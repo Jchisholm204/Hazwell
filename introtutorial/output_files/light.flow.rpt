@@ -1,5 +1,5 @@
 Flow report for light
-Thu Feb 23 23:49:31 2023
+Fri Feb 24 13:58:34 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Thu Feb 23 23:49:23 2023      ;
+; Flow Status                     ; Successful - Fri Feb 24 13:58:29 2023      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; light                                      ;
 ; Top-level Entity Name           ; light                                      ;
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/23/2023 23:48:21 ;
+; Start date & time ; 02/24/2023 13:57:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; light               ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 273457571979876.167721410116200       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 273457571979876.167726507520340       ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; None                                  ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
@@ -96,11 +96,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4708 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:44     ; 1.0                     ; 5645 MB             ; 00:00:27                           ;
-; Assembler                 ; 00:00:13     ; 1.0                     ; 4744 MB             ; 00:00:08                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 4917 MB             ; 00:00:04                           ;
-; Total                     ; 00:01:06     ; --                      ; --                  ; 00:00:40                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4703 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:24     ; 1.0                     ; 5638 MB             ; 00:00:21                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 4745 MB             ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4922 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:37     ; --                      ; --                  ; 00:00:31                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
