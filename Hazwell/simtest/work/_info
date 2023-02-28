@@ -187,15 +187,15 @@ Z40 FC:\Users\Jacob\Documents\GitHub\Hazwell\Hazwell\simtest\portmapTB.vhd
 l0
 L6
 VhB8QFNYmnC`<b7A0WWKjN3
-!s100 70X?<;nOY;[0ZGf_KCfVo3
 R7
 32
-!i10b 1
 Z41 !s108 1677554020.877000
 Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\Jacob\Documents\GitHub\Hazwell\Hazwell\simtest\portmapTB.vhd|
 Z43 !s107 C:\Users\Jacob\Documents\GitHub\Hazwell\Hazwell\simtest\portmapTB.vhd|
 R11
 R12
+!s100 70X?<;nOY;[0ZGf_KCfVo3
+!i10b 1
 Asim
 R37
 R1
@@ -205,28 +205,65 @@ DEx4 work 9 portmaptb 0 22 hB8QFNYmnC`<b7A0WWKjN3
 l20
 L9
 V]`5LZ<LHBenM`K;lWl[1S0
-!s100 XAbU68UT5d^8TM8_5M7:O3
 R7
 32
-!i10b 1
 R41
 R42
 R43
 R11
 R12
-Esensitivitylist
-Z44 w1677376819
+!s100 XAbU68UT5d^8TM8_5M7:O3
+!i10b 1
+Esegmenttb
+Z44 w1677612640
+R1
+R2
+R3
 R4
-Z45 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/sensitivityList.vhd
-Z46 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/sensitivityList.vhd
+Z45 8C:\Users\Jacob\Documents\GitHub\Hazwell\Hazwell\simtest\7segmentTb.vhd
+Z46 FC:\Users\Jacob\Documents\GitHub\Hazwell\Hazwell\simtest\7segmentTb.vhd
+l0
+L6
+V];DdFGK5DgVGK;?RC72oM3
+!s100 Z;h3@jOP4j7]>;dKeYFU`3
+R7
+32
+!i10b 1
+Z47 !s108 1677612651.558000
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\Jacob\Documents\GitHub\Hazwell\Hazwell\simtest\7segmentTb.vhd|
+Z49 !s107 C:\Users\Jacob\Documents\GitHub\Hazwell\Hazwell\simtest\7segmentTb.vhd|
+R11
+R12
+Asim
+R1
+R2
+R3
+Z50 DEx4 work 9 segmenttb 0 22 ];DdFGK5DgVGK;?RC72oM3
+l19
+L9
+VmUZnL_WDWIbHj]VgXANT=0
+!s100 d5bGLje?F@MU;AzBijM4J1
+R7
+32
+!i10b 1
+R47
+R48
+R49
+R11
+R12
+Esensitivitylist
+Z51 w1677376819
+R4
+Z52 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/sensitivityList.vhd
+Z53 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/sensitivityList.vhd
 l0
 L2
 VY_Hc2F[2SZ8POUhKT`DXk0
 R7
 32
-Z47 !s108 1677464738.108000
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/sensitivityList.vhd|
-Z49 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/sensitivityList.vhd|
+Z54 !s108 1677464738.108000
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/sensitivityList.vhd|
+Z56 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/sensitivityList.vhd|
 R11
 R12
 !s100 TceH16<1NGGzAP9:dYRaS1
@@ -238,29 +275,29 @@ L5
 Vj>O:4_34cfd9@:NTRZHV>1
 R7
 32
-R47
-R48
-R49
+R54
+R55
+R56
 R11
 R12
 !s100 6o0dhc_F6=g2h=jIWY2zJ3
 !i10b 1
 Esigned_unsigned
-Z50 w1677469493
+Z57 w1677469493
 R1
 R2
 R3
 R4
-Z51 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd
-Z52 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd
+Z58 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd
+Z59 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd
 l0
 L6
 VFaH^zdHmeG<:FJ22Fn[IV1
 R7
 32
-Z53 !s108 1677469496.472000
-Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd|
-Z55 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd|
+Z60 !s108 1677469496.472000
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd|
+Z62 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd|
 R11
 R12
 !s100 NOPR=Ni=So=abDZ^nYc1]2
@@ -275,9 +312,9 @@ L9
 VE?2^?cHFoX77J^_nU]ceW0
 R7
 32
-R53
-R54
-R55
+R60
+R61
+R62
 R11
 R12
 !s100 o4V`z5^ld:Gb85=Vg1P^00
@@ -302,20 +339,20 @@ R12
 !i10b 1
 !s108 1677379452.483000
 Estdlogic
-Z56 w1677464388
+Z63 w1677464388
 R2
 R3
 R4
-Z57 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd
-Z58 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd
+Z64 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd
+Z65 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd
 l0
 L5
 V?DjgU0jcfK>eADA82>IB12
 R7
 32
-Z59 !s108 1677464738.331000
-Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd|
-Z61 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd|
+Z66 !s108 1677464738.331000
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd|
+Z68 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd|
 R11
 R12
 !s100 A6zEcA[ZkYOOmO0J=?V_T0
@@ -329,28 +366,28 @@ L8
 VNQR8SKjdC<W7]d923;?dA0
 R7
 32
-R59
-R60
-R61
+R66
+R67
+R68
 R11
 R12
 !s100 eAWU=P<UAhDOjB^VPMGbW3
 !i10b 1
 Estdlogicvector
-Z62 w1677464786
+Z69 w1677464786
 R2
 R3
 R4
-R57
-R58
+R64
+R65
 l0
 L5
 VLNliRe<J3e@U>AcY8<DM<0
 R7
 32
-Z63 !s108 1677464792.637000
-R60
-R61
+Z70 !s108 1677464792.637000
+R67
+R68
 R11
 R12
 !s100 kImi>O_UMD7bEcl_dU?492
@@ -364,9 +401,9 @@ L8
 V?`MT9Z`cI4_b:o@L57JD=1
 R7
 32
-R63
-R60
-R61
+R70
+R67
+R68
 R11
 R12
 !s100 ]aOk@L;4i81M[W>d1b2_@0

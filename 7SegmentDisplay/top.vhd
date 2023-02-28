@@ -12,17 +12,15 @@ entity top is
 end top;
 
 architecture main of top is
-	signal number : std_logic_vector(7 downto 0);
+
 begin
 
-	number <= dipSwitches;
-
-	process(number) is
+	process(dipSwitches) is
 	begin
 	
-		if number = "00000000" then
+		if dipSwitches = "00000000" then
 			hex0 <= "1000000"; -- 0 is on
-		elsif number = "00000001" then
+		elsif dipSwitches = "00000001" then
 			hex0 <= "1111001"; -- 6 5 4 3 2 1 0
 		end if;
 		
