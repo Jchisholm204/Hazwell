@@ -1,17 +1,27 @@
 |top
-s0 => hex0[5].DATAIN
-s0 => hex0[0].DATAIN
-s0 => hex0[3].DATAIN
-s0 => hex0[4].DATAIN
-s1 => ~NO_FANOUT~
-s2 => ~NO_FANOUT~
+dipSwitches[0] => Equal0.IN7
+dipSwitches[0] => Equal1.IN7
+dipSwitches[1] => Equal0.IN6
+dipSwitches[1] => Equal1.IN6
+dipSwitches[2] => Equal0.IN5
+dipSwitches[2] => Equal1.IN5
+dipSwitches[3] => Equal0.IN4
+dipSwitches[3] => Equal1.IN4
+dipSwitches[4] => Equal0.IN3
+dipSwitches[4] => Equal1.IN3
+dipSwitches[5] => Equal0.IN2
+dipSwitches[5] => Equal1.IN2
+dipSwitches[6] => Equal0.IN1
+dipSwitches[6] => Equal1.IN1
+dipSwitches[7] => Equal0.IN0
+dipSwitches[7] => Equal1.IN0
 ledr0 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-hex0[0] <= s0.DB_MAX_OUTPUT_PORT_TYPE
+hex0[0] <= hex0[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
 hex0[1] <= <GND>
 hex0[2] <= <GND>
-hex0[3] <= s0.DB_MAX_OUTPUT_PORT_TYPE
-hex0[4] <= s0.DB_MAX_OUTPUT_PORT_TYPE
-hex0[5] <= s0.DB_MAX_OUTPUT_PORT_TYPE
+hex0[3] <= hex0[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+hex0[4] <= hex0[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+hex0[5] <= hex0[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
 hex0[6] <= <VCC>
 
 
