@@ -1,1 +1,81 @@
+C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/portmapTB.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/portmapTB.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity portmapTB
+-- Compiling architecture sim of portmapTB
+-- Loading entity mux
 
+} {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/casestatement.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/casestatement.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity casestatement
+-- Compiling architecture sim of casestatement
+
+} {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/ifStatement.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/ifStatement.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Compiling entity ifStatement
+-- Compiling architecture sim of ifStatement
+
+} {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity signed_unsigned
+-- Compiling architecture sim of signed_unsigned
+
+} {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/sensitivityList.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/sensitivityList.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Compiling entity sensitivityList
+-- Compiling architecture sim of sensitivityList
+
+} {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogic.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogic.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity stdlogic
+-- Compiling architecture sim of stdlogic
+
+} {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/mux.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/mux.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mux
+-- Compiling architecture rtl of mux
+
+} {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/concurrent.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/concurrent.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity concurrent
+-- Compiling architecture sim of concurrent
+
+} {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity stdlogicvector
+-- Compiling architecture sim of stdlogicvector
+
+} {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/main.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/main.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Compiling entity main
+-- Compiling architecture sim of main
+
+} {} {}}

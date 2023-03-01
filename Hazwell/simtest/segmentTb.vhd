@@ -10,19 +10,13 @@ architecture sim of segmentTb is
   
   -- dip switch inputs
   signal Switches : std_logic_vector(7 downto 0) := (others => '0');
-  signal number   : unsigned(7 downto 0)         := (others => '0');
   
-  signal Seg1     : unsigned(3 downto 0) := (others => 'X');
-  signal Seg2     : unsigned(3 downto 0) := (others => 'X');
+  signal Seg1     : std_logic_vector(6 downto 0) := (others => 'X');
+  signal Seg2     : std_logic_vector(6 downto 0) := (others => 'X');
+  signal Seg3     : std_logic_vector(6 downto 0) := (others => 'X');
   
   
 begin
-
-  process(number) is
-  begin
-    Seg1 <= number mod 10;
-    Seg2 <= number mod 1;
-  end process;
   
   process is
   begin
@@ -49,7 +43,12 @@ begin
     wait;
   end process;
   
-  number <= unsigned(Switches);
+    -- An instance of mux with architecture rtl
+  i_Segment : entity work.segment(rtl) port map (
+    switches   => Switches,
+    DispSeg1   => Seg1,
+    DispSeg2   => Seg2,
+    DispSeg3   => Seg3);
     
 end architecture;
 
