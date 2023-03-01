@@ -1,0 +1,1128 @@
+TimeQuest Timing Analyzer report for DE2_testing
+Tue Feb 28 21:40:35 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; DE2_testing                                                       ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------+
+; Propagation Delay                                             ;
++-------------+-------------+--------+--------+--------+--------+
+; Input Port  ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-------------+-------------+--------+--------+--------+--------+
+; switches[0] ; DispSeg1[0] ; 6.995  ; 6.995  ; 6.995  ; 6.995  ;
+; switches[0] ; DispSeg1[1] ; 7.128  ; 7.128  ; 7.128  ; 7.128  ;
+; switches[0] ; DispSeg1[2] ;        ; 7.103  ; 7.103  ;        ;
+; switches[0] ; DispSeg1[3] ; 6.738  ; 6.738  ; 6.738  ; 6.738  ;
+; switches[0] ; DispSeg1[4] ; 6.919  ;        ;        ; 6.919  ;
+; switches[0] ; DispSeg1[5] ; 6.726  ;        ;        ; 6.726  ;
+; switches[0] ; DispSeg1[6] ; 6.746  ;        ;        ; 6.746  ;
+; switches[1] ; DispSeg1[0] ; 12.183 ; 12.183 ; 12.183 ; 12.183 ;
+; switches[1] ; DispSeg1[1] ; 12.142 ; 12.142 ; 12.142 ; 12.142 ;
+; switches[1] ; DispSeg1[2] ; 12.157 ; 12.157 ; 12.157 ; 12.157 ;
+; switches[1] ; DispSeg1[3] ; 11.925 ; 11.925 ; 11.925 ; 11.925 ;
+; switches[1] ; DispSeg1[4] ; 11.934 ; 11.934 ; 11.934 ; 11.934 ;
+; switches[1] ; DispSeg1[5] ; 11.914 ; 11.914 ; 11.914 ; 11.914 ;
+; switches[1] ; DispSeg1[6] ; 11.934 ; 11.934 ; 11.934 ; 11.934 ;
+; switches[1] ; DispSeg2[0] ; 10.183 ; 10.183 ; 10.183 ; 10.183 ;
+; switches[1] ; DispSeg2[1] ; 10.167 ; 10.167 ; 10.167 ; 10.167 ;
+; switches[1] ; DispSeg2[2] ;        ; 10.014 ; 10.014 ;        ;
+; switches[1] ; DispSeg2[3] ; 9.968  ; 9.968  ; 9.968  ; 9.968  ;
+; switches[1] ; DispSeg2[4] ; 9.990  ;        ;        ; 9.990  ;
+; switches[1] ; DispSeg2[5] ; 10.113 ;        ;        ; 10.113 ;
+; switches[1] ; DispSeg2[6] ; 9.996  ;        ;        ; 9.996  ;
+; switches[2] ; DispSeg1[0] ; 15.633 ; 15.633 ; 15.633 ; 15.633 ;
+; switches[2] ; DispSeg1[1] ; 15.592 ; 15.592 ; 15.592 ; 15.592 ;
+; switches[2] ; DispSeg1[2] ; 15.607 ; 15.607 ; 15.607 ; 15.607 ;
+; switches[2] ; DispSeg1[3] ; 15.375 ; 15.375 ; 15.375 ; 15.375 ;
+; switches[2] ; DispSeg1[4] ; 15.384 ; 15.384 ; 15.384 ; 15.384 ;
+; switches[2] ; DispSeg1[5] ; 15.364 ; 15.364 ; 15.364 ; 15.364 ;
+; switches[2] ; DispSeg1[6] ; 15.384 ; 15.384 ; 15.384 ; 15.384 ;
+; switches[2] ; DispSeg2[0] ; 13.058 ; 13.058 ; 13.058 ; 13.058 ;
+; switches[2] ; DispSeg2[1] ; 13.068 ; 13.068 ; 13.068 ; 13.068 ;
+; switches[2] ; DispSeg2[2] ; 12.471 ; 12.471 ; 12.471 ; 12.471 ;
+; switches[2] ; DispSeg2[3] ; 12.847 ; 12.847 ; 12.847 ; 12.847 ;
+; switches[2] ; DispSeg2[4] ; 12.543 ; 12.543 ; 12.543 ; 12.543 ;
+; switches[2] ; DispSeg2[5] ; 13.016 ; 13.016 ; 13.016 ; 13.016 ;
+; switches[2] ; DispSeg2[6] ; 12.870 ; 12.870 ; 12.870 ; 12.870 ;
+; switches[2] ; DispSeg3[0] ; 9.408  ;        ;        ; 9.408  ;
+; switches[2] ; DispSeg3[2] ;        ; 9.112  ; 9.112  ;        ;
+; switches[2] ; DispSeg3[3] ; 9.142  ;        ;        ; 9.142  ;
+; switches[2] ; DispSeg3[4] ; 8.693  ;        ;        ; 8.693  ;
+; switches[2] ; DispSeg3[5] ; 9.080  ;        ;        ; 9.080  ;
+; switches[3] ; DispSeg1[0] ; 18.168 ; 18.168 ; 18.168 ; 18.168 ;
+; switches[3] ; DispSeg1[1] ; 18.127 ; 18.127 ; 18.127 ; 18.127 ;
+; switches[3] ; DispSeg1[2] ; 18.142 ; 18.142 ; 18.142 ; 18.142 ;
+; switches[3] ; DispSeg1[3] ; 17.910 ; 17.910 ; 17.910 ; 17.910 ;
+; switches[3] ; DispSeg1[4] ; 17.919 ; 17.919 ; 17.919 ; 17.919 ;
+; switches[3] ; DispSeg1[5] ; 17.899 ; 17.899 ; 17.899 ; 17.899 ;
+; switches[3] ; DispSeg1[6] ; 17.919 ; 17.919 ; 17.919 ; 17.919 ;
+; switches[3] ; DispSeg2[0] ; 15.430 ; 15.430 ; 15.430 ; 15.430 ;
+; switches[3] ; DispSeg2[1] ; 15.440 ; 15.440 ; 15.440 ; 15.440 ;
+; switches[3] ; DispSeg2[2] ; 14.843 ; 14.843 ; 14.843 ; 14.843 ;
+; switches[3] ; DispSeg2[3] ; 15.219 ; 15.219 ; 15.219 ; 15.219 ;
+; switches[3] ; DispSeg2[4] ; 14.915 ; 14.915 ; 14.915 ; 14.915 ;
+; switches[3] ; DispSeg2[5] ; 15.388 ; 15.388 ; 15.388 ; 15.388 ;
+; switches[3] ; DispSeg2[6] ; 15.242 ; 15.242 ; 15.242 ; 15.242 ;
+; switches[3] ; DispSeg3[0] ; 11.007 ; 10.581 ; 10.581 ; 11.007 ;
+; switches[3] ; DispSeg3[2] ; 10.285 ; 10.711 ; 10.711 ; 10.285 ;
+; switches[3] ; DispSeg3[3] ; 10.741 ; 10.315 ; 10.315 ; 10.741 ;
+; switches[3] ; DispSeg3[4] ; 10.292 ; 9.866  ; 9.866  ; 10.292 ;
+; switches[3] ; DispSeg3[5] ; 10.679 ; 10.253 ; 10.253 ; 10.679 ;
+; switches[3] ; DispSeg3[6] ;        ; 7.538  ; 7.538  ;        ;
+; switches[4] ; DispSeg1[0] ; 20.978 ; 20.978 ; 20.978 ; 20.978 ;
+; switches[4] ; DispSeg1[1] ; 20.937 ; 20.937 ; 20.937 ; 20.937 ;
+; switches[4] ; DispSeg1[2] ; 20.952 ; 20.952 ; 20.952 ; 20.952 ;
+; switches[4] ; DispSeg1[3] ; 20.720 ; 20.720 ; 20.720 ; 20.720 ;
+; switches[4] ; DispSeg1[4] ; 20.729 ; 20.729 ; 20.729 ; 20.729 ;
+; switches[4] ; DispSeg1[5] ; 20.709 ; 20.709 ; 20.709 ; 20.709 ;
+; switches[4] ; DispSeg1[6] ; 20.729 ; 20.729 ; 20.729 ; 20.729 ;
+; switches[4] ; DispSeg2[0] ; 17.635 ; 17.635 ; 17.635 ; 17.635 ;
+; switches[4] ; DispSeg2[1] ; 17.645 ; 17.645 ; 17.645 ; 17.645 ;
+; switches[4] ; DispSeg2[2] ; 17.048 ; 17.048 ; 17.048 ; 17.048 ;
+; switches[4] ; DispSeg2[3] ; 17.424 ; 17.424 ; 17.424 ; 17.424 ;
+; switches[4] ; DispSeg2[4] ; 17.120 ; 17.120 ; 17.120 ; 17.120 ;
+; switches[4] ; DispSeg2[5] ; 17.593 ; 17.593 ; 17.593 ; 17.593 ;
+; switches[4] ; DispSeg2[6] ; 17.447 ; 17.447 ; 17.447 ; 17.447 ;
+; switches[4] ; DispSeg3[0] ; 10.896 ; 10.470 ; 10.470 ; 10.896 ;
+; switches[4] ; DispSeg3[2] ; 10.174 ; 10.600 ; 10.600 ; 10.174 ;
+; switches[4] ; DispSeg3[3] ; 10.630 ; 10.204 ; 10.204 ; 10.630 ;
+; switches[4] ; DispSeg3[4] ; 10.181 ; 9.755  ; 9.755  ; 10.181 ;
+; switches[4] ; DispSeg3[5] ; 10.568 ; 10.142 ; 10.142 ; 10.568 ;
+; switches[4] ; DispSeg3[6] ;        ; 7.427  ; 7.427  ;        ;
+; switches[5] ; DispSeg1[0] ; 22.467 ; 22.467 ; 22.467 ; 22.467 ;
+; switches[5] ; DispSeg1[1] ; 22.426 ; 22.426 ; 22.426 ; 22.426 ;
+; switches[5] ; DispSeg1[2] ; 22.441 ; 22.441 ; 22.441 ; 22.441 ;
+; switches[5] ; DispSeg1[3] ; 22.209 ; 22.209 ; 22.209 ; 22.209 ;
+; switches[5] ; DispSeg1[4] ; 22.218 ; 22.218 ; 22.218 ; 22.218 ;
+; switches[5] ; DispSeg1[5] ; 22.198 ; 22.198 ; 22.198 ; 22.198 ;
+; switches[5] ; DispSeg1[6] ; 22.218 ; 22.218 ; 22.218 ; 22.218 ;
+; switches[5] ; DispSeg2[0] ; 19.524 ; 19.524 ; 19.524 ; 19.524 ;
+; switches[5] ; DispSeg2[1] ; 19.534 ; 19.534 ; 19.534 ; 19.534 ;
+; switches[5] ; DispSeg2[2] ; 18.937 ; 18.937 ; 18.937 ; 18.937 ;
+; switches[5] ; DispSeg2[3] ; 19.313 ; 19.313 ; 19.313 ; 19.313 ;
+; switches[5] ; DispSeg2[4] ; 19.009 ; 19.009 ; 19.009 ; 19.009 ;
+; switches[5] ; DispSeg2[5] ; 19.482 ; 19.482 ; 19.482 ; 19.482 ;
+; switches[5] ; DispSeg2[6] ; 19.336 ; 19.336 ; 19.336 ; 19.336 ;
+; switches[5] ; DispSeg3[0] ; 11.370 ; 10.944 ; 10.944 ; 11.370 ;
+; switches[5] ; DispSeg3[2] ; 10.648 ; 11.074 ; 11.074 ; 10.648 ;
+; switches[5] ; DispSeg3[3] ; 11.104 ; 10.678 ; 10.678 ; 11.104 ;
+; switches[5] ; DispSeg3[4] ; 10.655 ; 10.229 ; 10.229 ; 10.655 ;
+; switches[5] ; DispSeg3[5] ; 11.042 ; 10.616 ; 10.616 ; 11.042 ;
+; switches[5] ; DispSeg3[6] ;        ; 7.901  ; 7.901  ;        ;
+; switches[6] ; DispSeg1[0] ; 22.176 ; 22.176 ; 22.176 ; 22.176 ;
+; switches[6] ; DispSeg1[1] ; 22.135 ; 22.135 ; 22.135 ; 22.135 ;
+; switches[6] ; DispSeg1[2] ; 22.150 ; 22.150 ; 22.150 ; 22.150 ;
+; switches[6] ; DispSeg1[3] ; 21.918 ; 21.918 ; 21.918 ; 21.918 ;
+; switches[6] ; DispSeg1[4] ; 21.927 ; 21.927 ; 21.927 ; 21.927 ;
+; switches[6] ; DispSeg1[5] ; 21.907 ; 21.907 ; 21.907 ; 21.907 ;
+; switches[6] ; DispSeg1[6] ; 21.927 ; 21.927 ; 21.927 ; 21.927 ;
+; switches[6] ; DispSeg2[0] ; 18.830 ; 18.830 ; 18.830 ; 18.830 ;
+; switches[6] ; DispSeg2[1] ; 18.840 ; 18.840 ; 18.840 ; 18.840 ;
+; switches[6] ; DispSeg2[2] ; 18.243 ; 18.243 ; 18.243 ; 18.243 ;
+; switches[6] ; DispSeg2[3] ; 18.619 ; 18.619 ; 18.619 ; 18.619 ;
+; switches[6] ; DispSeg2[4] ; 18.315 ; 18.315 ; 18.315 ; 18.315 ;
+; switches[6] ; DispSeg2[5] ; 18.788 ; 18.788 ; 18.788 ; 18.788 ;
+; switches[6] ; DispSeg2[6] ; 18.642 ; 18.642 ; 18.642 ; 18.642 ;
+; switches[6] ; DispSeg3[0] ; 10.742 ; 10.316 ; 10.316 ; 10.742 ;
+; switches[6] ; DispSeg3[2] ; 10.020 ; 10.446 ; 10.446 ; 10.020 ;
+; switches[6] ; DispSeg3[3] ; 10.476 ; 10.050 ; 10.050 ; 10.476 ;
+; switches[6] ; DispSeg3[4] ; 10.027 ; 9.601  ; 9.601  ; 10.027 ;
+; switches[6] ; DispSeg3[5] ; 10.414 ; 9.988  ; 9.988  ; 10.414 ;
+; switches[6] ; DispSeg3[6] ;        ; 7.273  ; 7.273  ;        ;
+; switches[7] ; DispSeg1[0] ; 22.675 ; 22.675 ; 22.675 ; 22.675 ;
+; switches[7] ; DispSeg1[1] ; 22.634 ; 22.634 ; 22.634 ; 22.634 ;
+; switches[7] ; DispSeg1[2] ; 22.649 ; 22.649 ; 22.649 ; 22.649 ;
+; switches[7] ; DispSeg1[3] ; 22.417 ; 22.417 ; 22.417 ; 22.417 ;
+; switches[7] ; DispSeg1[4] ; 22.426 ; 22.426 ; 22.426 ; 22.426 ;
+; switches[7] ; DispSeg1[5] ; 22.406 ; 22.406 ; 22.406 ; 22.406 ;
+; switches[7] ; DispSeg1[6] ; 22.426 ; 22.426 ; 22.426 ; 22.426 ;
+; switches[7] ; DispSeg2[0] ; 19.333 ; 19.333 ; 19.333 ; 19.333 ;
+; switches[7] ; DispSeg2[1] ; 19.343 ; 19.343 ; 19.343 ; 19.343 ;
+; switches[7] ; DispSeg2[2] ; 18.746 ; 18.746 ; 18.746 ; 18.746 ;
+; switches[7] ; DispSeg2[3] ; 19.122 ; 19.122 ; 19.122 ; 19.122 ;
+; switches[7] ; DispSeg2[4] ; 18.818 ; 18.818 ; 18.818 ; 18.818 ;
+; switches[7] ; DispSeg2[5] ; 19.291 ; 19.291 ; 19.291 ; 19.291 ;
+; switches[7] ; DispSeg2[6] ; 19.145 ; 19.145 ; 19.145 ; 19.145 ;
+; switches[7] ; DispSeg3[0] ; 11.269 ; 10.843 ; 10.843 ; 11.269 ;
+; switches[7] ; DispSeg3[2] ; 10.547 ; 10.973 ; 10.973 ; 10.547 ;
+; switches[7] ; DispSeg3[3] ; 11.003 ; 10.577 ; 10.577 ; 11.003 ;
+; switches[7] ; DispSeg3[4] ; 10.554 ; 10.128 ; 10.128 ; 10.554 ;
+; switches[7] ; DispSeg3[5] ; 10.941 ; 10.515 ; 10.515 ; 10.941 ;
+; switches[7] ; DispSeg3[6] ;        ; 7.800  ; 7.800  ;        ;
++-------------+-------------+--------+--------+--------+--------+
+
+
++---------------------------------------------------------------+
+; Minimum Propagation Delay                                     ;
++-------------+-------------+--------+--------+--------+--------+
+; Input Port  ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-------------+-------------+--------+--------+--------+--------+
+; switches[0] ; DispSeg1[0] ; 6.995  ; 6.995  ; 6.995  ; 6.995  ;
+; switches[0] ; DispSeg1[1] ; 7.128  ; 7.128  ; 7.128  ; 7.128  ;
+; switches[0] ; DispSeg1[2] ;        ; 7.103  ; 7.103  ;        ;
+; switches[0] ; DispSeg1[3] ; 6.738  ; 6.738  ; 6.738  ; 6.738  ;
+; switches[0] ; DispSeg1[4] ; 6.919  ;        ;        ; 6.919  ;
+; switches[0] ; DispSeg1[5] ; 6.726  ;        ;        ; 6.726  ;
+; switches[0] ; DispSeg1[6] ; 6.746  ;        ;        ; 6.746  ;
+; switches[1] ; DispSeg1[0] ; 10.513 ; 9.924  ; 9.924  ; 10.513 ;
+; switches[1] ; DispSeg1[1] ; 9.883  ; 9.883  ; 9.883  ; 9.883  ;
+; switches[1] ; DispSeg1[2] ; 9.898  ; 10.360 ; 10.360 ; 9.898  ;
+; switches[1] ; DispSeg1[3] ; 9.666  ; 9.666  ; 9.666  ; 9.666  ;
+; switches[1] ; DispSeg1[4] ; 10.127 ; 9.675  ; 9.675  ; 10.127 ;
+; switches[1] ; DispSeg1[5] ; 9.655  ; 10.233 ; 10.233 ; 9.655  ;
+; switches[1] ; DispSeg1[6] ; 9.675  ; 9.675  ; 9.675  ; 9.675  ;
+; switches[1] ; DispSeg2[0] ; 10.152 ; 10.152 ; 10.152 ; 10.152 ;
+; switches[1] ; DispSeg2[1] ; 10.136 ; 10.136 ; 10.136 ; 10.136 ;
+; switches[1] ; DispSeg2[2] ;        ; 9.983  ; 9.983  ;        ;
+; switches[1] ; DispSeg2[3] ; 9.937  ; 9.937  ; 9.937  ; 9.937  ;
+; switches[1] ; DispSeg2[4] ; 9.959  ;        ;        ; 9.959  ;
+; switches[1] ; DispSeg2[5] ; 10.082 ;        ;        ; 10.082 ;
+; switches[1] ; DispSeg2[6] ; 9.965  ;        ;        ; 9.965  ;
+; switches[2] ; DispSeg1[0] ; 9.631  ; 9.631  ; 9.631  ; 9.631  ;
+; switches[2] ; DispSeg1[1] ; 9.464  ; 10.231 ; 10.231 ; 9.464  ;
+; switches[2] ; DispSeg1[2] ; 10.245 ; 9.478  ; 9.478  ; 10.245 ;
+; switches[2] ; DispSeg1[3] ; 9.388  ; 9.388  ; 9.388  ; 9.388  ;
+; switches[2] ; DispSeg1[4] ; 9.245  ; 10.012 ; 10.012 ; 9.245  ;
+; switches[2] ; DispSeg1[5] ; 10.118 ; 9.351  ; 9.351  ; 10.118 ;
+; switches[2] ; DispSeg1[6] ; 9.402  ; 9.402  ; 9.402  ; 9.402  ;
+; switches[2] ; DispSeg2[0] ; 9.675  ; 9.675  ; 9.675  ; 9.675  ;
+; switches[2] ; DispSeg2[1] ; 9.659  ; 9.659  ; 9.659  ; 9.659  ;
+; switches[2] ; DispSeg2[2] ; 10.577 ; 9.506  ; 9.506  ; 10.577 ;
+; switches[2] ; DispSeg2[3] ; 9.460  ; 9.460  ; 9.460  ; 9.460  ;
+; switches[2] ; DispSeg2[4] ; 9.482  ; 10.553 ; 10.553 ; 9.482  ;
+; switches[2] ; DispSeg2[5] ; 9.605  ; 10.676 ; 10.676 ; 9.605  ;
+; switches[2] ; DispSeg2[6] ; 9.488  ; 10.559 ; 10.559 ; 9.488  ;
+; switches[2] ; DispSeg3[0] ; 8.968  ;        ;        ; 8.968  ;
+; switches[2] ; DispSeg3[2] ;        ; 8.672  ; 8.672  ;        ;
+; switches[2] ; DispSeg3[3] ; 8.702  ;        ;        ; 8.702  ;
+; switches[2] ; DispSeg3[4] ; 8.253  ;        ;        ; 8.253  ;
+; switches[2] ; DispSeg3[5] ; 8.640  ;        ;        ; 8.640  ;
+; switches[3] ; DispSeg1[0] ; 11.326 ; 10.243 ; 10.243 ; 11.326 ;
+; switches[3] ; DispSeg1[1] ; 11.682 ; 11.682 ; 11.682 ; 11.682 ;
+; switches[3] ; DispSeg1[2] ; 11.696 ; 11.696 ; 11.696 ; 11.696 ;
+; switches[3] ; DispSeg1[3] ; 11.080 ; 9.997  ; 9.997  ; 11.080 ;
+; switches[3] ; DispSeg1[4] ; 11.463 ; 11.463 ; 11.463 ; 11.463 ;
+; switches[3] ; DispSeg1[5] ; 11.070 ; 9.987  ; 9.987  ; 11.070 ;
+; switches[3] ; DispSeg1[6] ; 11.130 ; 10.047 ; 10.047 ; 11.130 ;
+; switches[3] ; DispSeg2[0] ; 9.226  ; 9.226  ; 9.226  ; 9.226  ;
+; switches[3] ; DispSeg2[1] ; 9.210  ; 9.210  ; 9.210  ; 9.210  ;
+; switches[3] ; DispSeg2[2] ; 10.289 ; 9.057  ; 9.057  ; 10.289 ;
+; switches[3] ; DispSeg2[3] ; 9.011  ; 9.011  ; 9.011  ; 9.011  ;
+; switches[3] ; DispSeg2[4] ; 9.033  ; 10.287 ; 10.287 ; 9.033  ;
+; switches[3] ; DispSeg2[5] ; 9.156  ; 10.701 ; 10.701 ; 9.156  ;
+; switches[3] ; DispSeg2[6] ; 9.039  ; 10.437 ; 10.437 ; 9.039  ;
+; switches[3] ; DispSeg3[0] ; 8.837  ; 8.785  ; 8.785  ; 8.837  ;
+; switches[3] ; DispSeg3[2] ; 8.446  ; 8.541  ; 8.541  ; 8.446  ;
+; switches[3] ; DispSeg3[3] ; 8.571  ; 8.519  ; 8.519  ; 8.571  ;
+; switches[3] ; DispSeg3[4] ; 8.122  ; 9.124  ; 9.124  ; 8.122  ;
+; switches[3] ; DispSeg3[5] ; 8.456  ; 9.511  ; 9.511  ; 8.456  ;
+; switches[3] ; DispSeg3[6] ;        ; 7.538  ; 7.538  ;        ;
+; switches[4] ; DispSeg1[0] ; 12.132 ; 12.263 ; 12.263 ; 12.132 ;
+; switches[4] ; DispSeg1[1] ; 12.213 ; 12.213 ; 12.213 ; 12.213 ;
+; switches[4] ; DispSeg1[2] ; 12.227 ; 12.227 ; 12.227 ; 12.227 ;
+; switches[4] ; DispSeg1[3] ; 11.886 ; 12.017 ; 12.017 ; 11.886 ;
+; switches[4] ; DispSeg1[4] ; 11.994 ; 11.994 ; 11.994 ; 11.994 ;
+; switches[4] ; DispSeg1[5] ; 11.876 ; 12.007 ; 12.007 ; 11.876 ;
+; switches[4] ; DispSeg1[6] ; 11.936 ; 12.067 ; 12.067 ; 11.936 ;
+; switches[4] ; DispSeg2[0] ; 10.088 ; 10.088 ; 10.088 ; 10.088 ;
+; switches[4] ; DispSeg2[1] ; 10.072 ; 10.072 ; 10.072 ; 10.072 ;
+; switches[4] ; DispSeg2[2] ; 10.825 ; 9.919  ; 9.919  ; 10.825 ;
+; switches[4] ; DispSeg2[3] ; 9.873  ; 9.873  ; 9.873  ; 9.873  ;
+; switches[4] ; DispSeg2[4] ; 9.895  ; 10.801 ; 10.801 ; 9.895  ;
+; switches[4] ; DispSeg2[5] ; 10.018 ; 10.789 ; 10.789 ; 10.018 ;
+; switches[4] ; DispSeg2[6] ; 9.901  ; 10.643 ; 10.643 ; 9.901  ;
+; switches[4] ; DispSeg3[0] ; 9.041  ; 8.674  ; 8.674  ; 9.041  ;
+; switches[4] ; DispSeg3[2] ; 8.335  ; 8.745  ; 8.745  ; 8.335  ;
+; switches[4] ; DispSeg3[3] ; 8.775  ; 8.408  ; 8.408  ; 8.775  ;
+; switches[4] ; DispSeg3[4] ; 8.326  ; 8.674  ; 8.674  ; 8.326  ;
+; switches[4] ; DispSeg3[5] ; 8.345  ; 9.061  ; 9.061  ; 8.345  ;
+; switches[4] ; DispSeg3[6] ;        ; 7.427  ; 7.427  ;        ;
+; switches[5] ; DispSeg1[0] ; 12.705 ; 12.877 ; 12.877 ; 12.705 ;
+; switches[5] ; DispSeg1[1] ; 12.836 ; 12.836 ; 12.836 ; 12.836 ;
+; switches[5] ; DispSeg1[2] ; 12.850 ; 12.850 ; 12.850 ; 12.850 ;
+; switches[5] ; DispSeg1[3] ; 12.459 ; 12.631 ; 12.631 ; 12.459 ;
+; switches[5] ; DispSeg1[4] ; 12.617 ; 12.617 ; 12.617 ; 12.617 ;
+; switches[5] ; DispSeg1[5] ; 12.449 ; 12.621 ; 12.621 ; 12.449 ;
+; switches[5] ; DispSeg1[6] ; 12.509 ; 12.681 ; 12.681 ; 12.509 ;
+; switches[5] ; DispSeg2[0] ; 11.507 ; 11.507 ; 11.507 ; 11.507 ;
+; switches[5] ; DispSeg2[1] ; 11.517 ; 11.791 ; 11.791 ; 11.517 ;
+; switches[5] ; DispSeg2[2] ; 11.183 ; 11.183 ; 11.183 ; 11.183 ;
+; switches[5] ; DispSeg2[3] ; 11.296 ; 11.296 ; 11.296 ; 11.296 ;
+; switches[5] ; DispSeg2[4] ; 11.177 ; 11.177 ; 11.177 ; 11.177 ;
+; switches[5] ; DispSeg2[5] ; 11.739 ; 11.465 ; 11.465 ; 11.739 ;
+; switches[5] ; DispSeg2[6] ; 11.319 ; 11.319 ; 11.319 ; 11.319 ;
+; switches[5] ; DispSeg3[0] ; 8.910  ; 9.148  ; 9.148  ; 8.910  ;
+; switches[5] ; DispSeg3[2] ; 8.809  ; 8.614  ; 8.614  ; 8.809  ;
+; switches[5] ; DispSeg3[3] ; 8.644  ; 8.882  ; 8.882  ; 8.644  ;
+; switches[5] ; DispSeg3[4] ; 8.195  ; 9.460  ; 9.460  ; 8.195  ;
+; switches[5] ; DispSeg3[5] ; 8.582  ; 9.847  ; 9.847  ; 8.582  ;
+; switches[5] ; DispSeg3[6] ;        ; 7.901  ; 7.901  ;        ;
+; switches[6] ; DispSeg1[0] ; 12.684 ; 12.684 ; 12.684 ; 12.684 ;
+; switches[6] ; DispSeg1[1] ; 12.697 ; 12.697 ; 12.697 ; 12.697 ;
+; switches[6] ; DispSeg1[2] ; 12.711 ; 12.711 ; 12.711 ; 12.711 ;
+; switches[6] ; DispSeg1[3] ; 12.438 ; 12.438 ; 12.438 ; 12.438 ;
+; switches[6] ; DispSeg1[4] ; 12.478 ; 12.478 ; 12.478 ; 12.478 ;
+; switches[6] ; DispSeg1[5] ; 12.428 ; 12.428 ; 12.428 ; 12.428 ;
+; switches[6] ; DispSeg1[6] ; 12.488 ; 12.488 ; 12.488 ; 12.488 ;
+; switches[6] ; DispSeg2[0] ; 10.883 ; 10.883 ; 10.883 ; 10.883 ;
+; switches[6] ; DispSeg2[1] ; 10.893 ; 11.097 ; 11.097 ; 10.893 ;
+; switches[6] ; DispSeg2[2] ; 10.489 ; 10.489 ; 10.489 ; 10.489 ;
+; switches[6] ; DispSeg2[3] ; 10.672 ; 10.672 ; 10.672 ; 10.672 ;
+; switches[6] ; DispSeg2[4] ; 10.483 ; 10.483 ; 10.483 ; 10.483 ;
+; switches[6] ; DispSeg2[5] ; 11.045 ; 10.841 ; 10.841 ; 11.045 ;
+; switches[6] ; DispSeg2[6] ; 10.695 ; 10.695 ; 10.695 ; 10.695 ;
+; switches[6] ; DispSeg3[0] ; 8.825  ; 8.520  ; 8.520  ; 8.825  ;
+; switches[6] ; DispSeg3[2] ; 8.181  ; 8.529  ; 8.529  ; 8.181  ;
+; switches[6] ; DispSeg3[3] ; 8.559  ; 8.254  ; 8.254  ; 8.559  ;
+; switches[6] ; DispSeg3[4] ; 8.110  ; 8.871  ; 8.871  ; 8.110  ;
+; switches[6] ; DispSeg3[5] ; 8.191  ; 9.258  ; 9.258  ; 8.191  ;
+; switches[6] ; DispSeg3[6] ;        ; 7.273  ; 7.273  ;        ;
+; switches[7] ; DispSeg1[0] ; 13.014 ; 13.150 ; 13.150 ; 13.014 ;
+; switches[7] ; DispSeg1[1] ; 13.107 ; 13.107 ; 13.107 ; 13.107 ;
+; switches[7] ; DispSeg1[2] ; 13.121 ; 13.121 ; 13.121 ; 13.121 ;
+; switches[7] ; DispSeg1[3] ; 12.768 ; 12.904 ; 12.904 ; 12.768 ;
+; switches[7] ; DispSeg1[4] ; 12.888 ; 12.888 ; 12.888 ; 12.888 ;
+; switches[7] ; DispSeg1[5] ; 12.758 ; 12.894 ; 12.894 ; 12.758 ;
+; switches[7] ; DispSeg1[6] ; 12.818 ; 12.954 ; 12.954 ; 12.818 ;
+; switches[7] ; DispSeg2[0] ; 11.590 ; 11.590 ; 11.590 ; 11.590 ;
+; switches[7] ; DispSeg2[1] ; 11.600 ; 11.600 ; 11.600 ; 11.600 ;
+; switches[7] ; DispSeg2[2] ; 10.992 ; 10.992 ; 10.992 ; 10.992 ;
+; switches[7] ; DispSeg2[3] ; 11.379 ; 11.372 ; 11.372 ; 11.379 ;
+; switches[7] ; DispSeg2[4] ; 10.986 ; 10.986 ; 10.986 ; 10.986 ;
+; switches[7] ; DispSeg2[5] ; 11.548 ; 11.548 ; 11.548 ; 11.548 ;
+; switches[7] ; DispSeg2[6] ; 11.402 ; 11.402 ; 11.402 ; 11.402 ;
+; switches[7] ; DispSeg3[0] ; 9.394  ; 9.047  ; 9.047  ; 9.394  ;
+; switches[7] ; DispSeg3[2] ; 8.708  ; 9.098  ; 9.098  ; 8.708  ;
+; switches[7] ; DispSeg3[3] ; 9.128  ; 8.781  ; 8.781  ; 9.128  ;
+; switches[7] ; DispSeg3[4] ; 8.679  ; 9.093  ; 9.093  ; 8.679  ;
+; switches[7] ; DispSeg3[5] ; 8.718  ; 9.480  ; 9.480  ; 8.718  ;
+; switches[7] ; DispSeg3[6] ;        ; 7.800  ; 7.800  ;        ;
++-------------+-------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------+
+; Propagation Delay                                             ;
++-------------+-------------+--------+--------+--------+--------+
+; Input Port  ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-------------+-------------+--------+--------+--------+--------+
+; switches[0] ; DispSeg1[0] ; 3.693  ; 3.693  ; 3.693  ; 3.693  ;
+; switches[0] ; DispSeg1[1] ; 3.733  ; 3.733  ; 3.733  ; 3.733  ;
+; switches[0] ; DispSeg1[2] ;        ; 3.746  ; 3.746  ;        ;
+; switches[0] ; DispSeg1[3] ; 3.568  ; 3.568  ; 3.568  ; 3.568  ;
+; switches[0] ; DispSeg1[4] ; 3.658  ;        ;        ; 3.658  ;
+; switches[0] ; DispSeg1[5] ; 3.553  ;        ;        ; 3.553  ;
+; switches[0] ; DispSeg1[6] ; 3.567  ;        ;        ; 3.567  ;
+; switches[1] ; DispSeg1[0] ; 6.011  ; 6.011  ; 6.011  ; 6.011  ;
+; switches[1] ; DispSeg1[1] ; 5.975  ; 5.975  ; 5.975  ; 5.975  ;
+; switches[1] ; DispSeg1[2] ; 5.987  ; 5.987  ; 5.987  ; 5.987  ;
+; switches[1] ; DispSeg1[3] ; 5.887  ; 5.887  ; 5.887  ; 5.887  ;
+; switches[1] ; DispSeg1[4] ; 5.892  ; 5.892  ; 5.892  ; 5.892  ;
+; switches[1] ; DispSeg1[5] ; 5.874  ; 5.874  ; 5.874  ; 5.874  ;
+; switches[1] ; DispSeg1[6] ; 5.888  ; 5.888  ; 5.888  ; 5.888  ;
+; switches[1] ; DispSeg2[0] ; 4.964  ; 4.964  ; 4.964  ; 4.964  ;
+; switches[1] ; DispSeg2[1] ; 4.967  ; 4.967  ; 4.967  ; 4.967  ;
+; switches[1] ; DispSeg2[2] ;        ; 4.835  ; 4.835  ;        ;
+; switches[1] ; DispSeg2[3] ; 4.804  ; 4.804  ; 4.804  ; 4.804  ;
+; switches[1] ; DispSeg2[4] ; 4.819  ;        ;        ; 4.819  ;
+; switches[1] ; DispSeg2[5] ; 4.868  ;        ;        ; 4.868  ;
+; switches[1] ; DispSeg2[6] ; 4.826  ;        ;        ; 4.826  ;
+; switches[2] ; DispSeg1[0] ; 7.526  ; 7.526  ; 7.526  ; 7.526  ;
+; switches[2] ; DispSeg1[1] ; 7.490  ; 7.490  ; 7.490  ; 7.490  ;
+; switches[2] ; DispSeg1[2] ; 7.502  ; 7.502  ; 7.502  ; 7.502  ;
+; switches[2] ; DispSeg1[3] ; 7.402  ; 7.402  ; 7.402  ; 7.402  ;
+; switches[2] ; DispSeg1[4] ; 7.407  ; 7.407  ; 7.407  ; 7.407  ;
+; switches[2] ; DispSeg1[5] ; 7.389  ; 7.389  ; 7.389  ; 7.389  ;
+; switches[2] ; DispSeg1[6] ; 7.403  ; 7.403  ; 7.403  ; 7.403  ;
+; switches[2] ; DispSeg2[0] ; 6.208  ; 6.208  ; 6.208  ; 6.208  ;
+; switches[2] ; DispSeg2[1] ; 6.233  ; 6.233  ; 6.233  ; 6.233  ;
+; switches[2] ; DispSeg2[2] ; 5.889  ; 5.889  ; 5.889  ; 5.889  ;
+; switches[2] ; DispSeg2[3] ; 6.050  ; 6.050  ; 6.050  ; 6.050  ;
+; switches[2] ; DispSeg2[4] ; 5.899  ; 5.899  ; 5.899  ; 5.899  ;
+; switches[2] ; DispSeg2[5] ; 6.110  ; 6.110  ; 6.110  ; 6.110  ;
+; switches[2] ; DispSeg2[6] ; 6.068  ; 6.068  ; 6.068  ; 6.068  ;
+; switches[2] ; DispSeg3[0] ; 4.593  ;        ;        ; 4.593  ;
+; switches[2] ; DispSeg3[2] ;        ; 4.457  ; 4.457  ;        ;
+; switches[2] ; DispSeg3[3] ; 4.482  ;        ;        ; 4.482  ;
+; switches[2] ; DispSeg3[4] ; 4.273  ;        ;        ; 4.273  ;
+; switches[2] ; DispSeg3[5] ; 4.449  ;        ;        ; 4.449  ;
+; switches[3] ; DispSeg1[0] ; 8.597  ; 8.597  ; 8.597  ; 8.597  ;
+; switches[3] ; DispSeg1[1] ; 8.561  ; 8.561  ; 8.561  ; 8.561  ;
+; switches[3] ; DispSeg1[2] ; 8.573  ; 8.573  ; 8.573  ; 8.573  ;
+; switches[3] ; DispSeg1[3] ; 8.473  ; 8.473  ; 8.473  ; 8.473  ;
+; switches[3] ; DispSeg1[4] ; 8.478  ; 8.478  ; 8.478  ; 8.478  ;
+; switches[3] ; DispSeg1[5] ; 8.460  ; 8.460  ; 8.460  ; 8.460  ;
+; switches[3] ; DispSeg1[6] ; 8.474  ; 8.474  ; 8.474  ; 8.474  ;
+; switches[3] ; DispSeg2[0] ; 7.251  ; 7.251  ; 7.251  ; 7.251  ;
+; switches[3] ; DispSeg2[1] ; 7.276  ; 7.276  ; 7.276  ; 7.276  ;
+; switches[3] ; DispSeg2[2] ; 6.932  ; 6.932  ; 6.932  ; 6.932  ;
+; switches[3] ; DispSeg2[3] ; 7.093  ; 7.093  ; 7.093  ; 7.093  ;
+; switches[3] ; DispSeg2[4] ; 6.942  ; 6.942  ; 6.942  ; 6.942  ;
+; switches[3] ; DispSeg2[5] ; 7.153  ; 7.153  ; 7.153  ; 7.153  ;
+; switches[3] ; DispSeg2[6] ; 7.111  ; 7.111  ; 7.111  ; 7.111  ;
+; switches[3] ; DispSeg3[0] ; 5.330  ; 5.146  ; 5.146  ; 5.330  ;
+; switches[3] ; DispSeg3[2] ; 5.010  ; 5.194  ; 5.194  ; 5.010  ;
+; switches[3] ; DispSeg3[3] ; 5.219  ; 5.035  ; 5.035  ; 5.219  ;
+; switches[3] ; DispSeg3[4] ; 5.010  ; 4.826  ; 4.826  ; 5.010  ;
+; switches[3] ; DispSeg3[5] ; 5.186  ; 5.002  ; 5.002  ; 5.186  ;
+; switches[3] ; DispSeg3[6] ;        ; 3.797  ; 3.797  ;        ;
+; switches[4] ; DispSeg1[0] ; 9.811  ; 9.811  ; 9.811  ; 9.811  ;
+; switches[4] ; DispSeg1[1] ; 9.775  ; 9.775  ; 9.775  ; 9.775  ;
+; switches[4] ; DispSeg1[2] ; 9.787  ; 9.787  ; 9.787  ; 9.787  ;
+; switches[4] ; DispSeg1[3] ; 9.687  ; 9.687  ; 9.687  ; 9.687  ;
+; switches[4] ; DispSeg1[4] ; 9.692  ; 9.692  ; 9.692  ; 9.692  ;
+; switches[4] ; DispSeg1[5] ; 9.674  ; 9.674  ; 9.674  ; 9.674  ;
+; switches[4] ; DispSeg1[6] ; 9.688  ; 9.688  ; 9.688  ; 9.688  ;
+; switches[4] ; DispSeg2[0] ; 8.238  ; 8.238  ; 8.238  ; 8.238  ;
+; switches[4] ; DispSeg2[1] ; 8.263  ; 8.263  ; 8.263  ; 8.263  ;
+; switches[4] ; DispSeg2[2] ; 7.919  ; 7.919  ; 7.919  ; 7.919  ;
+; switches[4] ; DispSeg2[3] ; 8.080  ; 8.080  ; 8.080  ; 8.080  ;
+; switches[4] ; DispSeg2[4] ; 7.929  ; 7.929  ; 7.929  ; 7.929  ;
+; switches[4] ; DispSeg2[5] ; 8.140  ; 8.140  ; 8.140  ; 8.140  ;
+; switches[4] ; DispSeg2[6] ; 8.098  ; 8.098  ; 8.098  ; 8.098  ;
+; switches[4] ; DispSeg3[0] ; 5.294  ; 5.110  ; 5.110  ; 5.294  ;
+; switches[4] ; DispSeg3[2] ; 4.974  ; 5.158  ; 5.158  ; 4.974  ;
+; switches[4] ; DispSeg3[3] ; 5.183  ; 4.999  ; 4.999  ; 5.183  ;
+; switches[4] ; DispSeg3[4] ; 4.974  ; 4.790  ; 4.790  ; 4.974  ;
+; switches[4] ; DispSeg3[5] ; 5.150  ; 4.966  ; 4.966  ; 5.150  ;
+; switches[4] ; DispSeg3[6] ;        ; 3.761  ; 3.761  ;        ;
+; switches[5] ; DispSeg1[0] ; 10.402 ; 10.402 ; 10.402 ; 10.402 ;
+; switches[5] ; DispSeg1[1] ; 10.366 ; 10.366 ; 10.366 ; 10.366 ;
+; switches[5] ; DispSeg1[2] ; 10.378 ; 10.378 ; 10.378 ; 10.378 ;
+; switches[5] ; DispSeg1[3] ; 10.278 ; 10.278 ; 10.278 ; 10.278 ;
+; switches[5] ; DispSeg1[4] ; 10.283 ; 10.283 ; 10.283 ; 10.283 ;
+; switches[5] ; DispSeg1[5] ; 10.265 ; 10.265 ; 10.265 ; 10.265 ;
+; switches[5] ; DispSeg1[6] ; 10.279 ; 10.279 ; 10.279 ; 10.279 ;
+; switches[5] ; DispSeg2[0] ; 9.002  ; 9.002  ; 9.002  ; 9.002  ;
+; switches[5] ; DispSeg2[1] ; 9.027  ; 9.027  ; 9.027  ; 9.027  ;
+; switches[5] ; DispSeg2[2] ; 8.683  ; 8.683  ; 8.683  ; 8.683  ;
+; switches[5] ; DispSeg2[3] ; 8.844  ; 8.844  ; 8.844  ; 8.844  ;
+; switches[5] ; DispSeg2[4] ; 8.693  ; 8.693  ; 8.693  ; 8.693  ;
+; switches[5] ; DispSeg2[5] ; 8.904  ; 8.904  ; 8.904  ; 8.904  ;
+; switches[5] ; DispSeg2[6] ; 8.862  ; 8.862  ; 8.862  ; 8.862  ;
+; switches[5] ; DispSeg3[0] ; 5.484  ; 5.300  ; 5.300  ; 5.484  ;
+; switches[5] ; DispSeg3[2] ; 5.164  ; 5.348  ; 5.348  ; 5.164  ;
+; switches[5] ; DispSeg3[3] ; 5.373  ; 5.189  ; 5.189  ; 5.373  ;
+; switches[5] ; DispSeg3[4] ; 5.164  ; 4.980  ; 4.980  ; 5.164  ;
+; switches[5] ; DispSeg3[5] ; 5.340  ; 5.156  ; 5.156  ; 5.340  ;
+; switches[5] ; DispSeg3[6] ;        ; 3.951  ; 3.951  ;        ;
+; switches[6] ; DispSeg1[0] ; 10.264 ; 10.264 ; 10.264 ; 10.264 ;
+; switches[6] ; DispSeg1[1] ; 10.228 ; 10.228 ; 10.228 ; 10.228 ;
+; switches[6] ; DispSeg1[2] ; 10.240 ; 10.240 ; 10.240 ; 10.240 ;
+; switches[6] ; DispSeg1[3] ; 10.140 ; 10.140 ; 10.140 ; 10.140 ;
+; switches[6] ; DispSeg1[4] ; 10.145 ; 10.145 ; 10.145 ; 10.145 ;
+; switches[6] ; DispSeg1[5] ; 10.127 ; 10.127 ; 10.127 ; 10.127 ;
+; switches[6] ; DispSeg1[6] ; 10.141 ; 10.141 ; 10.141 ; 10.141 ;
+; switches[6] ; DispSeg2[0] ; 8.699  ; 8.699  ; 8.699  ; 8.699  ;
+; switches[6] ; DispSeg2[1] ; 8.724  ; 8.724  ; 8.724  ; 8.724  ;
+; switches[6] ; DispSeg2[2] ; 8.380  ; 8.380  ; 8.380  ; 8.380  ;
+; switches[6] ; DispSeg2[3] ; 8.541  ; 8.541  ; 8.541  ; 8.541  ;
+; switches[6] ; DispSeg2[4] ; 8.390  ; 8.390  ; 8.390  ; 8.390  ;
+; switches[6] ; DispSeg2[5] ; 8.601  ; 8.601  ; 8.601  ; 8.601  ;
+; switches[6] ; DispSeg2[6] ; 8.559  ; 8.559  ; 8.559  ; 8.559  ;
+; switches[6] ; DispSeg3[0] ; 5.196  ; 5.012  ; 5.012  ; 5.196  ;
+; switches[6] ; DispSeg3[2] ; 4.876  ; 5.060  ; 5.060  ; 4.876  ;
+; switches[6] ; DispSeg3[3] ; 5.085  ; 4.901  ; 4.901  ; 5.085  ;
+; switches[6] ; DispSeg3[4] ; 4.876  ; 4.692  ; 4.692  ; 4.876  ;
+; switches[6] ; DispSeg3[5] ; 5.052  ; 4.868  ; 4.868  ; 5.052  ;
+; switches[6] ; DispSeg3[6] ;        ; 3.663  ; 3.663  ;        ;
+; switches[7] ; DispSeg1[0] ; 10.573 ; 10.573 ; 10.573 ; 10.573 ;
+; switches[7] ; DispSeg1[1] ; 10.537 ; 10.537 ; 10.537 ; 10.537 ;
+; switches[7] ; DispSeg1[2] ; 10.549 ; 10.549 ; 10.549 ; 10.549 ;
+; switches[7] ; DispSeg1[3] ; 10.449 ; 10.449 ; 10.449 ; 10.449 ;
+; switches[7] ; DispSeg1[4] ; 10.454 ; 10.454 ; 10.454 ; 10.454 ;
+; switches[7] ; DispSeg1[5] ; 10.436 ; 10.436 ; 10.436 ; 10.436 ;
+; switches[7] ; DispSeg1[6] ; 10.450 ; 10.450 ; 10.450 ; 10.450 ;
+; switches[7] ; DispSeg2[0] ; 9.014  ; 9.014  ; 9.014  ; 9.014  ;
+; switches[7] ; DispSeg2[1] ; 9.039  ; 9.039  ; 9.039  ; 9.039  ;
+; switches[7] ; DispSeg2[2] ; 8.695  ; 8.695  ; 8.695  ; 8.695  ;
+; switches[7] ; DispSeg2[3] ; 8.856  ; 8.856  ; 8.856  ; 8.856  ;
+; switches[7] ; DispSeg2[4] ; 8.705  ; 8.705  ; 8.705  ; 8.705  ;
+; switches[7] ; DispSeg2[5] ; 8.916  ; 8.916  ; 8.916  ; 8.916  ;
+; switches[7] ; DispSeg2[6] ; 8.874  ; 8.874  ; 8.874  ; 8.874  ;
+; switches[7] ; DispSeg3[0] ; 5.538  ; 5.354  ; 5.354  ; 5.538  ;
+; switches[7] ; DispSeg3[2] ; 5.218  ; 5.402  ; 5.402  ; 5.218  ;
+; switches[7] ; DispSeg3[3] ; 5.427  ; 5.243  ; 5.243  ; 5.427  ;
+; switches[7] ; DispSeg3[4] ; 5.218  ; 5.034  ; 5.034  ; 5.218  ;
+; switches[7] ; DispSeg3[5] ; 5.394  ; 5.210  ; 5.210  ; 5.394  ;
+; switches[7] ; DispSeg3[6] ;        ; 4.005  ; 4.005  ;        ;
++-------------+-------------+--------+--------+--------+--------+
+
+
++-----------------------------------------------------------+
+; Minimum Propagation Delay                                 ;
++-------------+-------------+-------+-------+-------+-------+
+; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++-------------+-------------+-------+-------+-------+-------+
+; switches[0] ; DispSeg1[0] ; 3.693 ; 3.693 ; 3.693 ; 3.693 ;
+; switches[0] ; DispSeg1[1] ; 3.733 ; 3.733 ; 3.733 ; 3.733 ;
+; switches[0] ; DispSeg1[2] ;       ; 3.746 ; 3.746 ;       ;
+; switches[0] ; DispSeg1[3] ; 3.568 ; 3.568 ; 3.568 ; 3.568 ;
+; switches[0] ; DispSeg1[4] ; 3.658 ;       ;       ; 3.658 ;
+; switches[0] ; DispSeg1[5] ; 3.553 ;       ;       ; 3.553 ;
+; switches[0] ; DispSeg1[6] ; 3.567 ;       ;       ; 3.567 ;
+; switches[1] ; DispSeg1[0] ; 5.173 ; 5.024 ; 5.024 ; 5.173 ;
+; switches[1] ; DispSeg1[1] ; 4.988 ; 4.988 ; 4.988 ; 4.988 ;
+; switches[1] ; DispSeg1[2] ; 5.000 ; 5.084 ; 5.084 ; 5.000 ;
+; switches[1] ; DispSeg1[3] ; 4.900 ; 4.900 ; 4.900 ; 4.900 ;
+; switches[1] ; DispSeg1[4] ; 4.983 ; 4.905 ; 4.905 ; 4.983 ;
+; switches[1] ; DispSeg1[5] ; 4.887 ; 5.046 ; 5.046 ; 4.887 ;
+; switches[1] ; DispSeg1[6] ; 4.901 ; 4.901 ; 4.901 ; 4.901 ;
+; switches[1] ; DispSeg2[0] ; 4.953 ; 4.953 ; 4.953 ; 4.953 ;
+; switches[1] ; DispSeg2[1] ; 4.956 ; 4.956 ; 4.956 ; 4.956 ;
+; switches[1] ; DispSeg2[2] ;       ; 4.824 ; 4.824 ;       ;
+; switches[1] ; DispSeg2[3] ; 4.793 ; 4.793 ; 4.793 ; 4.793 ;
+; switches[1] ; DispSeg2[4] ; 4.808 ;       ;       ; 4.808 ;
+; switches[1] ; DispSeg2[5] ; 4.857 ;       ;       ; 4.857 ;
+; switches[1] ; DispSeg2[6] ; 4.815 ;       ;       ; 4.815 ;
+; switches[2] ; DispSeg1[0] ; 4.859 ; 4.859 ; 4.859 ; 4.859 ;
+; switches[2] ; DispSeg1[1] ; 4.785 ; 5.114 ; 5.114 ; 4.785 ;
+; switches[2] ; DispSeg1[2] ; 5.099 ; 4.770 ; 4.770 ; 5.099 ;
+; switches[2] ; DispSeg1[3] ; 4.747 ; 4.747 ; 4.747 ; 4.747 ;
+; switches[2] ; DispSeg1[4] ; 4.669 ; 4.998 ; 4.998 ; 4.669 ;
+; switches[2] ; DispSeg1[5] ; 5.061 ; 4.732 ; 4.732 ; 5.061 ;
+; switches[2] ; DispSeg1[6] ; 4.744 ; 4.744 ; 4.744 ; 4.744 ;
+; switches[2] ; DispSeg2[0] ; 4.763 ; 4.763 ; 4.763 ; 4.763 ;
+; switches[2] ; DispSeg2[1] ; 4.766 ; 4.766 ; 4.766 ; 4.766 ;
+; switches[2] ; DispSeg2[2] ; 5.078 ; 4.634 ; 4.634 ; 5.078 ;
+; switches[2] ; DispSeg2[3] ; 4.603 ; 4.603 ; 4.603 ; 4.603 ;
+; switches[2] ; DispSeg2[4] ; 4.618 ; 5.062 ; 5.062 ; 4.618 ;
+; switches[2] ; DispSeg2[5] ; 4.667 ; 5.111 ; 5.111 ; 4.667 ;
+; switches[2] ; DispSeg2[6] ; 4.625 ; 5.069 ; 5.069 ; 4.625 ;
+; switches[2] ; DispSeg3[0] ; 4.403 ;       ;       ; 4.403 ;
+; switches[2] ; DispSeg3[2] ;       ; 4.267 ; 4.267 ;       ;
+; switches[2] ; DispSeg3[3] ; 4.292 ;       ;       ; 4.292 ;
+; switches[2] ; DispSeg3[4] ; 4.083 ;       ;       ; 4.083 ;
+; switches[2] ; DispSeg3[5] ; 4.259 ;       ;       ; 4.259 ;
+; switches[3] ; DispSeg1[0] ; 5.668 ; 5.210 ; 5.210 ; 5.668 ;
+; switches[3] ; DispSeg1[1] ; 5.760 ; 5.760 ; 5.760 ; 5.760 ;
+; switches[3] ; DispSeg1[2] ; 5.745 ; 5.745 ; 5.745 ; 5.745 ;
+; switches[3] ; DispSeg1[3] ; 5.549 ; 5.091 ; 5.091 ; 5.549 ;
+; switches[3] ; DispSeg1[4] ; 5.644 ; 5.644 ; 5.644 ; 5.644 ;
+; switches[3] ; DispSeg1[5] ; 5.538 ; 5.080 ; 5.080 ; 5.538 ;
+; switches[3] ; DispSeg1[6] ; 5.550 ; 5.092 ; 5.092 ; 5.550 ;
+; switches[3] ; DispSeg2[0] ; 4.583 ; 4.583 ; 4.583 ; 4.583 ;
+; switches[3] ; DispSeg2[1] ; 4.586 ; 4.586 ; 4.586 ; 4.586 ;
+; switches[3] ; DispSeg2[2] ; 4.977 ; 4.454 ; 4.454 ; 4.977 ;
+; switches[3] ; DispSeg2[3] ; 4.423 ; 4.423 ; 4.423 ; 4.423 ;
+; switches[3] ; DispSeg2[4] ; 4.438 ; 4.974 ; 4.974 ; 4.438 ;
+; switches[3] ; DispSeg2[5] ; 4.487 ; 5.124 ; 5.124 ; 4.487 ;
+; switches[3] ; DispSeg2[6] ; 4.445 ; 5.053 ; 5.053 ; 4.445 ;
+; switches[3] ; DispSeg3[0] ; 4.372 ; 4.377 ; 4.377 ; 4.372 ;
+; switches[3] ; DispSeg3[2] ; 4.233 ; 4.236 ; 4.236 ; 4.233 ;
+; switches[3] ; DispSeg3[3] ; 4.261 ; 4.266 ; 4.266 ; 4.261 ;
+; switches[3] ; DispSeg3[4] ; 4.052 ; 4.450 ; 4.450 ; 4.052 ;
+; switches[3] ; DispSeg3[5] ; 4.206 ; 4.626 ; 4.626 ; 4.206 ;
+; switches[3] ; DispSeg3[6] ;       ; 3.797 ; 3.797 ;       ;
+; switches[4] ; DispSeg1[0] ; 6.001 ; 6.068 ; 6.068 ; 6.001 ;
+; switches[4] ; DispSeg1[1] ; 5.994 ; 5.994 ; 5.994 ; 5.994 ;
+; switches[4] ; DispSeg1[2] ; 5.979 ; 5.979 ; 5.979 ; 5.979 ;
+; switches[4] ; DispSeg1[3] ; 5.882 ; 5.951 ; 5.951 ; 5.882 ;
+; switches[4] ; DispSeg1[4] ; 5.878 ; 5.878 ; 5.878 ; 5.878 ;
+; switches[4] ; DispSeg1[5] ; 5.871 ; 5.940 ; 5.940 ; 5.871 ;
+; switches[4] ; DispSeg1[6] ; 5.883 ; 5.952 ; 5.952 ; 5.883 ;
+; switches[4] ; DispSeg2[0] ; 4.959 ; 4.959 ; 4.959 ; 4.959 ;
+; switches[4] ; DispSeg2[1] ; 4.962 ; 4.962 ; 4.962 ; 4.962 ;
+; switches[4] ; DispSeg2[2] ; 5.245 ; 4.830 ; 4.830 ; 5.245 ;
+; switches[4] ; DispSeg2[3] ; 4.799 ; 4.799 ; 4.799 ; 4.799 ;
+; switches[4] ; DispSeg2[4] ; 4.814 ; 5.229 ; 5.229 ; 4.814 ;
+; switches[4] ; DispSeg2[5] ; 4.863 ; 5.190 ; 5.190 ; 4.863 ;
+; switches[4] ; DispSeg2[6] ; 4.821 ; 5.150 ; 5.150 ; 4.821 ;
+; switches[4] ; DispSeg3[0] ; 4.475 ; 4.341 ; 4.341 ; 4.475 ;
+; switches[4] ; DispSeg3[2] ; 4.197 ; 4.339 ; 4.339 ; 4.197 ;
+; switches[4] ; DispSeg3[3] ; 4.364 ; 4.230 ; 4.230 ; 4.364 ;
+; switches[4] ; DispSeg3[4] ; 4.155 ; 4.311 ; 4.311 ; 4.155 ;
+; switches[4] ; DispSeg3[5] ; 4.170 ; 4.487 ; 4.487 ; 4.170 ;
+; switches[4] ; DispSeg3[6] ;       ; 3.761 ; 3.761 ;       ;
+; switches[5] ; DispSeg1[0] ; 6.214 ; 6.296 ; 6.296 ; 6.214 ;
+; switches[5] ; DispSeg1[1] ; 6.222 ; 6.222 ; 6.222 ; 6.222 ;
+; switches[5] ; DispSeg1[2] ; 6.207 ; 6.207 ; 6.207 ; 6.207 ;
+; switches[5] ; DispSeg1[3] ; 6.095 ; 6.179 ; 6.179 ; 6.095 ;
+; switches[5] ; DispSeg1[4] ; 6.106 ; 6.106 ; 6.106 ; 6.106 ;
+; switches[5] ; DispSeg1[5] ; 6.084 ; 6.168 ; 6.168 ; 6.084 ;
+; switches[5] ; DispSeg1[6] ; 6.096 ; 6.180 ; 6.180 ; 6.096 ;
+; switches[5] ; DispSeg2[0] ; 5.564 ; 5.564 ; 5.564 ; 5.564 ;
+; switches[5] ; DispSeg2[1] ; 5.595 ; 5.659 ; 5.659 ; 5.595 ;
+; switches[5] ; DispSeg2[2] ; 5.337 ; 5.337 ; 5.337 ; 5.337 ;
+; switches[5] ; DispSeg2[3] ; 5.412 ; 5.412 ; 5.412 ; 5.412 ;
+; switches[5] ; DispSeg2[4] ; 5.337 ; 5.337 ; 5.337 ; 5.337 ;
+; switches[5] ; DispSeg2[5] ; 5.559 ; 5.470 ; 5.470 ; 5.559 ;
+; switches[5] ; DispSeg2[6] ; 5.430 ; 5.430 ; 5.430 ; 5.430 ;
+; switches[5] ; DispSeg3[0] ; 4.416 ; 4.531 ; 4.531 ; 4.416 ;
+; switches[5] ; DispSeg3[2] ; 4.387 ; 4.280 ; 4.280 ; 4.387 ;
+; switches[5] ; DispSeg3[3] ; 4.305 ; 4.420 ; 4.420 ; 4.305 ;
+; switches[5] ; DispSeg3[4] ; 4.096 ; 4.608 ; 4.608 ; 4.096 ;
+; switches[5] ; DispSeg3[5] ; 4.272 ; 4.784 ; 4.784 ; 4.272 ;
+; switches[5] ; DispSeg3[6] ;       ; 3.951 ; 3.951 ;       ;
+; switches[6] ; DispSeg1[0] ; 6.222 ; 6.222 ; 6.222 ; 6.222 ;
+; switches[6] ; DispSeg1[1] ; 6.148 ; 6.148 ; 6.148 ; 6.148 ;
+; switches[6] ; DispSeg1[2] ; 6.133 ; 6.133 ; 6.133 ; 6.133 ;
+; switches[6] ; DispSeg1[3] ; 6.105 ; 6.105 ; 6.105 ; 6.105 ;
+; switches[6] ; DispSeg1[4] ; 6.032 ; 6.032 ; 6.032 ; 6.032 ;
+; switches[6] ; DispSeg1[5] ; 6.094 ; 6.094 ; 6.094 ; 6.094 ;
+; switches[6] ; DispSeg1[6] ; 6.106 ; 6.106 ; 6.106 ; 6.106 ;
+; switches[6] ; DispSeg2[0] ; 5.281 ; 5.281 ; 5.281 ; 5.281 ;
+; switches[6] ; DispSeg2[1] ; 5.312 ; 5.356 ; 5.356 ; 5.312 ;
+; switches[6] ; DispSeg2[2] ; 5.034 ; 5.034 ; 5.034 ; 5.034 ;
+; switches[6] ; DispSeg2[3] ; 5.129 ; 5.129 ; 5.129 ; 5.129 ;
+; switches[6] ; DispSeg2[4] ; 5.034 ; 5.034 ; 5.034 ; 5.034 ;
+; switches[6] ; DispSeg2[5] ; 5.256 ; 5.187 ; 5.187 ; 5.256 ;
+; switches[6] ; DispSeg2[6] ; 5.147 ; 5.147 ; 5.147 ; 5.147 ;
+; switches[6] ; DispSeg3[0] ; 4.369 ; 4.243 ; 4.243 ; 4.369 ;
+; switches[6] ; DispSeg3[2] ; 4.099 ; 4.233 ; 4.233 ; 4.099 ;
+; switches[6] ; DispSeg3[3] ; 4.258 ; 4.132 ; 4.132 ; 4.258 ;
+; switches[6] ; DispSeg3[4] ; 4.049 ; 4.320 ; 4.320 ; 4.049 ;
+; switches[6] ; DispSeg3[5] ; 4.072 ; 4.496 ; 4.496 ; 4.072 ;
+; switches[6] ; DispSeg3[6] ;       ; 3.663 ; 3.663 ;       ;
+; switches[7] ; DispSeg1[0] ; 6.438 ; 6.493 ; 6.493 ; 6.438 ;
+; switches[7] ; DispSeg1[1] ; 6.419 ; 6.419 ; 6.419 ; 6.419 ;
+; switches[7] ; DispSeg1[2] ; 6.404 ; 6.404 ; 6.404 ; 6.404 ;
+; switches[7] ; DispSeg1[3] ; 6.319 ; 6.376 ; 6.376 ; 6.319 ;
+; switches[7] ; DispSeg1[4] ; 6.303 ; 6.303 ; 6.303 ; 6.303 ;
+; switches[7] ; DispSeg1[5] ; 6.308 ; 6.365 ; 6.365 ; 6.308 ;
+; switches[7] ; DispSeg1[6] ; 6.320 ; 6.377 ; 6.377 ; 6.320 ;
+; switches[7] ; DispSeg2[0] ; 5.663 ; 5.663 ; 5.663 ; 5.663 ;
+; switches[7] ; DispSeg2[1] ; 5.671 ; 5.671 ; 5.671 ; 5.671 ;
+; switches[7] ; DispSeg2[2] ; 5.349 ; 5.349 ; 5.349 ; 5.349 ;
+; switches[7] ; DispSeg2[3] ; 5.512 ; 5.512 ; 5.512 ; 5.512 ;
+; switches[7] ; DispSeg2[4] ; 5.349 ; 5.349 ; 5.349 ; 5.349 ;
+; switches[7] ; DispSeg2[5] ; 5.571 ; 5.571 ; 5.571 ; 5.571 ;
+; switches[7] ; DispSeg2[6] ; 5.533 ; 5.533 ; 5.533 ; 5.533 ;
+; switches[7] ; DispSeg3[0] ; 4.716 ; 4.585 ; 4.585 ; 4.716 ;
+; switches[7] ; DispSeg3[2] ; 4.441 ; 4.580 ; 4.580 ; 4.441 ;
+; switches[7] ; DispSeg3[3] ; 4.605 ; 4.474 ; 4.474 ; 4.605 ;
+; switches[7] ; DispSeg3[4] ; 4.396 ; 4.559 ; 4.559 ; 4.396 ;
+; switches[7] ; DispSeg3[5] ; 4.414 ; 4.735 ; 4.735 ; 4.414 ;
+; switches[7] ; DispSeg3[6] ;       ; 4.005 ; 4.005 ;       ;
++-------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------+
+; Progagation Delay                                             ;
++-------------+-------------+--------+--------+--------+--------+
+; Input Port  ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++-------------+-------------+--------+--------+--------+--------+
+; switches[0] ; DispSeg1[0] ; 6.995  ; 6.995  ; 6.995  ; 6.995  ;
+; switches[0] ; DispSeg1[1] ; 7.128  ; 7.128  ; 7.128  ; 7.128  ;
+; switches[0] ; DispSeg1[2] ;        ; 7.103  ; 7.103  ;        ;
+; switches[0] ; DispSeg1[3] ; 6.738  ; 6.738  ; 6.738  ; 6.738  ;
+; switches[0] ; DispSeg1[4] ; 6.919  ;        ;        ; 6.919  ;
+; switches[0] ; DispSeg1[5] ; 6.726  ;        ;        ; 6.726  ;
+; switches[0] ; DispSeg1[6] ; 6.746  ;        ;        ; 6.746  ;
+; switches[1] ; DispSeg1[0] ; 12.183 ; 12.183 ; 12.183 ; 12.183 ;
+; switches[1] ; DispSeg1[1] ; 12.142 ; 12.142 ; 12.142 ; 12.142 ;
+; switches[1] ; DispSeg1[2] ; 12.157 ; 12.157 ; 12.157 ; 12.157 ;
+; switches[1] ; DispSeg1[3] ; 11.925 ; 11.925 ; 11.925 ; 11.925 ;
+; switches[1] ; DispSeg1[4] ; 11.934 ; 11.934 ; 11.934 ; 11.934 ;
+; switches[1] ; DispSeg1[5] ; 11.914 ; 11.914 ; 11.914 ; 11.914 ;
+; switches[1] ; DispSeg1[6] ; 11.934 ; 11.934 ; 11.934 ; 11.934 ;
+; switches[1] ; DispSeg2[0] ; 10.183 ; 10.183 ; 10.183 ; 10.183 ;
+; switches[1] ; DispSeg2[1] ; 10.167 ; 10.167 ; 10.167 ; 10.167 ;
+; switches[1] ; DispSeg2[2] ;        ; 10.014 ; 10.014 ;        ;
+; switches[1] ; DispSeg2[3] ; 9.968  ; 9.968  ; 9.968  ; 9.968  ;
+; switches[1] ; DispSeg2[4] ; 9.990  ;        ;        ; 9.990  ;
+; switches[1] ; DispSeg2[5] ; 10.113 ;        ;        ; 10.113 ;
+; switches[1] ; DispSeg2[6] ; 9.996  ;        ;        ; 9.996  ;
+; switches[2] ; DispSeg1[0] ; 15.633 ; 15.633 ; 15.633 ; 15.633 ;
+; switches[2] ; DispSeg1[1] ; 15.592 ; 15.592 ; 15.592 ; 15.592 ;
+; switches[2] ; DispSeg1[2] ; 15.607 ; 15.607 ; 15.607 ; 15.607 ;
+; switches[2] ; DispSeg1[3] ; 15.375 ; 15.375 ; 15.375 ; 15.375 ;
+; switches[2] ; DispSeg1[4] ; 15.384 ; 15.384 ; 15.384 ; 15.384 ;
+; switches[2] ; DispSeg1[5] ; 15.364 ; 15.364 ; 15.364 ; 15.364 ;
+; switches[2] ; DispSeg1[6] ; 15.384 ; 15.384 ; 15.384 ; 15.384 ;
+; switches[2] ; DispSeg2[0] ; 13.058 ; 13.058 ; 13.058 ; 13.058 ;
+; switches[2] ; DispSeg2[1] ; 13.068 ; 13.068 ; 13.068 ; 13.068 ;
+; switches[2] ; DispSeg2[2] ; 12.471 ; 12.471 ; 12.471 ; 12.471 ;
+; switches[2] ; DispSeg2[3] ; 12.847 ; 12.847 ; 12.847 ; 12.847 ;
+; switches[2] ; DispSeg2[4] ; 12.543 ; 12.543 ; 12.543 ; 12.543 ;
+; switches[2] ; DispSeg2[5] ; 13.016 ; 13.016 ; 13.016 ; 13.016 ;
+; switches[2] ; DispSeg2[6] ; 12.870 ; 12.870 ; 12.870 ; 12.870 ;
+; switches[2] ; DispSeg3[0] ; 9.408  ;        ;        ; 9.408  ;
+; switches[2] ; DispSeg3[2] ;        ; 9.112  ; 9.112  ;        ;
+; switches[2] ; DispSeg3[3] ; 9.142  ;        ;        ; 9.142  ;
+; switches[2] ; DispSeg3[4] ; 8.693  ;        ;        ; 8.693  ;
+; switches[2] ; DispSeg3[5] ; 9.080  ;        ;        ; 9.080  ;
+; switches[3] ; DispSeg1[0] ; 18.168 ; 18.168 ; 18.168 ; 18.168 ;
+; switches[3] ; DispSeg1[1] ; 18.127 ; 18.127 ; 18.127 ; 18.127 ;
+; switches[3] ; DispSeg1[2] ; 18.142 ; 18.142 ; 18.142 ; 18.142 ;
+; switches[3] ; DispSeg1[3] ; 17.910 ; 17.910 ; 17.910 ; 17.910 ;
+; switches[3] ; DispSeg1[4] ; 17.919 ; 17.919 ; 17.919 ; 17.919 ;
+; switches[3] ; DispSeg1[5] ; 17.899 ; 17.899 ; 17.899 ; 17.899 ;
+; switches[3] ; DispSeg1[6] ; 17.919 ; 17.919 ; 17.919 ; 17.919 ;
+; switches[3] ; DispSeg2[0] ; 15.430 ; 15.430 ; 15.430 ; 15.430 ;
+; switches[3] ; DispSeg2[1] ; 15.440 ; 15.440 ; 15.440 ; 15.440 ;
+; switches[3] ; DispSeg2[2] ; 14.843 ; 14.843 ; 14.843 ; 14.843 ;
+; switches[3] ; DispSeg2[3] ; 15.219 ; 15.219 ; 15.219 ; 15.219 ;
+; switches[3] ; DispSeg2[4] ; 14.915 ; 14.915 ; 14.915 ; 14.915 ;
+; switches[3] ; DispSeg2[5] ; 15.388 ; 15.388 ; 15.388 ; 15.388 ;
+; switches[3] ; DispSeg2[6] ; 15.242 ; 15.242 ; 15.242 ; 15.242 ;
+; switches[3] ; DispSeg3[0] ; 11.007 ; 10.581 ; 10.581 ; 11.007 ;
+; switches[3] ; DispSeg3[2] ; 10.285 ; 10.711 ; 10.711 ; 10.285 ;
+; switches[3] ; DispSeg3[3] ; 10.741 ; 10.315 ; 10.315 ; 10.741 ;
+; switches[3] ; DispSeg3[4] ; 10.292 ; 9.866  ; 9.866  ; 10.292 ;
+; switches[3] ; DispSeg3[5] ; 10.679 ; 10.253 ; 10.253 ; 10.679 ;
+; switches[3] ; DispSeg3[6] ;        ; 7.538  ; 7.538  ;        ;
+; switches[4] ; DispSeg1[0] ; 20.978 ; 20.978 ; 20.978 ; 20.978 ;
+; switches[4] ; DispSeg1[1] ; 20.937 ; 20.937 ; 20.937 ; 20.937 ;
+; switches[4] ; DispSeg1[2] ; 20.952 ; 20.952 ; 20.952 ; 20.952 ;
+; switches[4] ; DispSeg1[3] ; 20.720 ; 20.720 ; 20.720 ; 20.720 ;
+; switches[4] ; DispSeg1[4] ; 20.729 ; 20.729 ; 20.729 ; 20.729 ;
+; switches[4] ; DispSeg1[5] ; 20.709 ; 20.709 ; 20.709 ; 20.709 ;
+; switches[4] ; DispSeg1[6] ; 20.729 ; 20.729 ; 20.729 ; 20.729 ;
+; switches[4] ; DispSeg2[0] ; 17.635 ; 17.635 ; 17.635 ; 17.635 ;
+; switches[4] ; DispSeg2[1] ; 17.645 ; 17.645 ; 17.645 ; 17.645 ;
+; switches[4] ; DispSeg2[2] ; 17.048 ; 17.048 ; 17.048 ; 17.048 ;
+; switches[4] ; DispSeg2[3] ; 17.424 ; 17.424 ; 17.424 ; 17.424 ;
+; switches[4] ; DispSeg2[4] ; 17.120 ; 17.120 ; 17.120 ; 17.120 ;
+; switches[4] ; DispSeg2[5] ; 17.593 ; 17.593 ; 17.593 ; 17.593 ;
+; switches[4] ; DispSeg2[6] ; 17.447 ; 17.447 ; 17.447 ; 17.447 ;
+; switches[4] ; DispSeg3[0] ; 10.896 ; 10.470 ; 10.470 ; 10.896 ;
+; switches[4] ; DispSeg3[2] ; 10.174 ; 10.600 ; 10.600 ; 10.174 ;
+; switches[4] ; DispSeg3[3] ; 10.630 ; 10.204 ; 10.204 ; 10.630 ;
+; switches[4] ; DispSeg3[4] ; 10.181 ; 9.755  ; 9.755  ; 10.181 ;
+; switches[4] ; DispSeg3[5] ; 10.568 ; 10.142 ; 10.142 ; 10.568 ;
+; switches[4] ; DispSeg3[6] ;        ; 7.427  ; 7.427  ;        ;
+; switches[5] ; DispSeg1[0] ; 22.467 ; 22.467 ; 22.467 ; 22.467 ;
+; switches[5] ; DispSeg1[1] ; 22.426 ; 22.426 ; 22.426 ; 22.426 ;
+; switches[5] ; DispSeg1[2] ; 22.441 ; 22.441 ; 22.441 ; 22.441 ;
+; switches[5] ; DispSeg1[3] ; 22.209 ; 22.209 ; 22.209 ; 22.209 ;
+; switches[5] ; DispSeg1[4] ; 22.218 ; 22.218 ; 22.218 ; 22.218 ;
+; switches[5] ; DispSeg1[5] ; 22.198 ; 22.198 ; 22.198 ; 22.198 ;
+; switches[5] ; DispSeg1[6] ; 22.218 ; 22.218 ; 22.218 ; 22.218 ;
+; switches[5] ; DispSeg2[0] ; 19.524 ; 19.524 ; 19.524 ; 19.524 ;
+; switches[5] ; DispSeg2[1] ; 19.534 ; 19.534 ; 19.534 ; 19.534 ;
+; switches[5] ; DispSeg2[2] ; 18.937 ; 18.937 ; 18.937 ; 18.937 ;
+; switches[5] ; DispSeg2[3] ; 19.313 ; 19.313 ; 19.313 ; 19.313 ;
+; switches[5] ; DispSeg2[4] ; 19.009 ; 19.009 ; 19.009 ; 19.009 ;
+; switches[5] ; DispSeg2[5] ; 19.482 ; 19.482 ; 19.482 ; 19.482 ;
+; switches[5] ; DispSeg2[6] ; 19.336 ; 19.336 ; 19.336 ; 19.336 ;
+; switches[5] ; DispSeg3[0] ; 11.370 ; 10.944 ; 10.944 ; 11.370 ;
+; switches[5] ; DispSeg3[2] ; 10.648 ; 11.074 ; 11.074 ; 10.648 ;
+; switches[5] ; DispSeg3[3] ; 11.104 ; 10.678 ; 10.678 ; 11.104 ;
+; switches[5] ; DispSeg3[4] ; 10.655 ; 10.229 ; 10.229 ; 10.655 ;
+; switches[5] ; DispSeg3[5] ; 11.042 ; 10.616 ; 10.616 ; 11.042 ;
+; switches[5] ; DispSeg3[6] ;        ; 7.901  ; 7.901  ;        ;
+; switches[6] ; DispSeg1[0] ; 22.176 ; 22.176 ; 22.176 ; 22.176 ;
+; switches[6] ; DispSeg1[1] ; 22.135 ; 22.135 ; 22.135 ; 22.135 ;
+; switches[6] ; DispSeg1[2] ; 22.150 ; 22.150 ; 22.150 ; 22.150 ;
+; switches[6] ; DispSeg1[3] ; 21.918 ; 21.918 ; 21.918 ; 21.918 ;
+; switches[6] ; DispSeg1[4] ; 21.927 ; 21.927 ; 21.927 ; 21.927 ;
+; switches[6] ; DispSeg1[5] ; 21.907 ; 21.907 ; 21.907 ; 21.907 ;
+; switches[6] ; DispSeg1[6] ; 21.927 ; 21.927 ; 21.927 ; 21.927 ;
+; switches[6] ; DispSeg2[0] ; 18.830 ; 18.830 ; 18.830 ; 18.830 ;
+; switches[6] ; DispSeg2[1] ; 18.840 ; 18.840 ; 18.840 ; 18.840 ;
+; switches[6] ; DispSeg2[2] ; 18.243 ; 18.243 ; 18.243 ; 18.243 ;
+; switches[6] ; DispSeg2[3] ; 18.619 ; 18.619 ; 18.619 ; 18.619 ;
+; switches[6] ; DispSeg2[4] ; 18.315 ; 18.315 ; 18.315 ; 18.315 ;
+; switches[6] ; DispSeg2[5] ; 18.788 ; 18.788 ; 18.788 ; 18.788 ;
+; switches[6] ; DispSeg2[6] ; 18.642 ; 18.642 ; 18.642 ; 18.642 ;
+; switches[6] ; DispSeg3[0] ; 10.742 ; 10.316 ; 10.316 ; 10.742 ;
+; switches[6] ; DispSeg3[2] ; 10.020 ; 10.446 ; 10.446 ; 10.020 ;
+; switches[6] ; DispSeg3[3] ; 10.476 ; 10.050 ; 10.050 ; 10.476 ;
+; switches[6] ; DispSeg3[4] ; 10.027 ; 9.601  ; 9.601  ; 10.027 ;
+; switches[6] ; DispSeg3[5] ; 10.414 ; 9.988  ; 9.988  ; 10.414 ;
+; switches[6] ; DispSeg3[6] ;        ; 7.273  ; 7.273  ;        ;
+; switches[7] ; DispSeg1[0] ; 22.675 ; 22.675 ; 22.675 ; 22.675 ;
+; switches[7] ; DispSeg1[1] ; 22.634 ; 22.634 ; 22.634 ; 22.634 ;
+; switches[7] ; DispSeg1[2] ; 22.649 ; 22.649 ; 22.649 ; 22.649 ;
+; switches[7] ; DispSeg1[3] ; 22.417 ; 22.417 ; 22.417 ; 22.417 ;
+; switches[7] ; DispSeg1[4] ; 22.426 ; 22.426 ; 22.426 ; 22.426 ;
+; switches[7] ; DispSeg1[5] ; 22.406 ; 22.406 ; 22.406 ; 22.406 ;
+; switches[7] ; DispSeg1[6] ; 22.426 ; 22.426 ; 22.426 ; 22.426 ;
+; switches[7] ; DispSeg2[0] ; 19.333 ; 19.333 ; 19.333 ; 19.333 ;
+; switches[7] ; DispSeg2[1] ; 19.343 ; 19.343 ; 19.343 ; 19.343 ;
+; switches[7] ; DispSeg2[2] ; 18.746 ; 18.746 ; 18.746 ; 18.746 ;
+; switches[7] ; DispSeg2[3] ; 19.122 ; 19.122 ; 19.122 ; 19.122 ;
+; switches[7] ; DispSeg2[4] ; 18.818 ; 18.818 ; 18.818 ; 18.818 ;
+; switches[7] ; DispSeg2[5] ; 19.291 ; 19.291 ; 19.291 ; 19.291 ;
+; switches[7] ; DispSeg2[6] ; 19.145 ; 19.145 ; 19.145 ; 19.145 ;
+; switches[7] ; DispSeg3[0] ; 11.269 ; 10.843 ; 10.843 ; 11.269 ;
+; switches[7] ; DispSeg3[2] ; 10.547 ; 10.973 ; 10.973 ; 10.547 ;
+; switches[7] ; DispSeg3[3] ; 11.003 ; 10.577 ; 10.577 ; 11.003 ;
+; switches[7] ; DispSeg3[4] ; 10.554 ; 10.128 ; 10.128 ; 10.554 ;
+; switches[7] ; DispSeg3[5] ; 10.941 ; 10.515 ; 10.515 ; 10.941 ;
+; switches[7] ; DispSeg3[6] ;        ; 7.800  ; 7.800  ;        ;
++-------------+-------------+--------+--------+--------+--------+
+
+
++-----------------------------------------------------------+
+; Minimum Progagation Delay                                 ;
++-------------+-------------+-------+-------+-------+-------+
+; Input Port  ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++-------------+-------------+-------+-------+-------+-------+
+; switches[0] ; DispSeg1[0] ; 3.693 ; 3.693 ; 3.693 ; 3.693 ;
+; switches[0] ; DispSeg1[1] ; 3.733 ; 3.733 ; 3.733 ; 3.733 ;
+; switches[0] ; DispSeg1[2] ;       ; 3.746 ; 3.746 ;       ;
+; switches[0] ; DispSeg1[3] ; 3.568 ; 3.568 ; 3.568 ; 3.568 ;
+; switches[0] ; DispSeg1[4] ; 3.658 ;       ;       ; 3.658 ;
+; switches[0] ; DispSeg1[5] ; 3.553 ;       ;       ; 3.553 ;
+; switches[0] ; DispSeg1[6] ; 3.567 ;       ;       ; 3.567 ;
+; switches[1] ; DispSeg1[0] ; 5.173 ; 5.024 ; 5.024 ; 5.173 ;
+; switches[1] ; DispSeg1[1] ; 4.988 ; 4.988 ; 4.988 ; 4.988 ;
+; switches[1] ; DispSeg1[2] ; 5.000 ; 5.084 ; 5.084 ; 5.000 ;
+; switches[1] ; DispSeg1[3] ; 4.900 ; 4.900 ; 4.900 ; 4.900 ;
+; switches[1] ; DispSeg1[4] ; 4.983 ; 4.905 ; 4.905 ; 4.983 ;
+; switches[1] ; DispSeg1[5] ; 4.887 ; 5.046 ; 5.046 ; 4.887 ;
+; switches[1] ; DispSeg1[6] ; 4.901 ; 4.901 ; 4.901 ; 4.901 ;
+; switches[1] ; DispSeg2[0] ; 4.953 ; 4.953 ; 4.953 ; 4.953 ;
+; switches[1] ; DispSeg2[1] ; 4.956 ; 4.956 ; 4.956 ; 4.956 ;
+; switches[1] ; DispSeg2[2] ;       ; 4.824 ; 4.824 ;       ;
+; switches[1] ; DispSeg2[3] ; 4.793 ; 4.793 ; 4.793 ; 4.793 ;
+; switches[1] ; DispSeg2[4] ; 4.808 ;       ;       ; 4.808 ;
+; switches[1] ; DispSeg2[5] ; 4.857 ;       ;       ; 4.857 ;
+; switches[1] ; DispSeg2[6] ; 4.815 ;       ;       ; 4.815 ;
+; switches[2] ; DispSeg1[0] ; 4.859 ; 4.859 ; 4.859 ; 4.859 ;
+; switches[2] ; DispSeg1[1] ; 4.785 ; 5.114 ; 5.114 ; 4.785 ;
+; switches[2] ; DispSeg1[2] ; 5.099 ; 4.770 ; 4.770 ; 5.099 ;
+; switches[2] ; DispSeg1[3] ; 4.747 ; 4.747 ; 4.747 ; 4.747 ;
+; switches[2] ; DispSeg1[4] ; 4.669 ; 4.998 ; 4.998 ; 4.669 ;
+; switches[2] ; DispSeg1[5] ; 5.061 ; 4.732 ; 4.732 ; 5.061 ;
+; switches[2] ; DispSeg1[6] ; 4.744 ; 4.744 ; 4.744 ; 4.744 ;
+; switches[2] ; DispSeg2[0] ; 4.763 ; 4.763 ; 4.763 ; 4.763 ;
+; switches[2] ; DispSeg2[1] ; 4.766 ; 4.766 ; 4.766 ; 4.766 ;
+; switches[2] ; DispSeg2[2] ; 5.078 ; 4.634 ; 4.634 ; 5.078 ;
+; switches[2] ; DispSeg2[3] ; 4.603 ; 4.603 ; 4.603 ; 4.603 ;
+; switches[2] ; DispSeg2[4] ; 4.618 ; 5.062 ; 5.062 ; 4.618 ;
+; switches[2] ; DispSeg2[5] ; 4.667 ; 5.111 ; 5.111 ; 4.667 ;
+; switches[2] ; DispSeg2[6] ; 4.625 ; 5.069 ; 5.069 ; 4.625 ;
+; switches[2] ; DispSeg3[0] ; 4.403 ;       ;       ; 4.403 ;
+; switches[2] ; DispSeg3[2] ;       ; 4.267 ; 4.267 ;       ;
+; switches[2] ; DispSeg3[3] ; 4.292 ;       ;       ; 4.292 ;
+; switches[2] ; DispSeg3[4] ; 4.083 ;       ;       ; 4.083 ;
+; switches[2] ; DispSeg3[5] ; 4.259 ;       ;       ; 4.259 ;
+; switches[3] ; DispSeg1[0] ; 5.668 ; 5.210 ; 5.210 ; 5.668 ;
+; switches[3] ; DispSeg1[1] ; 5.760 ; 5.760 ; 5.760 ; 5.760 ;
+; switches[3] ; DispSeg1[2] ; 5.745 ; 5.745 ; 5.745 ; 5.745 ;
+; switches[3] ; DispSeg1[3] ; 5.549 ; 5.091 ; 5.091 ; 5.549 ;
+; switches[3] ; DispSeg1[4] ; 5.644 ; 5.644 ; 5.644 ; 5.644 ;
+; switches[3] ; DispSeg1[5] ; 5.538 ; 5.080 ; 5.080 ; 5.538 ;
+; switches[3] ; DispSeg1[6] ; 5.550 ; 5.092 ; 5.092 ; 5.550 ;
+; switches[3] ; DispSeg2[0] ; 4.583 ; 4.583 ; 4.583 ; 4.583 ;
+; switches[3] ; DispSeg2[1] ; 4.586 ; 4.586 ; 4.586 ; 4.586 ;
+; switches[3] ; DispSeg2[2] ; 4.977 ; 4.454 ; 4.454 ; 4.977 ;
+; switches[3] ; DispSeg2[3] ; 4.423 ; 4.423 ; 4.423 ; 4.423 ;
+; switches[3] ; DispSeg2[4] ; 4.438 ; 4.974 ; 4.974 ; 4.438 ;
+; switches[3] ; DispSeg2[5] ; 4.487 ; 5.124 ; 5.124 ; 4.487 ;
+; switches[3] ; DispSeg2[6] ; 4.445 ; 5.053 ; 5.053 ; 4.445 ;
+; switches[3] ; DispSeg3[0] ; 4.372 ; 4.377 ; 4.377 ; 4.372 ;
+; switches[3] ; DispSeg3[2] ; 4.233 ; 4.236 ; 4.236 ; 4.233 ;
+; switches[3] ; DispSeg3[3] ; 4.261 ; 4.266 ; 4.266 ; 4.261 ;
+; switches[3] ; DispSeg3[4] ; 4.052 ; 4.450 ; 4.450 ; 4.052 ;
+; switches[3] ; DispSeg3[5] ; 4.206 ; 4.626 ; 4.626 ; 4.206 ;
+; switches[3] ; DispSeg3[6] ;       ; 3.797 ; 3.797 ;       ;
+; switches[4] ; DispSeg1[0] ; 6.001 ; 6.068 ; 6.068 ; 6.001 ;
+; switches[4] ; DispSeg1[1] ; 5.994 ; 5.994 ; 5.994 ; 5.994 ;
+; switches[4] ; DispSeg1[2] ; 5.979 ; 5.979 ; 5.979 ; 5.979 ;
+; switches[4] ; DispSeg1[3] ; 5.882 ; 5.951 ; 5.951 ; 5.882 ;
+; switches[4] ; DispSeg1[4] ; 5.878 ; 5.878 ; 5.878 ; 5.878 ;
+; switches[4] ; DispSeg1[5] ; 5.871 ; 5.940 ; 5.940 ; 5.871 ;
+; switches[4] ; DispSeg1[6] ; 5.883 ; 5.952 ; 5.952 ; 5.883 ;
+; switches[4] ; DispSeg2[0] ; 4.959 ; 4.959 ; 4.959 ; 4.959 ;
+; switches[4] ; DispSeg2[1] ; 4.962 ; 4.962 ; 4.962 ; 4.962 ;
+; switches[4] ; DispSeg2[2] ; 5.245 ; 4.830 ; 4.830 ; 5.245 ;
+; switches[4] ; DispSeg2[3] ; 4.799 ; 4.799 ; 4.799 ; 4.799 ;
+; switches[4] ; DispSeg2[4] ; 4.814 ; 5.229 ; 5.229 ; 4.814 ;
+; switches[4] ; DispSeg2[5] ; 4.863 ; 5.190 ; 5.190 ; 4.863 ;
+; switches[4] ; DispSeg2[6] ; 4.821 ; 5.150 ; 5.150 ; 4.821 ;
+; switches[4] ; DispSeg3[0] ; 4.475 ; 4.341 ; 4.341 ; 4.475 ;
+; switches[4] ; DispSeg3[2] ; 4.197 ; 4.339 ; 4.339 ; 4.197 ;
+; switches[4] ; DispSeg3[3] ; 4.364 ; 4.230 ; 4.230 ; 4.364 ;
+; switches[4] ; DispSeg3[4] ; 4.155 ; 4.311 ; 4.311 ; 4.155 ;
+; switches[4] ; DispSeg3[5] ; 4.170 ; 4.487 ; 4.487 ; 4.170 ;
+; switches[4] ; DispSeg3[6] ;       ; 3.761 ; 3.761 ;       ;
+; switches[5] ; DispSeg1[0] ; 6.214 ; 6.296 ; 6.296 ; 6.214 ;
+; switches[5] ; DispSeg1[1] ; 6.222 ; 6.222 ; 6.222 ; 6.222 ;
+; switches[5] ; DispSeg1[2] ; 6.207 ; 6.207 ; 6.207 ; 6.207 ;
+; switches[5] ; DispSeg1[3] ; 6.095 ; 6.179 ; 6.179 ; 6.095 ;
+; switches[5] ; DispSeg1[4] ; 6.106 ; 6.106 ; 6.106 ; 6.106 ;
+; switches[5] ; DispSeg1[5] ; 6.084 ; 6.168 ; 6.168 ; 6.084 ;
+; switches[5] ; DispSeg1[6] ; 6.096 ; 6.180 ; 6.180 ; 6.096 ;
+; switches[5] ; DispSeg2[0] ; 5.564 ; 5.564 ; 5.564 ; 5.564 ;
+; switches[5] ; DispSeg2[1] ; 5.595 ; 5.659 ; 5.659 ; 5.595 ;
+; switches[5] ; DispSeg2[2] ; 5.337 ; 5.337 ; 5.337 ; 5.337 ;
+; switches[5] ; DispSeg2[3] ; 5.412 ; 5.412 ; 5.412 ; 5.412 ;
+; switches[5] ; DispSeg2[4] ; 5.337 ; 5.337 ; 5.337 ; 5.337 ;
+; switches[5] ; DispSeg2[5] ; 5.559 ; 5.470 ; 5.470 ; 5.559 ;
+; switches[5] ; DispSeg2[6] ; 5.430 ; 5.430 ; 5.430 ; 5.430 ;
+; switches[5] ; DispSeg3[0] ; 4.416 ; 4.531 ; 4.531 ; 4.416 ;
+; switches[5] ; DispSeg3[2] ; 4.387 ; 4.280 ; 4.280 ; 4.387 ;
+; switches[5] ; DispSeg3[3] ; 4.305 ; 4.420 ; 4.420 ; 4.305 ;
+; switches[5] ; DispSeg3[4] ; 4.096 ; 4.608 ; 4.608 ; 4.096 ;
+; switches[5] ; DispSeg3[5] ; 4.272 ; 4.784 ; 4.784 ; 4.272 ;
+; switches[5] ; DispSeg3[6] ;       ; 3.951 ; 3.951 ;       ;
+; switches[6] ; DispSeg1[0] ; 6.222 ; 6.222 ; 6.222 ; 6.222 ;
+; switches[6] ; DispSeg1[1] ; 6.148 ; 6.148 ; 6.148 ; 6.148 ;
+; switches[6] ; DispSeg1[2] ; 6.133 ; 6.133 ; 6.133 ; 6.133 ;
+; switches[6] ; DispSeg1[3] ; 6.105 ; 6.105 ; 6.105 ; 6.105 ;
+; switches[6] ; DispSeg1[4] ; 6.032 ; 6.032 ; 6.032 ; 6.032 ;
+; switches[6] ; DispSeg1[5] ; 6.094 ; 6.094 ; 6.094 ; 6.094 ;
+; switches[6] ; DispSeg1[6] ; 6.106 ; 6.106 ; 6.106 ; 6.106 ;
+; switches[6] ; DispSeg2[0] ; 5.281 ; 5.281 ; 5.281 ; 5.281 ;
+; switches[6] ; DispSeg2[1] ; 5.312 ; 5.356 ; 5.356 ; 5.312 ;
+; switches[6] ; DispSeg2[2] ; 5.034 ; 5.034 ; 5.034 ; 5.034 ;
+; switches[6] ; DispSeg2[3] ; 5.129 ; 5.129 ; 5.129 ; 5.129 ;
+; switches[6] ; DispSeg2[4] ; 5.034 ; 5.034 ; 5.034 ; 5.034 ;
+; switches[6] ; DispSeg2[5] ; 5.256 ; 5.187 ; 5.187 ; 5.256 ;
+; switches[6] ; DispSeg2[6] ; 5.147 ; 5.147 ; 5.147 ; 5.147 ;
+; switches[6] ; DispSeg3[0] ; 4.369 ; 4.243 ; 4.243 ; 4.369 ;
+; switches[6] ; DispSeg3[2] ; 4.099 ; 4.233 ; 4.233 ; 4.099 ;
+; switches[6] ; DispSeg3[3] ; 4.258 ; 4.132 ; 4.132 ; 4.258 ;
+; switches[6] ; DispSeg3[4] ; 4.049 ; 4.320 ; 4.320 ; 4.049 ;
+; switches[6] ; DispSeg3[5] ; 4.072 ; 4.496 ; 4.496 ; 4.072 ;
+; switches[6] ; DispSeg3[6] ;       ; 3.663 ; 3.663 ;       ;
+; switches[7] ; DispSeg1[0] ; 6.438 ; 6.493 ; 6.493 ; 6.438 ;
+; switches[7] ; DispSeg1[1] ; 6.419 ; 6.419 ; 6.419 ; 6.419 ;
+; switches[7] ; DispSeg1[2] ; 6.404 ; 6.404 ; 6.404 ; 6.404 ;
+; switches[7] ; DispSeg1[3] ; 6.319 ; 6.376 ; 6.376 ; 6.319 ;
+; switches[7] ; DispSeg1[4] ; 6.303 ; 6.303 ; 6.303 ; 6.303 ;
+; switches[7] ; DispSeg1[5] ; 6.308 ; 6.365 ; 6.365 ; 6.308 ;
+; switches[7] ; DispSeg1[6] ; 6.320 ; 6.377 ; 6.377 ; 6.320 ;
+; switches[7] ; DispSeg2[0] ; 5.663 ; 5.663 ; 5.663 ; 5.663 ;
+; switches[7] ; DispSeg2[1] ; 5.671 ; 5.671 ; 5.671 ; 5.671 ;
+; switches[7] ; DispSeg2[2] ; 5.349 ; 5.349 ; 5.349 ; 5.349 ;
+; switches[7] ; DispSeg2[3] ; 5.512 ; 5.512 ; 5.512 ; 5.512 ;
+; switches[7] ; DispSeg2[4] ; 5.349 ; 5.349 ; 5.349 ; 5.349 ;
+; switches[7] ; DispSeg2[5] ; 5.571 ; 5.571 ; 5.571 ; 5.571 ;
+; switches[7] ; DispSeg2[6] ; 5.533 ; 5.533 ; 5.533 ; 5.533 ;
+; switches[7] ; DispSeg3[0] ; 4.716 ; 4.585 ; 4.585 ; 4.716 ;
+; switches[7] ; DispSeg3[2] ; 4.441 ; 4.580 ; 4.580 ; 4.441 ;
+; switches[7] ; DispSeg3[3] ; 4.605 ; 4.474 ; 4.474 ; 4.605 ;
+; switches[7] ; DispSeg3[4] ; 4.396 ; 4.559 ; 4.559 ; 4.396 ;
+; switches[7] ; DispSeg3[5] ; 4.414 ; 4.735 ; 4.735 ; 4.414 ;
+; switches[7] ; DispSeg3[6] ;       ; 4.005 ; 4.005 ;       ;
++-------------+-------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 140   ; 140  ;
+; Unconstrained Output Ports      ; 20    ; 20   ;
+; Unconstrained Output Port Paths ; 140   ; 140  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Feb 28 21:40:35 2023
+Info: Command: quartus_sta DE2_testing -c DE2_testing
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'DE2_testing.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4543 megabytes
+    Info: Processing ended: Tue Feb 28 21:40:35 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
