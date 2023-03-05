@@ -1,14 +1,4 @@
-C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timerTb.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timerTb.vhd
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity timerTb
--- Compiling architecture sim of timerTb
--- Loading entity timer
-
-} {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/segmentTb.vhd {1 {vcom -work work -2002 -explicit {C:\Users\Jacob\Documents\GitHub\Hazwell\Hazwell\simtest\segmentTb.vhd}
+C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/segmentTb.vhd {1 {vcom -work work -2002 -explicit {C:\Users\Jacob\Documents\GitHub\Hazwell\Hazwell\simtest\segmentTb.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO

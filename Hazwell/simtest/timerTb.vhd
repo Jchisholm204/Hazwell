@@ -8,8 +8,8 @@ end entity;
 
 architecture sim of timerTb is
 
-    --constant ClockFrequency : integer := 100e6; -- 100MHz
-    constant ClockFrequency : integer := 10; -- 10Hz
+    constant ClockFrequency : integer := 100e6; -- 100MHz
+    --constant ClockFrequency : integer := 10; -- 10Hz
     constant ClockPeriod    : time    := 1000 ms / ClockFrequency;
 
     signal Clk  : std_logic := '1';
