@@ -37,6 +37,16 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity casestatement
 -- Compiling architecture sim of casestatement
 
+} {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/segmentCounter.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/segmentCounter.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity segmentCounter
+-- Compiling architecture rtl of segmentCounter
+-- Loading entity timer
+
 } {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/flipFlop.vhd {1 {vcom -work work -2002 -explicit {C:\Users\Jacob\Documents\GitHub\Hazwell\Hazwell\simtest\flipFlop.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
@@ -75,6 +85,16 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Compiling entity sensitivityList
 -- Compiling architecture sim of sensitivityList
+
+} {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/segmentCounterTB.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/segmentCounterTB.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity segmentCounterTB
+-- Compiling architecture sim of segmentCounterTB
+-- Loading entity segmentCounter
 
 } {} {}} C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timer.vhd {1 {vcom -work work -2002 -explicit C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timer.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
