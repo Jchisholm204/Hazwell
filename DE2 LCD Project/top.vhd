@@ -17,18 +17,27 @@ entity top is
 end entity;
 
 architecture rtl of top is
-    constant ClkFrq : integer := 50e6; -- 50MHz
+    constant ClkFreq : integer := 50e6; -- 50MHz
     
     signal DispInit : std_logic := 0;
+    signal Millis   : integer   := 0;
 
     begin
+
+    i_Clock : entity work.clock(rtl)
+    map generic(ClkFreq <= ClkFreq)
+    map port(
+        Clk    <= Clk,
+        nRst   <= '1',
+        Millis <= Millis
+    );
 
     process(Clk, DispInit) is
     begin
         if(DispInit = '0') then
             LCD_ON <= '1';
             LCD_EN <= '1';
-
+            
             LCD_DATA <= "00001100";
 
         end if;

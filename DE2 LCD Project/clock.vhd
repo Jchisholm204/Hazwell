@@ -39,10 +39,22 @@ begin
                                 if Hours = 23 then
                                     Hours <= 0;
                                 else
-                                    Hours <= Hours +1 ;
+                                    Hours <= Hours +1;
                                 end if;
                             else
-                            Minutes <= Minutes +1
-                            Hours <= Minutes
+                                Minutes <= Minutes +1;
+                            end if;
+                        else
+                            Seconds <= Seconds + 1;
+                        end if;
+                    else
+                        Millis <= Millis + 1;
+                    end if;
+                else:
+                    Ticks <= Ticks + 1;
+                end if;
+            end if;
+        end if;
+    end process;
 
 end architecture;
