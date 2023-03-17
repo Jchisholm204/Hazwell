@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "*.cr.mti": true,
+        "*.vhd.bak": true,
+        "*.wlf": true,
+        "**/.mpf": true
+    },
+    "search.exclude": {
+        "*.bak": true,
+        "*.mpf": true,
+        "*.vhd.bak": true
+    }
+}
