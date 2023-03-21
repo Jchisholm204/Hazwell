@@ -1,7 +1,7 @@
-.bak
-.vhd.bak
+*.bak
+*.vhd.bak
 work
-.cr.mti
-.mti
-.bak
-.wlf
+*.cr.mti
+*.mti
+*.bak
+*.wlf
