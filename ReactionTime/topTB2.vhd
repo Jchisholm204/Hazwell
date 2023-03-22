@@ -5,8 +5,11 @@ use IEEE.numeric_std.all;
 entity topTB2 is
 end entity;
 
+-- This is the proper testbench for the top module
 
 architecture sim of topTB2 is
+
+    -- Signals linking to the module
     signal HEX0  :  std_logic_vector(6 downto 0);
     signal HEX1  :  std_logic_vector(6 downto 0);
     signal HEX2  :  std_logic_vector(6 downto 0);
@@ -16,8 +19,10 @@ architecture sim of topTB2 is
 
     signal SW    :  std_logic_vector(2 downto 0) := (others => '0');
 
+    -- Board signals
     signal Clk   :  std_logic := '0';
 
+    -- simulator signals
     constant ClkFreq        : integer := 10000;
     constant ClockPeriod    : time    := 1000 ms / ClkFreq;
     
