@@ -5,6 +5,12 @@ use IEEE.numeric_std.all;
 entity topTB is
 end entity;
 
+-- This is the bad file dont use this file
+-- This file was because I couldn't figure out how to
+-- expose all of the signals on ModelSim
+-- 
+-- This file is old and does not work
+
 
 architecture sim of topTB is
     signal o_HEX0  :  std_logic_vector(6 downto 0);
