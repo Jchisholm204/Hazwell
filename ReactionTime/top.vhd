@@ -72,17 +72,17 @@ begin
         Seconds => j_Seconds
     );
 
-        -- Create Clock Entity
-        e_clock : entity work.clock(rtl)
-        generic map(
-            ClkFreq => k_ClkFreq
-        )
-        port map(
-            nRst    => e_nRst,
-            Clk     => i_Clk,
-            Millis  => e_Millis,
-            Seconds => e_Seconds
-        );
+    -- Create Clock Entity
+    e_clock : entity work.clock(rtl)
+    generic map(
+        ClkFreq => k_ClkFreq
+    )
+    port map(
+        nRst    => e_nRst,
+        Clk     => i_Clk,
+        Millis  => e_Millis,
+        Seconds => e_Seconds
+    );
 
 
     -- Process: Clock Processor
