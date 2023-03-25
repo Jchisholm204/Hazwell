@@ -1,0 +1,7 @@
+*.bak
+*.vhd.bak
+work
+*.cr.mti
+*.mti
+*.bak
+*.wlf

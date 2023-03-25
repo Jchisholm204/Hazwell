@@ -1,0 +1,6 @@
+
+State Machine - |top|ProgState
+Name ProgState.t_run ProgState.t_wait ProgState.t_await 
+ProgState.t_await 0 0 0 
+ProgState.t_wait 0 1 1 
+ProgState.t_run 1 0 1 

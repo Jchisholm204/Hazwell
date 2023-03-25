@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        ".mpf": true,
+        "*.bak": true,
+        "*.mpf": true,
+        "**/work": true,
+        "*.ipinfo" : true,
+        "**/db" : true,
+        "**/hc_output" : true,
+        "**/incremental_db" : true,
+        "**/output_files" : true
+    }
+}
