@@ -30,15 +30,40 @@ begin
 	
 	process (vga_clk) is
 	begin
-		if h_state = t_activeVideo then
-			if hCount > 480 then
-				h_state <= t_frontPorch;
-			end if;
-			vga_r <= 255;
-			vga_g <= 0;
-			vga_b <= 0;
-			hCount <= hCount + 1;
-		elsif h_state = t_frontPorch then
+		if rising_edge(vga_clk) then
+			if h_state = t_activeVideo then
+				if hCount > 480 then
+					hCount  <= 0;
+					h_state <= t_frontPorch;
+				end if;
+				vga_r	  <= 255;
+				vga_g	  <= 0;
+				vga_b 	  <= 0;
+				vga_hsync <= '1';
+				hCount 	  <= hCount + 1;
+			elsif h_state = t_frontPorch then
+				if hCount > 16 then
+					hCount   <= 0;
+					h_state  <= t_syncPulse;
+				end if;
+				vga_r 	  <= 0;
+				vga_g 	  <= 0;
+				vga_b 	  <= 0;
+				vga_hsync <= '1';
+				hCount    <= hCount + 1;
+			elsif h_state = t_syncPulse then
+				if hCount > 96 then
+					hCount   <= 0;
+					h_state  <= t_backPorch;
+				end if;
+				vga_r		 <= 0;
+				vga_g		 <= 0;
+				vga_b		 <= 0;
+				vga_hsync	 <= '0';
+				hCount		 <= hCount + 1;
+			elsif h_state = t_backPorch then
+				if hCount > 
+
 
 			
 				
