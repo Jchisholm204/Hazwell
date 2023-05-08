@@ -1,0 +1,6 @@
+project open C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/Verilog
+# Loading project Verilog
+vsim work.mux_using_assign_TB
+# vsim work.mux_using_assign_TB 
+# Loading work.mux_using_assign_TB
+# Loading work.mux_using_assign
