@@ -19,8 +19,8 @@ end entity Timing;
 
 architecture rtl of Timing is
 	type   vga_state is (t_activeVideo, t_frontPorch, t_syncPulse, t_backPorch);
-	signal h_state : t_state := t_frontPorch;
-	signal v_state : t_state := t_frontPorch;
+	signal h_state : t_state := t_activeVideo;
+	signal v_state : t_state := t_activeVideo;
 
 	signal vCount  : integer := 0;
 	signal hCount  : integer := 0;
@@ -31,42 +31,108 @@ begin
 	process (vga_clk) is
 	begin
 		if rising_edge(vga_clk) then
-			if h_state = t_activeVideo then
-				if hCount > 480 then
-					hCount  <= 0;
-					h_state <= t_frontPorch;
+			if v_state = t_activeVideo then
+				if vCount > 640 then
+					vCount 	<= 0;
+					v_state <= t_frontPorch;
 				end if;
-				vga_r	  <= 255;
-				vga_g	  <= 0;
-				vga_b 	  <= 0;
-				vga_hsync <= '1';
-				hCount 	  <= hCount + 1;
-			elsif h_state = t_frontPorch then
-				if hCount > 16 then
-					hCount   <= 0;
-					h_state  <= t_syncPulse;
+				if h_state = t_activeVideo then
+					--- end active video case
+					if hCount > 480 then
+						hCount  <= 0;
+						h_state <= t_frontPorch;
+					end if;
+
+					--- color test casing
+					if hCount < 240 then
+						vga_r <= 255;
+						vga_g <= 0;
+					else
+						vga_r <= 0;
+						vga_g <= 255;
+					end if;
+					if vCount > 320 then
+						vga_b <= 255;
+					else
+						vga_b <= 0;
+					end if;
+					--- end color test casing
+
+					vga_hsync <= '1';
+					hCount 	  <= hCount + 1;
+
+				elsif h_state = t_frontPorch then
+					if hCount > 16 then
+						hCount   <= 0;
+						h_state  <= t_syncPulse;
+					end if;
+
+					vga_r 	  <= 0;
+					vga_g 	  <= 0;
+					vga_b 	  <= 0;
+					vga_hsync <= '1';
+					hCount    <= hCount + 1;
+
+				elsif h_state = t_syncPulse then
+					if hCount > 96 then
+						hCount   <= 0;
+						h_state  <= t_backPorch;
+					end if;
+
+					vga_r		 <= 0;
+					vga_g		 <= 0;
+					vga_b		 <= 0;
+					vga_hsync	 <= '0';
+					hCount		 <= hCount + 1;
+
+				elsif h_state = t_backPorch then
+					if hCount > 48 then
+						hCount  <= 0;
+						vCount  <= vCount + 1;
+						h_state <= t_activeVideo;
+					end if;
+					
+					vga_r  	  	<= 0;
+					vga_g  	  	<= 0;
+					vga_b	 	<= 0;
+					vga_hsync 	<= '1';
+					hCount 	 	<= hCount + 1;
 				end if;
-				vga_r 	  <= 0;
-				vga_g 	  <= 0;
-				vga_b 	  <= 0;
-				vga_hsync <= '1';
-				hCount    <= hCount + 1;
-			elsif h_state = t_syncPulse then
-				if hCount > 96 then
-					hCount   <= 0;
-					h_state  <= t_backPorch;
+			elsif v_state = t_frontPorch then
+				if vCount > 7040 then
+					vCount 	<= 0;
+					v_state <= t_syncPulse;
 				end if;
-				vga_r		 <= 0;
-				vga_g		 <= 0;
-				vga_b		 <= 0;
-				vga_hsync	 <= '0';
-				hCount		 <= hCount + 1;
-			elsif h_state = t_backPorch then
-				if hCount > 
-
-
-			
-				
-
+				vga_r		<= 0;
+				vga_g		<= 0;
+				vga_b		<= 0;
+				vga_hsync	<= '0';
+				vga_vsync 	<= '1';
+				vCount 		<= vCount + 1;
+			elsif v_state = t_syncPulse then
+				if vCount > 1280 then
+					vCount <= 0;
+					v_state <= t_backPorch;
+				end if;
+				vga_r		<= 0;
+				vga_g		<= 0;
+				vga_b		<= 0;
+				vga_hsync	<= '0';
+				vga_vsync 	<= '0';
+				vCount 		<= vCount + 1;
+			elsif v_state = t_backPorch then
+				if vCount > 19840 then
+					vCount 	<= 0;
+					v_state	<= t_activeVideo;
+				end if;
+				vga_r		<= 0;
+				vga_g		<= 0;
+				vga_b		<= 0;
+				vga_hsync	<= '0';
+				vga_vsync 	<= '1';
+				vCount 		<= vCount + 1;
+			end if;
+		end if;
+	end process;
 
 end architecture;
