@@ -1,5 +1,44 @@
 m255
 K3
+z0
+!s11e vcom 2020.1 2020.02, Feb 28 2020
 13
 cModel Technology
 dC:\Users\Jacob\Documents\GitHub\Hazwell\Hazwell\simtest
+Pcommon
+!i122 0
+Z0 w1684727317
+Z1 dC:/Users/Jacob/Documents/GitHub/Hazwell/DE2 LCD Project
+Z2 8C:/Users/Jacob/Documents/GitHub/Hazwell/DE2 LCD Project/Common.vhd
+Z3 FC:/Users/Jacob/Documents/GitHub/Hazwell/DE2 LCD Project/Common.vhd
+l0
+L2 1
+VN<oY<@Tm9A^<<U;>1:^@P1
+!s100 ]IXT>iLi5?XD=7Z:g4k7Q2
+Z4 OV;C;2020.1;71
+32
+Z5 !s110 1684727368
+!i10b 1
+Z6 !s108 1684727367.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/DE2 LCD Project/Common.vhd|
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/DE2 LCD Project/Common.vhd|
+!i113 1
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1 CvgOpt 0
+Bbody
+DPx4 work 6 common 0 22 N<oY<@Tm9A^<<U;>1:^@P1
+!i122 0
+l0
+L17 1
+VZgFRAG8@bBA[P0^I0XIN00
+!s100 ]>bRU:70j3Nb1L>82P]lE3
+R4
+32
+R5
+!i10b 1
+R6
+R7
+Z10 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/DE2 LCD Project/Common.vhd|
+!i113 1
+R8
+R9
