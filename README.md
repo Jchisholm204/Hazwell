@@ -1,2 +1,2 @@
 # Hazwell
-Random programming projects made by friends.
+My Personal VHDL/Altium Playground
