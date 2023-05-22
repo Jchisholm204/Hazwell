@@ -6,7 +6,9 @@ use ieee.numeric_std.all;
 entity top is
     port(
         -- Inputs
-        i_SW   : in std_logic_vector(12 downto 0);
+        i_SW         : in  std_logic_vector(12 downto 0);
+        -- Switch LED's
+        o_LEDR       : out std_logic_vector(12 downto 0);
 
         -- 7 Segment Displays
         o_HEX0       : out std_logic_vector(6 downto 0);
@@ -30,7 +32,8 @@ end entity;
 
 architecture rtl of top is
 	 
-    signal dispn: integer := 0;
+    signal dispn        : integer    := 0;
+    signal LCD_nRst     : std_logic  := '0';
 
 begin
 
@@ -43,11 +46,22 @@ begin
             o_DispSeg4 => o_HEX3
         );
 		  
+    lcd : work.lcd_controller(behavioral)
+        port map(
+            LCD_DATA => LCD_DATA,
+            LCD_RW   => LCD_RW,
+            LCD_EN   => LCD_EN,
+            LCD_BLON => LCD_BLON,
+            i_Clk    => i_Clk,
+            i_dispNum=> dispn
+        );
+
 	process(i_Clk) is
     begin
-        dispn <= to_integer(unsigned(i_SW));
+        dispn  <= to_integer(unsigned(i_SW));
+        o_LEDR <= i_SW;
     end process;
-    
+
 end architecture;
 
 
