@@ -2,31 +2,22 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-
-entity DE2_testing is
+entity sevensegments is
     port(
-        -- Inputs
-        switches   : in std_logic_vector(7 downto 0);
-
-        -- Outputs
-        DispSeg1 : out std_logic_vector(6 downto 0);
-        DispSeg2 : out std_logic_vector(6 downto 0);
-        DispSeg3 : out std_logic_vector(6 downto 0);
-		  
-		  i_Clk    : in std_logic
-
+        i_dispNum   : in  integer;
+        o_DispSeg1  : out std_logic_vector(6 downto 0);
+        o_DispSeg2  : out std_logic_vector(6 downto 0);
+        o_DispSeg3  : out std_logic_vector(6 downto 0);
+        o_DispSeg4  : out std_logic_vector(6 downto 0)
     );
 end entity;
 
-architecture rtl of DE2_testing is
-  
-    -- Numbers for the display
+architecture behavioral of sevensegments is
+
     signal Seg1 : unsigned(7 downto 0) := (others => 'X');
     signal Seg2 : unsigned(7 downto 0) := (others => 'X');
     signal Seg3 : unsigned(7 downto 0) := (others => 'X');
-	 
-	 signal count: integer := 0;
-	 signal dispn: integer := 0;
+    signal Seg4 : unsigned(7 downto 0) := (others => 'X');
 
     pure function f_sevenSegment( num : unsigned(7 downto 0) := (others => 'X') )
         return std_logic_vector is
@@ -48,48 +39,35 @@ architecture rtl of DE2_testing is
         end case;
         return DispSeg;
     end function;
-  
+
 begin
 
-	process(i_Clk) is
-	begin
-		if rising_edge(i_Clk) then
-			count <= count + 1;
-			if count = 10e6 then
-				dispn <= dispn + 1;
-				count <= 0;
-				if dispn = 255 then
-					dispn <= 0;
-				end if;
-			end if;
-		end if;
-	end process;
-
-    process(dispn, Seg1, Seg2, Seg3) is
+    process(i_dispNum) is
     begin
-        Seg1 <= to_unsigned(dispn, Seg1'length)     mod 10;
-        Seg2 <= to_unsigned(dispn, Seg2'length)/10  mod 10;
-        Seg3 <= to_unsigned(dispn, Seg3'length)/100 mod 10;
+        Seg1 <= to_unsigned((i_dispNum      mod 10), Seg1'length);
+        Seg2 <= to_unsigned((i_dispNum/10   mod 10), Seg2'length);
+        Seg3 <= to_unsigned((i_dispNum/100  mod 10), Seg3'length);
+        Seg4 <= to_unsigned((i_dispNum/1000 mod 10), Seg4'length);
     end process;
 
     process(Seg1) is
     begin
-        DispSeg1 <= f_sevenSegment( num => Seg1);
+        o_DispSeg1 <= f_sevenSegment( num => Seg1 );
     end process;
 
     process(Seg2) is
     begin
-        DispSeg2 <= f_sevenSegment( num => Seg2);
+        o_DispSeg2 <= f_sevenSegment( num => Seg2 );
     end process;
 
     process(Seg3) is
     begin
-        DispSeg3 <= f_sevenSegment( num => Seg3);
+        o_DispSeg3 <= f_sevenSegment( num => Seg3 );
     end process;
-    
+
+    process(Seg4) is
+    begin
+        o_DispSeg4 <= f_sevenSegment( num => Seg4 );
+    end process;
+
 end architecture;
-
-
-
-
-
