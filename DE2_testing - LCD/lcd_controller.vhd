@@ -18,7 +18,7 @@ end entity;
 
 architecture behavioral of lcd_controller is
 
-    type LCD_State is (VCC_Initialize, EN_EN, Instruct, LCD_Initialized);
+    type LCD_State is (VCC_Initialize, FN_Set, Disp_Off, Disp_Clear, Set_Entry_Mode, LCD_Initialized, WriteChar);
     signal InitState            : LCD_State := VCC_Initialize;
     signal InitCounter          : integer   := 0;
 
@@ -37,41 +37,81 @@ begin
                     LCD_BLON <= '1';
                     if InitCounter = 750000 then
                         InitCounter <= 0;
-                        InitState   <= EN_EN;
+                        InitState   <= FN_Set;
                     else
                         InitCounter  <= InitCounter + 1;
                     end if;
-                when EN_EN =>
+                when FN_Set =>
+                    LCD_DATA <= (4 => '1', 5 => '1', others => '0');
+                    LCD_RW   <= '0';
+                    LCD_RS   <= '0';
+                    LCD_EN   <= '0';
+                    LCD_ON   <= '1';
+                    LCD_BLON <= '1';
+                    if InitCounter = 1000000 then
+                        InitCounter <= 0;
+                        InitState   <= Disp_Off;
+                    else
+                        InitCounter  <= InitCounter + 1;
+                    end if;
+                when Disp_Off =>
+                    LCD_DATA <= (3 => '1', 2 => '1', 0 => '1', others => '0');
+                    LCD_RW   <= '0';
+                    LCD_EN   <= '0';
+                    LCD_RS   <= '0';
+                    LCD_ON   <= '1';
+                    LCD_BLON <= '1';
+                    if InitCounter = 100000 then
+                        InitCounter <= 0;
+                        InitState   <= Disp_Clear;
+                    else
+                        InitCounter  <= InitCounter + 1;
+                    end if;
+                when Disp_Clear =>
+                    LCD_DATA <= (0 => '1', others => '0');
+                    LCD_RW   <= '0';
+                    LCD_EN   <= '0';
+                    LCD_RS   <= '0';
+                    LCD_ON   <= '1';
+                    LCD_BLON <= '1';
+                    if InitCounter = 100000 then
+                        InitCounter <= 0;
+                        InitState   <= LCD_Initialized;
+                    else
+                        InitCounter  <= InitCounter + 1;
+                    end if;
+                when Set_Entry_Mode =>
+                    LCD_DATA <= (2 => '1', others => '0');
+                    LCD_RW   <= '0';
+                    LCD_EN   <= '0';
+                    LCD_RS   <= '0';
+                    LCD_ON   <= '1';
+                    LCD_BLON <= '1';
+                    if InitCounter = 100000 then
+                        InitCounter <= 0;
+                        InitState   <= WriteChar;
+                    else
+                        InitCounter  <= InitCounter + 1;
+                    end if;
+                when LCD_Initialized =>
                     LCD_DATA <= (others => '0');
                     LCD_RW   <= '0';
                     LCD_EN   <= '0';
                     LCD_RS   <= '0';
                     LCD_ON   <= '1';
                     LCD_BLON <= '1';
-                    if InitCounter = 750000 then
-                        InitCounter <= 0;
-                        InitState   <= Instruct;
-                    else
-                        InitCounter  <= InitCounter + 1;
-                    end if;
-                when Instruct =>
-                    LCD_DATA <= (4 => '1', 5 => '1', others => '0');
-                    LCD_RW   <= '0';
-                    LCD_EN   <= '0';
-                    LCD_RS   <= '0';
-                    LCD_ON   <= '1';
-                    LCD_BLON <= '1';
+                when WriteChar =>
                     if InitCounter = 1000000 then
                         InitCounter <= 0;
                         InitState   <= LCD_Initialized;
                     else
                         InitCounter  <= InitCounter + 1;
                     end if;
-                when LCD_Initialized =>
-                    LCD_DATA <= (4 => '1', 5 => '1', others => '0');
-                    LCD_RW   <= '0';
+                    LCD_DATA <= "00000011";
+                    LCD_RW   <= '1';
+                    LCD_RS   <= '1';
+
                     LCD_EN   <= '0';
-                    LCD_RS   <= '0';
                     LCD_ON   <= '1';
                     LCD_BLON <= '1';
             end case;

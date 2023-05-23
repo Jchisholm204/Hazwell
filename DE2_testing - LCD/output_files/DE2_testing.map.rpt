@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_testing
-Mon May 22 00:33:42 2023
+Mon May 22 12:37:42 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,17 +13,22 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod0
- 10. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Div0
- 11. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod1
- 12. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Div1
- 13. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod2
- 14. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Div2
- 15. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod3
- 16. Port Connectivity Checks: "sevensegments:segments"
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  8. State Machine - |top|lcd_controller:lcd|InitState
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod0
+ 14. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Div0
+ 15. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod1
+ 16. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Div1
+ 17. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod2
+ 18. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Div2
+ 19. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod3
+ 20. Port Connectivity Checks: "lcd_controller:lcd"
+ 21. Port Connectivity Checks: "sevensegments:segments"
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -49,16 +54,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 22 00:33:42 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon May 22 12:37:42 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_testing                                     ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1,459                                           ;
-;     Total combinational functions  ; 1,459                                           ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 55                                              ;
+; Total logic elements               ; 1,523                                           ;
+;     Total combinational functions  ; 1,519                                           ;
+;     Dedicated logic registers      ; 43                                              ;
+; Total registers                    ; 43                                              ;
+; Total pins                         ; 68                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -167,6 +172,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                     ; Library ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
+; lcd_controller.vhd               ; yes             ; User VHDL File               ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - LCD/lcd_controller.vhd     ;         ;
 ; top.vhd                          ; yes             ; User VHDL File               ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - LCD/top.vhd                ;         ;
 ; sevensegments.vhd                ; yes             ; User VHDL File               ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - LCD/sevensegments.vhd      ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                 ;         ;
@@ -199,28 +205,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                                       ;
 +---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,459                                                                                                                       ;
+; Estimated Total logic elements              ; 1,523                                                                                                                       ;
 ;                                             ;                                                                                                                             ;
-; Total combinational functions               ; 1459                                                                                                                        ;
+; Total combinational functions               ; 1519                                                                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                                                                             ;
-;     -- 4 input functions                    ; 310                                                                                                                         ;
-;     -- 3 input functions                    ; 461                                                                                                                         ;
-;     -- <=2 input functions                  ; 688                                                                                                                         ;
+;     -- 4 input functions                    ; 329                                                                                                                         ;
+;     -- 3 input functions                    ; 465                                                                                                                         ;
+;     -- <=2 input functions                  ; 725                                                                                                                         ;
 ;                                             ;                                                                                                                             ;
 ; Logic elements by mode                      ;                                                                                                                             ;
-;     -- normal mode                          ; 936                                                                                                                         ;
-;     -- arithmetic mode                      ; 523                                                                                                                         ;
+;     -- normal mode                          ; 965                                                                                                                         ;
+;     -- arithmetic mode                      ; 554                                                                                                                         ;
 ;                                             ;                                                                                                                             ;
-; Total registers                             ; 0                                                                                                                           ;
-;     -- Dedicated logic registers            ; 0                                                                                                                           ;
+; Total registers                             ; 43                                                                                                                          ;
+;     -- Dedicated logic registers            ; 43                                                                                                                          ;
 ;     -- I/O registers                        ; 0                                                                                                                           ;
 ;                                             ;                                                                                                                             ;
-; I/O pins                                    ; 55                                                                                                                          ;
+; I/O pins                                    ; 68                                                                                                                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                                                           ;
 ; Maximum fan-out node                        ; sevensegments:segments|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider|op_21~44 ;
 ; Maximum fan-out                             ; 67                                                                                                                          ;
-; Total fan-out                               ; 3868                                                                                                                        ;
-; Average fan-out                             ; 2.55                                                                                                                        ;
+; Total fan-out                               ; 4197                                                                                                                        ;
+; Average fan-out                             ; 2.57                                                                                                                        ;
 +---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -229,7 +235,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top                                     ; 1459 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 55   ; 0            ; |top                                                                                                                    ; work         ;
+; |top                                     ; 1519 (0)          ; 43 (0)       ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |top                                                                                                                    ; work         ;
+;    |lcd_controller:lcd|                  ; 60 (60)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd_controller:lcd                                                                                                 ; work         ;
 ;    |sevensegments:segments|              ; 1459 (44)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:segments                                                                                             ; work         ;
 ;       |lpm_divide:Div0|                  ; 149 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:segments|lpm_divide:Div0                                                                             ; work         ;
 ;          |lpm_divide_7so:auto_generated| ; 149 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:segments|lpm_divide:Div0|lpm_divide_7so:auto_generated                                               ; work         ;
@@ -263,19 +270,71 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top|lcd_controller:lcd|InitState                                                                                                                                                ;
++---------------------------+---------------------+---------------------------+--------------------------+----------------------+--------------------+------------------+--------------------------+
+; Name                      ; InitState.WriteChar ; InitState.LCD_Initialized ; InitState.Set_Entry_Mode ; InitState.Disp_Clear ; InitState.Disp_Off ; InitState.FN_Set ; InitState.VCC_Initialize ;
++---------------------------+---------------------+---------------------------+--------------------------+----------------------+--------------------+------------------+--------------------------+
+; InitState.VCC_Initialize  ; 0                   ; 0                         ; 0                        ; 0                    ; 0                  ; 0                ; 0                        ;
+; InitState.FN_Set          ; 0                   ; 0                         ; 0                        ; 0                    ; 0                  ; 1                ; 1                        ;
+; InitState.Disp_Off        ; 0                   ; 0                         ; 0                        ; 0                    ; 1                  ; 0                ; 1                        ;
+; InitState.Disp_Clear      ; 0                   ; 0                         ; 0                        ; 1                    ; 0                  ; 0                ; 1                        ;
+; InitState.Set_Entry_Mode  ; 0                   ; 0                         ; 1                        ; 0                    ; 0                  ; 0                ; 1                        ;
+; InitState.LCD_Initialized ; 0                   ; 1                         ; 0                        ; 0                    ; 0                  ; 0                ; 1                        ;
+; InitState.WriteChar       ; 1                   ; 0                         ; 0                        ; 0                    ; 0                  ; 0                ; 1                        ;
++---------------------------+---------------------+---------------------------+--------------------------+----------------------+--------------------+------------------+--------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++---------------------------------------------+----------------------------------------+
+; Register name                               ; Reason for Removal                     ;
++---------------------------------------------+----------------------------------------+
+; lcd_controller:lcd|LCD_BLON                 ; Stuck at VCC due to stuck port data_in ;
+; lcd_controller:lcd|LCD_DATA[6]~reg0         ; Stuck at GND due to stuck port data_in ;
+; lcd_controller:lcd|LCD_DATA[7]~reg0         ; Stuck at GND due to stuck port data_in ;
+; lcd_controller:lcd|InitState.Set_Entry_Mode ; Stuck at GND due to stuck port data_in ;
+; lcd_controller:lcd|InitState.WriteChar      ; Stuck at GND due to stuck port data_in ;
+; lcd_controller:lcd|LCD_DATA[1]~reg0         ; Stuck at GND due to stuck port data_in ;
+; lcd_controller:lcd|LCD_RW                   ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 7       ;                                        ;
++---------------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                            ;
++---------------------------------------------+---------------------------+------------------------------------------------------------------------------+
+; Register name                               ; Reason for Removal        ; Registers Removed due to This Register                                       ;
++---------------------------------------------+---------------------------+------------------------------------------------------------------------------+
+; lcd_controller:lcd|InitState.Set_Entry_Mode ; Stuck at GND              ; lcd_controller:lcd|InitState.WriteChar, lcd_controller:lcd|LCD_DATA[1]~reg0, ;
+;                                             ; due to stuck port data_in ; lcd_controller:lcd|LCD_RW                                                    ;
++---------------------------------------------+---------------------------+------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 43    ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 7:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |top|lcd_controller:lcd|InitCounter[0] ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top|lcd_controller:lcd|Selector32     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------+
@@ -439,6 +498,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lcd_controller:lcd"                                                                              ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; lcd_rs            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; lcd_on            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; i_dispnum[31..13] ; Input  ; Info     ; Stuck at GND                                                                        ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Port Connectivity Checks: "sevensegments:segments"  ;
 +-------------------+-------+----------+--------------+
@@ -453,7 +523,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -463,9 +533,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon May 22 00:33:36 2023
+    Info: Processing started: Mon May 22 12:37:38 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_testing -c DE2_testing
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file lcd_controller.vhd
+    Info (12022): Found design unit 1: lcd_controller-behavioral
+    Info (12023): Found entity 1: lcd_controller
 Info (12021): Found 2 design units, including 1 entities, in source file top.vhd
     Info (12022): Found design unit 1: top-rtl
     Info (12023): Found entity 1: top
@@ -473,13 +546,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file sevense
     Info (12022): Found design unit 1: sevensegments-behavioral
     Info (12023): Found entity 1: sevensegments
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at top.vhd(19): used implicit default value for signal "LCD_RW" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at top.vhd(20): used implicit default value for signal "LCD_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at top.vhd(21): used implicit default value for signal "LCD_RS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at top.vhd(22): used implicit default value for signal "LCD_ON" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at top.vhd(23): used implicit default value for signal "LCD_BLON" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at top.vhd(48): signal "i_SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10541): VHDL Signal Declaration warning at top.vhd(23): used implicit default value for signal "LCD_RS" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at top.vhd(24): used implicit default value for signal "LCD_ON" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at top.vhd(66): signal "i_SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at top.vhd(67): signal "i_SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12129): Elaborating entity "sevensegments" using architecture "A:behavioral" for hierarchy "sevensegments:segments"
+Info (12129): Elaborating entity "lcd_controller" using architecture "A:behavioral" for hierarchy "lcd_controller:lcd"
 Info (278001): Inferred 7 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:segments|Mod0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:segments|Div0"
@@ -559,21 +631,27 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_e5f
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_tr9.tdf
     Info (12023): Found entity 1: lpm_abs_tr9
-Warning (13039): The following bidir pins have no drivers
-    Warning (13040): Bidir "LCD_DATA[0]" has no driver
-    Warning (13040): Bidir "LCD_DATA[1]" has no driver
-    Warning (13040): Bidir "LCD_DATA[2]" has no driver
-    Warning (13040): Bidir "LCD_DATA[3]" has no driver
-    Warning (13040): Bidir "LCD_DATA[4]" has no driver
-    Warning (13040): Bidir "LCD_DATA[5]" has no driver
-    Warning (13040): Bidir "LCD_DATA[6]" has no driver
-    Warning (13040): Bidir "LCD_DATA[7]" has no driver
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[0]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[2]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[3]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[4]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[5]" and its non-tri-state driver.
+Warning (13032): The following tri-state nodes are fed by constants
+    Warning (13033): The pin "LCD_DATA[1]" is fed by GND
+    Warning (13033): The pin "LCD_DATA[6]" is fed by GND
+    Warning (13033): The pin "LCD_DATA[7]" is fed by GND
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "LCD_DATA[0]~synth"
+    Warning (13010): Node "LCD_DATA[2]~synth"
+    Warning (13010): Node "LCD_DATA[3]~synth"
+    Warning (13010): Node "LCD_DATA[4]~synth"
+    Warning (13010): Node "LCD_DATA[5]~synth"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LCD_RW" is stuck at GND
-    Warning (13410): Pin "LCD_EN" is stuck at GND
     Warning (13410): Pin "LCD_RS" is stuck at GND
     Warning (13410): Pin "LCD_ON" is stuck at GND
-    Warning (13410): Pin "LCD_BLON" is stuck at GND
+    Warning (13410): Pin "LCD_BLON" is stuck at VCC
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "sevensegments:segments|lpm_divide:Mod1|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider|op_24~0"
     Info (17048): Logic cell "sevensegments:segments|lpm_divide:Mod1|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider|op_17~26"
@@ -592,17 +670,15 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "sevensegments:segments|lpm_divide:Mod3|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider|op_24~0"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_Clk"
-Info (21057): Implemented 1517 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1595 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 33 output pins
+    Info (21059): Implemented 46 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 1462 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4696 megabytes
-    Info: Processing ended: Mon May 22 00:33:42 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+    Info (21061): Implemented 1527 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4729 megabytes
+    Info: Processing ended: Mon May 22 12:37:42 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 

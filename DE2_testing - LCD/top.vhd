@@ -34,6 +34,8 @@ architecture rtl of top is
 	 
     signal dispn        : integer    := 0;
     signal LCD_nRst     : std_logic  := '0';
+    type LCD_State is (VCC_Initialize, EN_EN, Instruct, LCD_Initialized);
+    signal Clk_400hz    : std_logic  := '0';
 
 begin
 
@@ -45,7 +47,7 @@ begin
             o_DispSeg3 => o_HEX2,
             o_DispSeg4 => o_HEX3
         );
-		  
+
     lcd : work.lcd_controller(behavioral)
         port map(
             LCD_DATA => LCD_DATA,
@@ -55,11 +57,14 @@ begin
             i_Clk    => i_Clk,
             i_dispNum=> dispn
         );
+	
 
 	process(i_Clk) is
     begin
+
         dispn  <= to_integer(unsigned(i_SW));
         o_LEDR <= i_SW;
+
     end process;
 
 end architecture;

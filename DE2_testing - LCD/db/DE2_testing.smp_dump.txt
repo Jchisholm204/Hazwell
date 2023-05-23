@@ -1,0 +1,10 @@
+
+State Machine - |top|lcd_controller:lcd|InitState
+Name InitState.WriteChar InitState.LCD_Initialized InitState.Set_Entry_Mode InitState.Disp_Clear InitState.Disp_Off InitState.FN_Set InitState.VCC_Initialize 
+InitState.VCC_Initialize 0 0 0 0 0 0 0 
+InitState.FN_Set 0 0 0 0 0 1 1 
+InitState.Disp_Off 0 0 0 0 1 0 1 
+InitState.Disp_Clear 0 0 0 1 0 0 1 
+InitState.Set_Entry_Mode 0 0 1 0 0 0 1 
+InitState.LCD_Initialized 0 1 0 0 0 0 1 
+InitState.WriteChar 1 0 0 0 0 0 1 
