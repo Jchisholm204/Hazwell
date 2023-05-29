@@ -21,7 +21,7 @@ entity lcd_driver_core is
     );
 end entity;
 
-architecture rtl of generator_400hz is
+architecture rtl of lcd_driver_core is
 
     signal clk_count_400hz              : integer     := 0;
     signal clk_400hz_enable, lcd_rw_int : std_logic   := '0';
@@ -103,5 +103,61 @@ begin
                         state <= drop_lcd_e;
                         next_command <= func_set;
         
+                    -- Function Set
+                    --==============--
+                    when func_set =>                
+                        lcd_e <= '1';
+                        lcd_rs <= '0';
+                        lcd_rw_int <= '0';
+                        data_bus_value <= x"38";  -- Set Function to 8-bit transfer, 2 line display and a 5x8 Font size
+                        state <= drop_lcd_e;
+                        next_command <= display_off;
+                        
+                        
+                        
+                    -- Turn off Display
+                    --==============-- 
+                    when display_off =>
+                        lcd_e <= '1';
+                        lcd_rs <= '0';
+                        lcd_rw_int <= '0';
+                        data_bus_value <= x"08"; -- Turns OFF the Display, Cursor OFF and Blinking Cursor Position OFF.......
+                                                    -- (0F = Display ON and Cursor ON, Blinking cursor position ON)
+                        state <= drop_lcd_e;
+                        next_command <= display_clear;
+                        
+                        
+                    -- Clear Display 
+                    --==============--
+                    when display_clear =>
+                        lcd_e <= '1';
+                        lcd_rs <= '0';
+                        lcd_rw_int <= '0';
+                        data_bus_value <= x"01"; -- Clears the Display    
+                        state <= drop_lcd_e;
+                        next_command <= display_on;
+                        
+                        
+                        
+                    -- Turn on Display and Turn off cursor
+                    --===================================--
+                    when display_on =>
+                        lcd_e <= '1';
+                        lcd_rs <= '0';
+                        lcd_rw_int <= '0';
+                        data_bus_value <= x"0C"; -- Turns on the Display (0E = Display ON, Cursor ON and Blinking cursor OFF) 
+                        state <= drop_lcd_e;
+                        next_command <= mode_set;
+                        
+                        
+                    -- Set write mode to auto increment address and move cursor to the right
+                    --====================================================================--
+                    when mode_set =>
+                        lcd_e <= '1';
+                        lcd_rs <= '0';
+                        lcd_rw_int <= '0';
+                        data_bus_value <= x"06"; -- Auto increment address and move cursor to the right
+                        state <= drop_lcd_e;
+                        next_command <= print_string;
 
                     
