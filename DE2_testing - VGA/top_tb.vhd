@@ -30,8 +30,7 @@ begin
             VGA_VS => VGA_VS,
             VGA_SYNC => VGA_SYNC,
             CLOCK_50 => CLOCK_50,
-            LEDG0 => LEDG0,
-            LEDG1 => LEDG1
+            LEDG0 => LEDG0
         );
 
     CLOCK_50 <= not CLOCK_50 after 1000 ms /100e6;

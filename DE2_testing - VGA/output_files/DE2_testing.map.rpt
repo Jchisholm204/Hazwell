@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_testing
-Tue May 30 00:13:20 2023
+Thu Jun 01 23:32:51 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,14 +13,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |top|vidState
-  9. State Machine - |top|horState
- 10. State Machine - |top|verState
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +43,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 30 00:13:20 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 01 23:32:51 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_testing                                     ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 202                                             ;
-;     Total combinational functions  ; 183                                             ;
-;     Dedicated logic registers      ; 131                                             ;
-; Total registers                    ; 131                                             ;
-; Total pins                         ; 38                                              ;
+; Total logic elements               ; 1,088                                           ;
+;     Total combinational functions  ; 1,059                                           ;
+;     Dedicated logic registers      ; 325                                             ;
+; Total registers                    ; 325                                             ;
+; Total pins                         ; 41                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -159,43 +156,43 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------+---------+
-; top.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/top.vhd ;         ;
-+----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; top.vhd                          ; yes             ; User VHDL File  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/top.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 202      ;
-;                                             ;          ;
-; Total combinational functions               ; 183      ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 62       ;
-;     -- 3 input functions                    ; 13       ;
-;     -- <=2 input functions                  ; 108      ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 90       ;
-;     -- arithmetic mode                      ; 93       ;
-;                                             ;          ;
-; Total registers                             ; 131      ;
-;     -- Dedicated logic registers            ; 131      ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 38       ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-; Maximum fan-out node                        ; CLOCK_25 ;
-; Maximum fan-out                             ; 99       ;
-; Total fan-out                               ; 917      ;
-; Average fan-out                             ; 2.61     ;
-+---------------------------------------------+----------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 1,088     ;
+;                                             ;           ;
+; Total combinational functions               ; 1059      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 205       ;
+;     -- 3 input functions                    ; 277       ;
+;     -- <=2 input functions                  ; 577       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 265       ;
+;     -- arithmetic mode                      ; 794       ;
+;                                             ;           ;
+; Total registers                             ; 325       ;
+;     -- Dedicated logic registers            ; 325       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 41        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; timeClock ;
+; Maximum fan-out                             ; 195       ;
+; Total fan-out                               ; 3756      ;
+; Average fan-out                             ; 2.64      ;
++---------------------------------------------+-----------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -203,71 +200,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |top                       ; 183 (183)         ; 131 (131)    ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |top                ; work         ;
+; |top                       ; 1059 (1059)       ; 325 (325)    ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |top                ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------+
-; State Machine - |top|vidState                                                 ;
-+----------------------+----------------+----------------+----------------------+
-; Name                 ; vidState.vSync ; vidState.hSync ; vidState.activeVideo ;
-+----------------------+----------------+----------------+----------------------+
-; vidState.activeVideo ; 0              ; 0              ; 0                    ;
-; vidState.hSync       ; 0              ; 1              ; 1                    ;
-; vidState.vSync       ; 1              ; 0              ; 1                    ;
-+----------------------+----------------+----------------+----------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top|horState                                                                                                ;
-+----------------------+----------------+--------------------+--------------------+---------------------+----------------------+
-; Name                 ; horState.blank ; horState.backPorch ; horState.syncPulse ; horState.frontPorch ; horState.activeVideo ;
-+----------------------+----------------+--------------------+--------------------+---------------------+----------------------+
-; horState.activeVideo ; 0              ; 0                  ; 0                  ; 0                   ; 0                    ;
-; horState.frontPorch  ; 0              ; 0                  ; 0                  ; 1                   ; 1                    ;
-; horState.syncPulse   ; 0              ; 0                  ; 1                  ; 0                   ; 1                    ;
-; horState.backPorch   ; 0              ; 1                  ; 0                  ; 0                   ; 1                    ;
-; horState.blank       ; 1              ; 0                  ; 0                  ; 0                   ; 1                    ;
-+----------------------+----------------+--------------------+--------------------+---------------------+----------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top|verState                                                                                                ;
-+----------------------+----------------+--------------------+--------------------+---------------------+----------------------+
-; Name                 ; verState.blank ; verState.backPorch ; verState.syncPulse ; verState.frontPorch ; verState.activeVideo ;
-+----------------------+----------------+--------------------+--------------------+---------------------+----------------------+
-; verState.activeVideo ; 0              ; 0                  ; 0                  ; 0                   ; 0                    ;
-; verState.frontPorch  ; 0              ; 0                  ; 0                  ; 1                   ; 1                    ;
-; verState.syncPulse   ; 0              ; 0                  ; 1                  ; 0                   ; 1                    ;
-; verState.backPorch   ; 0              ; 1                  ; 0                  ; 0                   ; 1                    ;
-; verState.blank       ; 1              ; 0                  ; 0                  ; 0                   ; 1                    ;
-+----------------------+----------------+--------------------+--------------------+---------------------+----------------------+
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; VGA_G[0]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_G[1]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_G[2]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_G[3]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_G[4]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_G[5]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_G[6]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_G[7]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_G[8]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; VGA_G[9]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; verState.blank                         ; Lost fanout                            ;
-; vidState.activeVideo                   ; Merged with horState.activeVideo       ;
-; vidState.vSync                         ; Merged with horState.blank             ;
-; Total Number of Removed Registers = 13 ;                                        ;
-+----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -275,14 +210,29 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 131   ;
-; Number of registers using Synchronous Clear  ; 66    ;
+; Total registers                              ; 325   ;
+; Number of registers using Synchronous Clear  ; 160   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 64    ;
+; Number of registers using Clock Enable       ; 128   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; bally[7]                               ; 7       ;
+; bally[6]                               ; 6       ;
+; bally[5]                               ; 6       ;
+; bally[4]                               ; 6       ;
+; balldirx                               ; 33      ;
+; balldiry                               ; 33      ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -290,8 +240,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 10:1               ; 32 bits   ; 192 LEs       ; 32 LEs               ; 160 LEs                ; Yes        ; |top|hCount[10]            ;
-; 11:1               ; 32 bits   ; 224 LEs       ; 32 LEs               ; 192 LEs                ; Yes        ; |top|vCount[21]            ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |top|difficulty[10]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -310,13 +259,15 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 30 00:13:19 2023
+    Info: Processing started: Thu Jun 01 23:32:49 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_testing -c DE2_testing
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Warning (12125): Using design file top.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+Info (12021): Found 2 design units, including 1 entities, in source file top.vhd
     Info (12022): Found design unit 1: top-rtl
     Info (12023): Found entity 1: top
 Info (12127): Elaborating entity "top" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at top.vhd(43): used explicit default value for signal "ballvx" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at top.vhd(45): used explicit default value for signal "ballvy" because signal was never assigned a value
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "VGA_HS" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "VGA_VS" and its non-tri-state driver.
@@ -327,28 +278,18 @@ Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "VGA_HS~synth"
     Warning (13010): Node "VGA_VS~synth"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND
-    Warning (13410): Pin "VGA_G[3]" is stuck at GND
-    Warning (13410): Pin "VGA_G[4]" is stuck at GND
-    Warning (13410): Pin "VGA_G[5]" is stuck at GND
-    Warning (13410): Pin "VGA_G[6]" is stuck at GND
-    Warning (13410): Pin "VGA_G[7]" is stuck at GND
-    Warning (13410): Pin "VGA_G[8]" is stuck at GND
-    Warning (13410): Pin "VGA_G[9]" is stuck at GND
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "VGA_SYNC" is stuck at VCC
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 243 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+Info (21057): Implemented 1130 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 35 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 205 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4649 megabytes
-    Info: Processing ended: Tue May 30 00:13:20 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+    Info (21061): Implemented 1089 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4638 megabytes
+    Info: Processing ended: Thu Jun 01 23:32:51 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 
