@@ -14,6 +14,15 @@ entity top is
         VGA_HS       : inout std_logic;
         VGA_VS       : inout std_logic;
         VGA_SYNC     : out std_logic;
+
+        HEX0         : out std_logic_vector(6 downto 0);
+        HEX1         : out std_logic_vector(6 downto 0);
+        HEX2         : out std_logic_vector(6 downto 0);
+        HEX3         : out std_logic_vector(6 downto 0);
+        HEX4         : out std_logic_vector(6 downto 0);
+        HEX5         : out std_logic_vector(6 downto 0);
+        HEX6         : out std_logic_vector(6 downto 0);
+        HEX7         : out std_logic_vector(6 downto 0);
         
 		
         -- Clock Input (50 MHz)
@@ -48,8 +57,40 @@ architecture rtl of top is
     signal balldiry     : std_logic    := '1';
     signal difficulty   : integer      := 0;
     signal dcount       : integer      := 0;
+    
+    signal dotlineCnt   : integer      := 0;
+
+    signal nBallBounds  : std_logic    := '0';
+
+    signal leftCursory  : integer      := 240;
+    signal rightCursory : integer      := 240;
+    constant cursorLen  : integer      := 80;
+
+    signal cursorCount : integer      := 0;
+
+    signal scoreRight  : integer      := 0;
+    signal scoreLeft   : integer      := 0;
 
 begin
+
+    rightScore : work.sevensegments(behavioral)
+        port map(
+            i_dispNum => scoreRight,
+            o_DispSeg1 => HEX4,
+            o_DispSeg2 => HEX5
+        );
+
+    leftScore : work.sevensegments(behavioral)
+        port map(
+            i_dispNum => scoreLeft,
+            o_DispSeg1 => HEX6,
+            o_DispSeg2 => HEX7
+        );
+
+    HEX0 <= (others => '1');
+    HEX1 <= (others => '1');
+    HEX2 <= (others => '1');
+    HEX3 <= (others => '1');
 
     process(CLOCK_50) is
     begin
@@ -91,7 +132,16 @@ begin
             
             if rangeValid = '1' then
                 -- draw border
-                if x = 1 or x = 639 or y = 0 or y = 478 then
+                if y = 0 or y = 479 then
+                    VGA_R <= (others => '1');
+                    VGA_G <= (others => '1');
+                    VGA_B <= (others => '1');
+                -- draw ball
+                elsif x < 5 and x > 2 and y < (leftCursory + cursorLen/2) and y > (leftCursory - cursorLen/2) then
+                    VGA_R <= (others => '1');
+                    VGA_G <= (others => '1');
+                    VGA_B <= (others => '1');
+                elsif x > 634 and x < 637 and y < (rightCursory + cursorLen/2) and y > (rightCursory - cursorLen/2) then
                     VGA_R <= (others => '1');
                     VGA_G <= (others => '1');
                     VGA_B <= (others => '1');
@@ -112,6 +162,27 @@ begin
                         VGA_R <= (others => '0');
                         VGA_G <= (others => '0');
                         VGA_B <= (others => '0');
+                    else
+                        VGA_R <= (others => '1');
+                        VGA_G <= (others => '1');
+                        VGA_B <= (others => '1');
+                    end if;
+                -- draw dotted line
+                elsif x < 328 and x > 322 then
+                    if y < 10 or y > 470 then
+                        VGA_R <= (others => '0');
+                        VGA_G <= (others => '0');
+                        VGA_B <= (others => '0');
+                    elsif y mod 12 = 0 then
+                        dotlineCnt <= 2;
+                    elsif  dotlineCnt > 1 then
+                        VGA_R <= (others => '0');
+                        VGA_G <= (others => '0');
+                        VGA_B <= (others => '0');
+                        dotlineCnt <= dotlineCnt + 1;
+                        if dotlineCnt = 21 then
+                            dotlineCnt <= 0;
+                        end if;
                     else
                         VGA_R <= (others => '1');
                         VGA_G <= (others => '1');
@@ -148,8 +219,8 @@ begin
             dcount <= dcount + 1;
             if dcount = 2000 then
                 difficulty <= difficulty + 1;
-                if difficulty = ballvx then
-                    difficulty <= (ballvx -1);
+                if difficulty > 3*ballvx/4 then
+                    difficulty <= 3*ballvx/4 -1;
                 end if;
                 dcount <= 0;
             end if;
@@ -179,16 +250,73 @@ begin
                 end if;
                 velCounty <= 0;
             end if;
-            if ballx = 635 then
-                balldirx <= '0';
-            elsif ballx = 5 then
-                balldirx <= '1';
+            if ballx = 635 and balldirx = '1' then
+                    if bally > (rightCursory - cursorLen/2) and bally < (rightCursory + cursorLen/2) then
+                        balldirx <= '0';
+                    else
+                        ballx <= 320;
+                        bally <= 240;
+                        scoreLeft <= scoreLeft + 1;
+                        if scoreLeft > 99 then
+                            scoreLeft <= 0;
+                        end if;
+                    end if;
+            elsif ballx = 5 and balldirx = '0' then
+                if bally > (leftCursory - cursorLen/2) and bally < (leftCursory + cursorLen/2) then
+                    balldirx <= '1';
+                else
+                    ballx <= 320;
+                    bally <= 240;
+                    scoreRight <= scoreRight + 1;
+                    if scoreRight > 99 then
+                        scoreRight <= 0;
+                    end if;
+                end if;
             end if;
             if bally = 475 then
                 balldiry <= '0';
             elsif bally = 5 then
                 balldiry <= '1';
             end if;
+
+            -- auto cursor logic
+                if balldirx = '1' then
+                    
+
+                    if cursorCount > 160 - difficulty/2 then
+                        cursorCount <= 0;
+                        if leftCursory < bally then
+                            leftCursory <= leftCursory + 1;
+                        elsif leftCursory > bally then
+                            leftCursory <= leftCursory - 1;
+                        end if;
+                        if rightCursory < bally then
+                        rightCursory <= rightCursory + 1;
+                    elsif rightCursory > bally then
+                        rightCursory <= rightCursory - 1;
+                    end if;
+                    else
+                        cursorCount <= cursorCount + 1;
+                    end if;
+                else
+                    if cursorCount > 160 - difficulty/2 then
+                        cursorCount <= 0;
+                        if rightCursory < bally then
+                            rightCursory <= rightCursory + 1;
+                        elsif rightCursory > bally then
+                            rightCursory <= rightCursory - 1;
+                        end if;
+                        if leftCursory < bally then
+                        leftCursory <= leftCursory + 1;
+                    elsif leftCursory > bally then
+                        leftCursory <= leftCursory - 1;
+                    end if;
+                    else
+                        cursorCount <= cursorCount + 1;
+                    end if;
+                    
+                end if;
+
         end if;
     end process;
 
@@ -196,8 +324,6 @@ begin
     VGA_CLK      <= CLOCK_50;
     VGA_SYNC     <= '1';
     VGA_BLANK    <= VGA_HS and VGA_VS;
-    LEDG0 <= not KEY1;
-    LEDG1 <= not KEY2;
     
 
 end architecture;
