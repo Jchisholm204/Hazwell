@@ -1,5 +1,7 @@
 m255
 K3
+z0
+!s11e MIXED_VERSIONS
 13
 cModel Technology
 dC:\altera\13.1
@@ -585,22 +587,65 @@ R11
 R12
 !s100 6o0dhc_F6=g2h=jIWY2zJ3
 !i10b 1
+Eshiftregtb
+Z100 w1686509348
+Z101 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z102 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z103 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+Z104 dC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest
+Z105 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/shiftRegTB.vhd
+Z106 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/shiftRegTB.vhd
+l0
+L5 1
+VOodNjB3_QVUBllhM8zV8W2
+!s100 CeX[S=6BXlG^UO]@Sh1WE0
+Z107 OV;C;2020.1;71
+32
+Z108 !s110 1686509398
+!i10b 1
+Z109 !s108 1686509398.000000
+Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/shiftRegTB.vhd|
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/shiftRegTB.vhd|
+!i113 1
+Z111 o-work work -2002 -explicit
+Z112 tExplicit 1 CvgOpt 0
+Asim
+R101
+R102
+R103
+DEx4 work 10 shiftregtb 0 22 OodNjB3_QVUBllhM8zV8W2
+!i122 0
+l16
+L8 23
+VH;L1ING<5ke5I6[B2LeiP3
+!s100 Xk@N`N[m16i_AFG1K52M03
+R107
+32
+R108
+!i10b 1
+R109
+R110
+Z113 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/shiftRegTB.vhd|
+!i113 1
+R111
+R112
 Esigned_unsigned
-Z100 w1677469493
+Z114 w1677469493
 R1
 R2
 R3
 R4
-Z101 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd
-Z102 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd
+Z115 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd
+Z116 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd
 l0
 L6
 VFaH^zdHmeG<:FJ22Fn[IV1
 R7
 32
-Z103 !s108 1678037789.101000
-Z104 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd|
-Z105 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd|
+Z117 !s108 1678037789.101000
+Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd|
+Z119 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/signed_unsigned.vhd|
 R11
 R12
 !s100 NOPR=Ni=So=abDZ^nYc1]2
@@ -615,9 +660,9 @@ L9
 VE?2^?cHFoX77J^_nU]ceW0
 R7
 32
-R103
-R104
-R105
+R117
+R118
+R119
 R11
 R12
 !s100 o4V`z5^ld:Gb85=Vg1P^00
@@ -642,20 +687,20 @@ R12
 !i10b 1
 !s108 1677379452.483000
 Estdlogic
-Z106 w1677464186
+Z120 w1677464186
 R2
 R3
 R4
-Z107 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogic.vhd
-Z108 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogic.vhd
+Z121 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogic.vhd
+Z122 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogic.vhd
 l0
 L5
 V?DjgU0jcfK>eADA82>IB12
 R7
 32
-Z109 !s108 1678037788.858000
-Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogic.vhd|
-Z111 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogic.vhd|
+Z123 !s108 1678037788.858000
+Z124 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogic.vhd|
+Z125 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogic.vhd|
 R11
 R12
 !s100 A6zEcA[ZkYOOmO0J=?V_T0
@@ -669,28 +714,28 @@ L8
 VFeK=JN<]]J=@K:9cK>2af2
 R7
 32
-R109
-R110
-R111
+R123
+R124
+R125
 R11
 R12
 !s100 bj7RY6HhzMbOWU0JlCo?@3
 !i10b 1
 Estdlogicvector
-Z112 w1677464786
+Z126 w1677464786
 R2
 R3
 R4
-Z113 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd
-Z114 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd
+Z127 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd
+Z128 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd
 l0
 L5
 VLNliRe<J3e@U>AcY8<DM<0
 R7
 32
-Z115 !s108 1678037788.978000
-Z116 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd|
-Z117 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd|
+Z129 !s108 1678037788.978000
+Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd|
+Z131 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/stdlogicvector.vhd|
 R11
 R12
 !s100 kImi>O_UMD7bEcl_dU?492
@@ -704,29 +749,29 @@ L8
 V?`MT9Z`cI4_b:o@L57JD=1
 R7
 32
-R115
-R116
-R117
+R129
+R130
+R131
 R11
 R12
 !s100 ]aOk@L;4i81M[W>d1b2_@0
 !i10b 1
 Etimer
-Z118 w1677993986
+Z132 w1677993986
 R1
 R2
 R3
 R4
-Z119 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timer.vhd
-Z120 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timer.vhd
+Z133 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timer.vhd
+Z134 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timer.vhd
 l0
 L6
 VB4T]3MO[6;K=a[bXbX[4O2
 R7
 32
-Z121 !s108 1678048870.083000
-Z122 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timer.vhd|
-Z123 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timer.vhd|
+Z135 !s108 1678048870.083000
+Z136 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timer.vhd|
+Z137 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timer.vhd|
 R11
 R12
 !s100 A47FI9]Gb[2fk>9[lizfP3
@@ -741,29 +786,29 @@ L17
 V@jz0=WTHmH_T1HRdLP7b10
 R7
 32
-R121
-R122
-R123
+R135
+R136
+R137
 R11
 R12
 !s100 hKnJXQI4K>>30@WLUcz^X2
 !i10b 1
 Etimertb
-Z124 w1678037782
+Z138 w1678037782
 R1
 R2
 R3
 R4
-Z125 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timerTb.vhd
-Z126 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timerTb.vhd
+Z139 8C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timerTb.vhd
+Z140 FC:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timerTb.vhd
 l0
 L6
 ViH^>lQ;mB[2mk;bZaWM4Q0
 R7
 32
-Z127 !s108 1678037790.490000
-Z128 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timerTb.vhd|
-Z129 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timerTb.vhd|
+Z141 !s108 1678037790.490000
+Z142 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timerTb.vhd|
+Z143 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Hazwell/simtest/timerTb.vhd|
 R11
 R12
 !s100 :iz]59]lTOOO@LD?4:^3V3
@@ -779,9 +824,9 @@ L9
 VzIn=BTH[T[H8XGn3mfk><1
 R7
 32
-R127
-R128
-R129
+R141
+R142
+R143
 R11
 R12
 !s100 HK@XSY[DHj^jd:hjKgj?10
