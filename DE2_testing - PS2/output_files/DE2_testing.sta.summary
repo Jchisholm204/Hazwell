@@ -2,76 +2,52 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'CLOCK_25'
-Slack : -132.763
-TNS   : -4962.844
-
-Type  : Slow Model Setup 'timeClock'
-Slack : -8.165
-TNS   : -2000.445
-
 Type  : Slow Model Setup 'CLOCK_50'
-Slack : -2.827
-TNS   : -60.432
+Slack : -3.356
+TNS   : -70.821
+
+Type  : Slow Model Setup 'ps2_keyboard:keyboard|debounce:debounce_ps2_clk|result'
+Slack : -0.347
+TNS   : -0.433
 
 Type  : Slow Model Hold 'CLOCK_50'
-Slack : -2.541
-TNS   : -5.046
+Slack : -2.544
+TNS   : -19.896
 
-Type  : Slow Model Hold 'CLOCK_25'
-Slack : 0.391
-TNS   : 0.000
-
-Type  : Slow Model Hold 'timeClock'
-Slack : 0.391
+Type  : Slow Model Hold 'ps2_keyboard:keyboard|debounce:debounce_ps2_clk|result'
+Slack : 0.527
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
 Slack : -1.380
-TNS   : -35.380
+TNS   : -47.380
 
-Type  : Slow Model Minimum Pulse Width 'timeClock'
+Type  : Slow Model Minimum Pulse Width 'ps2_keyboard:keyboard|debounce:debounce_ps2_clk|result'
 Slack : -0.500
-TNS   : -322.000
-
-Type  : Slow Model Minimum Pulse Width 'CLOCK_25'
-Slack : -0.500
-TNS   : -100.000
-
-Type  : Fast Model Setup 'CLOCK_25'
-Slack : -59.758
-TNS   : -2214.611
-
-Type  : Fast Model Setup 'timeClock'
-Slack : -3.182
-TNS   : -755.900
+TNS   : -11.000
 
 Type  : Fast Model Setup 'CLOCK_50'
-Slack : -0.843
-TNS   : -12.077
+Slack : -1.232
+TNS   : -13.983
+
+Type  : Fast Model Setup 'ps2_keyboard:keyboard|debounce:debounce_ps2_clk|result'
+Slack : 0.049
+TNS   : 0.000
 
 Type  : Fast Model Hold 'CLOCK_50'
 Slack : -1.585
-TNS   : -3.135
+TNS   : -14.317
 
-Type  : Fast Model Hold 'CLOCK_25'
-Slack : 0.215
-TNS   : 0.000
-
-Type  : Fast Model Hold 'timeClock'
-Slack : 0.215
+Type  : Fast Model Hold 'ps2_keyboard:keyboard|debounce:debounce_ps2_clk|result'
+Slack : 0.245
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
 Slack : -1.380
-TNS   : -35.380
+TNS   : -47.380
 
-Type  : Fast Model Minimum Pulse Width 'timeClock'
+Type  : Fast Model Minimum Pulse Width 'ps2_keyboard:keyboard|debounce:debounce_ps2_clk|result'
 Slack : -0.500
-TNS   : -322.000
-
-Type  : Fast Model Minimum Pulse Width 'CLOCK_25'
-Slack : -0.500
-TNS   : -100.000
+TNS   : -11.000
 
 ------------------------------------------------------------

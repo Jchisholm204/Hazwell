@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_testing
-Fri Jun 02 23:53:58 2023
+Sun Jun 11 18:09:13 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,19 +13,20 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for Inferred Entity Instance: sevensegments:rightScore|lpm_divide:Mod0
- 13. Parameter Settings for Inferred Entity Instance: sevensegments:rightScore|lpm_divide:Div0
- 14. Parameter Settings for Inferred Entity Instance: sevensegments:rightScore|lpm_divide:Mod1
- 15. Parameter Settings for Inferred Entity Instance: sevensegments:leftScore|lpm_divide:Mod0
- 16. Parameter Settings for Inferred Entity Instance: sevensegments:leftScore|lpm_divide:Div0
- 17. Parameter Settings for Inferred Entity Instance: sevensegments:leftScore|lpm_divide:Mod1
- 18. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: ps2_keyboard:keyboard
+ 11. Parameter Settings for User Entity Instance: ps2_keyboard:keyboard|debounce:debounce_ps2_clk
+ 12. Parameter Settings for User Entity Instance: ps2_keyboard:keyboard|debounce:debounce_ps2_data
+ 13. Parameter Settings for Inferred Entity Instance: sevensegments:seg7|lpm_divide:Mod0
+ 14. Parameter Settings for Inferred Entity Instance: sevensegments:seg7|lpm_divide:Div0
+ 15. Parameter Settings for Inferred Entity Instance: sevensegments:seg7|lpm_divide:Mod1
+ 16. Parameter Settings for Inferred Entity Instance: sevensegments:seg7|lpm_divide:Div1
+ 17. Parameter Settings for Inferred Entity Instance: sevensegments:seg7|lpm_divide:Mod2
+ 18. Port Connectivity Checks: "ps2_keyboard:keyboard"
+ 19. Port Connectivity Checks: "sevensegments:seg7"
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -51,16 +52,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 02 23:53:58 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 11 18:09:13 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_testing                                     ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 10,941                                          ;
-;     Total combinational functions  ; 10,941                                          ;
-;     Dedicated logic registers      ; 456                                             ;
-; Total registers                    ; 456                                             ;
-; Total pins                         ; 97                                              ;
+; Total logic elements               ; 416                                             ;
+;     Total combinational functions  ; 391                                             ;
+;     Dedicated logic registers      ; 57                                              ;
+; Total registers                    ; 57                                              ;
+; Total pins                         ; 67                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -169,170 +170,89 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                     ; Library ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
-; sevensegments.vhd                ; yes             ; User VHDL File               ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/sevensegments.vhd      ;         ;
-; top.vhd                          ; yes             ; User VHDL File               ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/top.vhd                ;         ;
+; ps2_keyboard.vhd                 ; yes             ; User VHDL File               ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/ps2_keyboard.vhd       ;         ;
+; debounce.vhd                     ; yes             ; User VHDL File               ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/debounce.vhd           ;         ;
+; sevensegments.vhd                ; yes             ; User VHDL File               ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/sevensegments.vhd      ;         ;
+; top.vhd                          ; yes             ; User VHDL File               ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/top.vhd                ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                 ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc            ;         ;
 ; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                 ;         ;
-; db/lpm_divide_qlo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/db/lpm_divide_qlo.tdf  ;         ;
-; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/db/abs_divider_4dg.tdf ;         ;
-; db/alt_u_div_k5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/db/alt_u_div_k5f.tdf   ;         ;
-; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/db/add_sub_lkc.tdf     ;         ;
-; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/db/add_sub_mkc.tdf     ;         ;
-; db/lpm_abs_0s9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/db/lpm_abs_0s9.tdf     ;         ;
-; db/lpm_divide_7so.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/db/lpm_divide_7so.tdf  ;         ;
-; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/db/abs_divider_kbg.tdf ;         ;
-; db/alt_u_div_k2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/db/alt_u_div_k2f.tdf   ;         ;
-; db/lpm_abs_gq9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/db/lpm_abs_gq9.tdf     ;         ;
+; db/lpm_divide_qlo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/lpm_divide_qlo.tdf  ;         ;
+; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/abs_divider_4dg.tdf ;         ;
+; db/alt_u_div_k5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/alt_u_div_k5f.tdf   ;         ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/add_sub_lkc.tdf     ;         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/add_sub_mkc.tdf     ;         ;
+; db/lpm_abs_0s9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/lpm_abs_0s9.tdf     ;         ;
+; db/lpm_divide_7so.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/lpm_divide_7so.tdf  ;         ;
+; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/abs_divider_kbg.tdf ;         ;
+; db/alt_u_div_k2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/alt_u_div_k2f.tdf   ;         ;
+; db/lpm_abs_gq9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/lpm_abs_gq9.tdf     ;         ;
+; db/lpm_divide_aso.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/lpm_divide_aso.tdf  ;         ;
+; db/abs_divider_nbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/abs_divider_nbg.tdf ;         ;
+; db/alt_u_div_q2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/alt_u_div_q2f.tdf   ;         ;
+; db/lpm_abs_jq9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/db/lpm_abs_jq9.tdf     ;         ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 10,941    ;
-;                                             ;           ;
-; Total combinational functions               ; 10941     ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 3237      ;
-;     -- 3 input functions                    ; 3540      ;
-;     -- <=2 input functions                  ; 4164      ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 6657      ;
-;     -- arithmetic mode                      ; 4284      ;
-;                                             ;           ;
-; Total registers                             ; 456       ;
-;     -- Dedicated logic registers            ; 456       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 97        ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; timeClock ;
-; Maximum fan-out                             ; 323       ;
-; Total fan-out                               ; 32868     ;
-; Average fan-out                             ; 2.86      ;
-+---------------------------------------------+-----------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 416      ;
+;                                             ;          ;
+; Total combinational functions               ; 391      ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 85       ;
+;     -- 3 input functions                    ; 91       ;
+;     -- <=2 input functions                  ; 215      ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 241      ;
+;     -- arithmetic mode                      ; 150      ;
+;                                             ;          ;
+; Total registers                             ; 57       ;
+;     -- Dedicated logic registers            ; 57       ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 67       ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 46       ;
+; Total fan-out                               ; 1164     ;
+; Average fan-out                             ; 2.26     ;
++---------------------------------------------+----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                              ;
-+------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Library Name ;
-+------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top                                     ; 10941 (1808)      ; 456 (456)    ; 0           ; 0            ; 0       ; 0         ; 97   ; 0            ; |top                                                                                                                       ; work         ;
-;    |lpm_divide:Mod0|                     ; 1661 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod0                                                                                                       ; work         ;
-;       |lpm_divide_qlo:auto_generated|    ; 1661 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod0|lpm_divide_qlo:auto_generated                                                                         ; work         ;
-;          |abs_divider_4dg:divider|       ; 1661 (62)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider                                                 ; work         ;
-;             |alt_u_div_k5f:divider|      ; 1565 (1565)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider                           ; work         ;
-;             |lpm_abs_0s9:my_abs_num|     ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|lpm_abs_0s9:my_abs_num                          ; work         ;
-;    |sevensegments:leftScore|             ; 3738 (107)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore                                                                                               ; work         ;
-;       |lpm_divide:Div0|                  ; 564 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Div0                                                                               ; work         ;
-;          |lpm_divide_7so:auto_generated| ; 564 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Div0|lpm_divide_7so:auto_generated                                                 ; work         ;
-;             |abs_divider_kbg:divider|    ; 564 (62)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Div0|lpm_divide_7so:auto_generated|abs_divider_kbg:divider                         ; work         ;
-;                |alt_u_div_k2f:divider|   ; 449 (449)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Div0|lpm_divide_7so:auto_generated|abs_divider_kbg:divider|alt_u_div_k2f:divider   ; work         ;
-;                |lpm_abs_0s9:my_abs_num|  ; 53 (53)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Div0|lpm_divide_7so:auto_generated|abs_divider_kbg:divider|lpm_abs_0s9:my_abs_num  ; work         ;
-;       |lpm_divide:Mod0|                  ; 1524 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Mod0                                                                               ; work         ;
-;          |lpm_divide_qlo:auto_generated| ; 1524 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Mod0|lpm_divide_qlo:auto_generated                                                 ; work         ;
-;             |abs_divider_4dg:divider|    ; 1524 (8)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider                         ; work         ;
-;                |alt_u_div_k5f:divider|   ; 1510 (1510)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider   ; work         ;
-;                |lpm_abs_0s9:my_abs_num|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|lpm_abs_0s9:my_abs_num  ; work         ;
-;       |lpm_divide:Mod1|                  ; 1543 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Mod1                                                                               ; work         ;
-;          |lpm_divide_qlo:auto_generated| ; 1543 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Mod1|lpm_divide_qlo:auto_generated                                                 ; work         ;
-;             |abs_divider_4dg:divider|    ; 1543 (9)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Mod1|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider                         ; work         ;
-;                |alt_u_div_k5f:divider|   ; 1497 (1497)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Mod1|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider   ; work         ;
-;                |lpm_abs_0s9:my_abs_num|  ; 37 (37)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:leftScore|lpm_divide:Mod1|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|lpm_abs_0s9:my_abs_num  ; work         ;
-;    |sevensegments:rightScore|            ; 3734 (107)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore                                                                                              ; work         ;
-;       |lpm_divide:Div0|                  ; 549 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Div0                                                                              ; work         ;
-;          |lpm_divide_7so:auto_generated| ; 549 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Div0|lpm_divide_7so:auto_generated                                                ; work         ;
-;             |abs_divider_kbg:divider|    ; 549 (64)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Div0|lpm_divide_7so:auto_generated|abs_divider_kbg:divider                        ; work         ;
-;                |alt_u_div_k2f:divider|   ; 449 (449)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Div0|lpm_divide_7so:auto_generated|abs_divider_kbg:divider|alt_u_div_k2f:divider  ; work         ;
-;                |lpm_abs_0s9:my_abs_num|  ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Div0|lpm_divide_7so:auto_generated|abs_divider_kbg:divider|lpm_abs_0s9:my_abs_num ; work         ;
-;       |lpm_divide:Mod0|                  ; 1526 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Mod0                                                                              ; work         ;
-;          |lpm_divide_qlo:auto_generated| ; 1526 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Mod0|lpm_divide_qlo:auto_generated                                                ; work         ;
-;             |abs_divider_4dg:divider|    ; 1526 (8)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider                        ; work         ;
-;                |alt_u_div_k5f:divider|   ; 1510 (1510)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider  ; work         ;
-;                |lpm_abs_0s9:my_abs_num|  ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|lpm_abs_0s9:my_abs_num ; work         ;
-;       |lpm_divide:Mod1|                  ; 1552 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Mod1                                                                              ; work         ;
-;          |lpm_divide_qlo:auto_generated| ; 1552 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Mod1|lpm_divide_qlo:auto_generated                                                ; work         ;
-;             |abs_divider_4dg:divider|    ; 1552 (9)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Mod1|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider                        ; work         ;
-;                |alt_u_div_k5f:divider|   ; 1498 (1498)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Mod1|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider  ; work         ;
-;                |lpm_abs_0s9:my_abs_num|  ; 45 (45)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:rightScore|lpm_divide:Mod1|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|lpm_abs_0s9:my_abs_num ; work         ;
-+------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                       ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Library Name ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
+; |top                                     ; 391 (0)           ; 57 (0)       ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |top                                                                                                                ; work         ;
+;    |ps2_keyboard:keyboard|               ; 63 (21)           ; 57 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ps2_keyboard:keyboard                                                                                          ; work         ;
+;       |debounce:debounce_ps2_clk|        ; 21 (21)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ps2_keyboard:keyboard|debounce:debounce_ps2_clk                                                                ; work         ;
+;       |debounce:debounce_ps2_data|       ; 21 (21)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ps2_keyboard:keyboard|debounce:debounce_ps2_data                                                               ; work         ;
+;    |sevensegments:seg7|                  ; 328 (33)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7                                                                                             ; work         ;
+;       |lpm_divide:Div0|                  ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Div0                                                                             ; work         ;
+;          |lpm_divide_7so:auto_generated| ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Div0|lpm_divide_7so:auto_generated                                               ; work         ;
+;             |abs_divider_kbg:divider|    ; 69 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Div0|lpm_divide_7so:auto_generated|abs_divider_kbg:divider                       ; work         ;
+;                |alt_u_div_k2f:divider|   ; 69 (69)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Div0|lpm_divide_7so:auto_generated|abs_divider_kbg:divider|alt_u_div_k2f:divider ; work         ;
+;       |lpm_divide:Div1|                  ; 29 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Div1                                                                             ; work         ;
+;          |lpm_divide_aso:auto_generated| ; 29 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Div1|lpm_divide_aso:auto_generated                                               ; work         ;
+;             |abs_divider_nbg:divider|    ; 29 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Div1|lpm_divide_aso:auto_generated|abs_divider_nbg:divider                       ; work         ;
+;                |alt_u_div_q2f:divider|   ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Div1|lpm_divide_aso:auto_generated|abs_divider_nbg:divider|alt_u_div_q2f:divider ; work         ;
+;       |lpm_divide:Mod0|                  ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Mod0                                                                             ; work         ;
+;          |lpm_divide_qlo:auto_generated| ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Mod0|lpm_divide_qlo:auto_generated                                               ; work         ;
+;             |abs_divider_4dg:divider|    ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider                       ; work         ;
+;                |alt_u_div_k5f:divider|   ; 148 (148)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Mod0|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider ; work         ;
+;       |lpm_divide:Mod1|                  ; 49 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Mod1                                                                             ; work         ;
+;          |lpm_divide_qlo:auto_generated| ; 49 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Mod1|lpm_divide_qlo:auto_generated                                               ; work         ;
+;             |abs_divider_4dg:divider|    ; 49 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Mod1|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider                       ; work         ;
+;                |alt_u_div_k5f:divider|   ; 49 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|sevensegments:seg7|lpm_divide:Mod1|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider ; work         ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------+
-; Registers Removed During Synthesis                                   ;
-+----------------------------------------+-----------------------------+
-; Register name                          ; Reason for Removal          ;
-+----------------------------------------+-----------------------------+
-; VGA_B[1]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_B[2]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_B[3]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_B[4]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_B[5]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_B[6]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_B[7]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_B[8]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_B[9]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_G[0]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_G[1]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_G[2]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_G[3]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_G[4]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_G[5]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_G[6]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_G[7]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_G[8]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_G[9]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_R[0]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_R[1]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_R[2]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_R[3]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_R[4]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_R[5]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_R[6]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_R[7]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_R[8]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; VGA_R[9]~reg0                          ; Merged with VGA_B[0]~reg0   ;
-; rightCursory[24]                       ; Merged with leftCursory[24] ;
-; rightCursory[23]                       ; Merged with leftCursory[23] ;
-; rightCursory[22]                       ; Merged with leftCursory[22] ;
-; rightCursory[21]                       ; Merged with leftCursory[21] ;
-; rightCursory[20]                       ; Merged with leftCursory[20] ;
-; rightCursory[19]                       ; Merged with leftCursory[19] ;
-; rightCursory[18]                       ; Merged with leftCursory[18] ;
-; rightCursory[17]                       ; Merged with leftCursory[17] ;
-; rightCursory[16]                       ; Merged with leftCursory[16] ;
-; rightCursory[15]                       ; Merged with leftCursory[15] ;
-; rightCursory[14]                       ; Merged with leftCursory[14] ;
-; rightCursory[13]                       ; Merged with leftCursory[13] ;
-; rightCursory[12]                       ; Merged with leftCursory[12] ;
-; rightCursory[11]                       ; Merged with leftCursory[11] ;
-; rightCursory[10]                       ; Merged with leftCursory[10] ;
-; rightCursory[9]                        ; Merged with leftCursory[9]  ;
-; rightCursory[8]                        ; Merged with leftCursory[8]  ;
-; rightCursory[7]                        ; Merged with leftCursory[7]  ;
-; rightCursory[6]                        ; Merged with leftCursory[6]  ;
-; rightCursory[5]                        ; Merged with leftCursory[5]  ;
-; rightCursory[4]                        ; Merged with leftCursory[4]  ;
-; rightCursory[3]                        ; Merged with leftCursory[3]  ;
-; rightCursory[2]                        ; Merged with leftCursory[2]  ;
-; rightCursory[1]                        ; Merged with leftCursory[1]  ;
-; rightCursory[0]                        ; Merged with leftCursory[0]  ;
-; rightCursory[25]                       ; Merged with leftCursory[25] ;
-; rightCursory[26]                       ; Merged with leftCursory[26] ;
-; rightCursory[27]                       ; Merged with leftCursory[27] ;
-; rightCursory[28]                       ; Merged with leftCursory[28] ;
-; rightCursory[29]                       ; Merged with leftCursory[29] ;
-; rightCursory[30]                       ; Merged with leftCursory[30] ;
-; rightCursory[31]                       ; Merged with leftCursory[31] ;
-; Total Number of Removed Registers = 61 ;                             ;
-+----------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------+
@@ -340,209 +260,189 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 456   ;
-; Number of registers using Synchronous Clear  ; 256   ;
-; Number of registers using Synchronous Load   ; 1     ;
+; Total registers                              ; 57    ;
+; Number of registers using Synchronous Clear  ; 12    ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 192   ;
+; Number of registers using Clock Enable       ; 20    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; bally[7]                                ; 11      ;
-; bally[6]                                ; 10      ;
-; bally[5]                                ; 10      ;
-; bally[4]                                ; 10      ;
-; leftCursory[7]                          ; 5       ;
-; leftCursory[6]                          ; 5       ;
-; leftCursory[5]                          ; 5       ;
-; leftCursory[4]                          ; 5       ;
-; balldirx                                ; 36      ;
-; balldiry                                ; 33      ;
-; Total number of inverted registers = 10 ;         ;
-+-----------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|ps2_keyboard:keyboard|count_idle[4]                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|ps2_keyboard:keyboard|debounce:debounce_ps2_clk|counter_out[0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|ps2_keyboard:keyboard|debounce:debounce_ps2_data|counter_out[5] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 28 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |top|leftCursory[20]       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|dotlineCnt[5]         ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|ballx[11]             ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |top|bally[28]             ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |top|difficulty[7]         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|leftCursory[6]        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|bally[4]              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: sevensegments:rightScore|lpm_divide:Mod0 ;
-+------------------------+----------------+-------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                            ;
-+------------------------+----------------+-------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                         ;
-; LPM_WIDTHD             ; 32             ; Untyped                                         ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_PIPELINE           ; 0              ; Untyped                                         ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                         ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
-; CBXI_PARAMETER         ; lpm_divide_qlo ; Untyped                                         ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
-+------------------------+----------------+-------------------------------------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ps2_keyboard:keyboard ;
++-----------------------+----------+---------------------------------+
+; Parameter Name        ; Value    ; Type                            ;
++-----------------------+----------+---------------------------------+
+; clk_freq              ; 50000000 ; Signed Integer                  ;
+; debounce_counter_size ; 8        ; Signed Integer                  ;
++-----------------------+----------+---------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: sevensegments:rightScore|lpm_divide:Div0 ;
-+------------------------+----------------+-------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                            ;
-+------------------------+----------------+-------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                         ;
-; LPM_WIDTHD             ; 5              ; Untyped                                         ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_PIPELINE           ; 0              ; Untyped                                         ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                         ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
-; CBXI_PARAMETER         ; lpm_divide_7so ; Untyped                                         ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
-+------------------------+----------------+-------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ps2_keyboard:keyboard|debounce:debounce_ps2_clk ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; counter_size   ; 8     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: sevensegments:rightScore|lpm_divide:Mod1 ;
-+------------------------+----------------+-------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                            ;
-+------------------------+----------------+-------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                         ;
-; LPM_WIDTHD             ; 32             ; Untyped                                         ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_PIPELINE           ; 0              ; Untyped                                         ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                         ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
-; CBXI_PARAMETER         ; lpm_divide_qlo ; Untyped                                         ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
-+------------------------+----------------+-------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ps2_keyboard:keyboard|debounce:debounce_ps2_data ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; counter_size   ; 8     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: sevensegments:leftScore|lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                        ;
-; LPM_WIDTHD             ; 32             ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_qlo ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sevensegments:seg7|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------------+
+; Parameter Name         ; Value          ; Type                                      ;
++------------------------+----------------+-------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                   ;
+; LPM_WIDTHD             ; 32             ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_qlo ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
++------------------------+----------------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: sevensegments:leftScore|lpm_divide:Div0 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                        ;
-; LPM_WIDTHD             ; 5              ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_7so ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sevensegments:seg7|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------+
+; Parameter Name         ; Value          ; Type                                      ;
++------------------------+----------------+-------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                   ;
+; LPM_WIDTHD             ; 5              ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_7so ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
++------------------------+----------------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: sevensegments:leftScore|lpm_divide:Mod1 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                        ;
-; LPM_WIDTHD             ; 32             ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_qlo ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sevensegments:seg7|lpm_divide:Mod1 ;
++------------------------+----------------+-------------------------------------------+
+; Parameter Name         ; Value          ; Type                                      ;
++------------------------+----------------+-------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                   ;
+; LPM_WIDTHD             ; 32             ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_qlo ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
++------------------------+----------------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                ;
-; LPM_WIDTHD             ; 32             ; Untyped                ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_qlo ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sevensegments:seg7|lpm_divide:Div1 ;
++------------------------+----------------+-------------------------------------------+
+; Parameter Name         ; Value          ; Type                                      ;
++------------------------+----------------+-------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                   ;
+; LPM_WIDTHD             ; 8              ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_aso ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
++------------------------+----------------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sevensegments:seg7|lpm_divide:Mod2 ;
++------------------------+----------------+-------------------------------------------+
+; Parameter Name         ; Value          ; Type                                      ;
++------------------------+----------------+-------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                   ;
+; LPM_WIDTHD             ; 32             ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_qlo ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
++------------------------+----------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ps2_keyboard:keyboard"                                                                      ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; ps2_code_new ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "sevensegments:seg7"     ;
++------------------+-------+----------+--------------+
+; Port             ; Type  ; Severity ; Details      ;
++------------------+-------+----------+--------------+
+; i_dispnum[31..8] ; Input ; Info     ; Stuck at GND ;
++------------------+-------+----------+--------------+
 
 
 +-------------------------------+
@@ -550,7 +450,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:10     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -560,9 +460,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jun 02 23:53:45 2023
+    Info: Processing started: Sun Jun 11 18:09:10 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_testing -c DE2_testing
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file ps2_keyboard_to_ascii.vhd
+    Info (12022): Found design unit 1: ps2_keyboard_to_ascii-behavior
+    Info (12023): Found entity 1: ps2_keyboard_to_ascii
+Info (12021): Found 2 design units, including 1 entities, in source file ps2_keyboard.vhd
+    Info (12022): Found design unit 1: ps2_keyboard-logic
+    Info (12023): Found entity 1: ps2_keyboard
+Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
+    Info (12022): Found design unit 1: debounce-logic
+    Info (12023): Found entity 1: debounce
 Info (12021): Found 2 design units, including 1 entities, in source file sevensegments.vhd
     Info (12022): Found design unit 1: sevensegments-behavioral
     Info (12023): Found entity 1: sevensegments
@@ -570,21 +479,17 @@ Info (12021): Found 2 design units, including 1 entities, in source file top.vhd
     Info (12022): Found design unit 1: top-rtl
     Info (12023): Found entity 1: top
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at top.vhd(31): used implicit default value for signal "LEDG0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at top.vhd(32): used implicit default value for signal "LEDG1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10540): VHDL Signal Declaration warning at top.vhd(52): used explicit default value for signal "ballvx" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at top.vhd(54): used explicit default value for signal "ballvy" because signal was never assigned a value
-Info (12129): Elaborating entity "sevensegments" using architecture "A:behavioral" for hierarchy "sevensegments:rightScore"
-Info (278001): Inferred 7 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:rightScore|Mod0"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:rightScore|Div0"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:rightScore|Mod1"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:leftScore|Mod0"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:leftScore|Div0"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:leftScore|Mod1"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
-Info (12130): Elaborated megafunction instantiation "sevensegments:rightScore|lpm_divide:Mod0"
-Info (12133): Instantiated megafunction "sevensegments:rightScore|lpm_divide:Mod0" with the following parameter:
+Info (12129): Elaborating entity "sevensegments" using architecture "A:behavioral" for hierarchy "sevensegments:seg7"
+Info (12129): Elaborating entity "ps2_keyboard" using architecture "A:logic" for hierarchy "ps2_keyboard:keyboard"
+Info (12128): Elaborating entity "debounce" for hierarchy "ps2_keyboard:keyboard|debounce:debounce_ps2_clk"
+Info (278001): Inferred 5 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:seg7|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:seg7|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:seg7|Mod1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:seg7|Div1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:seg7|Mod2"
+Info (12130): Elaborated megafunction instantiation "sevensegments:seg7|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "sevensegments:seg7|lpm_divide:Mod0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -602,8 +507,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_mkc
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_0s9.tdf
     Info (12023): Found entity 1: lpm_abs_0s9
-Info (12130): Elaborated megafunction instantiation "sevensegments:rightScore|lpm_divide:Div0"
-Info (12133): Instantiated megafunction "sevensegments:rightScore|lpm_divide:Div0" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "sevensegments:seg7|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "sevensegments:seg7|lpm_divide:Div0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -617,47 +522,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_k2f
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_gq9.tdf
     Info (12023): Found entity 1: lpm_abs_gq9
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0"
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "sevensegments:seg7|lpm_divide:Mod1"
+Info (12133): Instantiated megafunction "sevensegments:seg7|lpm_divide:Mod1" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (13014): Ignored 217 buffer(s)
-    Info (13016): Ignored 217 CARRY_SUM buffer(s)
-Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "VGA_HS" and its non-tri-state driver.
-    Warning (13035): Inserted always-enabled tri-state buffer between "VGA_VS" and its non-tri-state driver.
-Info (13060): One or more bidirs are fed by always enabled tri-state buffers
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "VGA_HS" is moved to its source
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "VGA_VS" is moved to its source
-Warning (13009): TRI or OPNDRN buffers permanently enabled
-    Warning (13010): Node "VGA_HS~synth"
-    Warning (13010): Node "VGA_VS~synth"
+Info (12130): Elaborated megafunction instantiation "sevensegments:seg7|lpm_divide:Div1"
+Info (12133): Instantiated megafunction "sevensegments:seg7|lpm_divide:Div1" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_aso.tdf
+    Info (12023): Found entity 1: lpm_divide_aso
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_nbg.tdf
+    Info (12023): Found entity 1: abs_divider_nbg
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_q2f.tdf
+    Info (12023): Found entity 1: alt_u_div_q2f
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_jq9.tdf
+    Info (12023): Found entity 1: lpm_abs_jq9
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_SYNC" is stuck at VCC
-    Warning (13410): Pin "HEX0[0]" is stuck at VCC
-    Warning (13410): Pin "HEX0[1]" is stuck at VCC
-    Warning (13410): Pin "HEX0[2]" is stuck at VCC
-    Warning (13410): Pin "HEX0[3]" is stuck at VCC
-    Warning (13410): Pin "HEX0[4]" is stuck at VCC
-    Warning (13410): Pin "HEX0[5]" is stuck at VCC
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC
-    Warning (13410): Pin "HEX1[4]" is stuck at VCC
-    Warning (13410): Pin "HEX1[5]" is stuck at VCC
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC
-    Warning (13410): Pin "HEX2[0]" is stuck at VCC
-    Warning (13410): Pin "HEX2[1]" is stuck at VCC
-    Warning (13410): Pin "HEX2[2]" is stuck at VCC
-    Warning (13410): Pin "HEX2[3]" is stuck at VCC
-    Warning (13410): Pin "HEX2[4]" is stuck at VCC
-    Warning (13410): Pin "HEX2[5]" is stuck at VCC
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC
+    Warning (13410): Pin "HEX2[1]" is stuck at GND
     Warning (13410): Pin "HEX3[0]" is stuck at VCC
     Warning (13410): Pin "HEX3[1]" is stuck at VCC
     Warning (13410): Pin "HEX3[2]" is stuck at VCC
@@ -665,19 +553,48 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[4]" is stuck at VCC
     Warning (13410): Pin "HEX3[5]" is stuck at VCC
     Warning (13410): Pin "HEX3[6]" is stuck at VCC
-    Warning (13410): Pin "LEDG0" is stuck at GND
-    Warning (13410): Pin "LEDG1" is stuck at GND
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC
+    Warning (13410): Pin "HEX6[0]" is stuck at VCC
+    Warning (13410): Pin "HEX6[1]" is stuck at VCC
+    Warning (13410): Pin "HEX6[2]" is stuck at VCC
+    Warning (13410): Pin "HEX6[3]" is stuck at VCC
+    Warning (13410): Pin "HEX6[4]" is stuck at VCC
+    Warning (13410): Pin "HEX6[5]" is stuck at VCC
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC
+    Warning (13410): Pin "HEX7[0]" is stuck at VCC
+    Warning (13410): Pin "HEX7[1]" is stuck at VCC
+    Warning (13410): Pin "HEX7[2]" is stuck at VCC
+    Warning (13410): Pin "HEX7[3]" is stuck at VCC
+    Warning (13410): Pin "HEX7[4]" is stuck at VCC
+    Warning (13410): Pin "HEX7[5]" is stuck at VCC
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "sevensegments:seg7|lpm_divide:Mod1|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider|op_24~0"
+    Info (17048): Logic cell "sevensegments:seg7|lpm_divide:Mod1|lpm_divide_qlo:auto_generated|abs_divider_4dg:divider|alt_u_div_k5f:divider|op_23~26"
+    Info (17048): Logic cell "sevensegments:seg7|lpm_divide:Div1|lpm_divide_aso:auto_generated|abs_divider_nbg:divider|alt_u_div_q2f:divider|add_sub_30_result_int[1]~16"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 11038 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 91 output pins
-    Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 10941 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 43 warnings
-    Info: Peak virtual memory: 4704 megabytes
-    Info: Processing ended: Fri Jun 02 23:53:58 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:15
+Info (21057): Implemented 484 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 417 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 4696 megabytes
+    Info: Processing ended: Sun Jun 11 18:09:13 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -6,7 +6,8 @@ entity sevensegments is
     port(
         i_dispNum   : in  integer;
         o_DispSeg1  : out std_logic_vector(6 downto 0);
-        o_DispSeg2  : out std_logic_vector(6 downto 0)
+        o_DispSeg2  : out std_logic_vector(6 downto 0);
+        o_DispSeg3  : out std_logic_vector(6 downto 0)
     );
 end entity;
 
@@ -14,6 +15,7 @@ architecture behavioral of sevensegments is
 
     signal Seg1 : unsigned(7 downto 0) := (others => 'X');
     signal Seg2 : unsigned(7 downto 0) := (others => 'X');
+    signal Seg3 : unsigned(7 downto 0) := (others => 'X');
 
     pure function f_sevenSegment( num : unsigned(7 downto 0) := (others => 'X') )
         return std_logic_vector is
@@ -42,6 +44,7 @@ begin
     begin
         Seg1 <= to_unsigned((i_dispNum      mod 10), Seg1'length);
         Seg2 <= to_unsigned((i_dispNum/10   mod 10), Seg2'length);
+        Seg3 <= to_unsigned((i_dispNum/100  mod 10), Seg2'length);
     end process;
 
     process(Seg1) is
@@ -52,6 +55,11 @@ begin
     process(Seg2) is
     begin
         o_DispSeg2 <= f_sevenSegment( num => Seg2 );
+    end process;
+
+    process(Seg3) is
+    begin
+        o_DispSeg3 <= f_sevenSegment( num => Seg3 );
     end process;
 
 end architecture;

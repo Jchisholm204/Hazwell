@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C35F672) Path("C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - VGA/output_files/") File("DE2_testing.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C35F672) Path("C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - PS2/output_files/") File("DE2_testing.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
