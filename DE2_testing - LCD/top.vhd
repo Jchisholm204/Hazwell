@@ -36,6 +36,7 @@ architecture rtl of top is
     signal LCD_nRst     : std_logic  := '0';
     type LCD_State is (VCC_Initialize, EN_EN, Instruct, LCD_Initialized);
     signal Clk_400hz    : std_logic  := '0';
+	 signal Clk_pll		: std_logic;
 
 begin
 
@@ -57,6 +58,12 @@ begin
             i_Clk    => i_Clk,
             i_dispNum=> dispn
         );
+		  
+	altpll : work.pll(syn)
+		port map(
+			inclk0 => i_Clk,
+			c0 => Clk_pll
+		);
 	
 
 	process(i_Clk) is

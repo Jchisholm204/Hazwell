@@ -1,44 +1,173 @@
 m255
 K3
+z0
+!s11f MIXED_VERSIONS
 13
 cModel Technology
-Z0 dC:\altera\13.1
-vmux_using_assign
-Z1 !s100 XB:o_WGK41?V]5>EUG8TD1
-Z2 Ib@lbXS3]bfg6iZoH7Z9CL3
-Z3 VJ:]PVaPGgz87>>WX?Q3:H1
-Z4 dC:\Users\Jacob\Documents\GitHub\Hazwell\Verilog
-Z5 w1683232368
-Z6 8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v
-Z7 FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v
-L0 3
-Z8 OV;L;10.1d;51
+dC:\altera\13.1
+vadder
+!s110 1687157692
+!i10b 1
+!s100 35EJK<j]WdcYJ_Q5=[AB?2
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IQ60Yece@Akh[@GadLIc6:1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog
+w1687157689
+8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
+!i122 6
+L0 1 16
+Z3 OV;L;2020.1;71
 r1
-31
-Z9 !s90 -reportprogress|300|-work|work|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v|
-Z10 o-work work -O0
-Z11 !s108 1683232876.132000
-Z12 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v|
-!i10b 1
 !s85 0
-!s101 -O0
-vmux_using_assign_TB
+31
+!s108 1687157692.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vclockedProcess
+!s110 1687198188
 !i10b 1
-!s100 hiPHLKYMCzmGInkfzPK^73
-IMP__@_JlKeaU51:K7`jm53
-Z13 V@o36DSS?QI>6go4IGP4102
+!s100 C4lXW@TKMbeidBLj_5F=60
+R0
+IYQ837;?dX8WWL=@5?U@z13
+R1
+R2
+w1687198186
+8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/clockedProcess.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/clockedProcess.v
+!i122 18
+L0 4 7
+R3
+r1
+!s85 0
+31
+!s108 1687198188.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/clockedProcess.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/clockedProcess.v|
+!i113 1
 R4
-w1683233209
-Z14 8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign_TB.v
-Z15 FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign_TB.v
-L0 2
-R8
+R5
+nclocked@process
+vClockGenerator
+!s110 1687753440
+!i10b 1
+!s100 GIW?T0U^MI17fDzDU;DdS0
+R0
+IdBEN@JRSWMlS2Lc[EES9J0
+R1
+R2
+w1687753161
+8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+!i122 80
+L0 3 29
+R3
 r1
 !s85 0
 31
-!s108 1683233233.457000
-!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign_TB.v|
-Z16 !s90 -reportprogress|300|-work|work|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign_TB.v|
-!s101 -O0
-R10
-Z17 nmux_using_assign_@t@b
+!s108 1687753440.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v|
+!i113 1
+R4
+R5
+n@clock@generator
+vClockGeneratorTB
+!s110 1687753437
+!i10b 1
+!s100 B3[lJU;GJKY8]=iTQJl2@3
+R0
+I<z;fj7@Y1m=omD65PZ7h61
+R1
+R2
+w1687753432
+8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+!i122 79
+L0 3 21
+R3
+r1
+!s85 0
+31
+!s108 1687753437.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v|
+!i113 1
+R4
+R5
+n@clock@generator@t@b
+vmux_using_assign
+!s110 1687485079
+!i10b 1
+!s100 W0iC_0OCGg[_Z[R0lCTZ:3
+R0
+IW4EHli>Lj3NAI0>AC[`jW2
+R1
+R2
+Z6 w1684474872
+8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v
+!i122 50
+L0 3 16
+R3
+r1
+!s85 0
+31
+!s108 1687485079.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v|
+!i113 1
+R4
+R5
+vmux_using_assign_TB
+!s110 1687153169
+!i10b 1
+!s100 ED?cn7L5e4M=blWfnk6Qm0
+R0
+IJA4O6ECggMY:@QkeT_^]62
+R1
+R2
+R6
+8C:\Users\Jacob\Documents\GitHub\Hazwell\Verilog\mux_using_assign_TB.v
+FC:\Users\Jacob\Documents\GitHub\Hazwell\Verilog\mux_using_assign_TB.v
+!i122 3
+L0 4 14
+R3
+r1
+!s85 0
+31
+!s108 1687153169.000000
+!s107 C:\Users\Jacob\Documents\GitHub\Hazwell\Verilog\mux_using_assign_TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Jacob\Documents\GitHub\Hazwell\Verilog\mux_using_assign_TB.v|
+!i113 1
+R4
+R5
+nmux_using_assign_@t@b
+vVGA_Controller
+!s110 1688015810
+!i10b 1
+!s100 Cgn=20]eba[68eR<IEFbR2
+R0
+IiDmh5CdW:^=^`[TNQzD3?3
+R1
+R2
+w1688015806
+8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/VGA_Controller.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/VGA_Controller.v
+!i122 81
+L0 1 44
+R3
+r1
+!s85 0
+31
+!s108 1688015810.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/VGA_Controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/VGA_Controller.v|
+!i113 1
+R4
+R5
+n@v@g@a_@controller

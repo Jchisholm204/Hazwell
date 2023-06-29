@@ -1,6 +1,475 @@
-project open C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/Verilog
-# Loading project Verilog
-vsim work.mux_using_assign_TB
-# vsim work.mux_using_assign_TB 
-# Loading work.mux_using_assign_TB
-# Loading work.mux_using_assign
+vsim -gui work.ClockGeneratorTB
+# vsim -gui work.ClockGeneratorTB 
+# Start time: 18:51:01 on Jun 22,2023
+# Loading work.ClockGeneratorTB
+# Loading work.ClockGenerator
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# 
+# Top level modules:
+# 	ClockGeneratorTB
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module mux_using_assign
+# 
+# Top level modules:
+# 	mux_using_assign
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGeneratorTB
+run
+# Break key hit
+# Break in Module ClockGenerator at C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v line 21
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# 
+# Top level modules:
+# 	ClockGeneratorTB
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGeneratorTB
+add wave -position end  sim:/ClockGeneratorTB/nRst
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Jacob  Hostname: DESKTOP-OPAUD0K  ProcessID: 35632
+#           Attempting to use alternate WLF file "./wlftd3chx2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftd3chx2
+add wave -position end  sim:/ClockGeneratorTB/regnRst
+add wave -position end  sim:/ClockGeneratorTB/Clk
+run
+# Break key hit
+# Break in Module ClockGenerator at C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v line 21
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# ** Error: (vlog-13069) C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v(24): near "=": syntax error, unexpected '=', expecting ++ or --.
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# 
+# Top level modules:
+# 	ClockGeneratorTB
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGeneratorTB
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# ** Error: (vlog-13069) C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v(20): near "posedge": syntax error, unexpected posedge.
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# Break key hit
+# Break in Module ClockGenerator at C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v line 23
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# 
+# Top level modules:
+# 	ClockGeneratorTB
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGeneratorTB
+# Loading work.ClockGenerator
+run
+# Break key hit
+# Break in Module ClockGenerator at C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v line 21
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# 
+# Top level modules:
+# 	ClockGeneratorTB
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGeneratorTB
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# ** Error: (vlog-13069) C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v(19): near "or": syntax error, unexpected or.
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# 
+# Top level modules:
+# 	ClockGeneratorTB
+# 
+# 
+# Break key hit
+# Break in Module ClockGenerator at C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v line 20
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGeneratorTB
+# Loading work.ClockGenerator
+
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+# Break key hit
+# Break in Module ClockGenerator at C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v line 23
+run
+# Break key hit
+# Break in Module ClockGenerator at C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v line 23
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+restart
+restart
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v(22): (vlog-2110) Illegal reference to net "oClk".
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v(26): (vlog-2110) Illegal reference to net "oClk".
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+add wave -position end  sim:/#vsim_capacity#/totals
+add dataflow  \
+sim:/#vsim_capacity#/totals
+# WARNING: No extended dataflow license exists
+restart
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v(26): (vlog-2110) Illegal reference to net "oClk".
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v(28): (vlog-2110) Illegal reference to net "oClk".
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v(26): LHS in procedural continuous assignment may not be a net: oClk.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v(28): LHS in procedural continuous assignment may not be a net: oClk.
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v(26): (vlog-2110) Illegal reference to net "oClk".
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v(28): (vlog-2110) Illegal reference to net "oClk".
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# 
+# Top level modules:
+# 	ClockGeneratorTB
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGeneratorTB
+# Loading work.ClockGenerator
+run
+add wave -position end  sim:/ClockGeneratorTB/cg1/oClk
+add wave -position end  sim:/ClockGeneratorTB/cg1/Clk
+add wave -position end  sim:/ClockGeneratorTB/cg1/nRst
+restart
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGenerator
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# ** Error: (vlog-13069) C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v(14): near "ClockGenerator": syntax error, unexpected IDENTIFIER, expecting ';' or ','.
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# 
+# Top level modules:
+# 	ClockGeneratorTB
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGeneratorTB
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# 
+# Top level modules:
+# 	ClockGeneratorTB
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGeneratorTB
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# 
+# Top level modules:
+# 	ClockGeneratorTB
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ClockGeneratorTB
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v(11): defparam target 'ClockFrequency' not found in this scope.
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGeneratorTB
+# 
+# Top level modules:
+# 	ClockGeneratorTB
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module ClockGenerator
+# 
+# Top level modules:
+# 	ClockGenerator
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/VGA_Controller.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module VGA_Controller
+# ** Error: (vlog-13069) C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/VGA_Controller.v(41): near "<=": syntax error, unexpected <=.
+# ** Error: (vlog-13069) C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/VGA_Controller.v(42): near "<=": syntax error, unexpected <=.
+# 
+# 
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/VGA_Controller.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module VGA_Controller
+# 
+# Top level modules:
+# 	VGA_Controller
+# 
+# 

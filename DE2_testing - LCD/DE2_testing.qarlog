@@ -1,0 +1,18 @@
+Quartus II Archive log --	C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - LCD/DE2_testing.qarlog
+
+Archive:	C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - LCD/DE2_testing.qar
+Date:		Wed Jun 21 21:45:29 2023
+Quartus II 64-Bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - LCD/DE2_testing.qpf
+C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - LCD/DE2_testing.qsf
+C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - LCD/incremental_db/compiled_partitions/DE2_testing.db_info
+C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - LCD/lcd_controller.vhd
+C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - LCD/sevensegments.vhd
+C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_testing - LCD/top.vhd
+c:/altera/13.0sp1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 7 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
