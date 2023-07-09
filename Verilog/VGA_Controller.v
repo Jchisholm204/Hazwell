@@ -44,6 +44,10 @@ assign oVGA_BLANK  = oVGA_HS & oVGA_VS;
 parameter H_ACT    = 640;
 parameter H_FRONT  = 16;
 parameter H_SYNC   = 96;
-parameter 
+parameter H_BACK   = 48;
+parameter V_ACT    = 480;
+parameter V_FRONT  = 10;
+parameter V_SYNC   = 2;
+parameter V_BACK   = 33;
 
 endmodule

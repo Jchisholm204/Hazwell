@@ -6,30 +6,30 @@ z0
 cModel Technology
 dC:\altera\13.1
 vadder
-!s110 1687157692
+!s110 1688615193
 !i10b 1
-!s100 35EJK<j]WdcYJ_Q5=[AB?2
+!s100 Q1n[`YMnng@oMoEEV6ZH=2
 Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IQ60Yece@Akh[@GadLIc6:1
+IdPgD>7>OIFH9if3[5_a4N1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog
-w1687157689
+w1688615189
 8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
-!i122 6
+!i122 101
 L0 1 16
 Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1687157692.000000
+!s108 1688615193.000000
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v|
 !i113 1
 Z4 o-work work
 Z5 tCvgOpt 0
 vclockedProcess
-!s110 1687198188
+Z6 !s110 1688614465
 !i10b 1
 !s100 C4lXW@TKMbeidBLj_5F=60
 R0
@@ -39,13 +39,13 @@ R2
 w1687198186
 8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/clockedProcess.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/clockedProcess.v
-!i122 18
+!i122 87
 L0 4 7
 R3
 r1
 !s85 0
 31
-!s108 1687198188.000000
+Z7 !s108 1688614465.000000
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/clockedProcess.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/clockedProcess.v|
 !i113 1
@@ -53,7 +53,7 @@ R4
 R5
 nclocked@process
 vClockGenerator
-!s110 1687753440
+R6
 !i10b 1
 !s100 GIW?T0U^MI17fDzDU;DdS0
 R0
@@ -63,13 +63,13 @@ R2
 w1687753161
 8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
-!i122 80
+!i122 88
 L0 3 29
 R3
 r1
 !s85 0
 31
-!s108 1687753440.000000
+R7
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v|
 !i113 1
@@ -77,7 +77,7 @@ R4
 R5
 n@clock@generator
 vClockGeneratorTB
-!s110 1687753437
+R6
 !i10b 1
 !s100 B3[lJU;GJKY8]=iTQJl2@3
 R0
@@ -87,13 +87,13 @@ R2
 w1687753432
 8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
-!i122 79
+!i122 89
 L0 3 21
 R3
 r1
 !s85 0
 31
-!s108 1687753437.000000
+R7
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v|
 !i113 1
@@ -101,48 +101,48 @@ R4
 R5
 n@clock@generator@t@b
 vmux_using_assign
-!s110 1687485079
+R6
 !i10b 1
 !s100 W0iC_0OCGg[_Z[R0lCTZ:3
 R0
 IW4EHli>Lj3NAI0>AC[`jW2
 R1
 R2
-Z6 w1684474872
+w1684474872
 8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v
-!i122 50
+!i122 84
 L0 3 16
 R3
 r1
 !s85 0
 31
-!s108 1687485079.000000
+R7
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v|
 !i113 1
 R4
 R5
 vmux_using_assign_TB
-!s110 1687153169
+R6
 !i10b 1
 !s100 ED?cn7L5e4M=blWfnk6Qm0
 R0
-IJA4O6ECggMY:@QkeT_^]62
+IoScF6`QO5_Tn@=Q@I9i7m1
 R1
 R2
-R6
-8C:\Users\Jacob\Documents\GitHub\Hazwell\Verilog\mux_using_assign_TB.v
-FC:\Users\Jacob\Documents\GitHub\Hazwell\Verilog\mux_using_assign_TB.v
-!i122 3
+w1687157451
+8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign_TB.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign_TB.v
+!i122 85
 L0 4 14
 R3
 r1
 !s85 0
 31
-!s108 1687153169.000000
-!s107 C:\Users\Jacob\Documents\GitHub\Hazwell\Verilog\mux_using_assign_TB.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Jacob\Documents\GitHub\Hazwell\Verilog\mux_using_assign_TB.v|
+R7
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign_TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign_TB.v|
 !i113 1
 R4
 R5

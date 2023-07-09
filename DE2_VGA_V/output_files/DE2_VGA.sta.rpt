@@ -1,0 +1,1143 @@
+TimeQuest Timing Analyzer report for DE2_VGA
+Fri Jul 07 20:56:38 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'iClk'
+ 12. Slow Model Hold: 'iClk'
+ 13. Slow Model Minimum Pulse Width: 'iClk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'iClk'
+ 24. Fast Model Hold: 'iClk'
+ 25. Fast Model Minimum Pulse Width: 'iClk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; DE2_VGA                                                           ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                           ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets  ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+; iClk       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { iClk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 247.28 MHz ; 247.28 MHz      ; iClk       ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; iClk  ; -3.044 ; -68.945       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; iClk  ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; iClk  ; -1.380 ; -41.380               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'iClk'                                                                                       ;
++--------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; -3.044 ; blinkCount[0]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 4.082      ;
+; -3.028 ; blinkCount[0]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 4.064      ;
+; -3.008 ; blinkCount[0]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 4.044      ;
+; -2.940 ; blinkCount[0]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.977      ;
+; -2.869 ; blinkCount[0]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.906      ;
+; -2.826 ; blinkCount[1]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.864      ;
+; -2.810 ; blinkCount[1]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.846      ;
+; -2.798 ; blinkCount[0]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.835      ;
+; -2.791 ; blinkCount[0]  ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.829      ;
+; -2.790 ; blinkCount[1]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.826      ;
+; -2.782 ; blinkCount[16] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.820      ;
+; -2.780 ; blinkCount[16] ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.818      ;
+; -2.779 ; blinkCount[16] ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.817      ;
+; -2.761 ; blinkCount[2]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.799      ;
+; -2.745 ; blinkCount[2]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.781      ;
+; -2.727 ; blinkCount[0]  ; blinkCount[28] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.764      ;
+; -2.725 ; blinkCount[2]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.761      ;
+; -2.722 ; blinkCount[3]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.760      ;
+; -2.722 ; blinkCount[1]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.759      ;
+; -2.708 ; blinkCount[0]  ; blinkCount[19] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.746      ;
+; -2.706 ; blinkCount[3]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.742      ;
+; -2.686 ; blinkCount[3]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.722      ;
+; -2.663 ; blinkCount[6]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.701      ;
+; -2.657 ; blinkCount[2]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.694      ;
+; -2.656 ; blinkCount[0]  ; blinkCount[27] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.693      ;
+; -2.651 ; blinkCount[1]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.688      ;
+; -2.649 ; blinkCount[0]  ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.687      ;
+; -2.647 ; blinkCount[6]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.683      ;
+; -2.627 ; blinkCount[6]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.663      ;
+; -2.619 ; blinkCount[4]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.657      ;
+; -2.618 ; blinkCount[3]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.655      ;
+; -2.618 ; blinkCount[28] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.655      ;
+; -2.616 ; blinkCount[28] ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.653      ;
+; -2.615 ; blinkCount[28] ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.652      ;
+; -2.603 ; blinkCount[4]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.639      ;
+; -2.600 ; blinkCount[0]  ; blinkCount[16] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.636      ;
+; -2.586 ; blinkCount[2]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.623      ;
+; -2.585 ; blinkCount[0]  ; blinkCount[26] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.622      ;
+; -2.583 ; blinkCount[4]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.619      ;
+; -2.580 ; blinkCount[5]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.618      ;
+; -2.580 ; blinkCount[1]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.617      ;
+; -2.573 ; blinkCount[1]  ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.611      ;
+; -2.564 ; blinkCount[5]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.600      ;
+; -2.559 ; blinkCount[6]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.596      ;
+; -2.557 ; blinkCount[16] ; blinkCount[19] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.595      ;
+; -2.547 ; blinkCount[3]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.584      ;
+; -2.544 ; blinkCount[5]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.580      ;
+; -2.515 ; blinkCount[4]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.552      ;
+; -2.515 ; blinkCount[2]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.552      ;
+; -2.514 ; blinkCount[0]  ; blinkCount[25] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.551      ;
+; -2.509 ; blinkCount[1]  ; blinkCount[28] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.546      ;
+; -2.508 ; blinkCount[2]  ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.546      ;
+; -2.490 ; blinkCount[1]  ; blinkCount[19] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.528      ;
+; -2.488 ; blinkCount[6]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.525      ;
+; -2.486 ; blinkCount[31] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.523      ;
+; -2.484 ; blinkCount[31] ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.521      ;
+; -2.483 ; blinkCount[31] ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.520      ;
+; -2.481 ; blinkCount[30] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.518      ;
+; -2.479 ; blinkCount[30] ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.516      ;
+; -2.478 ; blinkCount[30] ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.515      ;
+; -2.476 ; blinkCount[5]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.513      ;
+; -2.476 ; blinkCount[3]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.513      ;
+; -2.469 ; blinkCount[3]  ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.507      ;
+; -2.444 ; blinkCount[4]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.481      ;
+; -2.444 ; blinkCount[2]  ; blinkCount[28] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.481      ;
+; -2.438 ; blinkCount[1]  ; blinkCount[27] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.475      ;
+; -2.431 ; blinkCount[1]  ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.469      ;
+; -2.425 ; blinkCount[2]  ; blinkCount[19] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.463      ;
+; -2.417 ; blinkCount[6]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.454      ;
+; -2.414 ; blinkCount[16] ; blinkCount[16] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.450      ;
+; -2.411 ; blinkCount[16] ; blinkCount[14] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.447      ;
+; -2.410 ; blinkCount[7]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.448      ;
+; -2.410 ; blinkCount[6]  ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.448      ;
+; -2.407 ; blinkCount[16] ; blinkCount[13] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.443      ;
+; -2.405 ; blinkCount[5]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.442      ;
+; -2.405 ; blinkCount[3]  ; blinkCount[28] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.442      ;
+; -2.403 ; blinkCount[16] ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.439      ;
+; -2.400 ; blinkCount[16] ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.436      ;
+; -2.394 ; blinkCount[7]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.430      ;
+; -2.393 ; blinkCount[28] ; blinkCount[19] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.430      ;
+; -2.386 ; blinkCount[3]  ; blinkCount[19] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.424      ;
+; -2.382 ; blinkCount[1]  ; blinkCount[16] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.418      ;
+; -2.374 ; blinkCount[0]  ; blinkCount[12] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.410      ;
+; -2.374 ; blinkCount[7]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 3.410      ;
+; -2.373 ; blinkCount[4]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.410      ;
+; -2.373 ; blinkCount[2]  ; blinkCount[27] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.410      ;
+; -2.369 ; blinkCount[26] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.406      ;
+; -2.367 ; blinkCount[26] ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.404      ;
+; -2.367 ; blinkCount[1]  ; blinkCount[26] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.404      ;
+; -2.366 ; blinkCount[4]  ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.404      ;
+; -2.366 ; blinkCount[26] ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.403      ;
+; -2.366 ; blinkCount[2]  ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.404      ;
+; -2.360 ; blinkCount[10] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.398      ;
+; -2.359 ; blinkCount[18] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.397      ;
+; -2.358 ; blinkCount[10] ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.396      ;
+; -2.357 ; blinkCount[18] ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.395      ;
+; -2.357 ; blinkCount[10] ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.395      ;
+; -2.356 ; blinkCount[18] ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.002      ; 3.394      ;
+; -2.346 ; blinkCount[6]  ; blinkCount[28] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.383      ;
+; -2.338 ; blinkCount[27] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 3.375      ;
++--------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'iClk'                                                                                       ;
++-------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; blink          ; blink          ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.657      ;
+; 0.531 ; blinkCount[31] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.797      ;
+; 0.795 ; blinkCount[15] ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; blinkCount[23] ; blinkCount[23] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.061      ;
+; 0.800 ; blinkCount[1]  ; blinkCount[1]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.066      ;
+; 0.801 ; blinkCount[9]  ; blinkCount[9]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.067      ;
+; 0.805 ; blinkCount[17] ; blinkCount[17] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806 ; blinkCount[2]  ; blinkCount[2]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; blinkCount[4]  ; blinkCount[4]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; blinkCount[7]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; blinkCount[25] ; blinkCount[25] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; blinkCount[27] ; blinkCount[27] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; blinkCount[29] ; blinkCount[29] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; blinkCount[30] ; blinkCount[30] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.072      ;
+; 0.835 ; blinkCount[3]  ; blinkCount[3]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835 ; blinkCount[5]  ; blinkCount[5]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835 ; blinkCount[8]  ; blinkCount[8]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835 ; blinkCount[10] ; blinkCount[10] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835 ; blinkCount[26] ; blinkCount[26] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835 ; blinkCount[28] ; blinkCount[28] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.101      ;
+; 1.183 ; blinkCount[1]  ; blinkCount[2]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.449      ;
+; 1.184 ; blinkCount[9]  ; blinkCount[10] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.450      ;
+; 1.189 ; blinkCount[30] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; blinkCount[29] ; blinkCount[30] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; blinkCount[2]  ; blinkCount[3]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; blinkCount[4]  ; blinkCount[5]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; blinkCount[25] ; blinkCount[26] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; blinkCount[27] ; blinkCount[28] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.455      ;
+; 1.221 ; blinkCount[8]  ; blinkCount[9]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.487      ;
+; 1.221 ; blinkCount[3]  ; blinkCount[4]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.487      ;
+; 1.221 ; blinkCount[26] ; blinkCount[27] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.487      ;
+; 1.221 ; blinkCount[28] ; blinkCount[29] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.487      ;
+; 1.254 ; blinkCount[1]  ; blinkCount[3]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.520      ;
+; 1.260 ; blinkCount[29] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; blinkCount[2]  ; blinkCount[4]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; blinkCount[25] ; blinkCount[27] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; blinkCount[27] ; blinkCount[29] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.526      ;
+; 1.281 ; blinkCount[7]  ; blinkCount[8]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.547      ;
+; 1.292 ; blinkCount[5]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.558      ;
+; 1.292 ; blinkCount[8]  ; blinkCount[10] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.558      ;
+; 1.292 ; blinkCount[28] ; blinkCount[30] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.558      ;
+; 1.292 ; blinkCount[3]  ; blinkCount[5]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.558      ;
+; 1.292 ; blinkCount[26] ; blinkCount[28] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.558      ;
+; 1.325 ; blinkCount[1]  ; blinkCount[4]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.591      ;
+; 1.329 ; blinkCount[22] ; blinkCount[23] ; iClk         ; iClk        ; 0.000        ; -0.001     ; 1.594      ;
+; 1.330 ; blinkCount[0]  ; blinkCount[1]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.596      ;
+; 1.331 ; blinkCount[4]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331 ; blinkCount[27] ; blinkCount[30] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331 ; blinkCount[2]  ; blinkCount[5]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.597      ;
+; 1.331 ; blinkCount[25] ; blinkCount[28] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.597      ;
+; 1.340 ; blinkCount[15] ; blinkCount[17] ; iClk         ; iClk        ; 0.000        ; 0.001      ; 1.607      ;
+; 1.341 ; blinkCount[23] ; blinkCount[25] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.607      ;
+; 1.352 ; blinkCount[7]  ; blinkCount[9]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.618      ;
+; 1.361 ; blinkCount[14] ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.627      ;
+; 1.363 ; blinkCount[28] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.629      ;
+; 1.363 ; blinkCount[26] ; blinkCount[29] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.629      ;
+; 1.375 ; blinkCount[6]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.641      ;
+; 1.396 ; blinkCount[1]  ; blinkCount[5]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.662      ;
+; 1.401 ; blinkCount[0]  ; blinkCount[2]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.667      ;
+; 1.402 ; blinkCount[27] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.668      ;
+; 1.402 ; blinkCount[25] ; blinkCount[29] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.668      ;
+; 1.403 ; blinkCount[24] ; blinkCount[25] ; iClk         ; iClk        ; 0.000        ; -0.001     ; 1.668      ;
+; 1.412 ; blinkCount[23] ; blinkCount[26] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.678      ;
+; 1.423 ; blinkCount[7]  ; blinkCount[10] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.689      ;
+; 1.434 ; blinkCount[3]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.700      ;
+; 1.434 ; blinkCount[26] ; blinkCount[30] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.700      ;
+; 1.451 ; blinkCount[5]  ; blinkCount[8]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.717      ;
+; 1.468 ; blinkCount[13] ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.734      ;
+; 1.472 ; blinkCount[0]  ; blinkCount[3]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.738      ;
+; 1.473 ; blinkCount[2]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.739      ;
+; 1.473 ; blinkCount[25] ; blinkCount[30] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.739      ;
+; 1.474 ; blinkCount[24] ; blinkCount[26] ; iClk         ; iClk        ; 0.000        ; -0.001     ; 1.739      ;
+; 1.483 ; blinkCount[23] ; blinkCount[27] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.749      ;
+; 1.490 ; blinkCount[4]  ; blinkCount[8]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.756      ;
+; 1.504 ; blinkCount[20] ; blinkCount[23] ; iClk         ; iClk        ; 0.000        ; -0.001     ; 1.769      ;
+; 1.505 ; blinkCount[26] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.771      ;
+; 1.505 ; blinkCount[10] ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.771      ;
+; 1.521 ; blinkCount[12] ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.787      ;
+; 1.522 ; blinkCount[5]  ; blinkCount[9]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.788      ;
+; 1.524 ; blinkCount[22] ; blinkCount[22] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.790      ;
+; 1.534 ; blinkCount[6]  ; blinkCount[8]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.800      ;
+; 1.538 ; blinkCount[1]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.804      ;
+; 1.539 ; blinkCount[9]  ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.805      ;
+; 1.543 ; blinkCount[0]  ; blinkCount[4]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.809      ;
+; 1.543 ; blinkCount[17] ; blinkCount[23] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.809      ;
+; 1.544 ; blinkCount[25] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.810      ;
+; 1.545 ; blinkCount[24] ; blinkCount[27] ; iClk         ; iClk        ; 0.000        ; -0.001     ; 1.810      ;
+; 1.554 ; blinkCount[23] ; blinkCount[28] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.820      ;
+; 1.557 ; blinkCount[20] ; blinkCount[20] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.823      ;
+; 1.559 ; blinkCount[22] ; blinkCount[25] ; iClk         ; iClk        ; 0.000        ; -0.001     ; 1.824      ;
+; 1.561 ; blinkCount[4]  ; blinkCount[9]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.827      ;
+; 1.564 ; blinkCount[14] ; blinkCount[14] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.830      ;
+; 1.575 ; blinkCount[19] ; blinkCount[23] ; iClk         ; iClk        ; 0.000        ; -0.001     ; 1.840      ;
+; 1.577 ; blinkCount[14] ; blinkCount[17] ; iClk         ; iClk        ; 0.000        ; 0.001      ; 1.844      ;
+; 1.590 ; blinkCount[11] ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.856      ;
+; 1.593 ; blinkCount[5]  ; blinkCount[10] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.859      ;
+; 1.593 ; blinkCount[3]  ; blinkCount[8]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.859      ;
+; 1.595 ; blinkCount[13] ; blinkCount[13] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.861      ;
+; 1.605 ; blinkCount[6]  ; blinkCount[9]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.871      ;
+; 1.614 ; blinkCount[0]  ; blinkCount[5]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 1.880      ;
++-------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'iClk'                                                              ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; iClk  ; Rise       ; iClk               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blink              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blink              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[16]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[16]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[17]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[17]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[18]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[18]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[19]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[19]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[20]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[20]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[21]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[21]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[22]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[22]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[23]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[23]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[24]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[24]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[25]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[25]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[26]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[26]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[27]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[27]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[28]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[28]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[29]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[29]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[30]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[30]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[31]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[31]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[9]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[4]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[4]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[5]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[5]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[6]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[6]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[0]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[0]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[11]|clk ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; eBlink    ; iClk       ; -0.186 ; -0.186 ; Rise       ; iClk            ;
+; iNum[*]   ; iClk       ; 1.214  ; 1.214  ; Rise       ; iClk            ;
+;  iNum[0]  ; iClk       ; 1.089  ; 1.089  ; Rise       ; iClk            ;
+;  iNum[1]  ; iClk       ; 1.214  ; 1.214  ; Rise       ; iClk            ;
+;  iNum[2]  ; iClk       ; 0.606  ; 0.606  ; Rise       ; iClk            ;
+;  iNum[3]  ; iClk       ; -0.226 ; -0.226 ; Rise       ; iClk            ;
+; nRst      ; iClk       ; -0.239 ; -0.239 ; Rise       ; iClk            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; eBlink    ; iClk       ; 0.466  ; 0.466  ; Rise       ; iClk            ;
+; iNum[*]   ; iClk       ; 0.465  ; 0.465  ; Rise       ; iClk            ;
+;  iNum[0]  ; iClk       ; -0.850 ; -0.850 ; Rise       ; iClk            ;
+;  iNum[1]  ; iClk       ; -0.976 ; -0.976 ; Rise       ; iClk            ;
+;  iNum[2]  ; iClk       ; -0.361 ; -0.361 ; Rise       ; iClk            ;
+;  iNum[3]  ; iClk       ; 0.465  ; 0.465  ; Rise       ; iClk            ;
+; nRst      ; iClk       ; 0.469  ; 0.469  ; Rise       ; iClk            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; oSeg[*]   ; iClk       ; 7.805 ; 7.805 ; Rise       ; iClk            ;
+;  oSeg[0]  ; iClk       ; 7.805 ; 7.805 ; Rise       ; iClk            ;
+;  oSeg[1]  ; iClk       ; 7.764 ; 7.764 ; Rise       ; iClk            ;
+;  oSeg[2]  ; iClk       ; 7.772 ; 7.772 ; Rise       ; iClk            ;
+;  oSeg[3]  ; iClk       ; 7.546 ; 7.546 ; Rise       ; iClk            ;
+;  oSeg[4]  ; iClk       ; 7.557 ; 7.557 ; Rise       ; iClk            ;
+;  oSeg[5]  ; iClk       ; 7.535 ; 7.535 ; Rise       ; iClk            ;
+;  oSeg[6]  ; iClk       ; 7.534 ; 7.534 ; Rise       ; iClk            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; oSeg[*]   ; iClk       ; 6.909 ; 6.909 ; Rise       ; iClk            ;
+;  oSeg[0]  ; iClk       ; 7.313 ; 7.313 ; Rise       ; iClk            ;
+;  oSeg[1]  ; iClk       ; 7.273 ; 7.273 ; Rise       ; iClk            ;
+;  oSeg[2]  ; iClk       ; 7.137 ; 7.137 ; Rise       ; iClk            ;
+;  oSeg[3]  ; iClk       ; 6.917 ; 6.917 ; Rise       ; iClk            ;
+;  oSeg[4]  ; iClk       ; 6.932 ; 6.932 ; Rise       ; iClk            ;
+;  oSeg[5]  ; iClk       ; 7.075 ; 7.075 ; Rise       ; iClk            ;
+;  oSeg[6]  ; iClk       ; 6.909 ; 6.909 ; Rise       ; iClk            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; iClk  ; -0.919 ; -15.829       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; iClk  ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; iClk  ; -1.380 ; -41.380               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'iClk'                                                                                       ;
++--------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; -0.919 ; blinkCount[0]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.952      ;
+; -0.907 ; blinkCount[0]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.940      ;
+; -0.872 ; blinkCount[0]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.905      ;
+; -0.871 ; blinkCount[0]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.903      ;
+; -0.871 ; blinkCount[0]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.903      ;
+; -0.837 ; blinkCount[0]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.870      ;
+; -0.811 ; blinkCount[1]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.844      ;
+; -0.802 ; blinkCount[0]  ; blinkCount[28] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.835      ;
+; -0.799 ; blinkCount[1]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.832      ;
+; -0.779 ; blinkCount[2]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.812      ;
+; -0.778 ; blinkCount[0]  ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.811      ;
+; -0.767 ; blinkCount[0]  ; blinkCount[27] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.800      ;
+; -0.767 ; blinkCount[2]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.800      ;
+; -0.764 ; blinkCount[1]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.797      ;
+; -0.763 ; blinkCount[1]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.795      ;
+; -0.763 ; blinkCount[1]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.795      ;
+; -0.755 ; blinkCount[3]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.788      ;
+; -0.750 ; blinkCount[0]  ; blinkCount[19] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.783      ;
+; -0.743 ; blinkCount[3]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.776      ;
+; -0.732 ; blinkCount[0]  ; blinkCount[26] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.765      ;
+; -0.732 ; blinkCount[2]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.765      ;
+; -0.731 ; blinkCount[2]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.763      ;
+; -0.731 ; blinkCount[2]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.763      ;
+; -0.729 ; blinkCount[1]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.762      ;
+; -0.725 ; blinkCount[6]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.758      ;
+; -0.713 ; blinkCount[6]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.746      ;
+; -0.711 ; blinkCount[16] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.744      ;
+; -0.710 ; blinkCount[4]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.743      ;
+; -0.709 ; blinkCount[0]  ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.742      ;
+; -0.709 ; blinkCount[16] ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.742      ;
+; -0.708 ; blinkCount[3]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.741      ;
+; -0.708 ; blinkCount[16] ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.741      ;
+; -0.707 ; blinkCount[3]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.739      ;
+; -0.707 ; blinkCount[3]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.739      ;
+; -0.698 ; blinkCount[4]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.731      ;
+; -0.697 ; blinkCount[0]  ; blinkCount[25] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.730      ;
+; -0.697 ; blinkCount[2]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.730      ;
+; -0.694 ; blinkCount[1]  ; blinkCount[28] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.727      ;
+; -0.685 ; blinkCount[5]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.718      ;
+; -0.678 ; blinkCount[6]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.711      ;
+; -0.677 ; blinkCount[6]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.709      ;
+; -0.677 ; blinkCount[6]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.709      ;
+; -0.673 ; blinkCount[5]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.706      ;
+; -0.673 ; blinkCount[3]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.706      ;
+; -0.671 ; blinkCount[0]  ; blinkCount[16] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.703      ;
+; -0.670 ; blinkCount[1]  ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.703      ;
+; -0.663 ; blinkCount[4]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.696      ;
+; -0.662 ; blinkCount[4]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.694      ;
+; -0.662 ; blinkCount[4]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.694      ;
+; -0.662 ; blinkCount[2]  ; blinkCount[28] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.695      ;
+; -0.659 ; blinkCount[1]  ; blinkCount[27] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.692      ;
+; -0.643 ; blinkCount[6]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.676      ;
+; -0.642 ; blinkCount[1]  ; blinkCount[19] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.675      ;
+; -0.638 ; blinkCount[5]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.671      ;
+; -0.638 ; blinkCount[3]  ; blinkCount[28] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.671      ;
+; -0.638 ; blinkCount[2]  ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.671      ;
+; -0.637 ; blinkCount[5]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.669      ;
+; -0.637 ; blinkCount[5]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.669      ;
+; -0.632 ; blinkCount[28] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.664      ;
+; -0.630 ; blinkCount[28] ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.662      ;
+; -0.629 ; blinkCount[28] ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.661      ;
+; -0.628 ; blinkCount[4]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.661      ;
+; -0.627 ; blinkCount[2]  ; blinkCount[27] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.660      ;
+; -0.624 ; blinkCount[1]  ; blinkCount[26] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.657      ;
+; -0.614 ; blinkCount[3]  ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.647      ;
+; -0.610 ; blinkCount[2]  ; blinkCount[19] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.643      ;
+; -0.608 ; blinkCount[6]  ; blinkCount[28] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.641      ;
+; -0.603 ; blinkCount[5]  ; blinkCount[29] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.636      ;
+; -0.603 ; blinkCount[3]  ; blinkCount[27] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.636      ;
+; -0.603 ; blinkCount[31] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.635      ;
+; -0.601 ; blinkCount[7]  ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.634      ;
+; -0.601 ; blinkCount[1]  ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.634      ;
+; -0.601 ; blinkCount[31] ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.633      ;
+; -0.600 ; blinkCount[31] ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.632      ;
+; -0.599 ; blinkCount[30] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.631      ;
+; -0.597 ; blinkCount[30] ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.629      ;
+; -0.596 ; blinkCount[30] ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.628      ;
+; -0.593 ; blinkCount[4]  ; blinkCount[28] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.626      ;
+; -0.592 ; blinkCount[16] ; blinkCount[19] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.625      ;
+; -0.592 ; blinkCount[2]  ; blinkCount[26] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.625      ;
+; -0.589 ; blinkCount[7]  ; blinkCount[31] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.622      ;
+; -0.589 ; blinkCount[1]  ; blinkCount[25] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.622      ;
+; -0.586 ; blinkCount[3]  ; blinkCount[19] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.619      ;
+; -0.584 ; blinkCount[6]  ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.617      ;
+; -0.573 ; blinkCount[6]  ; blinkCount[27] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.606      ;
+; -0.569 ; blinkCount[4]  ; blinkCount[22] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.602      ;
+; -0.569 ; blinkCount[2]  ; blinkCount[20] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.602      ;
+; -0.568 ; blinkCount[0]  ; blinkCount[23] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.601      ;
+; -0.568 ; blinkCount[5]  ; blinkCount[28] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.601      ;
+; -0.568 ; blinkCount[3]  ; blinkCount[26] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.601      ;
+; -0.563 ; blinkCount[1]  ; blinkCount[16] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.595      ;
+; -0.561 ; blinkCount[0]  ; blinkCount[12] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.593      ;
+; -0.558 ; blinkCount[4]  ; blinkCount[27] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.591      ;
+; -0.557 ; blinkCount[2]  ; blinkCount[25] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.590      ;
+; -0.556 ; blinkCount[6]  ; blinkCount[19] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.589      ;
+; -0.554 ; blinkCount[7]  ; blinkCount[30] ; iClk         ; iClk        ; 1.000        ; 0.001      ; 1.587      ;
+; -0.553 ; blinkCount[7]  ; blinkCount[18] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; blinkCount[7]  ; blinkCount[21] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.585      ;
+; -0.548 ; blinkCount[26] ; blinkCount[24] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.580      ;
+; -0.548 ; blinkCount[16] ; blinkCount[16] ; iClk         ; iClk        ; 1.000        ; 0.000      ; 1.580      ;
++--------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'iClk'                                                                                       ;
++-------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; blink          ; blink          ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.367      ;
+; 0.243 ; blinkCount[31] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.395      ;
+; 0.356 ; blinkCount[23] ; blinkCount[23] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357 ; blinkCount[1]  ; blinkCount[1]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357 ; blinkCount[9]  ; blinkCount[9]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357 ; blinkCount[15] ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.509      ;
+; 0.359 ; blinkCount[17] ; blinkCount[17] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; blinkCount[2]  ; blinkCount[2]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; blinkCount[25] ; blinkCount[25] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; blinkCount[27] ; blinkCount[27] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; blinkCount[4]  ; blinkCount[4]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; blinkCount[7]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; blinkCount[29] ; blinkCount[29] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; blinkCount[30] ; blinkCount[30] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.513      ;
+; 0.369 ; blinkCount[3]  ; blinkCount[3]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; blinkCount[5]  ; blinkCount[5]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; blinkCount[8]  ; blinkCount[8]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; blinkCount[10] ; blinkCount[10] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; blinkCount[26] ; blinkCount[26] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; blinkCount[28] ; blinkCount[28] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.521      ;
+; 0.495 ; blinkCount[1]  ; blinkCount[2]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.647      ;
+; 0.495 ; blinkCount[9]  ; blinkCount[10] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.647      ;
+; 0.498 ; blinkCount[2]  ; blinkCount[3]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; blinkCount[25] ; blinkCount[26] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; blinkCount[27] ; blinkCount[28] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499 ; blinkCount[30] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; blinkCount[29] ; blinkCount[30] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; blinkCount[4]  ; blinkCount[5]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.651      ;
+; 0.509 ; blinkCount[8]  ; blinkCount[9]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; blinkCount[26] ; blinkCount[27] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; blinkCount[3]  ; blinkCount[4]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; blinkCount[28] ; blinkCount[29] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.661      ;
+; 0.530 ; blinkCount[1]  ; blinkCount[3]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.682      ;
+; 0.533 ; blinkCount[25] ; blinkCount[27] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; blinkCount[2]  ; blinkCount[4]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; blinkCount[27] ; blinkCount[29] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534 ; blinkCount[29] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.686      ;
+; 0.544 ; blinkCount[5]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; blinkCount[8]  ; blinkCount[10] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; blinkCount[26] ; blinkCount[28] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; blinkCount[28] ; blinkCount[30] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; blinkCount[3]  ; blinkCount[5]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.696      ;
+; 0.554 ; blinkCount[7]  ; blinkCount[8]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.706      ;
+; 0.565 ; blinkCount[1]  ; blinkCount[4]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.717      ;
+; 0.567 ; blinkCount[22] ; blinkCount[23] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568 ; blinkCount[0]  ; blinkCount[1]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; blinkCount[25] ; blinkCount[28] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; blinkCount[27] ; blinkCount[30] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; blinkCount[2]  ; blinkCount[5]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.720      ;
+; 0.569 ; blinkCount[4]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.721      ;
+; 0.575 ; blinkCount[14] ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.727      ;
+; 0.576 ; blinkCount[15] ; blinkCount[17] ; iClk         ; iClk        ; 0.000        ; 0.001      ; 0.729      ;
+; 0.579 ; blinkCount[26] ; blinkCount[29] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; blinkCount[28] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.731      ;
+; 0.584 ; blinkCount[23] ; blinkCount[25] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.736      ;
+; 0.584 ; blinkCount[6]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.736      ;
+; 0.589 ; blinkCount[7]  ; blinkCount[9]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.741      ;
+; 0.593 ; blinkCount[24] ; blinkCount[25] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.745      ;
+; 0.600 ; blinkCount[1]  ; blinkCount[5]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.752      ;
+; 0.603 ; blinkCount[0]  ; blinkCount[2]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.755      ;
+; 0.603 ; blinkCount[25] ; blinkCount[29] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.755      ;
+; 0.603 ; blinkCount[27] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.755      ;
+; 0.614 ; blinkCount[26] ; blinkCount[30] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.766      ;
+; 0.614 ; blinkCount[3]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.766      ;
+; 0.619 ; blinkCount[23] ; blinkCount[26] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.771      ;
+; 0.623 ; blinkCount[13] ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.775      ;
+; 0.624 ; blinkCount[7]  ; blinkCount[10] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.776      ;
+; 0.628 ; blinkCount[24] ; blinkCount[26] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.780      ;
+; 0.638 ; blinkCount[0]  ; blinkCount[3]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.790      ;
+; 0.638 ; blinkCount[5]  ; blinkCount[8]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.790      ;
+; 0.638 ; blinkCount[25] ; blinkCount[30] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.790      ;
+; 0.638 ; blinkCount[2]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.790      ;
+; 0.645 ; blinkCount[20] ; blinkCount[23] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.797      ;
+; 0.649 ; blinkCount[26] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.801      ;
+; 0.649 ; blinkCount[10] ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.801      ;
+; 0.654 ; blinkCount[23] ; blinkCount[27] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.806      ;
+; 0.656 ; blinkCount[12] ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.808      ;
+; 0.663 ; blinkCount[4]  ; blinkCount[8]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.815      ;
+; 0.663 ; blinkCount[24] ; blinkCount[27] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.815      ;
+; 0.670 ; blinkCount[1]  ; blinkCount[7]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.822      ;
+; 0.670 ; blinkCount[9]  ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.822      ;
+; 0.672 ; blinkCount[17] ; blinkCount[23] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.824      ;
+; 0.673 ; blinkCount[0]  ; blinkCount[4]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.825      ;
+; 0.673 ; blinkCount[5]  ; blinkCount[9]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.825      ;
+; 0.673 ; blinkCount[25] ; blinkCount[31] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.825      ;
+; 0.674 ; blinkCount[22] ; blinkCount[22] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.826      ;
+; 0.678 ; blinkCount[6]  ; blinkCount[8]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.830      ;
+; 0.679 ; blinkCount[19] ; blinkCount[23] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.831      ;
+; 0.683 ; blinkCount[20] ; blinkCount[20] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.835      ;
+; 0.687 ; blinkCount[14] ; blinkCount[14] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.839      ;
+; 0.688 ; blinkCount[11] ; blinkCount[15] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.840      ;
+; 0.689 ; blinkCount[23] ; blinkCount[28] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.841      ;
+; 0.696 ; blinkCount[14] ; blinkCount[17] ; iClk         ; iClk        ; 0.000        ; 0.001      ; 0.849      ;
+; 0.696 ; blinkCount[22] ; blinkCount[25] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.848      ;
+; 0.697 ; blinkCount[13] ; blinkCount[13] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.849      ;
+; 0.697 ; blinkCount[16] ; blinkCount[17] ; iClk         ; iClk        ; 0.000        ; 0.001      ; 0.850      ;
+; 0.698 ; blinkCount[4]  ; blinkCount[9]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.850      ;
+; 0.698 ; blinkCount[24] ; blinkCount[28] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.850      ;
+; 0.708 ; blinkCount[0]  ; blinkCount[5]  ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.860      ;
+; 0.708 ; blinkCount[5]  ; blinkCount[10] ; iClk         ; iClk        ; 0.000        ; 0.000      ; 0.860      ;
++-------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'iClk'                                                              ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; iClk  ; Rise       ; iClk               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blink              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blink              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[16]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[16]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[17]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[17]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[18]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[18]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[19]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[19]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[20]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[20]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[21]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[21]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[22]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[22]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[23]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[23]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[24]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[24]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[25]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[25]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[26]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[26]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[27]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[27]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[28]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[28]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[29]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[29]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[30]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[30]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[31]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[31]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[9]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[0]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[1]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[2]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[3]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[4]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[4]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[5]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[5]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; Seg[6]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; Seg[6]|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[0]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[0]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; iClk  ; Rise       ; blinkCount[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; iClk  ; Rise       ; blinkCount[11]|clk ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; eBlink    ; iClk       ; -0.351 ; -0.351 ; Rise       ; iClk            ;
+; iNum[*]   ; iClk       ; 0.341  ; 0.341  ; Rise       ; iClk            ;
+;  iNum[0]  ; iClk       ; 0.254  ; 0.254  ; Rise       ; iClk            ;
+;  iNum[1]  ; iClk       ; 0.341  ; 0.341  ; Rise       ; iClk            ;
+;  iNum[2]  ; iClk       ; 0.061  ; 0.061  ; Rise       ; iClk            ;
+;  iNum[3]  ; iClk       ; -0.459 ; -0.459 ; Rise       ; iClk            ;
+; nRst      ; iClk       ; -0.385 ; -0.385 ; Rise       ; iClk            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; eBlink    ; iClk       ; 0.504  ; 0.504  ; Rise       ; iClk            ;
+; iNum[*]   ; iClk       ; 0.589  ; 0.589  ; Rise       ; iClk            ;
+;  iNum[0]  ; iClk       ; -0.124 ; -0.124 ; Rise       ; iClk            ;
+;  iNum[1]  ; iClk       ; -0.216 ; -0.216 ; Rise       ; iClk            ;
+;  iNum[2]  ; iClk       ; 0.070  ; 0.070  ; Rise       ; iClk            ;
+;  iNum[3]  ; iClk       ; 0.589  ; 0.589  ; Rise       ; iClk            ;
+; nRst      ; iClk       ; 0.505  ; 0.505  ; Rise       ; iClk            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; oSeg[*]   ; iClk       ; 4.345 ; 4.345 ; Rise       ; iClk            ;
+;  oSeg[0]  ; iClk       ; 4.345 ; 4.345 ; Rise       ; iClk            ;
+;  oSeg[1]  ; iClk       ; 4.310 ; 4.310 ; Rise       ; iClk            ;
+;  oSeg[2]  ; iClk       ; 4.319 ; 4.319 ; Rise       ; iClk            ;
+;  oSeg[3]  ; iClk       ; 4.223 ; 4.223 ; Rise       ; iClk            ;
+;  oSeg[4]  ; iClk       ; 4.229 ; 4.229 ; Rise       ; iClk            ;
+;  oSeg[5]  ; iClk       ; 4.211 ; 4.211 ; Rise       ; iClk            ;
+;  oSeg[6]  ; iClk       ; 4.211 ; 4.211 ; Rise       ; iClk            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; oSeg[*]   ; iClk       ; 3.876 ; 3.876 ; Rise       ; iClk            ;
+;  oSeg[0]  ; iClk       ; 4.072 ; 4.072 ; Rise       ; iClk            ;
+;  oSeg[1]  ; iClk       ; 4.036 ; 4.036 ; Rise       ; iClk            ;
+;  oSeg[2]  ; iClk       ; 3.977 ; 3.977 ; Rise       ; iClk            ;
+;  oSeg[3]  ; iClk       ; 3.883 ; 3.883 ; Rise       ; iClk            ;
+;  oSeg[4]  ; iClk       ; 3.892 ; 3.892 ; Rise       ; iClk            ;
+;  oSeg[5]  ; iClk       ; 3.947 ; 3.947 ; Rise       ; iClk            ;
+;  oSeg[6]  ; iClk       ; 3.876 ; 3.876 ; Rise       ; iClk            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.044  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  iClk            ; -3.044  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -68.945 ; 0.0   ; 0.0      ; 0.0     ; -41.38              ;
+;  iClk            ; -68.945 ; 0.000 ; N/A      ; N/A     ; -41.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; eBlink    ; iClk       ; -0.186 ; -0.186 ; Rise       ; iClk            ;
+; iNum[*]   ; iClk       ; 1.214  ; 1.214  ; Rise       ; iClk            ;
+;  iNum[0]  ; iClk       ; 1.089  ; 1.089  ; Rise       ; iClk            ;
+;  iNum[1]  ; iClk       ; 1.214  ; 1.214  ; Rise       ; iClk            ;
+;  iNum[2]  ; iClk       ; 0.606  ; 0.606  ; Rise       ; iClk            ;
+;  iNum[3]  ; iClk       ; -0.226 ; -0.226 ; Rise       ; iClk            ;
+; nRst      ; iClk       ; -0.239 ; -0.239 ; Rise       ; iClk            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; eBlink    ; iClk       ; 0.504  ; 0.504  ; Rise       ; iClk            ;
+; iNum[*]   ; iClk       ; 0.589  ; 0.589  ; Rise       ; iClk            ;
+;  iNum[0]  ; iClk       ; -0.124 ; -0.124 ; Rise       ; iClk            ;
+;  iNum[1]  ; iClk       ; -0.216 ; -0.216 ; Rise       ; iClk            ;
+;  iNum[2]  ; iClk       ; 0.070  ; 0.070  ; Rise       ; iClk            ;
+;  iNum[3]  ; iClk       ; 0.589  ; 0.589  ; Rise       ; iClk            ;
+; nRst      ; iClk       ; 0.505  ; 0.505  ; Rise       ; iClk            ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; oSeg[*]   ; iClk       ; 7.805 ; 7.805 ; Rise       ; iClk            ;
+;  oSeg[0]  ; iClk       ; 7.805 ; 7.805 ; Rise       ; iClk            ;
+;  oSeg[1]  ; iClk       ; 7.764 ; 7.764 ; Rise       ; iClk            ;
+;  oSeg[2]  ; iClk       ; 7.772 ; 7.772 ; Rise       ; iClk            ;
+;  oSeg[3]  ; iClk       ; 7.546 ; 7.546 ; Rise       ; iClk            ;
+;  oSeg[4]  ; iClk       ; 7.557 ; 7.557 ; Rise       ; iClk            ;
+;  oSeg[5]  ; iClk       ; 7.535 ; 7.535 ; Rise       ; iClk            ;
+;  oSeg[6]  ; iClk       ; 7.534 ; 7.534 ; Rise       ; iClk            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; oSeg[*]   ; iClk       ; 3.876 ; 3.876 ; Rise       ; iClk            ;
+;  oSeg[0]  ; iClk       ; 4.072 ; 4.072 ; Rise       ; iClk            ;
+;  oSeg[1]  ; iClk       ; 4.036 ; 4.036 ; Rise       ; iClk            ;
+;  oSeg[2]  ; iClk       ; 3.977 ; 3.977 ; Rise       ; iClk            ;
+;  oSeg[3]  ; iClk       ; 3.883 ; 3.883 ; Rise       ; iClk            ;
+;  oSeg[4]  ; iClk       ; 3.892 ; 3.892 ; Rise       ; iClk            ;
+;  oSeg[5]  ; iClk       ; 3.947 ; 3.947 ; Rise       ; iClk            ;
+;  oSeg[6]  ; iClk       ; 3.876 ; 3.876 ; Rise       ; iClk            ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; iClk       ; iClk     ; 977      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; iClk       ; iClk     ; 977      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 101   ; 101  ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 14    ; 14   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Jul 07 20:56:37 2023
+Info: Command: quartus_sta DE2_VGA -c DE2_VGA
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'DE2_VGA.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name iClk iClk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.044
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.044       -68.945 iClk 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 iClk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -41.380 iClk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.919
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.919       -15.829 iClk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 iClk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -41.380 iClk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4539 megabytes
+    Info: Processing ended: Fri Jul 07 20:56:38 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
