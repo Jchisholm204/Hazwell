@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_VGA
-Fri Jul 07 20:56:29 2023
+Tue Jul 25 22:37:44 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,12 +13,27 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |sevensegmentcontroller
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
- 13. Analysis & Synthesis Suppressed Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: sevensegments:segments|sevensegmentcontroller:s0
+ 13. Parameter Settings for User Entity Instance: sevensegments:segments|sevensegmentcontroller:s1
+ 14. Parameter Settings for User Entity Instance: sevensegments:segments|sevensegmentcontroller:s2
+ 15. Parameter Settings for User Entity Instance: sevensegments:segments|sevensegmentcontroller:s3
+ 16. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod0
+ 17. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Div0
+ 18. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod1
+ 19. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Div1
+ 20. Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod2
+ 21. Port Connectivity Checks: "vga_640x480:vgaController"
+ 22. Port Connectivity Checks: "sevensegments:segments|sevensegmentcontroller:s3"
+ 23. Port Connectivity Checks: "sevensegments:segments|sevensegmentcontroller:s2"
+ 24. Port Connectivity Checks: "sevensegments:segments|sevensegmentcontroller:s1"
+ 25. Port Connectivity Checks: "sevensegments:segments|sevensegmentcontroller:s0"
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+ 28. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,16 +59,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jul 07 20:56:29 2023           ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 25 22:37:44 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_VGA                                         ;
-; Top-level Entity Name              ; sevensegmentcontroller                          ;
+; Top-level Entity Name              ; DE2_VGA                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 71                                              ;
-;     Total combinational functions  ; 71                                              ;
-;     Dedicated logic registers      ; 40                                              ;
-; Total registers                    ; 40                                              ;
-; Total pins                         ; 14                                              ;
+; Total logic elements               ; 407                                             ;
+;     Total combinational functions  ; 405                                             ;
+;     Dedicated logic registers      ; 167                                             ;
+; Total registers                    ; 167                                             ;
+; Total pins                         ; 110                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -61,89 +76,89 @@ applicable agreement for further details.
 +------------------------------------+-------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                            ;
-+----------------------------------------------------------------------------+------------------------+--------------------+
-; Option                                                                     ; Setting                ; Default Value      ;
-+----------------------------------------------------------------------------+------------------------+--------------------+
-; Device                                                                     ; EP2C35F672C6           ;                    ;
-; Top-level entity name                                                      ; sevensegmentcontroller ; DE2_VGA            ;
-; Family name                                                                ; Cyclone II             ; Cyclone IV GX      ;
-; Use smart compilation                                                      ; Off                    ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                     ; On                 ;
-; Enable compact report table                                                ; Off                    ; Off                ;
-; Restructure Multiplexers                                                   ; Auto                   ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                    ; Off                ;
-; Preserve fewer node names                                                  ; On                     ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                    ; Off                ;
-; Verilog Version                                                            ; Verilog_2001           ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993              ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto                   ; Auto               ;
-; Safe State Machine                                                         ; Off                    ; Off                ;
-; Extract Verilog State Machines                                             ; On                     ; On                 ;
-; Extract VHDL State Machines                                                ; On                     ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                    ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000                   ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                    ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                     ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                     ; On                 ;
-; Parallel Synthesis                                                         ; On                     ; On                 ;
-; DSP Block Balancing                                                        ; Auto                   ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                     ; On                 ;
-; Power-Up Don't Care                                                        ; On                     ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                    ; Off                ;
-; Remove Duplicate Registers                                                 ; On                     ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                    ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                    ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                    ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                    ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                    ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                     ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                    ; Off                ;
-; Optimization Technique                                                     ; Balanced               ; Balanced           ;
-; Carry Chain Length                                                         ; 70                     ; 70                 ;
-; Auto Carry Chains                                                          ; On                     ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                     ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                    ; Off                ;
-; Auto ROM Replacement                                                       ; On                     ; On                 ;
-; Auto RAM Replacement                                                       ; On                     ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto                   ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto                   ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                     ; On                 ;
-; Strict RAM Replacement                                                     ; Off                    ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                     ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                    ; Off                ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                    ; Off                ;
-; Auto Resource Sharing                                                      ; Off                    ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                    ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                    ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                    ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                     ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                    ; Off                ;
-; Timing-Driven Synthesis                                                    ; Off                    ; Off                ;
-; Report Parameter Settings                                                  ; On                     ; On                 ;
-; Report Source Assignments                                                  ; On                     ; On                 ;
-; Report Connectivity Checks                                                 ; On                     ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                    ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                      ; 2                  ;
-; PowerPlay Power Optimization                                               ; Normal compilation     ; Normal compilation ;
-; HDL message level                                                          ; Level2                 ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                    ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000                   ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                   ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                    ; 100                ;
-; Clock MUX Protection                                                       ; On                     ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                    ; Off                ;
-; Block Design Naming                                                        ; Auto                   ; Auto               ;
-; SDC constraint protection                                                  ; Off                    ; Off                ;
-; Synthesis Effort                                                           ; Auto                   ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                     ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                    ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium                 ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto                   ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                     ; On                 ;
-; Synthesis Seed                                                             ; 1                      ; 1                  ;
-+----------------------------------------------------------------------------+------------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; DE2_VGA            ; DE2_VGA            ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
 
 
 Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
@@ -157,53 +172,221 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; sevensegmentcontroller.v         ; yes             ; User Verilog HDL File  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/sevensegmentcontroller.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; DE2_VGA.v                        ; yes             ; User Verilog HDL File        ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/DE2_VGA.v                  ;         ;
+; sevensegments.v                  ; yes             ; User Verilog HDL File        ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/sevensegments.v            ;         ;
+; sevensegmentcontroller.v         ; yes             ; User Verilog HDL File        ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/sevensegmentcontroller.v   ;         ;
+; vga_640x480.v                    ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/vga_640x480.v              ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf             ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc            ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc             ;         ;
+; db/lpm_divide_45m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/db/lpm_divide_45m.tdf      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/db/sign_div_unsign_bkh.tdf ;         ;
+; db/alt_u_div_ove.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/db/alt_u_div_ove.tdf       ;         ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/db/add_sub_lkc.tdf         ;         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/db/add_sub_mkc.tdf         ;         ;
+; db/lpm_divide_1dm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/db/lpm_divide_1dm.tdf      ;         ;
+; db/lpm_divide_4dm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/db/lpm_divide_4dm.tdf      ;         ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/db/sign_div_unsign_ekh.tdf ;         ;
+; db/alt_u_div_uve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/db/alt_u_div_uve.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 71    ;
-;                                             ;       ;
-; Total combinational functions               ; 71    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 17    ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 54    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 40    ;
-;     -- arithmetic mode                      ; 31    ;
-;                                             ;       ;
-; Total registers                             ; 40    ;
-;     -- Dedicated logic registers            ; 40    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 14    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; iClk  ;
-; Maximum fan-out                             ; 40    ;
-; Total fan-out                               ; 335   ;
-; Average fan-out                             ; 2.68  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 407      ;
+;                                             ;          ;
+; Total combinational functions               ; 405      ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 77       ;
+;     -- 3 input functions                    ; 49       ;
+;     -- <=2 input functions                  ; 279      ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 217      ;
+;     -- arithmetic mode                      ; 188      ;
+;                                             ;          ;
+; Total registers                             ; 167      ;
+;     -- Dedicated logic registers            ; 167      ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 110      ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 103      ;
+; Total fan-out                               ; 1521     ;
+; Average fan-out                             ; 2.23     ;
++---------------------------------------------+----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                             ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
-; |sevensegmentcontroller    ; 71 (71)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |sevensegmentcontroller ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                    ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |DE2_VGA                                  ; 405 (65)          ; 167 (41)     ; 0           ; 0            ; 0       ; 0         ; 110  ; 0            ; |DE2_VGA                                                                                                                        ; work         ;
+;    |sevensegments:segments|               ; 245 (3)           ; 62 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                   ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_1dm:auto_generated|  ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Div0|lpm_divide_1dm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Div0|lpm_divide_1dm:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;                |alt_u_div_ove:divider|    ; 56 (56)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Div0|lpm_divide_1dm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_ove:divider ; work         ;
+;       |lpm_divide:Div1|                   ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Div1                                                                                 ; work         ;
+;          |lpm_divide_4dm:auto_generated|  ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Div1|lpm_divide_4dm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_ekh:divider| ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Div1|lpm_divide_4dm:auto_generated|sign_div_unsign_ekh:divider                       ; work         ;
+;                |alt_u_div_uve:divider|    ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Div1|lpm_divide_4dm:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ; work         ;
+;       |lpm_divide:Mod0|                   ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_45m:auto_generated|  ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Mod0|lpm_divide_45m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Mod0|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;                |alt_u_div_ove:divider|    ; 59 (59)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Mod0|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_ove:divider ; work         ;
+;       |lpm_divide:Mod1|                   ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Mod1                                                                                 ; work         ;
+;          |lpm_divide_45m:auto_generated|  ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Mod1|lpm_divide_45m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Mod1|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider                       ; work         ;
+;                |alt_u_div_ove:divider|    ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|lpm_divide:Mod1|lpm_divide_45m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_ove:divider ; work         ;
+;       |sevensegmentcontroller:s0|         ; 58 (58)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|sevensegmentcontroller:s0                                                                       ; work         ;
+;       |sevensegmentcontroller:s1|         ; 14 (14)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|sevensegmentcontroller:s1                                                                       ; work         ;
+;       |sevensegmentcontroller:s2|         ; 9 (9)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|sevensegments:segments|sevensegmentcontroller:s2                                                                       ; work         ;
+;    |vga_640x480:vgaController|            ; 95 (95)           ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_VGA|vga_640x480:vgaController                                                                                              ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                            ;
++-----------------------------------------------------------------+-----------------------------------------------------------------------------+
+; Register name                                                   ; Reason for Removal                                                          ;
++-----------------------------------------------------------------+-----------------------------------------------------------------------------+
+; sevensegments:segments|sevensegmentcontroller:s1|blink          ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blink          ;
+; sevensegments:segments|sevensegmentcontroller:s2|blink          ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blink          ;
+; sevensegments:segments|sevensegmentcontroller:s3|blink          ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blink          ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[31] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[31] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[31] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[31] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[31] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[31] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[30] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[30] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[30] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[30] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[30] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[30] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[29] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[29] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[29] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[29] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[29] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[29] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[28] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[28] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[28] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[28] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[28] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[28] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[27] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[27] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[27] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[27] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[27] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[27] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[26] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[26] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[26] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[26] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[26] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[26] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[25] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[25] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[25] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[25] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[25] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[25] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[24] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[24] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[24] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[24] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[24] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[24] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[23] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[23] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[23] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[23] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[23] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[23] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[22] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[22] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[22] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[22] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[22] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[22] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[21] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[21] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[21] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[21] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[21] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[21] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[20] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[20] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[20] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[20] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[20] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[20] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[19] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[19] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[19] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[19] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[19] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[19] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[18] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[18] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[18] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[18] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[18] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[18] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[17] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[17] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[17] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[17] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[17] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[17] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[16] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[16] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[16] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[16] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[16] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[16] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[15] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[15] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[15] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[15] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[15] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[15] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[14] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[14] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[14] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[14] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[14] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[14] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[13] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[13] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[13] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[13] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[13] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[13] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[12] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[12] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[12] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[12] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[12] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[12] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[11] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[11] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[11] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[11] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[11] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[11] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[10] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[10] ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[10] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[10] ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[10] ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[10] ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[9]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[9]  ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[9]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[9]  ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[9]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[9]  ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[8]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[8]  ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[8]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[8]  ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[8]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[8]  ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[7]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[7]  ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[7]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[7]  ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[7]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[7]  ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[6]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[6]  ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[6]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[6]  ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[6]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[6]  ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[5]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[5]  ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[5]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[5]  ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[5]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[5]  ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[4]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[4]  ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[4]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[4]  ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[4]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[4]  ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[3]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[3]  ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[3]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[3]  ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[3]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[3]  ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[2]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[2]  ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[2]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[2]  ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[2]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[2]  ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[1]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[1]  ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[1]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[1]  ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[1]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[1]  ;
+; sevensegments:segments|sevensegmentcontroller:s1|blinkCount[0]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[0]  ;
+; sevensegments:segments|sevensegmentcontroller:s2|blinkCount[0]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[0]  ;
+; sevensegments:segments|sevensegmentcontroller:s3|blinkCount[0]  ; Merged with sevensegments:segments|sevensegmentcontroller:s0|blinkCount[0]  ;
+; sevensegments:segments|Seg3[0..3]                               ; Stuck at GND due to stuck port data_in                                      ;
+; sevensegments:segments|sevensegmentcontroller:s3|Seg[6]         ; Stuck at VCC due to stuck port data_in                                      ;
+; sevensegments:segments|sevensegmentcontroller:s3|Seg[0..5]      ; Stuck at GND due to stuck port data_in                                      ;
+; sevensegments:segments|Seg2[2,3]                                ; Stuck at GND due to stuck port data_in                                      ;
+; sevensegments:segments|sevensegmentcontroller:s2|Seg[1]         ; Stuck at GND due to stuck port data_in                                      ;
+; sevensegments:segments|sevensegmentcontroller:s2|Seg[3]         ; Merged with sevensegments:segments|sevensegmentcontroller:s2|Seg[0]         ;
+; Total Number of Removed Registers = 114                         ;                                                                             ;
++-----------------------------------------------------------------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                           ;
++--------------------------------+---------------------------+----------------------------------------------------------+
+; Register name                  ; Reason for Removal        ; Registers Removed due to This Register                   ;
++--------------------------------+---------------------------+----------------------------------------------------------+
+; sevensegments:segments|Seg3[0] ; Stuck at GND              ; sevensegments:segments|sevensegmentcontroller:s3|Seg[6], ;
+;                                ; due to stuck port data_in ; sevensegments:segments|sevensegmentcontroller:s3|Seg[5], ;
+;                                ;                           ; sevensegments:segments|sevensegmentcontroller:s3|Seg[4], ;
+;                                ;                           ; sevensegments:segments|sevensegmentcontroller:s3|Seg[3], ;
+;                                ;                           ; sevensegments:segments|sevensegmentcontroller:s3|Seg[2], ;
+;                                ;                           ; sevensegments:segments|sevensegmentcontroller:s3|Seg[1], ;
+;                                ;                           ; sevensegments:segments|sevensegmentcontroller:s3|Seg[0]  ;
+; sevensegments:segments|Seg2[2] ; Stuck at GND              ; sevensegments:segments|sevensegmentcontroller:s2|Seg[1]  ;
+;                                ; due to stuck port data_in ;                                                          ;
++--------------------------------+---------------------------+----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -211,40 +394,232 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 40    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 167   ;
+; Number of registers using Synchronous Clear  ; 96    ;
 ; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 39    ;
+; Number of registers using Asynchronous Clear ; 40    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 33    ;
+; Number of registers using Clock Enable       ; 40    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; Seg[0]                                 ; 1       ;
-; Seg[1]                                 ; 1       ;
-; Seg[2]                                 ; 1       ;
-; Seg[3]                                 ; 1       ;
-; Seg[4]                                 ; 1       ;
-; Seg[5]                                 ; 1       ;
-; Seg[6]                                 ; 1       ;
-; Total number of inverted registers = 7 ;         ;
-+----------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DE2_VGA|sevensegments:segments|sevensegmentcontroller:s0|blinkCount[13] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |sevensegmentcontroller ;
-+----------------+----------------------------------+------------------------------------+
-; Parameter Name ; Value                            ; Type                               ;
-+----------------+----------------------------------+------------------------------------+
-; blinkDuration  ; 00000001011111010111100001000000 ; Unsigned Binary                    ;
-+----------------+----------------------------------+------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sevensegments:segments|sevensegmentcontroller:s0 ;
++----------------+----------------------------------+-------------------------------------------+
+; Parameter Name ; Value                            ; Type                                      ;
++----------------+----------------------------------+-------------------------------------------+
+; blinkDuration  ; 00000001011111010111100001000000 ; Unsigned Binary                           ;
++----------------+----------------------------------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sevensegments:segments|sevensegmentcontroller:s1 ;
++----------------+----------------------------------+-------------------------------------------+
+; Parameter Name ; Value                            ; Type                                      ;
++----------------+----------------------------------+-------------------------------------------+
+; blinkDuration  ; 00000001011111010111100001000000 ; Unsigned Binary                           ;
++----------------+----------------------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sevensegments:segments|sevensegmentcontroller:s2 ;
++----------------+----------------------------------+-------------------------------------------+
+; Parameter Name ; Value                            ; Type                                      ;
++----------------+----------------------------------+-------------------------------------------+
+; blinkDuration  ; 00000001011111010111100001000000 ; Unsigned Binary                           ;
++----------------+----------------------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sevensegments:segments|sevensegmentcontroller:s3 ;
++----------------+----------------------------------+-------------------------------------------+
+; Parameter Name ; Value                            ; Type                                      ;
++----------------+----------------------------------+-------------------------------------------+
+; blinkDuration  ; 00000001011111010111100001000000 ; Unsigned Binary                           ;
++----------------+----------------------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_45m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_1dm ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod1 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_45m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Div1 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                       ;
+; LPM_WIDTHD             ; 7              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_4dm ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sevensegments:segments|lpm_divide:Mod2 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_45m ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga_640x480:vgaController"                                                                  ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; nRst         ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; iRed[8..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; iRed[9]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; iGreen[8..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; iGreen[9]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; iBlue[8..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; iBlue[9]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; oX           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; oY           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; oImValid     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sevensegments:segments|sevensegmentcontroller:s3"                                                                                                                               ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; iNum ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sevensegments:segments|sevensegmentcontroller:s2"                                                                                                                               ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; iNum ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sevensegments:segments|sevensegmentcontroller:s1"                                                                                                                               ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; iNum ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sevensegments:segments|sevensegmentcontroller:s0"                                                                                                                               ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; iNum ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -262,26 +637,154 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jul 07 20:56:28 2023
+    Info: Processing started: Tue Jul 25 22:37:43 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_VGA -c DE2_VGA
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file de2_vga.v
+    Info (12023): Found entity 1: DE2_VGA
+Info (12021): Found 1 design units, including 1 entities, in source file sevensegments.v
+    Info (12023): Found entity 1: sevensegments
 Info (12021): Found 1 design units, including 1 entities, in source file sevensegmentcontroller.v
     Info (12023): Found entity 1: sevensegmentcontroller
-Info (12127): Elaborating entity "sevensegmentcontroller" for the top level hierarchy
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (12127): Elaborating entity "DE2_VGA" for the top level hierarchy
+Info (12128): Elaborating entity "sevensegments" for hierarchy "sevensegments:segments"
+Warning (10230): Verilog HDL assignment warning at sevensegments.v(29): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at sevensegments.v(30): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at sevensegments.v(31): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at sevensegments.v(32): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "sevensegmentcontroller" for hierarchy "sevensegments:segments|sevensegmentcontroller:s0"
+Warning (12125): Using design file vga_640x480.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: vga_640x480
+Info (12128): Elaborating entity "vga_640x480" for hierarchy "vga_640x480:vgaController"
+Info (278001): Inferred 5 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:segments|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:segments|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:segments|Mod1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:segments|Div1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevensegments:segments|Mod2"
+Info (12130): Elaborated megafunction instantiation "sevensegments:segments|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "sevensegments:segments|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_45m.tdf
+    Info (12023): Found entity 1: lpm_divide_45m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
+    Info (12023): Found entity 1: alt_u_div_ove
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
+    Info (12023): Found entity 1: add_sub_lkc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
+    Info (12023): Found entity 1: add_sub_mkc
+Info (12130): Elaborated megafunction instantiation "sevensegments:segments|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "sevensegments:segments|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1dm.tdf
+    Info (12023): Found entity 1: lpm_divide_1dm
+Info (12130): Elaborated megafunction instantiation "sevensegments:segments|lpm_divide:Div1"
+Info (12133): Instantiated megafunction "sevensegments:segments|lpm_divide:Div1" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4dm.tdf
+    Info (12023): Found entity 1: lpm_divide_4dm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_ekh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uve.tdf
+    Info (12023): Found entity 1: alt_u_div_uve
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND
+    Warning (13410): Pin "VGA_R[8]" is stuck at GND
+    Warning (13410): Pin "VGA_R[9]" is stuck at GND
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND
+    Warning (13410): Pin "VGA_G[8]" is stuck at GND
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND
+    Warning (13410): Pin "VGA_B[8]" is stuck at GND
+    Warning (13410): Pin "VGA_SYNC" is stuck at VCC
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC
+    Warning (13410): Pin "HEX6[0]" is stuck at VCC
+    Warning (13410): Pin "HEX6[1]" is stuck at VCC
+    Warning (13410): Pin "HEX6[2]" is stuck at VCC
+    Warning (13410): Pin "HEX6[3]" is stuck at VCC
+    Warning (13410): Pin "HEX6[4]" is stuck at VCC
+    Warning (13410): Pin "HEX6[5]" is stuck at VCC
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC
+    Warning (13410): Pin "HEX7[0]" is stuck at VCC
+    Warning (13410): Pin "HEX7[1]" is stuck at VCC
+    Warning (13410): Pin "HEX7[2]" is stuck at VCC
+    Warning (13410): Pin "HEX7[3]" is stuck at VCC
+    Warning (13410): Pin "HEX7[4]" is stuck at VCC
+    Warning (13410): Pin "HEX7[5]" is stuck at VCC
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC
+Info (144001): Generated suppressed messages file C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/output_files/DE2_VGA.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 85 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 71 logic cells
-Info (144001): Generated suppressed messages file C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_VGA_V/output_files/DE2_VGA.map.smsg
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4597 megabytes
-    Info: Processing ended: Fri Jul 07 20:56:29 2023
+Warning (21074): Design contains 17 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[10]"
+    Warning (15610): No output dependent on input pin "SW[11]"
+    Warning (15610): No output dependent on input pin "SW[12]"
+    Warning (15610): No output dependent on input pin "SW[13]"
+    Warning (15610): No output dependent on input pin "SW[14]"
+    Warning (15610): No output dependent on input pin "SW[15]"
+    Warning (15610): No output dependent on input pin "SW[16]"
+    Warning (15610): No output dependent on input pin "SW[17]"
+Info (21057): Implemented 517 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 91 output pins
+    Info (21061): Implemented 407 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 81 warnings
+    Info: Peak virtual memory: 4620 megabytes
+    Info: Processing ended: Tue Jul 25 22:37:44 2023
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+

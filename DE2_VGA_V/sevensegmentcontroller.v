@@ -44,7 +44,7 @@ begin
 
         // Number to 7Segment
         case (iNum)
-            4'h1: Seg = 7'b1111001;	// ---t----
+            4'h1: Seg = 7'b1111001;	    // ---t----
             4'h2: Seg = 7'b0100100; 	// |	  |
             4'h3: Seg = 7'b0110000; 	// lt	 rt
             4'h4: Seg = 7'b0011001; 	// |	  |
