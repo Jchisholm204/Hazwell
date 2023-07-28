@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Jul 25 22:37:44 2023
+Analysis & Synthesis Status : Successful - Thu Jul 27 23:12:12 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : DE2_VGA
 Top-level Entity Name : DE2_VGA
 Family : Cyclone II
-Total logic elements : 407
-    Total combinational functions : 405
-    Dedicated logic registers : 167
-Total registers : 167
+Total logic elements : 3,245
+    Total combinational functions : 3,244
+    Dedicated logic registers : 208
+Total registers : 208
 Total pins : 110
 Total virtual pins : 0
 Total memory bits : 0

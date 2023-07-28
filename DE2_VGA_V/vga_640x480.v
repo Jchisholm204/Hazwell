@@ -1,4 +1,5 @@
 module vga_640x480 (
+        CLK_50,
         CLK_25,
         nRst,
         VGA_CLK,
@@ -17,7 +18,7 @@ module vga_640x480 (
         oImValid
     );
 
-input  wire CLK_25;
+input  wire CLK_50, CLK_25;
 input  wire nRst;
 output wire VGA_CLK;
 output wire VGA_BLANK;
@@ -31,18 +32,18 @@ output wire oImValid;
 
 reg [31:0] imX, imY;
 
-assign VGA_HS   = ~((imX > 32'd656) && (imX < 32'd752));
-assign VGA_VS   = ~((imY > 32'd490) && (imY < 32'd492));
-assign oImValid = ((imX < 32'd640) || (imY < 32'd480)) ? 1'b1 : 1'b0;
+assign VGA_HS   = ((imX < 32'd656) || (imX > 32'd752));
+assign VGA_VS   = ((imY < 32'd490) || (imY > 32'd492));
+assign oImValid = ((imX < 32'd640) && (imY < 32'd480)) ? 1'b1 : 1'b0;
 assign oX       = oImValid ? imX : 32'd640;
 assign oY       = oImValid ? imY : 32'd480;
 assign VGA_SYNC = 1'b1;
 assign VGA_BLANK = ((VGA_VS) && (VGA_HS));
 assign VGA_CLK = CLK_25;
 
-assign VGA_R = (oImValid == 1'b1) ? 10'd200   : 10'd0;
-assign VGA_G = (oImValid == 1'b1) ? 10'd0   : 10'd512;
-assign VGA_B = (oImValid == 1'b1) ? 10'd512   : 10'd0;
+assign VGA_R = (oImValid == 1'b1) ? iRed   : 10'd0;
+assign VGA_G = (oImValid == 1'b1) ? iGreen : 10'd0;
+assign VGA_B = (oImValid == 1'b1) ? iBlue  : 10'd0;
 
 always @(posedge CLK_25 or negedge nRst) begin
     if(nRst == 1'b0) begin

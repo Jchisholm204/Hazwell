@@ -53,23 +53,23 @@ R4
 R5
 nclocked@process
 vClockGenerator
-R6
+!s110 1690517541
 !i10b 1
 !s100 GIW?T0U^MI17fDzDU;DdS0
 R0
 IdBEN@JRSWMlS2Lc[EES9J0
 R1
 R2
-w1687753161
+w1690517488
 8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
-!i122 88
+!i122 107
 L0 3 29
 R3
 r1
 !s85 0
 31
-R7
+!s108 1690517541.000000
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v|
 !i113 1
@@ -147,6 +147,29 @@ R7
 R4
 R5
 nmux_using_assign_@t@b
+vvga_640x480
+!s110 1690519121
+!i10b 1
+!s100 DBW`bQA=:cTVFI`S_9a1B2
+R0
+IPFG?^0:[jK80_=B97EhU82
+R1
+R2
+w1690519106
+8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_640x480.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_640x480.v
+!i122 112
+L0 1 65
+R3
+r1
+!s85 0
+31
+!s108 1690519121.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_640x480.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_640x480.v|
+!i113 1
+R4
+R5
 vVGA_Controller
 !s110 1688015810
 !i10b 1
@@ -171,3 +194,26 @@ r1
 R4
 R5
 n@v@g@a_@controller
+vvga_tb
+!s110 1690518057
+!i10b 1
+!s100 9[5@cak0zdI[E;SH89YLP3
+R0
+ISDDXEX3B^MFQ6DdeDg6R:2
+R1
+R2
+w1690518054
+8C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_tb.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_tb.v
+!i122 111
+L0 3 46
+R3
+r1
+!s85 0
+31
+!s108 1690518057.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_tb.v|
+!i113 1
+R4
+R5

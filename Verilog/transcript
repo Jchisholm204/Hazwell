@@ -1,61 +1,99 @@
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_640x480.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
+# -- Compiling module vga_640x480
 # 
 # Top level modules:
-# 	adder
+# 	vga_640x480
 # 
 # 
-vsim -gui work.adder
-# vsim -gui work.adder 
-# Start time: 20:29:39 on Jul 05,2023
-# Loading work.adder
-run
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_tb.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
+# -- Compiling module vga_tb
 # 
 # Top level modules:
-# 	adder
+# 	vga_tb
+# 
+# 
+vsim -gui work.vga_tb
+# vsim -gui work.vga_tb 
+# Start time: 21:01:11 on Jul 27,2023
+# Loading work.vga_tb
+# Loading work.ClockGenerator
+# Loading work.vga_640x480
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'oX'.
+#    Time: 0 ps  Iteration: 0  Instance: /vga_tb/vga File: C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_tb.v Line: 21
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'oY'.
+#    Time: 0 ps  Iteration: 0  Instance: /vga_tb/vga File: C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_tb.v Line: 21
+# Error loading design
+# End time: 21:01:12 on Jul 27,2023, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 4
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module vga_tb
+# 
+# Top level modules:
+# 	vga_tb
+# 
+# 
+vsim -gui work.vga_tb
+# vsim -gui work.vga_tb 
+# Start time: 21:01:44 on Jul 27,2023
+# Loading work.vga_tb
+# Loading work.ClockGenerator
+# Loading work.vga_640x480
+add wave -position end  sim:/vga_tb/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Jacob  Hostname: DESKTOP-OPAUD0K  ProcessID: 35632
+#           Attempting to use alternate WLF file "./wlftq5wyqd".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftq5wyqd
+add wave -position end  sim:/vga_tb/VGA_R
+add wave -position end  sim:/vga_tb/VGA_G
+add wave -position end  sim:/vga_tb/VGA_B
+add wave -position end  sim:/vga_tb/VGA_BLANK
+add wave -position end  sim:/vga_tb/VGA_SYNC
+add wave -position end  sim:/vga_tb/VGA_HS
+add wave -position end  sim:/vga_tb/VGA_VS
+add wave -position end  sim:/vga_tb/VGA_CLK
+add wave -position end  sim:/vga_tb/r
+add wave -position end  sim:/vga_tb/g
+add wave -position end  sim:/vga_tb/b
+add wave -position end  sim:/vga_tb/x
+add wave -position end  sim:/vga_tb/y
+add wave -position end  sim:/vga_tb/imValid
+add wave -position end  sim:/vga_tb/sysnRst
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# -- Compiling module vga_tb
+# 
+# Top level modules:
+# 	vga_tb
 # 
 # 
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.adder
+# Loading work.vga_tb
 run
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign.v
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module mux_using_assign
+# -- Compiling module ClockGenerator
 # 
 # Top level modules:
-# 	mux_using_assign
-# 
-# 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/mux_using_assign_TB.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module mux_using_assign_TB
-# 
-# Top level modules:
-# 	mux_using_assign_TB
-# 
-# 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# 
-# 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/clockedProcess.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module clockedProcess
-# 
-# Top level modules:
-# 	clockedProcess
+# 	ClockGenerator
 # 
 # 
 # vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGenerator.v
@@ -66,201 +104,79 @@ run
 # 	ClockGenerator
 # 
 # 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/ClockGeneratorTB.v
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_640x480.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module ClockGeneratorTB
+# -- Compiling module vga_640x480
 # 
 # Top level modules:
-# 	ClockGeneratorTB
+# 	vga_640x480
 # 
 # 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/VGA_Controller.v
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_tb.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module VGA_Controller
-# ** Error: (vlog-13069) C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/VGA_Controller.v(49): near "endmodule": syntax error, unexpected endmodule, expecting '['.
-# 
-# 
-# 7 compiles, 1 failed with 1 error.
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
+# -- Compiling module vga_tb
 # 
 # Top level modules:
-# 	adder
+# 	vga_tb
 # 
 # 
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.adder
-runm
-# invalid command name "runm"
+# Loading work.vga_tb
+# Loading work.ClockGenerator
+# Loading work.vga_640x480
 run
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
+run
+run
+run
+run
+run
+run 100 ms
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_tb.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
+# -- Compiling module vga_tb
 # 
 # Top level modules:
-# 	adder
+# 	vga_tb
 # 
 # 
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.adder
-run
+# Loading work.vga_tb
+run 20 ms
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_tb.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
+# -- Compiling module vga_tb
 # 
 # Top level modules:
-# 	adder
+# 	vga_tb
 # 
 # 
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.adder
-run
+# Loading work.vga_tb
+run 20 ms
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
+# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/vga_640x480.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
+# -- Compiling module vga_640x480
 # 
 # Top level modules:
-# 	adder
+# 	vga_640x480
 # 
 # 
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.adder
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-vsim -gui work.adder
-# End time: 20:35:58 on Jul 05,2023, Elapsed time: 0:06:19
-# Errors: 0, Warnings: 1
-# vsim -gui work.adder 
-# Start time: 20:35:58 on Jul 05,2023
-# Loading work.adder
-run
-run
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.adder
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.adder
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.adder
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.adder
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.adder
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.adder
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# 
-# 
-# vlog -work work -stats=none C:/Users/Jacob/Documents/GitHub/Hazwell/Verilog/adder.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.adder
-run
+# Loading work.vga_640x480
+run 20 ms
 # GetModuleFileName: The specified module could not be found.
 # 
 # 

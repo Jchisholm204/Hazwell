@@ -14,7 +14,7 @@ module sevensegments (
 
 input   wire iClk_50;
         wire nRst;
-input   wire [7:0] iNum;
+input   wire [31:0] iNum;
 input   wire eBlink;
 output  wire [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7;
 reg [7:0] Seg0, Seg1, Seg2, Seg3;
