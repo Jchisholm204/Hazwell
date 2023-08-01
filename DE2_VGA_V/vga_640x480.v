@@ -1,3 +1,14 @@
+/**
+ * @file vga_640x480.v
+ * @author Jacob Chisholm (jacobchisholm1010@gmail.com)
+ * @brief VGA signal generator for 640 x 480 resolution
+ * @version 0.1
+ * @date 2023-07-30
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 module vga_640x480 (
         CLK_50,
         CLK_25,
@@ -34,7 +45,7 @@ reg [31:0] imX, imY;
 
 assign VGA_HS   = ((imX < 32'd656) || (imX > 32'd752));
 assign VGA_VS   = ((imY < 32'd490) || (imY > 32'd492));
-assign oImValid = ((imX < 32'd640) && (imY < 32'd480)) ? 1'b1 : 1'b0;
+assign oImValid = ((imX <= 32'd640) && (imY <= 32'd480)) ? 1'b1 : 1'b0;
 assign oX       = oImValid ? imX : 32'd640;
 assign oY       = oImValid ? imY : 32'd480;
 assign VGA_SYNC = 1'b1;
@@ -54,7 +65,7 @@ always @(posedge CLK_25 or negedge nRst) begin
             imX <= imX + 32'd1;
         end else begin
             imX <= 32'd0;
-            if(imY <= 525) begin
+            if(imY <= 32'd525) begin
                 imY <= imY + 32'd1;
             end else begin
                 imY <= 32'd0;
