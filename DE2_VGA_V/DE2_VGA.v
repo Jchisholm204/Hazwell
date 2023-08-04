@@ -16,8 +16,11 @@ module DE2_VGA (
         HEX4,
         HEX5,
         HEX6,
-        HEX7
+        HEX7,
+        PS2_CLK,
+        PS2_DAT
     );
+
 
 input wire CLOCK_50;
 input wire [17:0] SW;
@@ -28,7 +31,7 @@ output wire VGA_HS;
 output wire VGA_VS;
 output wire VGA_SYNC;
 output wire [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7;
-
+input wire PS2_CLK, PS2_DAT;
 
 reg [7:0] dispNum; //0-255
 wire      running;
@@ -43,7 +46,7 @@ wire imValid;
 
 sevensegments segments (
     .iClk_50(CLOCK_50),
-    .iNum(divend),
+    .iNum(ps2_code),
     .eBlink(~running),
     .HEX0(HEX0),
     .HEX1(HEX1),
@@ -70,23 +73,43 @@ vga_640x480 vgaController (
     .iRed(r),
     .iGreen(g),
     .iBlue(b),
-    .oX(x),
-    .oY(y),
+    // .oX(x),
+    // .oY(y),
     .oImValid(imValid)
 );
 
-always @(posedge CLOCK_50) begin
-    if(x <= divend) begin
-        r <= 10'b1111111111;
-        b <= 10'd0;
-    end else begin
-        r <= 10'd0;
-        b <= 10'b1111111111;
-    end
-    if(y > 240) begin
-        g <= 10'd0;
-    end else begin
-        g <= 10'b1111111111;
+wire ps2_code_ready;
+wire [7:0] ps2_code;
+reg [7:0] color_code;
+
+ps2_keyboard keyboard (
+    .nRst(1'b1),
+    .ps2_clk(PS2_CLK),
+    .ps2_data(PS2_DAT),
+    .code_ready(ps2_code_ready),
+    .ps2_code(ps2_code)
+);
+
+always @(posedge CLOCK_50 ) begin
+    if(ps2_code_ready == 1'b1) begin
+        if (ps2_code == 8'h2D || ps2_code == 8'h34 || ps2_code == 8'h32) begin
+            color_code <= ps2_code;
+        end
+        if(ps2_code == 8'hE075) begin
+            case (color_code)
+                8'h2D: r <= r + 10'd100;
+                8'h34: g <= g + 10'd100;
+                8'h32: b <= b + 10'd100;
+                default: ;
+            endcase;
+        end else begin
+            case (color_code)
+                8'h2D: r <= r - 10'd100;
+                8'h34: g <= g - 10'd100;
+                8'h32: b <= b - 10'd100;
+                default: ;
+            endcase;
+        end
     end
 end
 

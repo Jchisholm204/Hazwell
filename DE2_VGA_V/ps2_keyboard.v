@@ -6,9 +6,10 @@ module ps2_keyboard (
     ps2_code
 );
 
-input  wire       nRst,
-input  wire       ps2_data,
-output reg        code_ready,
+input  wire       nRst;
+input  wire       ps2_data;
+input  wire       ps2_clk;
+output reg        code_ready;
 output reg [7:0]  ps2_code;
 
 reg [10:0] data_register;
@@ -23,7 +24,7 @@ always @(negedge ps2_clk or negedge nRst) begin
     end else begin
         data_register <= ps2_data & data_register[10:1];
         clkCount <= clkCount + 8'd1;
-        if(clkCount == 8'd10) begin
+        if(clkCount == 8'd11) begin
             code_ready <= 1'b1;
             ps2_code   <= data_register[8:1];
             clkCount   <= 8'd0;
