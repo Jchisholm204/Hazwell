@@ -33,7 +33,7 @@ output wire VGA_SYNC;
 output wire [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7;
 input wire PS2_CLK, PS2_DAT;
 
-reg [7:0] dispNum; //0-255
+wire [7:0] dispNum; //0-255
 wire      running;
 assign running = SW[0];
 reg [31:0]  ClkCount;
@@ -47,7 +47,7 @@ wire imValid;
 sevensegments segments (
     .iClk_50(CLOCK_50),
     .iNum(ps2_code),
-    .eBlink(~running),
+    .eBlink(~ps2_code_ready),
     .HEX0(HEX0),
     .HEX1(HEX1),
     .HEX2(HEX2),
@@ -87,53 +87,42 @@ ps2_keyboard keyboard (
     .ps2_clk(PS2_CLK),
     .ps2_data(PS2_DAT),
     .code_ready(ps2_code_ready),
-    .ps2_code(ps2_code)
+    .ps2_code(ps2_code),
+    .clkCount(dispNum)
 );
 
-always @(posedge CLOCK_50 ) begin
-    if(ps2_code_ready == 1'b1) begin
-        if (ps2_code == 8'h2D || ps2_code == 8'h34 || ps2_code == 8'h32) begin
-            color_code <= ps2_code;
-        end
-        if(ps2_code == 8'hE075) begin
-            case (color_code)
-                8'h2D: r <= r + 10'd100;
-                8'h34: g <= g + 10'd100;
-                8'h32: b <= b + 10'd100;
-                default: ;
-            endcase;
-        end else begin
-            case (color_code)
-                8'h2D: r <= r - 10'd100;
-                8'h34: g <= g - 10'd100;
-                8'h32: b <= b - 10'd100;
-                default: ;
-            endcase;
-        end
+always @( ps2_code_ready ) begin
+    if(ps2_code == 8'h2D) color_code <= 8'h2D;
+    if(ps2_code == 8'h34) color_code <= 8'h34;
+    if(ps2_code == 8'h32) color_code <= 8'h32;
+
+    if(color_code == 8'h2D) begin
+        if(ps2_code == 8'h16) r <= 10'd800;
+        if(ps2_code == 8'h0E) r <= 10'd0;
     end
 end
 
 always @(posedge CLOCK_50) 
     CLOCK_25 <= ~CLOCK_25;
 
-always @(posedge CLOCK_50  or negedge running) begin
-    if (running == 1'b0) begin
-        ClkCount <= 32'd0;
-        dispNum  <= 8'd0;
-    end
-    else begin
-        ClkCount <= ClkCount + 1;
-        if (ClkCount == 32'd1_000_000) begin
-            ClkCount <= 1'd0;
-            dispNum <= dispNum + 8'd1;
-            divend <= divend + 32'd1;
-            if (divend == 32'd640)
-                divend <= 32'd0;
-            if (dispNum == 8'd255) begin
-                dispNum <= 1'd0;
-            end
-        end
-    end
-end
+// always @(posedge CLOCK_50  or negedge running) begin
+//     if (running == 1'b0) begin
+//         ClkCount <= 32'd0;
+//         dispNum  <= 8'd0;
+//     end
+//     else begin
+//         ClkCount <= ClkCount + 1;
+//         if (ClkCount == 32'd1_000_000) begin
+//             ClkCount <= 1'd0;
+//             dispNum <= dispNum + 8'd1;
+//             divend <= divend + 32'd1;
+//             if (divend == 32'd640)
+//                 divend <= 32'd0;
+//             if (dispNum == 8'd255) begin
+//                 dispNum <= 1'd0;
+//             end
+//         end
+//     end
+// end
 
 endmodule
