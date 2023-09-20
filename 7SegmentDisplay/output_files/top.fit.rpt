@@ -1,6 +1,6 @@
 Fitter report for top
-Mon Feb 27 22:24:50 2023
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Sep 13 22:24:56 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -26,15 +26,14 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  18. Delay Chain Summary
  19. Pad To Core Delay Chain Fanout
  20. Non-Global High Fan-Out Signals
- 21. Interconnect Usage Summary
- 22. Other Routing Usage Summary
- 23. I/O Rules Summary
- 24. I/O Rules Details
- 25. I/O Rules Matrix
- 26. Fitter Device Options
- 27. Operating Settings and Conditions
- 28. Fitter Messages
- 29. Fitter Suppressed Messages
+ 21. Routing Usage Summary
+ 22. I/O Rules Summary
+ 23. I/O Rules Details
+ 24. I/O Rules Matrix
+ 25. Fitter Device Options
+ 26. Operating Settings and Conditions
+ 27. Fitter Messages
+ 28. Fitter Suppressed Messages
 
 
 
@@ -57,31 +56,29 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Fitter Summary                                                                        ;
-+-------------------------------------+-------------------------------------------------+
-; Fitter Status                       ; Successful - Mon Feb 27 22:24:50 2023           ;
-; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                       ; top                                             ;
-; Top-level Entity Name               ; top                                             ;
-; Family                              ; Cyclone V                                       ;
-; Device                              ; 5CSEMA5F31C6                                    ;
-; Timing Models                       ; Preliminary                                     ;
-; Logic utilization (in ALMs)         ; 4 / 32,070 ( < 1 % )                            ;
-; Total registers                     ; 0                                               ;
-; Total pins                          ; 16 / 457 ( 4 % )                                ;
-; Total virtual pins                  ; 0                                               ;
-; Total block memory bits             ; 0 / 4,065,280 ( 0 % )                           ;
-; Total DSP Blocks                    ; 0 / 87 ( 0 % )                                  ;
-; Total HSSI RX PCSs                  ; 0                                               ;
-; Total HSSI PMA RX Deserializers     ; 0                                               ;
-; Total HSSI PMA RX ATT Deserializers ; 0                                               ;
-; Total HSSI TX PCSs                  ; 0                                               ;
-; Total HSSI PMA TX Serializers       ; 0                                               ;
-; Total HSSI PMA TX ATT Serializers   ; 0                                               ;
-; Total PLLs                          ; 0 / 6 ( 0 % )                                   ;
-; Total DLLs                          ; 0 / 4 ( 0 % )                                   ;
-+-------------------------------------+-------------------------------------------------+
++------------------------------------------------------------------------------+
+; Fitter Summary                                                               ;
++---------------------------------+--------------------------------------------+
+; Fitter Status                   ; Successful - Wed Sep 13 22:24:56 2023      ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                   ; top                                        ;
+; Top-level Entity Name           ; top                                        ;
+; Family                          ; Cyclone V                                  ;
+; Device                          ; 5CSEMA5F31C6                               ;
+; Timing Models                   ; Preliminary                                ;
+; Logic utilization (in ALMs)     ; 4 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 0                                          ;
+; Total pins                      ; 16 / 457 ( 4 % )                           ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                      ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                             ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI TX Channels          ; 0                                          ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                              ;
++---------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -98,7 +95,6 @@ applicable agreement for further details.
 ; Router Timing Optimization Level                                           ; Normal                                ; Normal                                ;
 ; Perform Clocking Topology Analysis During Routing                          ; Off                                   ; Off                                   ;
 ; Placement Effort Multiplier                                                ; 1.0                                   ; 1.0                                   ;
-; Router Effort Multiplier                                                   ; 1.0                                   ; 1.0                                   ;
 ; Device initialization clock source                                         ; INIT_INTOSC                           ; INIT_INTOSC                           ;
 ; Optimize Hold Timing                                                       ; All Paths                             ; All Paths                             ;
 ; Optimize Multi-Corner Timing                                               ; On                                    ; On                                    ;
@@ -148,7 +144,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 16     ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -167,13 +163,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; hex0[5]        ; Incomplete set of assignments ;
 ; hex0[6]        ; Incomplete set of assignments ;
 ; dipSwitches[0] ; Incomplete set of assignments ;
-; dipSwitches[7] ; Incomplete set of assignments ;
-; dipSwitches[6] ; Incomplete set of assignments ;
 ; dipSwitches[5] ; Incomplete set of assignments ;
-; dipSwitches[4] ; Incomplete set of assignments ;
-; dipSwitches[3] ; Incomplete set of assignments ;
+; dipSwitches[6] ; Incomplete set of assignments ;
+; dipSwitches[7] ; Incomplete set of assignments ;
 ; dipSwitches[1] ; Incomplete set of assignments ;
 ; dipSwitches[2] ; Incomplete set of assignments ;
+; dipSwitches[3] ; Incomplete set of assignments ;
+; dipSwitches[4] ; Incomplete set of assignments ;
 +----------------+-------------------------------+
 
 
@@ -188,19 +184,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------+----------------+--------------+------------+---------------+----------------+
 
 
-+----------------------------------------------+
-; Incremental Compilation Preservation Summary ;
-+---------------------+------------------------+
-; Type                ; Value                  ;
-+---------------------+------------------------+
-; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 40 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 40 ( 0.00 % )      ;
-;                     ;                        ;
-; Routing (by net)    ;                        ;
-;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
-;     -- Achieved     ; 0 / 0 ( 0.00 % )       ;
-+---------------------+------------------------+
++-------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                    ;
++---------------------+-------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+-------------------+----------------------------+--------------------------+
+; Placement (by node) ;                   ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 40 ) ; 0.00 % ( 0 / 40 )          ; 0.00 % ( 0 / 40 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 40 ) ; 0.00 % ( 0 / 40 )          ; 0.00 % ( 0 / 40 )        ;
+;                     ;                   ;                            ;                          ;
+; Routing (by net)    ;                   ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+-------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -213,14 +209,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+----------------+-------------------+-------------------------+------------------------+------------------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Incremental Compilation Placement Preservation                                                             ;
-+--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
-+--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 40      ; 0                 ; N/A                     ; Source File       ;
-; hard_block:auto_generated_inst ; 0       ; 0                 ; N/A                     ; Source File       ;
-+--------------------------------+---------+-------------------+-------------------------+-------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Incremental Compilation Placement Preservation                                                                                     ;
++--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
+; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
++--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
+; Top                            ; 0.00 % ( 0 / 40 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
++--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
 
 +--------------+
@@ -419,14 +415,14 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 ; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
-; dipSwitches[0] ; AK29  ; 4A       ; 82           ; 0            ; 91           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; dipSwitches[1] ; AA20  ; 4A       ; 84           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; dipSwitches[2] ; AG26  ; 4A       ; 84           ; 0            ; 34           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; dipSwitches[3] ; Y19   ; 4A       ; 84           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; dipSwitches[4] ; AH27  ; 4A       ; 84           ; 0            ; 51           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; dipSwitches[5] ; AF26  ; 4A       ; 86           ; 0            ; 51           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; dipSwitches[6] ; AD21  ; 4A       ; 82           ; 0            ; 57           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; dipSwitches[7] ; AC22  ; 4A       ; 86           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; dipSwitches[0] ; AA21  ; 4A       ; 88           ; 0            ; 1            ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; dipSwitches[1] ; AE24  ; 4A       ; 88           ; 0            ; 52           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; dipSwitches[2] ; AH29  ; 5A       ; 89           ; 6            ; 54           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; dipSwitches[3] ; W20   ; 5A       ; 89           ; 6            ; 3            ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; dipSwitches[4] ; W21   ; 5A       ; 89           ; 8            ; 3            ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; dipSwitches[5] ; AC25  ; 5A       ; 89           ; 4            ; 60           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; dipSwitches[6] ; Y21   ; 5A       ; 89           ; 6            ; 20           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; dipSwitches[7] ; AG26  ; 4A       ; 84           ; 0            ; 34           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 
 
@@ -446,26 +442,26 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 +---------+-------+----------+--------------+--------------+--------------+-----------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+---------------------------------------------------------------------------+
-; I/O Bank Usage                                                            ;
-+----------+-----------------+---------------+--------------+---------------+
-; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
-+----------+-----------------+---------------+--------------+---------------+
-; B2L      ; 0 / 0 ( -- )    ; --            ; --           ; --            ;
-; B1L      ; 0 / 0 ( -- )    ; --            ; --           ; --            ;
-; 3A       ; 0 / 32 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 0 / 48 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 9 / 80 ( 11 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 5A       ; 7 / 32 ( 22 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 5B       ; 0 / 16 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 6B       ; 0 / 45 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 6A       ; 0 / 57 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 7A       ; 0 / 19 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 7B       ; 0 / 22 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 7C       ; 0 / 12 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 7D       ; 0 / 14 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 0 / 80 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-+----------+-----------------+---------------+--------------+---------------+
++----------------------------------------------------------------------------+
+; I/O Bank Usage                                                             ;
++----------+------------------+---------------+--------------+---------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
++----------+------------------+---------------+--------------+---------------+
+; B2L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
+; B1L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
+; 3A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 4 / 80 ( 5 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 12 / 32 ( 38 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 5B       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 6B       ; 0 / 45 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 6A       ; 0 / 57 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 7A       ; 0 / 19 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 7B       ; 0 / 22 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 7C       ; 0 / 12 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 7D       ; 0 / 14 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 0 / 80 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
++----------+------------------+---------------+--------------+---------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -520,8 +516,8 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; AA17     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AA18     ; 168        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA19     ; 176        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA20     ; 200        ; 4A       ; dipSwitches[1]                  ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AA21     ; 210        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA20     ; 200        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA21     ; 210        ; 4A       ; dipSwitches[0]                  ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AA22     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA23     ;            ; --       ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
 ; AA24     ; 228        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -538,7 +534,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; AB5      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB6      ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AB7      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AB8      ; 43         ; 3A       ; ^nCSO, DATA4                    ; input  ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
+; AB8      ; 43         ; 3A       ; ^nCSO, DATA4                    ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AB9      ; 42         ; 3A       ; #TDO                            ; output ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB10     ;            ; --       ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
 ; AB11     ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -567,7 +563,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; AC4      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC5      ; 46         ; 3A       ; #TCK                            ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC6      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AC7      ; 45         ; 3A       ; ^AS_DATA3, DATA3                ; input  ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
+; AC7      ; 45         ; 3A       ; ^AS_DATA3, DATA3                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AC8      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC9      ; 58         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC10     ;            ; 3A       ; VCCPD3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -582,10 +578,10 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; AC19     ;            ; --       ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC20     ; 186        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC21     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AC22     ; 207        ; 4A       ; dipSwitches[7]                  ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AC22     ; 207        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC23     ; 205        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC24     ;            ; 5A       ; VREFB5AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; AC25     ; 215        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AC25     ; 215        ; 5A       ; dipSwitches[5]                  ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AC26     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC27     ; 242        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AC28     ; 245        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -611,7 +607,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; AD18     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD19     ; 184        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD20     ; 199        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AD21     ; 197        ; 4A       ; dipSwitches[6]                  ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AD21     ; 197        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD22     ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD23     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD24     ; 211        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -625,10 +621,10 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; AE2      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE3      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE4      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AE5      ; 49         ; 3A       ; ^AS_DATA1, DATA1                ; input  ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
-; AE6      ; 51         ; 3A       ; ^AS_DATA0, ASDO, DATA0          ; input  ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
+; AE5      ; 49         ; 3A       ; ^AS_DATA1, DATA1                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
+; AE6      ; 51         ; 3A       ; ^AS_DATA0, ASDO, DATA0          ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AE7      ; 60         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE8      ; 47         ; 3A       ; ^AS_DATA2, DATA2                ; input  ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
+; AE8      ; 47         ; 3A       ; ^AS_DATA2, DATA2                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AE9      ; 53         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE10     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE11     ; 59         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -644,7 +640,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; AE21     ;            ; --       ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE22     ; 191        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE23     ; 189        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE24     ; 209        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE24     ; 209        ; 4A       ; dipSwitches[1]                  ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AE25     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE26     ; 220        ; 5A       ; hex0[0]                         ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AE27     ; 229        ; 5A       ; hex0[1]                         ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
@@ -676,7 +672,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; AF23     ; 183        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF24     ; 181        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF25     ; 206        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AF26     ; 204        ; 4A       ; dipSwitches[5]                  ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AF26     ; 204        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF27     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF28     ; 235        ; 5A       ; hex0[4]                         ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AF29     ; 237        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -706,7 +702,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; AG23     ; 163        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG24     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AG25     ; 190        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG26     ; 203        ; 4A       ; dipSwitches[2]                  ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG26     ; 203        ; 4A       ; dipSwitches[7]                  ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AG27     ; 212        ; 5A       ; hex0[3]                         ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AG28     ; 233        ; 5A       ; hex0[5]                         ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AG29     ;            ; 5A       ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -737,9 +733,9 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; AH24     ; 161        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH25     ; 188        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH26     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AH27     ; 201        ; 4A       ; dipSwitches[4]                  ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH27     ; 201        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH28     ; 214        ; 5A       ; hex0[6]                         ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
-; AH29     ; 218        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AH29     ; 218        ; 5A       ; dipSwitches[2]                  ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AH30     ; 241        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AJ1      ; 79         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ2      ; 77         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -798,7 +794,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; AK26     ; 185        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK27     ; 193        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK28     ; 198        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AK29     ; 196        ; 4A       ; dipSwitches[0]                  ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK29     ; 196        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B1       ; 509        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B2       ; 507        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B3       ; 513        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -921,7 +917,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; E30      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F1       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; F3       ; 539        ; 9A       ; ^CONF_DONE                      ; bidir  ;              ;                     ; --           ;                 ; --       ; --           ;
+; F3       ; 539        ; 9A       ; ^CONF_DONE                      ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F4       ; 541        ; 9A       ; ^nSTATUS                        ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F6       ; 537        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -954,7 +950,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; G3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G5       ; 542        ; 9A       ; ^nCE                            ;        ;              ;                     ; --           ;                 ; --       ; --           ;
-; G6       ; 543        ; 9A       ; ^MSEL2                          ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
+; G6       ; 543        ; 9A       ; ^MSEL2                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G7       ; 535        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G8       ; 492        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G9       ;            ; 8A       ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1013,7 +1009,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; J2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; J5       ; 545        ; 9A       ; ^nCONFIG                        ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
+; J5       ; 545        ; 9A       ; ^nCONFIG                        ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J6       ; 547        ; 9A       ; ^GND                            ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J7       ; 506        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J8       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1044,7 +1040,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; K3       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K4       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; K6       ; 540        ; 9A       ; ^MSEL1                          ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
+; K6       ; 540        ; 9A       ; ^MSEL1                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K7       ; 522        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; K8       ; 524        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; K9       ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1075,9 +1071,9 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; L4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L5       ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; L6       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; L7       ; 544        ; 9A       ; ^MSEL3                          ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
-; L8       ; 538        ; 9A       ; ^MSEL0                          ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
-; L9       ; 546        ; 9A       ; ^MSEL4                          ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
+; L7       ; 544        ; 9A       ; ^MSEL3                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
+; L8       ; 538        ; 9A       ; ^MSEL0                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
+; L9       ; 546        ; 9A       ; ^MSEL4                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L10      ;            ; 8A       ; VCCPD8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; L11      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L12      ;            ; 8A       ; VCCPD8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1255,7 +1251,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; U4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; U5       ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; U6       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; U7       ; 50         ; 3A       ; ^DCLK                           ; bidir  ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
+; U7       ; 50         ; 3A       ; ^DCLK                           ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; U8       ; 48         ; 3A       ; #TDI                            ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; U9       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; U10      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
@@ -1328,8 +1324,8 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; W17      ; 152        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W18      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; W19      ; 192        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; W20      ; 217        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; W21      ; 221        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; W20      ; 217        ; 5A       ; dipSwitches[3]                  ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; W21      ; 221        ; 5A       ; dipSwitches[4]                  ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; W22      ; 223        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W23      ;            ; 5A       ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W24      ; 238        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -1357,9 +1353,9 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/7Segmen
 ; Y16      ; 128        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y17      ; 170        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y18      ; 178        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; Y19      ; 202        ; 4A       ; dipSwitches[3]                  ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y19      ; 202        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y20      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; Y21      ; 219        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; Y21      ; 219        ; 5A       ; dipSwitches[6]                  ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; Y22      ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; Y23      ; 232        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y24      ; 234        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -1396,14 +1392,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; hex0[4]        ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; hex0[5]        ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; hex0[6]        ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; dipSwitches[0] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; dipSwitches[7] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; dipSwitches[0] ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; dipSwitches[5] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; dipSwitches[6] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; dipSwitches[5] ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; dipSwitches[4] ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; dipSwitches[3] ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; dipSwitches[7] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; dipSwitches[1] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; dipSwitches[2] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; dipSwitches[2] ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; dipSwitches[3] ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; dipSwitches[4] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +----------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -1413,23 +1409,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
 ; dipSwitches[0]      ;                   ;         ;
-;      - Equal0~1     ; 0                 ; 0       ;
-; dipSwitches[7]      ;                   ;         ;
+;      - Equal0~1     ; 1                 ; 0       ;
+; dipSwitches[5]      ;                   ;         ;
 ;      - Equal0~1     ; 0                 ; 0       ;
 ;      - Equal0~2     ; 0                 ; 0       ;
 ; dipSwitches[6]      ;                   ;         ;
 ;      - Equal0~1     ; 0                 ; 0       ;
 ;      - Equal0~2     ; 0                 ; 0       ;
-; dipSwitches[5]      ;                   ;         ;
-;      - Equal0~1     ; 1                 ; 0       ;
-;      - Equal0~2     ; 1                 ; 0       ;
-; dipSwitches[4]      ;                   ;         ;
-;      - Equal0~0     ; 1                 ; 0       ;
-; dipSwitches[3]      ;                   ;         ;
-;      - Equal0~0     ; 1                 ; 0       ;
+; dipSwitches[7]      ;                   ;         ;
+;      - Equal0~1     ; 0                 ; 0       ;
+;      - Equal0~2     ; 0                 ; 0       ;
 ; dipSwitches[1]      ;                   ;         ;
 ;      - Equal0~0     ; 0                 ; 0       ;
 ; dipSwitches[2]      ;                   ;         ;
+;      - Equal0~0     ; 1                 ; 0       ;
+; dipSwitches[3]      ;                   ;         ;
+;      - Equal0~0     ; 1                 ; 0       ;
+; dipSwitches[4]      ;                   ;         ;
 ;      - Equal0~0     ; 0                 ; 0       ;
 +---------------------+-------------------+---------+
 
@@ -1441,106 +1437,99 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------+----------+
 ; Equal0~2             ; 4        ;
 ; Equal0~1             ; 4        ;
-; dipSwitches[5]~input ; 2        ;
-; dipSwitches[6]~input ; 2        ;
 ; dipSwitches[7]~input ; 2        ;
+; dipSwitches[6]~input ; 2        ;
+; dipSwitches[5]~input ; 2        ;
 ; hex0[5]$latch        ; 2        ;
 ; hex0[4]$latch        ; 2        ;
 ; hex0[3]$latch        ; 2        ;
 ; hex0[0]$latch        ; 2        ;
 ; Equal0~0             ; 2        ;
+; dipSwitches[4]~input ; 1        ;
+; dipSwitches[3]~input ; 1        ;
 ; dipSwitches[2]~input ; 1        ;
 ; dipSwitches[1]~input ; 1        ;
-; dipSwitches[3]~input ; 1        ;
-; dipSwitches[4]~input ; 1        ;
 ; dipSwitches[0]~input ; 1        ;
 +----------------------+----------+
 
 
-+-----------------------------------------------------+
-; Interconnect Usage Summary                          ;
-+----------------------------+------------------------+
-; Interconnect Resource Type ; Usage                  ;
-+----------------------------+------------------------+
-; Block interconnects        ; 12 / 289,320 ( < 1 % ) ;
-; C12 interconnects          ; 0 / 13,420 ( 0 % )     ;
-; C2 interconnects           ; 8 / 119,108 ( < 1 % )  ;
-; C4 interconnects           ; 10 / 56,300 ( < 1 % )  ;
-; Local interconnects        ; 7 / 84,580 ( < 1 % )   ;
-; R14 interconnects          ; 0 / 12,676 ( 0 % )     ;
-; R3 interconnects           ; 2 / 130,992 ( < 1 % )  ;
-; R6 interconnects           ; 8 / 266,960 ( < 1 % )  ;
-+----------------------------+------------------------+
-
-
-+------------------------------------------------------------------+
-; Other Routing Usage Summary                                      ;
-+---------------------------------------------+--------------------+
-; Other Routing Resource Type                 ; Usage              ;
-+---------------------------------------------+--------------------+
-; DQS bus muxes                               ; 0 / 25 ( 0 % )     ;
-; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )     ;
-; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )     ;
-; Global clocks                               ; 0 / 16 ( 0 % )     ;
-; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )      ;
-; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )      ;
-; HPS_INTERFACE_BOOT_FROM_FPGA_INPUTs         ; 0 / 9 ( 0 % )      ;
-; HPS_INTERFACE_CLOCKS_RESETS_INPUTs          ; 0 / 7 ( 0 % )      ;
-; HPS_INTERFACE_CLOCKS_RESETS_OUTPUTs         ; 0 / 6 ( 0 % )      ;
-; HPS_INTERFACE_CROSS_TRIGGER_INPUTs          ; 0 / 18 ( 0 % )     ;
-; HPS_INTERFACE_CROSS_TRIGGER_OUTPUTs         ; 0 / 24 ( 0 % )     ;
-; HPS_INTERFACE_DBG_APB_INPUTs                ; 0 / 37 ( 0 % )     ;
-; HPS_INTERFACE_DBG_APB_OUTPUTs               ; 0 / 55 ( 0 % )     ;
-; HPS_INTERFACE_DMA_INPUTs                    ; 0 / 16 ( 0 % )     ;
-; HPS_INTERFACE_DMA_OUTPUTs                   ; 0 / 8 ( 0 % )      ;
-; HPS_INTERFACE_FPGA2HPS_INPUTs               ; 0 / 287 ( 0 % )    ;
-; HPS_INTERFACE_FPGA2HPS_OUTPUTs              ; 0 / 154 ( 0 % )    ;
-; HPS_INTERFACE_FPGA2SDRAM_INPUTs             ; 0 / 852 ( 0 % )    ;
-; HPS_INTERFACE_FPGA2SDRAM_OUTPUTs            ; 0 / 408 ( 0 % )    ;
-; HPS_INTERFACE_HPS2FPGA_INPUTs               ; 0 / 165 ( 0 % )    ;
-; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_INPUTs  ; 0 / 67 ( 0 % )     ;
-; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_OUTPUTs ; 0 / 156 ( 0 % )    ;
-; HPS_INTERFACE_HPS2FPGA_OUTPUTs              ; 0 / 282 ( 0 % )    ;
-; HPS_INTERFACE_INTERRUPTS_INPUTs             ; 0 / 64 ( 0 % )     ;
-; HPS_INTERFACE_INTERRUPTS_OUTPUTs            ; 0 / 42 ( 0 % )     ;
-; HPS_INTERFACE_JTAG_OUTPUTs                  ; 0 / 5 ( 0 % )      ;
-; HPS_INTERFACE_LOAN_IO_INPUTs                ; 0 / 142 ( 0 % )    ;
-; HPS_INTERFACE_LOAN_IO_OUTPUTs               ; 0 / 85 ( 0 % )     ;
-; HPS_INTERFACE_MPU_EVENT_STANDBY_INPUTs      ; 0 / 1 ( 0 % )      ;
-; HPS_INTERFACE_MPU_EVENT_STANDBY_OUTPUTs     ; 0 / 5 ( 0 % )      ;
-; HPS_INTERFACE_MPU_GENERAL_PURPOSE_INPUTs    ; 0 / 32 ( 0 % )     ;
-; HPS_INTERFACE_MPU_GENERAL_PURPOSE_OUTPUTs   ; 0 / 32 ( 0 % )     ;
-; HPS_INTERFACE_PERIPHERAL_CAN_INPUTs         ; 0 / 2 ( 0 % )      ;
-; HPS_INTERFACE_PERIPHERAL_CAN_OUTPUTs        ; 0 / 2 ( 0 % )      ;
-; HPS_INTERFACE_PERIPHERAL_EMAC_INPUTs        ; 0 / 32 ( 0 % )     ;
-; HPS_INTERFACE_PERIPHERAL_EMAC_OUTPUTs       ; 0 / 34 ( 0 % )     ;
-; HPS_INTERFACE_PERIPHERAL_I2C_INPUTs         ; 0 / 8 ( 0 % )      ;
-; HPS_INTERFACE_PERIPHERAL_I2C_OUTPUTs        ; 0 / 8 ( 0 % )      ;
-; HPS_INTERFACE_PERIPHERAL_NAND_INPUTs        ; 0 / 12 ( 0 % )     ;
-; HPS_INTERFACE_PERIPHERAL_NAND_OUTPUTs       ; 0 / 18 ( 0 % )     ;
-; HPS_INTERFACE_PERIPHERAL_QSPI_INPUTs        ; 0 / 4 ( 0 % )      ;
-; HPS_INTERFACE_PERIPHERAL_QSPI_OUTPUTs       ; 0 / 13 ( 0 % )     ;
-; HPS_INTERFACE_PERIPHERAL_SDMMC_INPUTs       ; 0 / 13 ( 0 % )     ;
-; HPS_INTERFACE_PERIPHERAL_SDMMC_OUTPUTs      ; 0 / 22 ( 0 % )     ;
-; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_INPUTs  ; 0 / 4 ( 0 % )      ;
-; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_OUTPUTs ; 0 / 14 ( 0 % )     ;
-; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_INPUTs   ; 0 / 6 ( 0 % )      ;
-; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_OUTPUTs  ; 0 / 4 ( 0 % )      ;
-; HPS_INTERFACE_PERIPHERAL_UART_INPUTs        ; 0 / 10 ( 0 % )     ;
-; HPS_INTERFACE_PERIPHERAL_UART_OUTPUTs       ; 0 / 10 ( 0 % )     ;
-; HPS_INTERFACE_PERIPHERAL_USB_INPUTs         ; 0 / 22 ( 0 % )     ;
-; HPS_INTERFACE_PERIPHERAL_USB_OUTPUTs        ; 0 / 34 ( 0 % )     ;
-; HPS_INTERFACE_STM_EVENT_INPUTs              ; 0 / 28 ( 0 % )     ;
-; HPS_INTERFACE_TEST_INPUTs                   ; 0 / 610 ( 0 % )    ;
-; HPS_INTERFACE_TEST_OUTPUTs                  ; 0 / 513 ( 0 % )    ;
-; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )      ;
-; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )     ;
-; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )     ;
-; Quadrant clocks                             ; 0 / 66 ( 0 % )     ;
-; R14/C12 interconnect drivers                ; 0 / 20,720 ( 0 % ) ;
-; Spine clocks                                ; 0 / 360 ( 0 % )    ;
-; Wire stub REs                               ; 0 / 15,858 ( 0 % ) ;
-+---------------------------------------------+--------------------+
++----------------------------------------------------------------------+
+; Routing Usage Summary                                                ;
++---------------------------------------------+------------------------+
+; Routing Resource Type                       ; Usage                  ;
++---------------------------------------------+------------------------+
+; Block interconnects                         ; 14 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 3 / 13,420 ( < 1 % )   ;
+; C2 interconnects                            ; 7 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 4 / 56,300 ( < 1 % )   ;
+; DQS bus muxes                               ; 0 / 25 ( 0 % )         ;
+; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )         ;
+; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )         ;
+; Direct links                                ; 1 / 289,320 ( < 1 % )  ;
+; Global clocks                               ; 0 / 16 ( 0 % )         ;
+; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )          ;
+; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )          ;
+; HPS_INTERFACE_BOOT_FROM_FPGA_INPUTs         ; 0 / 9 ( 0 % )          ;
+; HPS_INTERFACE_CLOCKS_RESETS_INPUTs          ; 0 / 7 ( 0 % )          ;
+; HPS_INTERFACE_CLOCKS_RESETS_OUTPUTs         ; 0 / 6 ( 0 % )          ;
+; HPS_INTERFACE_CROSS_TRIGGER_INPUTs          ; 0 / 18 ( 0 % )         ;
+; HPS_INTERFACE_CROSS_TRIGGER_OUTPUTs         ; 0 / 24 ( 0 % )         ;
+; HPS_INTERFACE_DBG_APB_INPUTs                ; 0 / 37 ( 0 % )         ;
+; HPS_INTERFACE_DBG_APB_OUTPUTs               ; 0 / 55 ( 0 % )         ;
+; HPS_INTERFACE_DMA_INPUTs                    ; 0 / 16 ( 0 % )         ;
+; HPS_INTERFACE_DMA_OUTPUTs                   ; 0 / 8 ( 0 % )          ;
+; HPS_INTERFACE_FPGA2HPS_INPUTs               ; 0 / 287 ( 0 % )        ;
+; HPS_INTERFACE_FPGA2HPS_OUTPUTs              ; 0 / 154 ( 0 % )        ;
+; HPS_INTERFACE_FPGA2SDRAM_INPUTs             ; 0 / 852 ( 0 % )        ;
+; HPS_INTERFACE_FPGA2SDRAM_OUTPUTs            ; 0 / 408 ( 0 % )        ;
+; HPS_INTERFACE_HPS2FPGA_INPUTs               ; 0 / 165 ( 0 % )        ;
+; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_INPUTs  ; 0 / 67 ( 0 % )         ;
+; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_OUTPUTs ; 0 / 156 ( 0 % )        ;
+; HPS_INTERFACE_HPS2FPGA_OUTPUTs              ; 0 / 282 ( 0 % )        ;
+; HPS_INTERFACE_INTERRUPTS_INPUTs             ; 0 / 64 ( 0 % )         ;
+; HPS_INTERFACE_INTERRUPTS_OUTPUTs            ; 0 / 42 ( 0 % )         ;
+; HPS_INTERFACE_JTAG_OUTPUTs                  ; 0 / 5 ( 0 % )          ;
+; HPS_INTERFACE_LOAN_IO_INPUTs                ; 0 / 142 ( 0 % )        ;
+; HPS_INTERFACE_LOAN_IO_OUTPUTs               ; 0 / 85 ( 0 % )         ;
+; HPS_INTERFACE_MPU_EVENT_STANDBY_INPUTs      ; 0 / 1 ( 0 % )          ;
+; HPS_INTERFACE_MPU_EVENT_STANDBY_OUTPUTs     ; 0 / 5 ( 0 % )          ;
+; HPS_INTERFACE_MPU_GENERAL_PURPOSE_INPUTs    ; 0 / 32 ( 0 % )         ;
+; HPS_INTERFACE_MPU_GENERAL_PURPOSE_OUTPUTs   ; 0 / 32 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_CAN_INPUTs         ; 0 / 2 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_CAN_OUTPUTs        ; 0 / 2 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_EMAC_INPUTs        ; 0 / 32 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_EMAC_OUTPUTs       ; 0 / 34 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_I2C_INPUTs         ; 0 / 8 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_I2C_OUTPUTs        ; 0 / 8 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_NAND_INPUTs        ; 0 / 12 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_NAND_OUTPUTs       ; 0 / 18 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_QSPI_INPUTs        ; 0 / 4 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_QSPI_OUTPUTs       ; 0 / 13 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SDMMC_INPUTs       ; 0 / 13 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SDMMC_OUTPUTs      ; 0 / 22 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_INPUTs  ; 0 / 4 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_OUTPUTs ; 0 / 14 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_INPUTs   ; 0 / 6 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_OUTPUTs  ; 0 / 4 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_UART_INPUTs        ; 0 / 10 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_UART_OUTPUTs       ; 0 / 10 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_USB_INPUTs         ; 0 / 22 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_USB_OUTPUTs        ; 0 / 34 ( 0 % )         ;
+; HPS_INTERFACE_STM_EVENT_INPUTs              ; 0 / 28 ( 0 % )         ;
+; HPS_INTERFACE_TEST_INPUTs                   ; 0 / 610 ( 0 % )        ;
+; HPS_INTERFACE_TEST_OUTPUTs                  ; 0 / 513 ( 0 % )        ;
+; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )          ;
+; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )         ;
+; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )         ;
+; Local interconnects                         ; 6 / 84,580 ( < 1 % )   ;
+; Quadrant clocks                             ; 0 / 66 ( 0 % )         ;
+; R14 interconnects                           ; 0 / 12,676 ( 0 % )     ;
+; R14/C12 interconnect drivers                ; 0 / 20,720 ( 0 % )     ;
+; R3 interconnects                            ; 1 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 5 / 266,960 ( < 1 % )  ;
+; Spine clocks                                ; 0 / 360 ( 0 % )        ;
+; Wire stub REs                               ; 0 / 15,858 ( 0 % )     ;
++---------------------------------------------+------------------------+
 
 
 +------------------------------------------+
@@ -1611,13 +1600,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; hex0[5]            ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; hex0[6]            ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; dipSwitches[0]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; dipSwitches[7]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; dipSwitches[6]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; dipSwitches[5]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; dipSwitches[4]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; dipSwitches[3]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; dipSwitches[6]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; dipSwitches[7]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; dipSwitches[1]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; dipSwitches[2]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; dipSwitches[3]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; dipSwitches[4]     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
 
@@ -1667,20 +1656,22 @@ Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device 5CSEMA5F31C6 for design "top"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Info (119007): Compilation Report contains advance information. Specifications for device 5CSEMA5F31C6 are subject to change. Contact Altera for information on availability. No programming file will be generated.
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Critical Warning (169085): No exact pin location assignment(s) for 8 pins of 16 total pins
     Info (169086): Pin dipSwitches[0] not assigned to an exact location on the device
-    Info (169086): Pin dipSwitches[7] not assigned to an exact location on the device
-    Info (169086): Pin dipSwitches[6] not assigned to an exact location on the device
     Info (169086): Pin dipSwitches[5] not assigned to an exact location on the device
-    Info (169086): Pin dipSwitches[4] not assigned to an exact location on the device
-    Info (169086): Pin dipSwitches[3] not assigned to an exact location on the device
+    Info (169086): Pin dipSwitches[6] not assigned to an exact location on the device
+    Info (169086): Pin dipSwitches[7] not assigned to an exact location on the device
     Info (169086): Pin dipSwitches[1] not assigned to an exact location on the device
     Info (169086): Pin dipSwitches[2] not assigned to an exact location on the device
+    Info (169086): Pin dipSwitches[3] not assigned to an exact location on the device
+    Info (169086): Pin dipSwitches[4] not assigned to an exact location on the device
+Warning (205009): Dummy RLC values generated in IBIS model files for device 5CSEMA5 with package FBGA and pin count 896
 Info (184020): Starting Fitter periphery placement operations
+Warning (205009): Dummy RLC values generated in IBIS model files for device 5CSEMA5 with package FBGA and pin count 896
+Warning (205009): Dummy RLC values generated in IBIS model files for device 5CSEMA5 with package FBGA and pin count 896
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Warning (335093): TimeQuest Timing Analyzer is analyzing 4 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'top.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1697,7 +1688,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "s0" is assigned to location or region, but does not exist in design
     Warning (15706): Node "s1" is assigned to location or region, but does not exist in design
     Warning (15706): Node "s2" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:17
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1706,25 +1697,25 @@ Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X78_Y0 to location X89_Y10
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 5CSEMA5F31C6 are preliminary
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 5CSEMA5F31C6 are preliminary
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/Jacob/Documents/GitHub/Hazwell/7SegmentDisplay/output_files/top.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 5960 megabytes
-    Info: Processing ended: Mon Feb 27 22:24:50 2023
-    Info: Elapsed time: 00:00:50
-    Info: Total CPU time (on all processors): 00:00:38
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 5613 megabytes
+    Info: Processing ended: Wed Sep 13 22:24:57 2023
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +----------------------------+
