@@ -1,0 +1,80 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.1
+Edebounce
+Z0 w1695236669
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Jacob\Documents\GitHub\Hazwell\271 Labs\sim1
+Z5 8C:\Users\Jacob\Documents\GitHub\Hazwell\271 Labs\sim1\debounce.vhd
+Z6 FC:\Users\Jacob\Documents\GitHub\Hazwell\271 Labs\sim1\debounce.vhd
+l0
+L5
+VhYYXkaSAgCISK]><L[4Li2
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1695236708.872000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\Jacob\Documents\GitHub\Hazwell\271 Labs\sim1\debounce.vhd|
+Z10 !s107 C:\Users\Jacob\Documents\GitHub\Hazwell\271 Labs\sim1\debounce.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 Alb>X62fbQRI?fG@;Di8o0
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+Z13 DEx4 work 8 debounce 0 22 hYYXkaSAgCISK]><L[4Li2
+l16
+L13
+VNU8CX^mQh49aN5z7QXoal3
+!s100 nR^2`?H?[RPS=oQ7IafL?3
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+Edebounce_tb
+Z14 w1695236704
+R1
+R2
+R3
+R4
+Z15 8C:\Users\Jacob\Documents\GitHub\Hazwell\271 Labs\sim1\debouce_tb.vhd
+Z16 FC:\Users\Jacob\Documents\GitHub\Hazwell\271 Labs\sim1\debouce_tb.vhd
+l0
+L5
+VAf^ojaQPY6f0IVCc]nL@C0
+!s100 K[fbVR2Q<=Uc4ID?E=QTd0
+R7
+32
+!i10b 1
+Z17 !s108 1695236708.936000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\Jacob\Documents\GitHub\Hazwell\271 Labs\sim1\debouce_tb.vhd|
+Z19 !s107 C:\Users\Jacob\Documents\GitHub\Hazwell\271 Labs\sim1\debouce_tb.vhd|
+R11
+R12
+Asim
+R13
+R1
+R2
+R3
+Z20 DEx4 work 11 debounce_tb 0 22 Af^ojaQPY6f0IVCc]nL@C0
+l13
+L8
+V5o:]b7enWm<P[<IgNc]AJ2
+!s100 Tn=<>1LUK7ibDANIaRPV52
+R7
+32
+!i10b 1
+R17
+R18
+R19
+R11
+R12

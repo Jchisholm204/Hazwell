@@ -14,9 +14,9 @@
 
 // VENDOR "Altera"
 // PROGRAM "Quartus II 64-Bit"
-// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "09/20/2023 14:02:18"
+// DATE "09/20/2023 14:14:24"
 
 // 
 // Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -37,9 +37,9 @@ input 	clock;
 input 	button;
 
 // Design Ports Information
-// button_out	=>  Location: PIN_E9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// button_out	=>  Location: PIN_R17,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // clock	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// button	=>  Location: PIN_D9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// button	=>  Location: PIN_R16,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -53,15 +53,12 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \clock~input_o ;
 wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \clock~input_o ;
 wire \clock~inputCLKENA0_outclk ;
 wire \button~input_o ;
-wire \inst1~feeder_combout ;
 wire \inst1~q ;
-wire \inst2~feeder_combout ;
 wire \inst2~q ;
-wire \inst5~feeder_combout ;
 wire \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout ;
 wire \inst~combout ;
 wire \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT ;
@@ -106,18 +103,7 @@ wire \inst5~q ;
 wire [18:0] \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit ;
 
 
-// Location: IOIBUF_X54_Y18_N61
-cyclonev_io_ibuf \clock~input (
-	.i(clock),
-	.ibar(gnd),
-	.dynamicterminationcontrol(gnd),
-	.o(\clock~input_o ));
-// synopsys translate_off
-defparam \clock~input .bus_hold = "false";
-defparam \clock~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOOBUF_X10_Y45_N2
+// Location: IOOBUF_X54_Y16_N22
 cyclonev_io_obuf \button_out~output (
 	.i(\inst5~q ),
 	.oe(vcc),
@@ -133,7 +119,18 @@ defparam \button_out~output .open_drain_output = "false";
 defparam \button_out~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: CLKCTRL_G11
+// Location: IOIBUF_X54_Y18_N61
+cyclonev_io_ibuf \clock~input (
+	.i(clock),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\clock~input_o ));
+// synopsys translate_off
+defparam \clock~input .bus_hold = "false";
+defparam \clock~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G10
 cyclonev_clkena \clock~inputCLKENA0 (
 	.inclk(\clock~input_o ),
 	.ena(vcc),
@@ -147,7 +144,7 @@ defparam \clock~inputCLKENA0 .ena_register_power_up = "high";
 defparam \clock~inputCLKENA0 .test_syn = "high";
 // synopsys translate_on
 
-// Location: IOIBUF_X10_Y45_N18
+// Location: IOIBUF_X54_Y16_N4
 cyclonev_io_ibuf \button~input (
 	.i(button),
 	.ibar(gnd),
@@ -158,39 +155,15 @@ defparam \button~input .bus_hold = "false";
 defparam \button~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: MLABCELL_X9_Y44_N15
-cyclonev_lcell_comb \inst1~feeder (
-// Equation(s):
-// \inst1~feeder_combout  = ( \button~input_o  )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\button~input_o ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst1~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst1~feeder .extended_lut = "off";
-defparam \inst1~feeder .lut_mask = 64'h00000000FFFFFFFF;
-defparam \inst1~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X9_Y44_N17
+// Location: FF_X53_Y16_N50
 dffeas inst1(
 	.clk(\clock~inputCLKENA0_outclk ),
-	.d(\inst1~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\button~input_o ),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -201,39 +174,15 @@ defparam inst1.is_wysiwyg = "true";
 defparam inst1.power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X9_Y44_N6
-cyclonev_lcell_comb \inst2~feeder (
-// Equation(s):
-// \inst2~feeder_combout  = \inst1~q 
-
-	.dataa(gnd),
-	.datab(!\inst1~q ),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst2~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst2~feeder .extended_lut = "off";
-defparam \inst2~feeder .lut_mask = 64'h3333333333333333;
-defparam \inst2~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: FF_X9_Y44_N8
+// Location: FF_X53_Y16_N47
 dffeas inst2(
 	.clk(\clock~inputCLKENA0_outclk ),
-	.d(\inst2~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\inst1~q ),
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -244,31 +193,7 @@ defparam inst2.is_wysiwyg = "true";
 defparam inst2.power_up = "low";
 // synopsys translate_on
 
-// Location: MLABCELL_X9_Y44_N48
-cyclonev_lcell_comb \inst5~feeder (
-// Equation(s):
-// \inst5~feeder_combout  = \inst2~q 
-
-	.dataa(gnd),
-	.datab(!\inst2~q ),
-	.datac(gnd),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst5~feeder_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst5~feeder .extended_lut = "off";
-defparam \inst5~feeder .lut_mask = 64'h3333333333333333;
-defparam \inst5~feeder .shared_arith = "off";
-// synopsys translate_on
-
-// Location: LABCELL_X10_Y44_N0
+// Location: LABCELL_X52_Y16_N0
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita0 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [0] ) + ( VCC ) + ( !VCC ))
@@ -293,17 +218,17 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita0 .lut_mas
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: MLABCELL_X9_Y44_N57
+// Location: LABCELL_X53_Y16_N48
 cyclonev_lcell_comb inst(
 // Equation(s):
-// \inst~combout  = ( \inst2~q  & ( !\inst1~q  ) ) # ( !\inst2~q  & ( \inst1~q  ) )
+// \inst~combout  = ( \inst1~q  & ( !\inst2~q  ) ) # ( !\inst1~q  & ( \inst2~q  ) )
 
 	.dataa(gnd),
-	.datab(gnd),
-	.datac(!\inst1~q ),
+	.datab(!\inst2~q ),
+	.datac(gnd),
 	.datad(gnd),
-	.datae(gnd),
-	.dataf(!\inst2~q ),
+	.datae(!\inst1~q ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -313,11 +238,11 @@ cyclonev_lcell_comb inst(
 	.shareout());
 // synopsys translate_off
 defparam inst.extended_lut = "off";
-defparam inst.lut_mask = 64'h0F0F0F0FF0F0F0F0;
+defparam inst.lut_mask = 64'h3333CCCC3333CCCC;
 defparam inst.shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N2
+// Location: FF_X52_Y16_N2
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[0] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout ),
@@ -336,7 +261,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[0] .is_wysi
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[0] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N3
+// Location: LABCELL_X52_Y16_N3
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita1 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita1~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [1] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT  ))
@@ -361,7 +286,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita1 .lut_mas
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita1 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N5
+// Location: FF_X52_Y16_N5
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[1] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita1~sumout ),
@@ -380,7 +305,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[1] .is_wysi
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[1] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N6
+// Location: LABCELL_X52_Y16_N6
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita2 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita2~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [2] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT  ))
@@ -405,7 +330,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita2 .lut_mas
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita2 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N8
+// Location: FF_X52_Y16_N8
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[2] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita2~sumout ),
@@ -424,7 +349,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[2] .is_wysi
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[2] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N9
+// Location: LABCELL_X52_Y16_N9
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita3 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita3~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [3] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT  ))
@@ -449,7 +374,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita3 .lut_mas
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita3 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N11
+// Location: FF_X52_Y16_N11
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[3] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita3~sumout ),
@@ -468,7 +393,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[3] .is_wysi
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[3] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N12
+// Location: LABCELL_X52_Y16_N12
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita4 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita4~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [4] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT  ))
@@ -493,7 +418,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita4 .lut_mas
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita4 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N14
+// Location: FF_X52_Y16_N14
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[4] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita4~sumout ),
@@ -512,7 +437,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[4] .is_wysi
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[4] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N15
+// Location: LABCELL_X52_Y16_N15
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita5 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita5~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [5] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT  ))
@@ -537,7 +462,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita5 .lut_mas
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita5 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N17
+// Location: FF_X52_Y16_N17
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[5] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita5~sumout ),
@@ -556,7 +481,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[5] .is_wysi
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[5] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N18
+// Location: LABCELL_X52_Y16_N18
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita6 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita6~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [6] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT  ))
@@ -581,7 +506,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita6 .lut_mas
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita6 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N20
+// Location: FF_X52_Y16_N20
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[6] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita6~sumout ),
@@ -600,7 +525,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[6] .is_wysi
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[6] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N21
+// Location: LABCELL_X52_Y16_N21
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita7 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita7~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [7] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT  ))
@@ -625,7 +550,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita7 .lut_mas
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita7 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N23
+// Location: FF_X52_Y16_N23
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[7] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita7~sumout ),
@@ -644,7 +569,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[7] .is_wysi
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[7] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N24
+// Location: LABCELL_X52_Y16_N24
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita8 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita8~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [8] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT  ))
@@ -669,7 +594,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita8 .lut_mas
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita8 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N26
+// Location: FF_X52_Y16_N26
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[8] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita8~sumout ),
@@ -688,7 +613,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[8] .is_wysi
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[8] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N27
+// Location: LABCELL_X52_Y16_N27
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita9 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita9~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [9] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT  ))
@@ -713,7 +638,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita9 .lut_mas
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita9 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N29
+// Location: FF_X52_Y16_N29
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[9] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita9~sumout ),
@@ -732,7 +657,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[9] .is_wysi
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[9] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N30
+// Location: LABCELL_X52_Y16_N30
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita10 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita10~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [10] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT  ))
@@ -757,7 +682,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita10 .lut_ma
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita10 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N32
+// Location: FF_X52_Y16_N32
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[10] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita10~sumout ),
@@ -776,7 +701,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[10] .is_wys
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[10] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N33
+// Location: LABCELL_X52_Y16_N33
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita11 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita11~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [11] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita10~COUT  ))
@@ -801,7 +726,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita11 .lut_ma
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita11 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N35
+// Location: FF_X52_Y16_N35
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[11] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita11~sumout ),
@@ -820,7 +745,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[11] .is_wys
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[11] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N36
+// Location: LABCELL_X52_Y16_N36
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita12 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita12~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [12] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita11~COUT  ))
@@ -845,7 +770,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita12 .lut_ma
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita12 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N38
+// Location: FF_X52_Y16_N38
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[12] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita12~sumout ),
@@ -864,7 +789,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[12] .is_wys
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[12] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N39
+// Location: LABCELL_X52_Y16_N39
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita13 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita13~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [13] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita12~COUT  ))
@@ -889,7 +814,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita13 .lut_ma
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita13 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N41
+// Location: FF_X52_Y16_N41
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[13] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita13~sumout ),
@@ -908,7 +833,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[13] .is_wys
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[13] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N42
+// Location: LABCELL_X52_Y16_N42
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita14 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita14~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [14] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita13~COUT  ))
@@ -933,7 +858,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita14 .lut_ma
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita14 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N44
+// Location: FF_X52_Y16_N44
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[14] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita14~sumout ),
@@ -952,7 +877,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[14] .is_wys
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[14] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N45
+// Location: LABCELL_X52_Y16_N45
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita15 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita15~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [15] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita14~COUT  ))
@@ -977,7 +902,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita15 .lut_ma
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita15 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N47
+// Location: FF_X52_Y16_N47
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[15] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita15~sumout ),
@@ -996,7 +921,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[15] .is_wys
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[15] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N48
+// Location: LABCELL_X52_Y16_N48
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita16 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita16~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [16] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita15~COUT  ))
@@ -1021,7 +946,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita16 .lut_ma
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita16 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N50
+// Location: FF_X52_Y16_N50
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[16] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita16~sumout ),
@@ -1040,7 +965,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[16] .is_wys
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[16] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N51
+// Location: LABCELL_X52_Y16_N51
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita17 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita17~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [17] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita16~COUT  ))
@@ -1065,7 +990,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita17 .lut_ma
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita17 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N53
+// Location: FF_X52_Y16_N53
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[17] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita17~sumout ),
@@ -1084,7 +1009,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[17] .is_wys
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[17] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N54
+// Location: LABCELL_X52_Y16_N54
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita18 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita18~sumout  = SUM(( \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit [18] ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita17~COUT  ))
@@ -1109,7 +1034,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita18 .lut_ma
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita18 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X10_Y44_N56
+// Location: FF_X52_Y16_N56
 dffeas \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[18] (
 	.clk(\clock~inputCLKENA0_outclk ),
 	.d(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita18~sumout ),
@@ -1128,7 +1053,7 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[18] .is_wys
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_reg_bit[18] .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X10_Y44_N57
+// Location: LABCELL_X52_Y16_N57
 cyclonev_lcell_comb \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita18~1 (
 // Equation(s):
 // \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita18~1_sumout  = SUM(( GND ) + ( GND ) + ( \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita18~COUT  ))
@@ -1152,15 +1077,15 @@ defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita18~1 .lut_
 defparam \inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita18~1 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X9_Y44_N49
+// Location: FF_X53_Y16_N1
 dffeas inst5(
 	.clk(\clock~inputCLKENA0_outclk ),
-	.d(\inst5~feeder_combout ),
-	.asdata(vcc),
+	.d(gnd),
+	.asdata(\inst2~q ),
 	.clrn(\inst3|LPM_COUNTER_component|auto_generated|counter_comb_bita18~1_sumout ),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(gnd),
+	.sload(vcc),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
@@ -1171,7 +1096,7 @@ defparam inst5.is_wysiwyg = "true";
 defparam inst5.power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X19_Y15_N3
+// Location: LABCELL_X31_Y20_N0
 cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 

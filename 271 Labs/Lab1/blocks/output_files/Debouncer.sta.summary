@@ -4,82 +4,82 @@ TimeQuest Timing Analyzer Summary
 
 Type  : Slow 1100mV 85C Model Setup 'clock'
 Slack : -2.008
-TNS   : -38.657
+TNS   : -38.233
 
 Type  : Slow 1100mV 85C Model Hold 'clock'
-Slack : 0.650
+Slack : 0.444
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'clock'
-Slack : -1.936
-TNS   : -1.936
+Slack : -1.829
+TNS   : -1.829
 
 Type  : Slow 1100mV 85C Model Removal 'clock'
-Slack : 1.665
+Slack : 1.543
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
 Slack : -0.538
-TNS   : -17.200
+TNS   : -17.254
 
 Type  : Slow 1100mV 0C Model Setup 'clock'
-Slack : -1.980
-TNS   : -38.224
+Slack : -1.978
+TNS   : -37.681
 
 Type  : Slow 1100mV 0C Model Hold 'clock'
-Slack : 0.679
+Slack : 0.450
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'clock'
-Slack : -2.028
-TNS   : -2.028
+Slack : -1.901
+TNS   : -1.901
 
 Type  : Slow 1100mV 0C Model Removal 'clock'
-Slack : 1.651
+Slack : 1.531
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
 Slack : -0.538
-TNS   : -17.800
+TNS   : -17.428
 
 Type  : Fast 1100mV 85C Model Setup 'clock'
-Slack : -0.329
-TNS   : -6.224
+Slack : -0.328
+TNS   : -6.223
 
 Type  : Fast 1100mV 85C Model Hold 'clock'
-Slack : 0.277
+Slack : 0.245
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'clock'
-Slack : -0.374
-TNS   : -0.374
+Slack : -0.322
+TNS   : -0.322
 
 Type  : Fast 1100mV 85C Model Removal 'clock'
-Slack : 0.766
+Slack : 0.705
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
 Slack : -0.089
-TNS   : -1.900
+TNS   : -1.927
 
 Type  : Fast 1100mV 0C Model Setup 'clock'
-Slack : -0.271
-TNS   : -5.122
+Slack : -0.270
+TNS   : -5.112
 
 Type  : Fast 1100mV 0C Model Hold 'clock'
-Slack : 0.266
+Slack : 0.234
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'clock'
-Slack : -0.336
-TNS   : -0.336
+Slack : -0.280
+TNS   : -0.280
 
 Type  : Fast 1100mV 0C Model Removal 'clock'
-Slack : 0.722
+Slack : 0.665
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
-Slack : -0.089
-TNS   : -1.912
+Slack : -0.093
+TNS   : -2.015
 
 ------------------------------------------------------------

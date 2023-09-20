@@ -1,6 +1,6 @@
 EDA Netlist Writer report for Debouncer
-Wed Sep 20 14:02:18 2023
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Sep 20 14:14:24 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Sep 20 14:02:18 2023 ;
+; EDA Netlist Writer Status ; Successful - Wed Sep 20 14:14:24 2023 ;
 ; Revision Name             ; Debouncer                             ;
 ; Top-level Entity Name     ; Debouncer                             ;
 ; Family                    ; Cyclone V                             ;
@@ -79,14 +79,14 @@ applicable agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Sep 20 14:02:18 2023
-Info: Command: quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Wed Sep 20 14:14:23 2023
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Debouncer -c Debouncer
 Info (204019): Generated file Debouncer.vo in folder "C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/Lab1/blocks/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4585 megabytes
-    Info: Processing ended: Wed Sep 20 14:02:18 2023
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 4611 megabytes
+    Info: Processing ended: Wed Sep 20 14:14:24 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
