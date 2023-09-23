@@ -1,6 +1,6 @@
 Fitter report for Debouncer
-Wed Sep 20 13:56:56 2023
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Sep 20 14:14:12 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -28,17 +28,16 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  20. Control Signals
  21. Global & Other Fast Signals
  22. Non-Global High Fan-Out Signals
- 23. Interconnect Usage Summary
- 24. Other Routing Usage Summary
- 25. I/O Rules Summary
- 26. I/O Rules Details
- 27. I/O Rules Matrix
- 28. Fitter Device Options
- 29. Operating Settings and Conditions
- 30. Estimated Delay Added for Hold Timing Summary
- 31. Estimated Delay Added for Hold Timing Details
- 32. Fitter Messages
- 33. Fitter Suppressed Messages
+ 23. Routing Usage Summary
+ 24. I/O Rules Summary
+ 25. I/O Rules Details
+ 26. I/O Rules Matrix
+ 27. Fitter Device Options
+ 28. Operating Settings and Conditions
+ 29. Estimated Delay Added for Hold Timing Summary
+ 30. Estimated Delay Added for Hold Timing Details
+ 31. Fitter Messages
+ 32. Fitter Suppressed Messages
 
 
 
@@ -61,31 +60,29 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Fitter Summary                                                                        ;
-+-------------------------------------+-------------------------------------------------+
-; Fitter Status                       ; Successful - Wed Sep 20 13:56:56 2023           ;
-; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                       ; Debouncer                                       ;
-; Top-level Entity Name               ; Debouncer                                       ;
-; Family                              ; Cyclone V                                       ;
-; Device                              ; 5CEBA4F23C7                                     ;
-; Timing Models                       ; Final                                           ;
-; Logic utilization (in ALMs)         ; 12 / 18,480 ( < 1 % )                           ;
-; Total registers                     ; 22                                              ;
-; Total pins                          ; 3 / 224 ( 1 % )                                 ;
-; Total virtual pins                  ; 0                                               ;
-; Total block memory bits             ; 0 / 3,153,920 ( 0 % )                           ;
-; Total DSP Blocks                    ; 0 / 66 ( 0 % )                                  ;
-; Total HSSI RX PCSs                  ; 0                                               ;
-; Total HSSI PMA RX Deserializers     ; 0                                               ;
-; Total HSSI PMA RX ATT Deserializers ; 0                                               ;
-; Total HSSI TX PCSs                  ; 0                                               ;
-; Total HSSI PMA TX Serializers       ; 0                                               ;
-; Total HSSI PMA TX ATT Serializers   ; 0                                               ;
-; Total PLLs                          ; 0 / 4 ( 0 % )                                   ;
-; Total DLLs                          ; 0 / 4 ( 0 % )                                   ;
-+-------------------------------------+-------------------------------------------------+
++------------------------------------------------------------------------------+
+; Fitter Summary                                                               ;
++---------------------------------+--------------------------------------------+
+; Fitter Status                   ; Successful - Wed Sep 20 14:14:12 2023      ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                   ; Debouncer                                  ;
+; Top-level Entity Name           ; Debouncer                                  ;
+; Family                          ; Cyclone V                                  ;
+; Device                          ; 5CEBA4F23C7                                ;
+; Timing Models                   ; Final                                      ;
+; Logic utilization (in ALMs)     ; 12 / 18,480 ( < 1 % )                      ;
+; Total registers                 ; 22                                         ;
+; Total pins                      ; 3 / 224 ( 1 % )                            ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                      ;
+; Total DSP Blocks                ; 0 / 66 ( 0 % )                             ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI TX Channels          ; 0                                          ;
+; Total PLLs                      ; 0 / 4 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                              ;
++---------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -102,7 +99,6 @@ applicable agreement for further details.
 ; Router Timing Optimization Level                                           ; Normal                                ; Normal                                ;
 ; Perform Clocking Topology Analysis During Routing                          ; Off                                   ; Off                                   ;
 ; Placement Effort Multiplier                                                ; 1.0                                   ; 1.0                                   ;
-; Router Effort Multiplier                                                   ; 1.0                                   ; 1.0                                   ;
 ; Device initialization clock source                                         ; INIT_INTOSC                           ; INIT_INTOSC                           ;
 ; Optimize Hold Timing                                                       ; All Paths                             ; All Paths                             ;
 ; Optimize Multi-Corner Timing                                               ; On                                    ; On                                    ;
@@ -152,7 +148,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 16     ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -177,19 +173,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------+---------+-----------+----------------------------+-----------+----------------+------------------+------------------+-----------------------+
 
 
-+----------------------------------------------+
-; Incremental Compilation Preservation Summary ;
-+---------------------+------------------------+
-; Type                ; Value                  ;
-+---------------------+------------------------+
-; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 51 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 51 ( 0.00 % )      ;
-;                     ;                        ;
-; Routing (by net)    ;                        ;
-;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
-;     -- Achieved     ; 0 / 0 ( 0.00 % )       ;
-+---------------------+------------------------+
++-------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                    ;
++---------------------+-------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+-------------------+----------------------------+--------------------------+
+; Placement (by node) ;                   ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 51 ) ; 0.00 % ( 0 / 51 )          ; 0.00 % ( 0 / 51 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 51 ) ; 0.00 % ( 0 / 51 )          ; 0.00 % ( 0 / 51 )        ;
+;                     ;                   ;                            ;                          ;
+; Routing (by net)    ;                   ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+-------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -202,14 +198,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+----------------+-------------------+-------------------------+------------------------+------------------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Incremental Compilation Placement Preservation                                                             ;
-+--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
-+--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 51      ; 0                 ; N/A                     ; Source File       ;
-; hard_block:auto_generated_inst ; 0       ; 0                 ; N/A                     ; Source File       ;
-+--------------------------------+---------+-------------------+-------------------------+-------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Incremental Compilation Placement Preservation                                                                                     ;
++--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
+; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
++--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
+; Top                            ; 0.00 % ( 0 / 51 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
++--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
 
 +--------------+
@@ -225,12 +221,12 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 +-------------------------------------------------------------+---------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 12 / 18,480   ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 12            ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 14 / 18,480   ; < 1 % ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 12 / 18,480   ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 10            ;       ;
-;         [b] ALMs used for LUT logic                         ; 2             ;       ;
-;         [c] ALMs used for registers                         ; 2             ;       ;
+;         [b] ALMs used for LUT logic                         ; 1             ;       ;
+;         [c] ALMs used for registers                         ; 1             ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0             ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 18,480    ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 18,480    ; 0 %   ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18,480    ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0             ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0             ;       ;
@@ -249,7 +245,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ;     -- 5 input functions                                    ; 0             ;       ;
 ;     -- 4 input functions                                    ; 0             ;       ;
 ;     -- <=3 input functions                                  ; 22            ;       ;
-; Combinational ALUT usage for route-throughs                 ; 3             ;       ;
+; Combinational ALUT usage for route-throughs                 ; 0             ;       ;
 ; Dedicated logic registers                                   ; 22            ;       ;
 ;     -- By type:                                             ;               ;       ;
 ;         -- Primary logic registers                          ; 22 / 36,960   ; < 1 % ;
@@ -283,8 +279,8 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; Peak interconnect usage (total/H/V)                         ; 0% / 0% / 0%  ;       ;
 ; Maximum fan-out                                             ; 22            ;       ;
 ; Highest non-global fan-out                                  ; 20            ;       ;
-; Total fan-out                                               ; 131           ;       ;
-; Average fan-out                                             ; 2.43          ;       ;
+; Total fan-out                                               ; 128           ;       ;
+; Average fan-out                                             ; 2.51          ;       ;
 +-------------------------------------------------------------+---------------+-------+
 
 
@@ -295,12 +291,12 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 12 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 12                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 14 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 12 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 10                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 2                    ; 0                              ;
-;         [c] ALMs used for registers                         ; 2                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 1                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 1                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 18480 ( 0 % )    ; 0 / 18480 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18480 ( 0 % )    ; 0 / 18480 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -319,7 +315,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ;     -- 5 input functions                                    ; 0                    ; 0                              ;
 ;     -- 4 input functions                                    ; 0                    ; 0                              ;
 ;     -- <=3 input functions                                  ; 22                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 3                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 0                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
@@ -347,7 +343,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 131                  ; 0                              ;
+;     -- Total Connections                                    ; 128                  ; 0                              ;
 ;     -- Registered Connections                               ; 24                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
@@ -380,7 +376,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
-; button ; D9    ; 8A       ; 10           ; 45           ; 17           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; button ; R16   ; 5A       ; 54           ; 16           ; 3            ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 ; clock  ; M16   ; 5B       ; 54           ; 18           ; 60           ; 22                    ; 0                  ; yes    ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 
@@ -390,24 +386,24 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 +------------+-------+----------+--------------+--------------+--------------+-----------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; button_out ; E9    ; 8A       ; 10           ; 45           ; 0            ; no              ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; button_out ; R17   ; 5A       ; 54           ; 16           ; 20           ; no              ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+--------------------------------------------------------------------------+
-; I/O Bank Usage                                                           ;
-+----------+----------------+---------------+--------------+---------------+
-; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
-+----------+----------------+---------------+--------------+---------------+
-; 2A       ; 0 / 16 ( 0 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 3A       ; 0 / 16 ( 0 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 0 / 32 ( 0 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 0 / 48 ( 0 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 5A       ; 0 / 16 ( 0 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 5B       ; 1 / 16 ( 6 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 7A       ; 0 / 48 ( 0 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 2 / 32 ( 6 % ) ; 2.5V          ; --           ; 2.5V          ;
-+----------+----------------+---------------+--------------+---------------+
++---------------------------------------------------------------------------+
+; I/O Bank Usage                                                            ;
++----------+-----------------+---------------+--------------+---------------+
+; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
++----------+-----------------+---------------+--------------+---------------+
+; 2A       ; 0 / 16 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 3A       ; 0 / 16 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 0 / 32 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 0 / 48 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 2 / 16 ( 13 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 5B       ; 1 / 16 ( 6 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 7A       ; 0 / 48 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 0 / 32 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
++----------+-----------------+---------------+--------------+---------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -416,9 +412,9 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; Location ; Pad Number ; I/O Bank ; Pin Name/Usage                  ; Dir.   ; I/O Standard ; Voltage             ; I/O Type     ; User Assignment ; Bus Hold ; Weak Pull Up ;
 +----------+------------+----------+---------------------------------+--------+--------------+---------------------+--------------+-----------------+----------+--------------+
 ; A1       ;            ;          ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
-; A2       ; 288        ; 9A       ; ^MSEL2                          ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
+; A2       ; 288        ; 9A       ; ^MSEL2                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A3       ;            ; --       ; VCCBAT                          ; power  ;              ; 1.2V                ; --           ;                 ; --       ; --           ;
-; A4       ; 290        ; 9A       ; ^nCONFIG                        ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
+; A4       ; 290        ; 9A       ; ^nCONFIG                        ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A5       ; 264        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A6       ;            ; 8A       ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; A7       ; 273        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -441,7 +437,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; AA2      ; 31         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AA3      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA4      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AA5      ; 53         ; 3A       ; ^AS_DATA2, DATA2                ; input  ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
+; AA5      ; 53         ; 3A       ; ^AS_DATA2, DATA2                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AA6      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA7      ; 79         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA8      ; 82         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -461,8 +457,8 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; AA22     ; 137        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB1      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB2      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AB3      ; 55         ; 3A       ; ^AS_DATA1, DATA1                ; input  ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
-; AB4      ; 57         ; 3A       ; ^AS_DATA0, ASDO, DATA0          ; input  ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
+; AB3      ; 55         ; 3A       ; ^AS_DATA1, DATA1                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
+; AB4      ; 57         ; 3A       ; ^AS_DATA0, ASDO, DATA0          ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AB5      ; 76         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB6      ; 74         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB7      ; 81         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -533,7 +529,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; D6       ; 274        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D7       ; 276        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D8       ;            ; --       ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; D9       ; 277        ; 8A       ; button                          ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; D9       ; 277        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D10      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; D11      ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D12      ; 247        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -551,11 +547,11 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; E2       ; 20         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; E3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; E5       ; 289        ; 9A       ; ^MSEL3                          ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
+; E5       ; 289        ; 9A       ; ^MSEL3                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E6       ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; E7       ; 282        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E8       ;            ; 8A       ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; E9       ; 275        ; 8A       ; button_out                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; E9       ; 275        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E10      ; 267        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E11      ;            ; --       ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; E12      ; 249        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -571,7 +567,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; E22      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; F3       ; 291        ; 9A       ; ^MSEL4                          ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
+; F3       ; 291        ; 9A       ; ^MSEL4                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F4       ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; F5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F6       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -640,7 +636,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; J3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J4       ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; J5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; J6       ; 285        ; 9A       ; ^MSEL1                          ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
+; J6       ; 285        ; 9A       ; ^MSEL1                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J7       ; 255        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J8       ; 257        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J9       ; 259        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -662,7 +658,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; K3       ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; K4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K5       ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; K6       ; 284        ; 9A       ; ^CONF_DONE                      ; bidir  ;              ;                     ; --           ;                 ; --       ; --           ;
+; K6       ; 284        ; 9A       ; ^CONF_DONE                      ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K7       ; 254        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; K8       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K9       ; 246        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -684,7 +680,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; L3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L4       ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; L5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; L6       ; 283        ; 9A       ; ^MSEL0                          ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
+; L6       ; 283        ; 9A       ; ^MSEL0                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L7       ; 252        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; L8       ; 244        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; L9       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -770,7 +766,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; R1       ;            ; 2A       ; VCCIO2A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; R2       ;            ; --       ; VCCPD1A2A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; R3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; R4       ; 49         ; 3A       ; ^nCSO, DATA4                    ; input  ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
+; R4       ; 49         ; 3A       ; ^nCSO, DATA4                    ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; R5       ; 60         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; R6       ; 58         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; R7       ; 71         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -782,8 +778,8 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; R13      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; R14      ; 144        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; R15      ; 161        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; R16      ; 163        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; R17      ; 165        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; R16      ; 163        ; 5A       ; button                          ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; R17      ; 165        ; 5A       ; button_out                      ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; R18      ;            ; 5A       ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; R19      ;            ; --       ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
 ; R20      ;            ; 5A       ; VREFB5AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -792,7 +788,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; T1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; T2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; T3       ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; T4       ; 51         ; 3A       ; ^AS_DATA3, DATA3                ; input  ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
+; T4       ; 51         ; 3A       ; ^AS_DATA3, DATA3                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; T5       ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; T6       ;            ; 3A       ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; T7       ; 66         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -835,7 +831,7 @@ The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/Hazwell/271 Lab
 ; U22      ; 146        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; V3       ; 56         ; 3A       ; ^DCLK                           ; bidir  ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
+; V3       ; 56         ; 3A       ; ^DCLK                           ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; V4       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V5       ; 52         ; 3A       ; #TCK                            ; input  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V6       ; 69         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -908,7 +904,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                           ; Library Name ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------+--------------+
-; |Debouncer                                ; 11.5 (1.5)           ; 12.5 (2.5)                       ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (2)              ; 22 (3)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 3    ; 0            ; |Debouncer                                                                    ; work         ;
+; |Debouncer                                ; 11.5 (1.5)           ; 12.0 (2.0)                       ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (2)              ; 22 (3)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 3    ; 0            ; |Debouncer                                                                    ; work         ;
 ;    |c1:inst3|                             ; 10.0 (0.0)           ; 10.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 20 (0)              ; 19 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Debouncer|c1:inst3                                                           ; work         ;
 ;       |lpm_counter:LPM_COUNTER_component| ; 10.0 (0.0)           ; 10.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 20 (0)              ; 19 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Debouncer|c1:inst3|lpm_counter:LPM_COUNTER_component                         ; work         ;
 ;          |cntr_d5j:auto_generated|        ; 10.0 (10.0)          ; 10.0 (10.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 20 (20)             ; 19 (19)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |Debouncer|c1:inst3|lpm_counter:LPM_COUNTER_component|cntr_d5j:auto_generated ; work         ;
@@ -934,7 +930,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 ; clock               ;                   ;         ;
 ; button              ;                   ;         ;
-;      - inst1~feeder ; 0                 ; 0       ;
+;      - inst1        ; 0                 ; 0       ;
 +---------------------+-------------------+---------+
 
 
@@ -943,9 +939,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------+---------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                     ; Location            ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------------------------------------------------------+---------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; c1:inst3|lpm_counter:LPM_COUNTER_component|cntr_d5j:auto_generated|counter_comb_bita18~1 ; LABCELL_X10_Y44_N57 ; 20      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; clock                                                                                    ; PIN_M16             ; 22      ; Clock                      ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; inst                                                                                     ; MLABCELL_X9_Y44_N57 ; 19      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; c1:inst3|lpm_counter:LPM_COUNTER_component|cntr_d5j:auto_generated|counter_comb_bita18~1 ; LABCELL_X52_Y16_N57 ; 20      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; clock                                                                                    ; PIN_M16             ; 22      ; Clock                      ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; inst                                                                                     ; LABCELL_X53_Y16_N48 ; 19      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
 +------------------------------------------------------------------------------------------+---------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -954,7 +950,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
-; clock ; PIN_M16  ; 22      ; Global Clock         ; GCLK11           ; --                        ;
+; clock ; PIN_M16  ; 22      ; Global Clock         ; GCLK10           ; --                        ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1029,34 +1025,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------+
-; Interconnect Usage Summary                         ;
-+----------------------------+-----------------------+
-; Interconnect Resource Type ; Usage                 ;
-+----------------------------+-----------------------+
-; Block interconnects        ; 5 / 140,056 ( < 1 % ) ;
-; C12 interconnects          ; 0 / 6,048 ( 0 % )     ;
-; C2 interconnects           ; 2 / 54,648 ( < 1 % )  ;
-; C4 interconnects           ; 0 / 25,920 ( 0 % )    ;
-; Local interconnects        ; 2 / 36,960 ( < 1 % )  ;
-; R14 interconnects          ; 0 / 5,984 ( 0 % )     ;
-; R3 interconnects           ; 0 / 60,192 ( 0 % )    ;
-; R6 interconnects           ; 1 / 127,072 ( < 1 % ) ;
-+----------------------------+-----------------------+
-
-
 +------------------------------------------------------+
-; Other Routing Usage Summary                          ;
+; Routing Usage Summary                                ;
 +------------------------------+-----------------------+
-; Other Routing Resource Type  ; Usage                 ;
+; Routing Resource Type        ; Usage                 ;
 +------------------------------+-----------------------+
+; Block interconnects          ; 5 / 140,056 ( < 1 % ) ;
+; C12 interconnects            ; 0 / 6,048 ( 0 % )     ;
+; C2 interconnects             ; 0 / 54,648 ( 0 % )    ;
+; C4 interconnects             ; 0 / 25,920 ( 0 % )    ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )        ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )        ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )        ;
-; Direct links                 ; 3 / 140,056 ( < 1 % ) ;
+; Direct links                 ; 4 / 140,056 ( < 1 % ) ;
 ; Global clocks                ; 1 / 16 ( 6 % )        ;
+; Local interconnects          ; 2 / 36,960 ( < 1 % )  ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )        ;
+; R14 interconnects            ; 0 / 5,984 ( 0 % )     ;
 ; R14/C12 interconnect drivers ; 0 / 9,504 ( 0 % )     ;
+; R3 interconnects             ; 0 / 60,192 ( 0 % )    ;
+; R6 interconnects             ; 0 / 127,072 ( 0 % )   ;
 ; Spine clocks                 ; 1 / 120 ( < 1 % )     ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )     ;
 +------------------------------+-----------------------+
@@ -1172,7 +1160,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
-This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
+This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
 +------------------------------------------------------------+
@@ -1181,7 +1169,7 @@ This will disable optimization of problematic paths and expose them for further 
 ; Source Register ; Destination Register ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
 ; inst2           ; inst5                ; 0.043             ;
-; inst1           ; inst2                ; 0.042             ;
+; inst1           ; inst2                ; 0.031             ;
 +-----------------+----------------------+-------------------+
 Note: This table only shows the top 2 path(s) that have the largest delay added for hold.
 
@@ -1202,7 +1190,7 @@ Critical Warning (169085): No exact pin location assignment(s) for 3 pins of 3 t
     Info (169086): Pin button not assigned to an exact location on the device
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): clock~inputCLKENA0 with 22 fanout uses global clock CLKCTRL_G11
+    Info (11162): clock~inputCLKENA0 with 22 fanout uses global clock CLKCTRL_G10
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Debouncer.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
@@ -1212,7 +1200,7 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:09
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1220,11 +1208,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y34 to location X10_Y45
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y23 to location X10_Y33
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.16 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1232,10 +1220,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/Lab1/blocks/output_files/Debouncer.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5599 megabytes
-    Info: Processing ended: Wed Sep 20 13:56:57 2023
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 5350 megabytes
+    Info: Processing ended: Wed Sep 20 14:14:13 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +----------------------------+

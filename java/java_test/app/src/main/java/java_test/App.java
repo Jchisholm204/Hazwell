@@ -12,8 +12,8 @@ public class App {
     public static void main(String[] args) {
         Greeter greeter = new Greeter();
         System.out.println(greeter.Hello());
-        //System.out.println("Running GUI");
-        gui.main(args);
+        System.out.println("Running GUI");
+        java_test.gui.main(args);
         //assign3.main();
     }
 }

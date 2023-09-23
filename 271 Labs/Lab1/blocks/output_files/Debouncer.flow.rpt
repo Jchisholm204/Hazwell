@@ -1,6 +1,6 @@
 Flow report for Debouncer
-Wed Sep 20 14:23:45 2023
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Sep 20 14:14:24 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -37,31 +37,29 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Flow Summary                                                                          ;
-+-------------------------------------+-------------------------------------------------+
-; Flow Status                         ; Successful - Wed Sep 20 14:23:45 2023           ;
-; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                       ; Debouncer                                       ;
-; Top-level Entity Name               ; Debouncer                                       ;
-; Family                              ; Cyclone V                                       ;
-; Device                              ; 5CEBA4F23C7                                     ;
-; Timing Models                       ; Final                                           ;
-; Logic utilization (in ALMs)         ; 12 / 18,480 ( < 1 % )                           ;
-; Total registers                     ; 22                                              ;
-; Total pins                          ; 3 / 224 ( 1 % )                                 ;
-; Total virtual pins                  ; 0                                               ;
-; Total block memory bits             ; 0 / 3,153,920 ( 0 % )                           ;
-; Total DSP Blocks                    ; 0 / 66 ( 0 % )                                  ;
-; Total HSSI RX PCSs                  ; 0                                               ;
-; Total HSSI PMA RX Deserializers     ; 0                                               ;
-; Total HSSI PMA RX ATT Deserializers ; 0                                               ;
-; Total HSSI TX PCSs                  ; 0                                               ;
-; Total HSSI PMA TX Serializers       ; 0                                               ;
-; Total HSSI PMA TX ATT Serializers   ; 0                                               ;
-; Total PLLs                          ; 0 / 4 ( 0 % )                                   ;
-; Total DLLs                          ; 0 / 4 ( 0 % )                                   ;
-+-------------------------------------+-------------------------------------------------+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++---------------------------------+--------------------------------------------+
+; Flow Status                     ; Successful - Wed Sep 20 14:14:24 2023      ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                   ; Debouncer                                  ;
+; Top-level Entity Name           ; Debouncer                                  ;
+; Family                          ; Cyclone V                                  ;
+; Device                          ; 5CEBA4F23C7                                ;
+; Timing Models                   ; Final                                      ;
+; Logic utilization (in ALMs)     ; 12 / 18,480 ( < 1 % )                      ;
+; Total registers                 ; 22                                         ;
+; Total pins                      ; 3 / 224 ( 1 % )                            ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                      ;
+; Total DSP Blocks                ; 0 / 66 ( 0 % )                             ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI TX Channels          ; 0                                          ;
+; Total PLLs                      ; 0 / 4 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                              ;
++---------------------------------+--------------------------------------------+
 
 
 +-----------------------------------------+
@@ -69,33 +67,34 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/20/2023 13:56:27 ;
+; Start date & time ; 09/20/2023 14:13:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Debouncer           ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                   ;
-+-------------------------------------+-------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                         ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+-------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 5334173384506.169523258702692 ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                          ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)        ; <None>        ; --          ; --             ;
-; IP_TOOL_NAME                        ; LPM_COUNTER                   ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                     ; 13.0                          ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                            ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                             ; --            ; --          ; --             ;
-; MISC_FILE                           ; c1.bsf                        ; --            ; --          ; --             ;
-; MISC_FILE                           ; c1_inst.vhd                   ; --            ; --          ; --             ;
-; MISC_FILE                           ; c1.inc                        ; --            ; --          ; --             ;
-; MISC_FILE                           ; c1.cmp                        ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                      ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING         ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                        ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                  ; --            ; --          ; --             ;
-+-------------------------------------+-------------------------------+---------------+-------------+----------------+
++------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                 ;
++-------------------------------------+-----------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                       ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+-----------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 91758954753.169523363347572 ; --            ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                          ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                 ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)   ; <None>        ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_COUNTER                 ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                        ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                          ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; c1.bsf                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; c1_inst.vhd                 ; --            ; --          ; --             ;
+; MISC_FILE                           ; c1.inc                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; c1.cmp                      ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                    ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING       ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                      ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                ; --            ; --          ; --             ;
++-------------------------------------+-----------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -103,27 +102,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4690 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:26     ; 1.0                     ; 5599 MB             ; 00:00:25                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4711 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 5121 MB             ; 00:00:06                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4587 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4587 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4587 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4587 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4587 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4585 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4587 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:54     ; --                      ; --                  ; 00:00:53                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4708 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:16     ; 1.0                     ; 5350 MB             ; 00:00:12                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4714 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4846 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4600 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:26     ; --                      ; --                  ; 00:00:19                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -132,26 +116,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-P0DR7CJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-P0DR7CJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-P0DR7CJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-P0DR7CJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-P0DR7CJ  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -163,21 +132,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off Debouncer -c De
 quartus_asm --read_settings_files=off --write_settings_files=off Debouncer -c Debouncer
 quartus_sta Debouncer -c Debouncer
 quartus_eda --read_settings_files=off --write_settings_files=off Debouncer -c Debouncer
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer --vector_source="C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/Lab1/blocks/Waveform.vwf" --testbench_file=./simulation/qsim/Debouncer.vt
-quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer --vector_source="C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/Lab1/blocks/Waveform.vwf" --testbench_file=./simulation/qsim/Debouncer.vt
-quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer --vector_source="C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/Lab1/blocks/Waveform.vwf" --testbench_file=./simulation/qsim/Debouncer.vt
-quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer --vector_source="C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/Lab1/blocks/Waveform.vwf" --testbench_file=./simulation/qsim/Debouncer.vt
-quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer --vector_source="C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/Lab1/blocks/Waveform.vwf" --testbench_file=./simulation/qsim/Debouncer.vt
-quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer --vector_source="C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/Lab1/blocks/Waveform.vwf" --testbench_file="C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/Lab1/blocks/simulation/modelsim/Waveform.vwf.vt"
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer --vector_source="C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/Lab1/blocks/Waveform.vwf" --testbench_file=./simulation/qsim/Debouncer.vt
-quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer --vector_source="C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/Lab1/blocks/Waveform.vwf" --testbench_file=./simulation/qsim/Debouncer.vt
-quartus_eda --functional=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog Debouncer -c Debouncer
 
 
 

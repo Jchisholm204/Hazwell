@@ -1,6 +1,6 @@
 Flow report for top
-Mon Feb 27 22:25:01 2023
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Sep 13 22:25:20 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -37,31 +37,29 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Flow Summary                                                                          ;
-+-------------------------------------+-------------------------------------------------+
-; Flow Status                         ; Successful - Mon Feb 27 22:25:01 2023           ;
-; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                       ; top                                             ;
-; Top-level Entity Name               ; top                                             ;
-; Family                              ; Cyclone V                                       ;
-; Device                              ; 5CSEMA5F31C6                                    ;
-; Timing Models                       ; Preliminary                                     ;
-; Logic utilization (in ALMs)         ; 4 / 32,070 ( < 1 % )                            ;
-; Total registers                     ; 0                                               ;
-; Total pins                          ; 16 / 457 ( 4 % )                                ;
-; Total virtual pins                  ; 0                                               ;
-; Total block memory bits             ; 0 / 4,065,280 ( 0 % )                           ;
-; Total DSP Blocks                    ; 0 / 87 ( 0 % )                                  ;
-; Total HSSI RX PCSs                  ; 0                                               ;
-; Total HSSI PMA RX Deserializers     ; 0                                               ;
-; Total HSSI PMA RX ATT Deserializers ; 0                                               ;
-; Total HSSI TX PCSs                  ; 0                                               ;
-; Total HSSI PMA TX Serializers       ; 0                                               ;
-; Total HSSI PMA TX ATT Serializers   ; 0                                               ;
-; Total PLLs                          ; 0 / 6 ( 0 % )                                   ;
-; Total DLLs                          ; 0 / 4 ( 0 % )                                   ;
-+-------------------------------------+-------------------------------------------------+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++---------------------------------+--------------------------------------------+
+; Flow Status                     ; Successful - Wed Sep 13 22:25:20 2023      ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                   ; top                                        ;
+; Top-level Entity Name           ; top                                        ;
+; Family                          ; Cyclone V                                  ;
+; Device                          ; 5CSEMA5F31C6                               ;
+; Timing Models                   ; Preliminary                                ;
+; Logic utilization (in ALMs)     ; 4 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 0                                          ;
+; Total pins                      ; 16 / 457 ( 4 % )                           ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                      ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                             ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI TX Channels          ; 0                                          ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                              ;
++---------------------------------+--------------------------------------------+
 
 
 +-----------------------------------------+
@@ -69,27 +67,27 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/27/2023 22:23:58 ;
+; Start date & time ; 09/13/2023 22:24:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top                 ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                   ;
-+-------------------------------------+-------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                         ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+-------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 5334173384506.167755463833964 ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                          ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)        ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                            ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                             ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                      ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING         ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                        ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                  ; --            ; --          ; --             ;
-+-------------------------------------+-------------------------------+---------------+-------------+----------------+
++------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                 ;
++-------------------------------------+-----------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                       ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+-----------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 91769080972.169465824814964 ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                        ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)      ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                          ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                           ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                    ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING       ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                      ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                ; --            ; --          ; --             ;
++-------------------------------------+-----------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -97,12 +95,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4678 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:50     ; 1.0                     ; 5960 MB             ; 00:00:38                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4595 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 5169 MB             ; 00:00:06                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4584 MB             ; 00:00:01                           ;
-; Total                     ; 00:01:00     ; --                      ; --                  ; 00:00:47                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4710 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:44     ; 1.0                     ; 5613 MB             ; 00:00:26                           ;
+; Assembler                 ; 00:00:14     ; 1.0                     ; 4741 MB             ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4897 MB             ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4606 MB             ; 00:00:01                           ;
+; Total                     ; 00:01:06     ; --                      ; --                  ; 00:00:37                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,11 +109,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-OPAUD0K  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-P0DR7CJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-P0DR7CJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-P0DR7CJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-P0DR7CJ  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-P0DR7CJ  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
