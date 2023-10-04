@@ -6,3 +6,102 @@
 # Compile of top.vhd failed with 2 errors.
 # Compile of top.vhd failed with 1 errors.
 # Compile of top.vhd was successful.
+# Compile of top.vhd was successful.
+# Compile of top_tb.vhd was successful.
+vsim -gui work.top_tb
+# vsim -gui work.top_tb 
+# Start time: 09:45:03 on Oct 04,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_tb(sim)
+# Loading work.top(rtl)
+# Loading work.debounce(behavioral)
+# ** Warning: (vsim-8684) No drivers exist on out port /top_tb/top/o_LEDG(3), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /top_tb/ledg(3).
+add wave -position end  sim:/top_tb/button
+add wave -position end  sim:/top_tb/keys
+add wave -position end  sim:/top_tb/ledr
+add wave -position end  sim:/top_tb/ledg
+add wave -position end  sim:/top_tb/clk
+add wave -position end  sim:/top_tb/ClockFrequency
+add wave -position end  sim:/top_tb/ClockPeriod
+run 40 ms
+add wave -position end  sim:/top_tb/top/i_CLK
+add wave -position end  sim:/top_tb/top/i_SW
+add wave -position end  sim:/top_tb/top/i_KEY
+add wave -position end  sim:/top_tb/top/o_LEDR
+add wave -position end  sim:/top_tb/top/o_LEDG
+add wave -position end  sim:/top_tb/top/Key1
+add wave -position end  sim:/top_tb/top/Key2
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-8684) No drivers exist on out port /top_tb/top/o_LEDG(3), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /top_tb/ledg(3).
+run 30 ms
+# Compile of top_tb.vhd was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb(sim)
+# ** Warning: (vsim-8684) No drivers exist on out port /top_tb/top/o_LEDG(3), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /top_tb/ledg(3).
+run 100 ms
+add wave -position end  sim:/top_tb/top/k1/flipflops
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-8684) No drivers exist on out port /top_tb/top/o_LEDG(3), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /top_tb/ledg(3).
+run 100 ms
+# Compile of debounce.vhd was successful.
+# Compile of debouce_tb.vhd was successful.
+# Compile of top.vhd was successful.
+# Compile of top_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb(sim)
+# Loading work.top(rtl)
+# Loading work.debounce(behavioral)
+# ** Warning: (vsim-8684) No drivers exist on out port /top_tb/top/o_LEDG(3), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /top_tb/ledg(3).
+run 100 ms
+add wave -position end  sim:/top_tb/top/k1/i_button
+# Compile of debounce.vhd was successful.
+# Compile of debouce_tb.vhd was successful.
+# Compile of top.vhd was successful.
+# Compile of top_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb(sim)
+# Loading work.top(rtl)
+# Loading work.debounce(behavioral)
+# ** Warning: (vsim-8684) No drivers exist on out port /top_tb/top/o_LEDG(3), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /top_tb/ledg(3).
+run 100 ms
+# Compile of debounce.vhd was successful.
+# Compile of debouce_tb.vhd was successful.
+# Compile of top.vhd was successful.
+# Compile of top_tb.vhd failed with 2 errors.
+# 4 compiles, 1 failed with 2 errors.
+# Compile of debounce.vhd was successful.
+# Compile of debouce_tb.vhd was successful.
+# Compile of top.vhd was successful.
+# Compile of top_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.top_tb(sim)
+# Loading work.top(rtl)
+# Loading work.debounce(behavioral)
+# ** Warning: (vsim-8684) No drivers exist on out port /top_tb/top/o_LEDG(3), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /top_tb/ledg(3).
+run 100 ms

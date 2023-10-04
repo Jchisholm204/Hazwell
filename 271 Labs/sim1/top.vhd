@@ -18,22 +18,22 @@ architecture rtl of top is
 begin
     k1: entity work.debounce(behavioral)
     generic map(
-      clkFreq => 50e6
+      clkFreq => 50e3
     )
     port map(
         i_clk => i_CLK,
         o_button => Key1,
-        i_button => i_SW(0)
+        i_button => i_KEY(0)
     );
 
     k2: entity work.debounce(behavioral)
     generic map(
-      clkFreq => 50e6
+      clkFreq => 50e3
     )
     port map(
         i_clk => i_CLK,
         o_button => Key2,
-        i_button => i_SW(1)
+        i_button => i_KEY(1)
     );
 
     o_LEDG(0) <= Key1 OR  Key2;
