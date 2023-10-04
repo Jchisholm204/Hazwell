@@ -1,80 +1,132 @@
 m255
 K3
+z0
+!s11e MIXED_VERSIONS
 13
 cModel Technology
 dC:\altera\13.1
 Edebounce
-Z0 w1695243985
-Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z4 dC:\Users\Jacob\Documents\GitHub\Hazwell\271 Labs\sim1
+Z0 w1695505932
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+Z4 dC:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1
 Z5 8C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debounce.vhd
 Z6 FC:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debounce.vhd
 l0
-L5
-V8RcmdadPV2WN1]iZ]4hVZ0
-Z7 OV;C;10.1d;51
+L5 1
+V3nUL6ZUn0ZjocBS2JLPbk0
+!s100 c<^2Z>?ZSDk^]TVXnHlCL1
+Z7 OV;C;2020.1;71
 32
-Z8 !s108 1695244068.411000
-Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debounce.vhd|
-Z10 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debounce.vhd|
-Z11 o-work work -2002 -explicit -O0
-Z12 tExplicit 1
-!s100 ]U5<JTS?d_G;A3T<e@QDY2
+Z8 !s110 1696400245
 !i10b 1
+Z9 !s108 1696400245.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debounce.vhd|
+Z11 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debounce.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
 Abehavioral
 R1
 R2
 R3
-Z13 DEx4 work 8 debounce 0 22 8RcmdadPV2WN1]iZ]4hVZ0
+Z14 DEx4 work 8 debounce 0 22 3nUL6ZUn0ZjocBS2JLPbk0
+!i122 4
 l20
-L16
-V:c?[<lZemNSHKn6A3XhzJ2
-!s100 [Bj8A;`HoWeePAYJ25hm[1
+L16 23
+Vz[k=R03EYhES:N<>855@d0
+!s100 HN;ZDVd8>ziQ;X7F>2?jO1
 R7
 32
 R8
+!i10b 1
 R9
 R10
 R11
+!i113 1
 R12
-!i10b 1
+R13
 Edebounce_tb
-Z14 w1695244061
-R1
-R2
-R3
-R4
-Z15 8C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debouce_tb.vhd
-Z16 FC:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debouce_tb.vhd
+Z15 w1695244061
+Z16 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z17 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z18 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z19 dC:\Users\Jacob\Documents\GitHub\Hazwell\271 Labs\sim1
+Z20 8C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debouce_tb.vhd
+Z21 FC:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debouce_tb.vhd
 l0
 L5
 VAf^ojaQPY6f0IVCc]nL@C0
 !s100 K[fbVR2Q<=Uc4ID?E=QTd0
-R7
+Z22 OV;C;10.1d;51
 32
 !i10b 1
-Z17 !s108 1695244068.466000
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debouce_tb.vhd|
-Z19 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debouce_tb.vhd|
-R11
-R12
+Z23 !s108 1695244068.466000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debouce_tb.vhd|
+Z25 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/debouce_tb.vhd|
+Z26 o-work work -2002 -explicit -O0
+Z27 tExplicit 1
 Asim
-R13
-R1
-R2
-R3
-Z20 DEx4 work 11 debounce_tb 0 22 Af^ojaQPY6f0IVCc]nL@C0
+DEx4 work 8 debounce 0 22 8RcmdadPV2WN1]iZ]4hVZ0
+R16
+R17
+R18
+DEx4 work 11 debounce_tb 0 22 Af^ojaQPY6f0IVCc]nL@C0
 l16
 L8
 VehEY=bG;V2:3:AChDPWQi1
 !s100 o472^]R8][Mon9@1VC<0L1
-R7
+R22
 32
 !i10b 1
-R17
-R18
-R19
-R11
+R23
+R24
+R25
+R26
+R27
+Etop
+Z28 w1696400280
+R1
+R2
+R3
+!i122 7
+R4
+Z29 8C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/top.vhd
+Z30 FC:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/top.vhd
+l0
+L5 1
+V[gInCB[hkK42dOTA;boz_0
+!s100 i_b00O6Q6[V>fWlz;mFIL1
+R7
+32
+Z31 !s110 1696400282
+!i10b 1
+Z32 !s108 1696400282.000000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/top.vhd|
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/top.vhd|
+!i113 1
 R12
+R13
+Artl
+R14
+R1
+R2
+R3
+DEx4 work 3 top 0 22 [gInCB[hkK42dOTA;boz_0
+!i122 7
+l18
+L15 46
+V2^`mCJE8UWDLWj4oneg8Y1
+!s100 gZke8^UThNm[Dj2dMF5[03
+R7
+32
+R31
+!i10b 1
+R32
+R33
+Z34 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/271 Labs/sim1/top.vhd|
+!i113 1
+R12
+R13
