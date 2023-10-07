@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "696992576260",
+    "project_id": "down-to-hang-8287f",
+    "storage_bucket": "down-to-hang-8287f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696992576260:android:a130d8cbe39a71a237d651",
+        "android_client_info": {
+          "package_name": "com.example.down_to_hang"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKmDxR4LBDybUQPayEfKF7_0PesMy_qyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696992576260:android:3c1802d95f75a75a37d651",
+        "android_client_info": {
+          "package_name": "com.example.flutter_authentication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKmDxR4LBDybUQPayEfKF7_0PesMy_qyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
