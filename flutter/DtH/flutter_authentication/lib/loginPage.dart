@@ -1,11 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_authentication/fire_auth.dart';
-import 'package:flutter_authentication/firebase_options.dart';
-import 'package:flutter_authentication/profilePage.dart';
-import 'package:flutter_authentication/registerPage.dart';
-import 'package:flutter_authentication/validator.dart';
+import 'package:dth/fire_auth.dart';
+import 'package:dth/firebase_options.dart';
+import 'package:dth/profilePage.dart';
+import 'package:dth/registerPage.dart';
+import 'package:dth/validator.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -51,9 +51,6 @@ class _LoginPageState extends State<LoginPage> {
         _focusPassword.unfocus();
       },
       child: Scaffold(
-        appBar: AppBar(
-          title: Text('Firebase Authentication'),
-        ),
         body: FutureBuilder(
           future: _initializeFirebase(),
           builder: (context, snapshot) {
@@ -63,11 +60,22 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Expanded(flex: 2, child: Column()),
+                    SizedBox(
+                      height: 100,
+                      child: Image.network(
+                          'https://jchisholm204.github.io/assets/jc_boc.png'),
+                    ),
+                    Expanded(child: Column()),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 24.0),
-                      child: Text(
-                        'Login',
-                        style: Theme.of(context).textTheme.headline1,
+                      child: Column(
+                        children: [
+                          Text(
+                            'Login',
+                            style: Theme.of(context).textTheme.headline1,
+                          ),
+                        ],
                       ),
                     ),
                     Form(
@@ -117,6 +125,23 @@ class _LoginPageState extends State<LoginPage> {
                                   children: [
                                     Expanded(
                                       child: ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  RegisterPage(),
+                                            ),
+                                          );
+                                        },
+                                        child: Text(
+                                          'Register',
+                                          style: TextStyle(color: Colors.black),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(width: 24.0),
+                                    Expanded(
+                                      child: ElevatedButton(
                                         onPressed: () async {
                                           _focusEmail.unfocus();
                                           _focusPassword.unfocus();
@@ -151,24 +176,7 @@ class _LoginPageState extends State<LoginPage> {
                                         },
                                         child: Text(
                                           'Sign In',
-                                          style: TextStyle(color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(width: 24.0),
-                                    Expanded(
-                                      child: ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.of(context).push(
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  RegisterPage(),
-                                            ),
-                                          );
-                                        },
-                                        child: Text(
-                                          'Register',
-                                          style: TextStyle(color: Colors.white),
+                                          style: TextStyle(color: Colors.black),
                                         ),
                                       ),
                                     ),
@@ -176,7 +184,11 @@ class _LoginPageState extends State<LoginPage> {
                                 )
                         ],
                       ),
-                    )
+                    ),
+                    Expanded(
+                      flex: 4,
+                      child: Column(),
+                    ),
                   ],
                 ),
               );
