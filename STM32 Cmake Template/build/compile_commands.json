@@ -1,0 +1,26 @@
+[
+{
+  "directory": "C:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/build",
+  "command": "\"C:/Program Files/PROS/toolchain/usr/bin/arm-none-eabi-gcc.exe\" -fdata-sections -ffunction-sections -Wl,--gc-sections  -IC:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/core/cmsis_core/CMSIS/Core/Include -IC:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/core/cmsis_f4/Include -IC:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/Project/include -g -std=gnu11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Os -g3 -fno-common -o CMakeFiles/blinky-led.dir/Project/src/main.c.obj -c C:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/Project/src/main.c",
+  "file": "C:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/Project/src/main.c",
+  "output": "CMakeFiles/blinky-led.dir/Project/src/main.c.obj"
+},
+{
+  "directory": "C:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/build",
+  "command": "\"C:/Program Files/PROS/toolchain/usr/bin/arm-none-eabi-gcc.exe\" -fdata-sections -ffunction-sections -Wl,--gc-sections  -IC:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/core/cmsis_core/CMSIS/Core/Include -IC:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/core/cmsis_f4/Include -IC:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/Project/include -g -std=gnu11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Os -g3 -fno-common -o CMakeFiles/blinky-led.dir/Project/src/startup.c.obj -c C:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/Project/src/startup.c",
+  "file": "C:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/Project/src/startup.c",
+  "output": "CMakeFiles/blinky-led.dir/Project/src/startup.c.obj"
+},
+{
+  "directory": "C:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/build",
+  "command": "\"C:/Program Files/PROS/toolchain/usr/bin/arm-none-eabi-gcc.exe\" -fdata-sections -ffunction-sections -Wl,--gc-sections  -IC:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/core/cmsis_core/CMSIS/Core/Include -IC:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/core/cmsis_f4/Include -IC:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/Project/include -g -std=gnu11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Os -g3 -fno-common -o CMakeFiles/blinky-led.dir/Project/src/syscalls.c.obj -c C:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/Project/src/syscalls.c",
+  "file": "C:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/Project/src/syscalls.c",
+  "output": "CMakeFiles/blinky-led.dir/Project/src/syscalls.c.obj"
+},
+{
+  "directory": "C:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/build",
+  "command": "\"C:/Program Files/PROS/toolchain/usr/bin/arm-none-eabi-gcc.exe\" -fdata-sections -ffunction-sections -Wl,--gc-sections  -IC:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/core/cmsis_core/CMSIS/Core/Include -IC:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/core/cmsis_f4/Include -IC:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/Project/include -g -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -Wextra -Os -g3 -fno-common -o CMakeFiles/blinky-led.dir/core/startup_stm32f446retx.s.obj -c C:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/core/startup_stm32f446retx.s",
+  "file": "C:/Users/Jacob/Documents/GitHub/Hazwell/STM32_RTOS/core/startup_stm32f446retx.s",
+  "output": "CMakeFiles/blinky-led.dir/core/startup_stm32f446retx.s.obj"
+}
+]
