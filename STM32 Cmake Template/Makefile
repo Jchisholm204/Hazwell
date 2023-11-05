@@ -20,13 +20,11 @@ COMPORT = COM3
 # firmware.bin: firmware.elf
 # 	arm-none-eabi-objcopy -O binary $< $@
 
-cmake:
-	mkdir build
-	cd build
-	cmake ..
+flash: st-flash
+
 
 # must run "run" command or restart target to start program
-flash:
+BlackMagic-flash:
 	gdb -ex 'target extended-remote $(COMPORT)' \
 	-ex 'set mem inaccessible-by-default off' \
 	-ex 'monitor swdp' \
@@ -34,15 +32,14 @@ flash:
 	-ex 'load firmware.elf' \
 	-q
 
+st-flash: build/firmware.bin
+	./Tools/ST-LINK_CLI.exe -P build/firmware.bin 0x08000000 -V -RST
+
 clean:
-	rm firmware.*
+	rm -r build
 
 cmsis_core:
-	cd core
 	git clone --depth 1 -b 5.9.0 https://github.com/ARM-software/CMSIS_5 $@
-	cd ../
   
 cmsis_f4: 
-	cd core
 	git clone --depth 1 -b v2.6.8 https://github.com/STMicroelectronics/cmsis_device_f4 $@
-	cd ../
