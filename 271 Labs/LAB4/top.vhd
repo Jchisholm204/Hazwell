@@ -8,12 +8,15 @@ entity top is
         signal i_SW   : IN  std_logic_vector(17 downto 0);
         signal i_KEY  : IN  std_logic_vector(3 downto 0);
         signal o_LEDR : OUT std_logic_vector(17 downto 0);
-        signal o_LEDG : OUT std_logic_vector(7 downto 0)
+        signal o_LEDG : OUT std_logic_vector(7 downto 0);
+        signal o_HEX0 : OUT std_logic_vector(6 downto 0);
+        signal o_HEX1 : OUT std_logic_vector(6 downto 0)
     );
 end entity;
 
 architecture rtl of top is
     signal button_o : std_logic;
+    signal state : integer;
 begin
 
     -- debouncer entity
@@ -39,7 +42,15 @@ begin
             Light2_Red     => o_LEDR(4),
             Light3_Green   => o_LEDR(3),
             Light3_Yellow  => o_LEDR(2),
-            Light3_Red     => o_LEDR(1)
+            Light3_Red     => o_LEDR(1),
+            state_o => state
+        );
+
+    SEG : entity work.sevensegments(behavioral)
+        port map(
+            i_dispNum => state,
+            o_DispSeg1 => o_HEX0,
+            o_DispSeg2 => o_HEX1
         );
     
     o_LEDG <= (0 => (i_SW(0) and not button_o), others => i_SW(0));

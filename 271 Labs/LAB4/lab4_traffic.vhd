@@ -15,7 +15,8 @@ entity Lab4_traffic is
         Light2_Red     : out std_logic;
         Light3_Green   : out std_logic;
         Light3_Yellow  : out std_logic;
-        Light3_Red     : out std_logic
+        Light3_Red     : out std_logic;
+        state_o        : out integer
     );
 end entity;
 
@@ -40,10 +41,12 @@ begin
             Light3_Yellow  <= '0';
             Light3_Red     <= '0';
             bbc            <= 0;
+            state_o <= 99;
         else
         if rising_edge(button_in) then
             case State is
                 when Straight_Green =>
+                    state_o <= 0;
                     Light1_Green  <= '1';
                     Light1_Yellow <= '0';
                     Light1_Red    <= '0';
@@ -59,6 +62,7 @@ begin
                     else bbc <= bbc + 1;
                     end if;
                 when Straight_Yellow =>
+                    state_o <= 1;
                     Light1_Green <= '0';
                     Light1_Yellow <= '1';
                     Light1_Red <= '0';
@@ -70,6 +74,7 @@ begin
                     Light3_Red <= '0';
                     State <= T_Green;
                 when T_Green =>
+                    state_o <= 2;
                     Light1_Green <= '0';
                     Light1_Yellow <= '0';
                     Light1_Red <= '1';
@@ -85,6 +90,7 @@ begin
                     else bbc <= bbc + 1;
                     end if;
                 when T_Yellow =>
+                    state_o <= 3;
                     Light1_Green <= '0';
                     Light1_Yellow <= '0';
                     Light1_Red <= '1';
@@ -96,6 +102,7 @@ begin
                     Light3_Red <= '1';
                     State <= Straight_Green;
                 when others =>
+                    state_o <= 0;
                     Light1_Green <= '0';
                     Light1_Yellow <= '0';
                     Light1_Red <= '1';

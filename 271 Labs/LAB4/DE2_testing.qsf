@@ -106,6 +106,7 @@ set_location_assignment PIN_U17 -to o_LEDG[5]
 set_location_assignment PIN_AA20 -to o_LEDG[6]
 set_location_assignment PIN_Y18 -to o_LEDG[7]
 set_location_assignment PIN_Y12 -to o_LEDG[8]
+set_global_assignment -name VHDL_FILE sevensegments.vhd
 set_global_assignment -name VHDL_FILE top.vhd
 set_global_assignment -name VHDL_FILE lab4_traffic.vhd
 set_global_assignment -name VHDL_FILE debounce.vhd
