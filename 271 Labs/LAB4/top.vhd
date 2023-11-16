@@ -42,4 +42,6 @@ begin
             Light3_Red     => o_LEDR(1)
         );
     
+    o_LEDG <= (0 => (i_SW(0) and not button_o), others => i_SW(0));
+    
 end architecture; -- arch
