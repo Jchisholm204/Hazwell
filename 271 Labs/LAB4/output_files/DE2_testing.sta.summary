@@ -3,16 +3,16 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'i_CLK'
-Slack : -2.948
-TNS   : -93.479
+Slack : -2.957
+TNS   : -93.597
 
 Type  : Slow Model Setup 'debounce:DB|o_button'
-Slack : -2.849
-TNS   : -72.782
+Slack : -2.790
+TNS   : -71.442
 
 Type  : Slow Model Hold 'i_CLK'
-Slack : -2.509
-TNS   : -2.509
+Slack : -2.537
+TNS   : -2.537
 
 Type  : Slow Model Hold 'debounce:DB|o_button'
 Slack : 0.391
@@ -24,19 +24,19 @@ TNS   : -36.380
 
 Type  : Slow Model Minimum Pulse Width 'debounce:DB|o_button'
 Slack : -0.500
-TNS   : -45.000
+TNS   : -48.000
 
 Type  : Fast Model Setup 'i_CLK'
-Slack : -0.872
-TNS   : -27.077
+Slack : -0.877
+TNS   : -27.129
 
 Type  : Fast Model Setup 'debounce:DB|o_button'
-Slack : -0.855
-TNS   : -13.369
+Slack : -0.828
+TNS   : -12.081
 
 Type  : Fast Model Hold 'i_CLK'
-Slack : -1.555
-TNS   : -1.555
+Slack : -1.580
+TNS   : -1.580
 
 Type  : Fast Model Hold 'debounce:DB|o_button'
 Slack : 0.215
@@ -48,6 +48,6 @@ TNS   : -36.380
 
 Type  : Fast Model Minimum Pulse Width 'debounce:DB|o_button'
 Slack : -0.500
-TNS   : -45.000
+TNS   : -48.000
 
 ------------------------------------------------------------
