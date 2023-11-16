@@ -1,0 +1,7 @@
+
+State Machine - |top|Lab4_traffic:LAB|State
+Name State.T_Yellow State.T_Green State.Straight_Yellow State.Straight_Green 
+State.Straight_Green 0 0 0 0 
+State.Straight_Yellow 0 0 1 1 
+State.T_Green 0 1 0 1 
+State.T_Yellow 1 0 0 1 
