@@ -62,18 +62,18 @@ class LSM6DS3Class {
 
     // Accelerometer
     virtual int readAcceleration(float& x, float& y, float& z); // Results are in g (earth gravity).
-    virtual float accelerationSampleRate(); // Sampling rate of the sensor.
+    // virtual float accelerationSampleRate(); // Sampling rate of the sensor.
     virtual int accelerationAvailable(); // Check for available data from accelerometer
 
-    // Gyroscope
-    virtual int readGyroscope(float& x, float& y, float& z); // Results are in degrees/second.
-    virtual float gyroscopeSampleRate(); // Sampling rate of the sensor.
-    virtual int gyroscopeAvailable(); // Check for available data from gyroscope
+    // // Gyroscope
+    // virtual int readGyroscope(float& x, float& y, float& z); // Results are in degrees/second.
+    // virtual float gyroscopeSampleRate(); // Sampling rate of the sensor.
+    // virtual int gyroscopeAvailable(); // Check for available data from gyroscope
 
-    // Temperature Sensor
-    virtual int readTemperature(float& t); // Results are in deg. C
-    virtual float temperatureSampleRate(); // Sampling rate of the sensor.
-    virtual int temperatureAvailable(); // Check for available data from temperature sensor
+    // // Temperature Sensor
+    // virtual int readTemperature(float& t); // Results are in deg. C
+    // virtual float temperatureSampleRate(); // Sampling rate of the sensor.
+    // virtual int temperatureAvailable(); // Check for available data from temperature sensor
 
 
   protected:

@@ -111,72 +111,72 @@ int LSM6DS3Class::accelerationAvailable()
   return 0;
 }
 
-float LSM6DS3Class::accelerationSampleRate()
-{
-  return 104.0F;
-}
+// float LSM6DS3Class::accelerationSampleRate()
+// {
+//   return 104.0F;
+// }
 
-int LSM6DS3Class::readGyroscope(float& x, float& y, float& z)
-{
-  int16_t data[3];
+// int LSM6DS3Class::readGyroscope(float& x, float& y, float& z)
+// {
+//   int16_t data[3];
 
-  if (!readRegisters(LSM6DS3_OUTX_L_G, (uint8_t*)data, sizeof(data))) {
-    x = NAN;
-    y = NAN;
-    z = NAN;
+//   if (!readRegisters(LSM6DS3_OUTX_L_G, (uint8_t*)data, sizeof(data))) {
+//     x = NAN;
+//     y = NAN;
+//     z = NAN;
 
-    return 0;
-  }
+//     return 0;
+//   }
 
-  x = data[0] * 2000.0 / 32768.0;
-  y = data[1] * 2000.0 / 32768.0;
-  z = data[2] * 2000.0 / 32768.0;
+//   x = data[0] * 2000.0 / 32768.0;
+//   y = data[1] * 2000.0 / 32768.0;
+//   z = data[2] * 2000.0 / 32768.0;
 
-  return 1;
-}
+//   return 1;
+// }
 
-int LSM6DS3Class::gyroscopeAvailable()
-{
-  if (readRegister(LSM6DS3_STATUS_REG) & 0x02) {
-    return 1;
-  }
+// int LSM6DS3Class::gyroscopeAvailable()
+// {
+//   if (readRegister(LSM6DS3_STATUS_REG) & 0x02) {
+//     return 1;
+//   }
 
-  return 0;
-}
+//   return 0;
+// }
 
-float LSM6DS3Class::gyroscopeSampleRate()
-{
-  return 104.0F;
-}
+// float LSM6DS3Class::gyroscopeSampleRate()
+// {
+//   return 104.0F;
+// }
 
-int LSM6DS3Class::readTemperature(float& t)
-{
-  int16_t data[1];
+// int LSM6DS3Class::readTemperature(float& t)
+// {
+//   int16_t data[1];
 
-  if (!readRegisters(LSM6DS3_OUT_TEMP_L, (uint8_t*)data, sizeof(data))) {
-    t = NAN;
+//   if (!readRegisters(LSM6DS3_OUT_TEMP_L, (uint8_t*)data, sizeof(data))) {
+//     t = NAN;
 
-    return 0;
-  }
+//     return 0;
+//   }
 
-  t = data[0] / 16.0 + 25;
+//   t = data[0] / 16.0 + 25;
 
-  return 1;
-}
+//   return 1;
+// }
 
-int LSM6DS3Class::temperatureAvailable()
-{
-  if (readRegister(LSM6DS3_STATUS_REG) & 0x04) {
-    return 1;
-  }
+// int LSM6DS3Class::temperatureAvailable()
+// {
+//   if (readRegister(LSM6DS3_STATUS_REG) & 0x04) {
+//     return 1;
+//   }
 
-  return 0;
-}
+//   return 0;
+// }
 
-float LSM6DS3Class::temperatureSampleRate()
-{
-  return 52.0F;
-}
+// float LSM6DS3Class::temperatureSampleRate()
+// {
+//   return 52.0F;
+// }
 
 int LSM6DS3Class::readRegister(uint8_t address)
 {
