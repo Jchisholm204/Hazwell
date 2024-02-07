@@ -1,0 +1,64 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1
+vADDER
+Z1 !s100 IhUJW:AIoXa];i;J[e=Y[0
+Z2 IDj]_If1X5_dI2BWZU=XCX3
+Z3 V9W_mGF:43O80@DM^R`]4g3
+Z4 dC:\Users\Jacob\Documents\GitHub\Hazwell\CPU\ALU
+Z5 w1707244186
+Z6 8C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU/ADDER.v
+Z7 FC:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU/ADDER.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU/ADDER.v|
+Z10 o-work work -O0
+Z11 n@a@d@d@e@r
+!i10b 1
+!s85 0
+Z12 !s108 1707244751.444000
+Z13 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU/ADDER.v|
+!s101 -O0
+vADDER_TB
+!i10b 1
+!s100 `edLlQE7bDFzWH@AU75Ne2
+Ic`Lil<Jj>fAzgSg]TMWSa0
+Z14 VDCi1@S?W`D69`_PjjP]FV1
+R4
+w1707244746
+Z15 8C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU/ADDER_TB.v
+Z16 FC:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU/ADDER_TB.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1707244751.538000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU/ADDER_TB.v|
+Z17 !s90 -reportprogress|300|-work|work|C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU/ADDER_TB.v|
+!s101 -O0
+R10
+Z18 n@a@d@d@e@r_@t@b
+vha
+Z19 I3g<CKmNAAS=9A`FO3LJ>z1
+Z20 VEefR25bO>51`aY4VK@g8B0
+R4
+Z21 w1707239838
+R6
+R7
+L0 3
+R8
+r1
+31
+R9
+R10
+Z22 !s100 HQRJBN1`DW]6NYf@86[cU1
+Z23 !s108 1707239859.239000
+R13
+!i10b 1
+!s85 0
+!s101 -O0
