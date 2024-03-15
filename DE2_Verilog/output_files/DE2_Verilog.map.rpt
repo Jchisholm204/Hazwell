@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_Verilog
-Thu Mar 14 14:43:48 2024
+Fri Mar 15 10:47:54 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,13 +13,18 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Port Connectivity Checks: "SEG7:u1"
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. State Machine - |DE2_Verilog|LCD_Test:u2|mLCD_ST
+  9. State Machine - |DE2_Verilog|LCD_Test:u2|LCD_Controller:u0|State
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: LCD_Test:u2
+ 16. Parameter Settings for User Entity Instance: LCD_Test:u2|LCD_Controller:u0
+ 17. Port Connectivity Checks: "SEG7:u1"
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +50,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 14 14:43:48 2024           ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 15 10:47:54 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DE2_Verilog                                     ;
 ; Top-level Entity Name              ; DE2_Verilog                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 98                                              ;
-;     Total combinational functions  ; 98                                              ;
-;     Dedicated logic registers      ; 44                                              ;
-; Total registers                    ; 44                                              ;
-; Total pins                         ; 106                                             ;
+; Total logic elements               ; 135                                             ;
+;     Total combinational functions  ; 129                                             ;
+;     Dedicated logic registers      ; 74                                              ;
+; Total registers                    ; 74                                              ;
+; Total pins                         ; 119                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -158,77 +163,142 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; DE2_Verilog.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_Verilog/DE2_Verilog.v ;         ;
-; SEG7.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_Verilog/SEG7.v        ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
+; Reset_Delay.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_Verilog/Reset_Delay.v    ;         ;
+; LCD_Test.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_Verilog/LCD_Test.v       ;         ;
+; LCD_Controller.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_Verilog/LCD_Controller.v ;         ;
+; DE2_Verilog.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_Verilog/DE2_Verilog.v    ;         ;
+; SEG7.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Jacob/Documents/GitHub/Hazwell/DE2_Verilog/SEG7.v           ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 98    ;
-;                                             ;       ;
-; Total combinational functions               ; 98    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 19    ;
-;     -- 3 input functions                    ; 15    ;
-;     -- <=2 input functions                  ; 64    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 64    ;
-;     -- arithmetic mode                      ; 34    ;
-;                                             ;       ;
-; Total registers                             ; 44    ;
-;     -- Dedicated logic registers            ; 44    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 106   ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; SW[0] ;
-; Maximum fan-out                             ; 52    ;
-; Total fan-out                               ; 377   ;
-; Average fan-out                             ; 1.52  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 135      ;
+;                                             ;          ;
+; Total combinational functions               ; 129      ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 26       ;
+;     -- 3 input functions                    ; 19       ;
+;     -- <=2 input functions                  ; 84       ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 77       ;
+;     -- arithmetic mode                      ; 52       ;
+;                                             ;          ;
+; Total registers                             ; 74       ;
+;     -- Dedicated logic registers            ; 74       ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 119      ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 74       ;
+; Total fan-out                               ; 545      ;
+; Average fan-out                             ; 1.69     ;
++---------------------------------------------+----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                          ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
-; |DE2_Verilog               ; 98 (91)           ; 44 (44)      ; 0           ; 0            ; 0       ; 0         ; 106  ; 0            ; |DE2_Verilog         ; work         ;
-;    |SEG7:u0|               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Verilog|SEG7:u0 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
+; |DE2_Verilog               ; 129 (91)          ; 74 (44)      ; 0           ; 0            ; 0       ; 0         ; 119  ; 0            ; |DE2_Verilog                               ; work         ;
+;    |LCD_Test:u2|           ; 3 (1)             ; 9 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Verilog|LCD_Test:u2                   ; work         ;
+;       |LCD_Controller:u0|  ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Verilog|LCD_Test:u2|LCD_Controller:u0 ; work         ;
+;    |Reset_Delay:r0|        ; 28 (28)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Verilog|Reset_Delay:r0                ; work         ;
+;    |SEG7:u0|               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Verilog|SEG7:u0                       ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+----------------------------------------+--------------------+
-; Register name                          ; Reason for Removal ;
-+----------------------------------------+--------------------+
-; Count[4..31]                           ; Lost fanout        ;
-; Total Number of Removed Registers = 28 ;                    ;
-+----------------------------------------+--------------------+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------+
+; State Machine - |DE2_Verilog|LCD_Test:u2|mLCD_ST                                   ;
++----------------+----------------+----------------+----------------+----------------+
+; Name           ; mLCD_ST.000011 ; mLCD_ST.000010 ; mLCD_ST.000001 ; mLCD_ST.000000 ;
++----------------+----------------+----------------+----------------+----------------+
+; mLCD_ST.000000 ; 0              ; 0              ; 0              ; 0              ;
+; mLCD_ST.000001 ; 0              ; 0              ; 1              ; 1              ;
+; mLCD_ST.000010 ; 0              ; 1              ; 0              ; 1              ;
+; mLCD_ST.000011 ; 1              ; 0              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                         ;
-+---------------+--------------------+------------------------------------------------------------------------------------------------+
-; Register name ; Reason for Removal ; Registers Removed due to This Register                                                         ;
-+---------------+--------------------+------------------------------------------------------------------------------------------------+
-; Count[31]     ; Lost Fanouts       ; Count[30], Count[29], Count[28], Count[27], Count[26], Count[25], Count[24], Count[23],        ;
-;               ;                    ; Count[22], Count[21], Count[20], Count[19], Count[18], Count[17], Count[16], Count[15],        ;
-;               ;                    ; Count[14], Count[13], Count[12], Count[11], Count[10], Count[9], Count[8], Count[7], Count[6], ;
-;               ;                    ; Count[5], Count[4]                                                                             ;
-+---------------+--------------------+------------------------------------------------------------------------------------------------+
+Encoding Type:  One-Hot
++------------------------------------------------------------------+
+; State Machine - |DE2_Verilog|LCD_Test:u2|LCD_Controller:u0|State ;
++----------+----------+----------+----------+----------------------+
+; Name     ; State.11 ; State.10 ; State.01 ; State.00             ;
++----------+----------+----------+----------+----------------------+
+; State.00 ; 0        ; 0        ; 0        ; 0                    ;
+; State.01 ; 0        ; 0        ; 1        ; 1                    ;
+; State.10 ; 0        ; 1        ; 0        ; 1                    ;
+; State.11 ; 1        ; 0        ; 0        ; 1                    ;
++----------+----------+----------+----------+----------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++-------------------------------------------+----------------------------------------------------+
+; Register name                             ; Reason for Removal                                 ;
++-------------------------------------------+----------------------------------------------------+
+; LCD_Test:u2|mLCD_ST~8                     ; Lost fanout                                        ;
+; LCD_Test:u2|mLCD_ST~9                     ; Lost fanout                                        ;
+; LCD_Test:u2|mLCD_ST~10                    ; Lost fanout                                        ;
+; LCD_Test:u2|mLCD_ST~11                    ; Lost fanout                                        ;
+; LCD_Test:u2|mLCD_ST~12                    ; Lost fanout                                        ;
+; LCD_Test:u2|mLCD_ST~13                    ; Lost fanout                                        ;
+; LCD_Test:u2|LCD_Controller:u0|State~6     ; Lost fanout                                        ;
+; LCD_Test:u2|LCD_Controller:u0|State~7     ; Lost fanout                                        ;
+; LCD_Test:u2|LCD_Controller:u0|State.10    ; Stuck at GND due to stuck port data_in             ;
+; LCD_Test:u2|LCD_Controller:u0|State.11    ; Stuck at GND due to stuck port data_in             ;
+; LCD_Test:u2|LCD_Controller:u0|oDone       ; Stuck at GND due to stuck port data_in             ;
+; LCD_Test:u2|LCD_Controller:u0|Count[0..4] ; Stuck at GND due to stuck port data_in             ;
+; LCD_Test:u2|mLCD_ST.000010                ; Stuck at GND due to stuck port data_in             ;
+; LCD_Test:u2|mDLY[0..17]                   ; Stuck at GND due to stuck port clock_enable        ;
+; LCD_Test:u2|mLCD_ST.000011                ; Stuck at GND due to stuck port data_in             ;
+; LCD_Test:u2|LUT_INDEX[0..5]               ; Stuck at GND due to stuck port clock_enable        ;
+; LCD_Test:u2|mLCD_DATA[0..2,6,7]           ; Stuck at GND due to stuck port data_in             ;
+; LCD_Test:u2|mLCD_RS                       ; Stuck at GND due to stuck port data_in             ;
+; LCD_Test:u2|mLCD_Start                    ; Merged with LCD_Test:u2|mLCD_ST.000000             ;
+; Count[4..31]                              ; Lost fanout                                        ;
+; LCD_Test:u2|LCD_Controller:u0|State.01    ; Merged with LCD_Test:u2|LCD_Controller:u0|State.00 ;
+; Total Number of Removed Registers = 78    ;                                                    ;
++-------------------------------------------+----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                         ;
++----------------------------------------+---------------------------+------------------------------------------------------------------------------------------------+
+; Register name                          ; Reason for Removal        ; Registers Removed due to This Register                                                         ;
++----------------------------------------+---------------------------+------------------------------------------------------------------------------------------------+
+; LCD_Test:u2|mLCD_ST.000010             ; Stuck at GND              ; LCD_Test:u2|mDLY[17], LCD_Test:u2|mDLY[16], LCD_Test:u2|mDLY[15], LCD_Test:u2|mDLY[14],        ;
+;                                        ; due to stuck port data_in ; LCD_Test:u2|mDLY[13], LCD_Test:u2|mDLY[12], LCD_Test:u2|mDLY[11], LCD_Test:u2|mDLY[10],        ;
+;                                        ;                           ; LCD_Test:u2|mDLY[9], LCD_Test:u2|mDLY[8], LCD_Test:u2|mDLY[7], LCD_Test:u2|mDLY[6],            ;
+;                                        ;                           ; LCD_Test:u2|mDLY[5], LCD_Test:u2|mDLY[4], LCD_Test:u2|mDLY[3], LCD_Test:u2|mDLY[2],            ;
+;                                        ;                           ; LCD_Test:u2|mDLY[1], LCD_Test:u2|mDLY[0], LCD_Test:u2|mLCD_ST.000011,                          ;
+;                                        ;                           ; LCD_Test:u2|LUT_INDEX[0], LCD_Test:u2|LUT_INDEX[1], LCD_Test:u2|LUT_INDEX[2],                  ;
+;                                        ;                           ; LCD_Test:u2|LUT_INDEX[3], LCD_Test:u2|LUT_INDEX[4], LCD_Test:u2|LUT_INDEX[5],                  ;
+;                                        ;                           ; LCD_Test:u2|mLCD_DATA[0], LCD_Test:u2|mLCD_DATA[1], LCD_Test:u2|mLCD_DATA[2],                  ;
+;                                        ;                           ; LCD_Test:u2|mLCD_DATA[6], LCD_Test:u2|mLCD_DATA[7], LCD_Test:u2|mLCD_RS                        ;
+; Count[31]                              ; Lost Fanouts              ; Count[30], Count[29], Count[28], Count[27], Count[26], Count[25], Count[24], Count[23],        ;
+;                                        ;                           ; Count[22], Count[21], Count[20], Count[19], Count[18], Count[17], Count[16], Count[15],        ;
+;                                        ;                           ; Count[14], Count[13], Count[12], Count[11], Count[10], Count[9], Count[8], Count[7], Count[6], ;
+;                                        ;                           ; Count[5], Count[4]                                                                             ;
+; LCD_Test:u2|LCD_Controller:u0|State.10 ; Stuck at GND              ; LCD_Test:u2|LCD_Controller:u0|Count[3], LCD_Test:u2|LCD_Controller:u0|Count[2],                ;
+;                                        ; due to stuck port data_in ; LCD_Test:u2|LCD_Controller:u0|Count[1], LCD_Test:u2|LCD_Controller:u0|Count[0]                 ;
+; LCD_Test:u2|LCD_Controller:u0|State.11 ; Stuck at GND              ; LCD_Test:u2|LCD_Controller:u0|oDone                                                            ;
+;                                        ; due to stuck port data_in ;                                                                                                ;
++----------------------------------------+---------------------------+------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -236,12 +306,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 44    ;
+; Total registers                              ; 74    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 30    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -251,9 +321,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; Wrapper[0]                             ; 2       ;
+; Wrapper[0]                             ; 3       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |DE2_Verilog|LCD_Test:u2|mLCD_ST ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LCD_Test:u2 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; LCD_INTIAL     ; 0     ; Signed Integer                  ;
+; LCD_LINE1      ; 5     ; Signed Integer                  ;
+; LCD_CH_LINE    ; 21    ; Signed Integer                  ;
+; LCD_LINE2      ; 22    ; Signed Integer                  ;
+; LUT_SIZE       ; 38    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LCD_Test:u2|LCD_Controller:u0 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; ClkDiv         ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------+
@@ -280,21 +383,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Mar 14 14:43:47 2024
+    Info: Processing started: Fri Mar 15 10:47:53 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_Verilog -c DE2_Verilog
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file reset_delay.v
+    Info (12023): Found entity 1: Reset_Delay
+Info (12021): Found 1 design units, including 1 entities, in source file lcd_test.v
+    Info (12023): Found entity 1: LCD_Test
+Warning (10229): Verilog HDL Expression warning at LCD_Controller.v(41): truncated literal to match 1 bits
+Warning (10229): Verilog HDL Expression warning at LCD_Controller.v(45): truncated literal to match 1 bits
+Info (12021): Found 1 design units, including 1 entities, in source file lcd_controller.v
+    Info (12023): Found entity 1: LCD_Controller
 Info (12021): Found 1 design units, including 1 entities, in source file de2_verilog.v
     Info (12023): Found entity 1: DE2_Verilog
 Info (12021): Found 1 design units, including 1 entities, in source file seg7.v
     Info (12023): Found entity 1: SEG7
+Warning (10236): Verilog HDL Implicit Net warning at DE2_Verilog.v(60): created implicit net for "DLY_RST"
 Info (12127): Elaborating entity "DE2_Verilog" for the top level hierarchy
-Warning (10034): Output port "HEX2" at DE2_Verilog.v(11) has no driver
-Warning (10034): Output port "HEX3" at DE2_Verilog.v(11) has no driver
-Warning (10034): Output port "HEX4" at DE2_Verilog.v(11) has no driver
-Warning (10034): Output port "HEX5" at DE2_Verilog.v(11) has no driver
-Warning (10034): Output port "HEX6" at DE2_Verilog.v(11) has no driver
-Warning (10034): Output port "HEX7" at DE2_Verilog.v(11) has no driver
+Warning (10034): Output port "HEX2" at DE2_Verilog.v(12) has no driver
+Warning (10034): Output port "HEX3" at DE2_Verilog.v(12) has no driver
+Warning (10034): Output port "HEX4" at DE2_Verilog.v(12) has no driver
+Warning (10034): Output port "HEX5" at DE2_Verilog.v(12) has no driver
+Warning (10034): Output port "HEX6" at DE2_Verilog.v(12) has no driver
+Warning (10034): Output port "HEX7" at DE2_Verilog.v(12) has no driver
+Warning (10034): Output port "LCD_BLON" at DE2_Verilog.v(17) has no driver
 Info (12128): Elaborating entity "SEG7" for hierarchy "SEG7:u0"
+Info (12128): Elaborating entity "LCD_Test" for hierarchy "LCD_Test:u2"
+Warning (10230): Verilog HDL assignment warning at LCD_Test.v(57): truncated value with size 32 to match size of target (18)
+Warning (10230): Verilog HDL assignment warning at LCD_Test.v(65): truncated value with size 32 to match size of target (6)
+Info (12128): Elaborating entity "LCD_Controller" for hierarchy "LCD_Test:u2|LCD_Controller:u0"
+Info (10264): Verilog HDL Case Statement information at LCD_Controller.v(38): all case item expressions in this case statement are onehot
+Info (12128): Elaborating entity "Reset_Delay" for hierarchy "Reset_Delay:r0"
+Warning (10230): Verilog HDL assignment warning at reset_delay.v(10): truncated value with size 32 to match size of target (20)
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX1[0]" is stuck at GND
     Warning (13410): Pin "HEX1[1]" is stuck at VCC
@@ -346,7 +466,16 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX7[5]" is stuck at GND
     Warning (13410): Pin "HEX7[6]" is stuck at GND
     Warning (13410): Pin "LEDG[8]" is stuck at GND
-Info (17049): 28 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "LCD_DATA[0]" is stuck at GND
+    Warning (13410): Pin "LCD_DATA[1]" is stuck at GND
+    Warning (13410): Pin "LCD_DATA[2]" is stuck at GND
+    Warning (13410): Pin "LCD_DATA[6]" is stuck at GND
+    Warning (13410): Pin "LCD_DATA[7]" is stuck at GND
+    Warning (13410): Pin "LCD_ON" is stuck at VCC
+    Warning (13410): Pin "LCD_BLON" is stuck at GND
+    Warning (13410): Pin "LCD_RS" is stuck at GND
+    Warning (13410): Pin "LCD_RW" is stuck at GND
+Info (17049): 36 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
@@ -354,14 +483,14 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 204 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 254 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
-    Info (21059): Implemented 83 output pins
-    Info (21061): Implemented 98 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info (21059): Implemented 96 output pins
+    Info (21061): Implemented 135 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 79 warnings
     Info: Peak virtual memory: 4602 megabytes
-    Info: Processing ended: Thu Mar 14 14:43:48 2024
+    Info: Processing ended: Fri Mar 15 10:47:54 2024
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
