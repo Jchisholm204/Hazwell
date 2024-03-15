@@ -12,9 +12,10 @@ output wire [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7;
 output wire [8:0] LEDG;
 output wire [17:0] LEDR;
 
-reg [8:0] Wrapper = 9'b1;
+reg [7:0] Wrapper = 8'b1;
 
-assign LEDG = Wrapper;
+assign LEDG[7:0] = Wrapper;
+assign LEDG[8] = 1'b0;
 
 reg [31:0] Count  = 32'd0;
 reg [31:0] ClkDiv = 32'd0;
@@ -25,7 +26,7 @@ always @(posedge CLOCK_50) begin
     if(!SW[0]) begin
         Count = 32'd0;
         ClkDiv = 32'd0;
-		  Wrapper = 9'd0;
+		  Wrapper = 8'd0;
     end
     else
         ClkDiv = ClkDiv + 1;
