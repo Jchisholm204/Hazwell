@@ -1,0 +1,7 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# vsim -gui . 
+# ** Error: (vsim-19) Failed to access library '' at "".
+# 
+# Invalid argument. (errno = EINVAL)
+# Error loading design
+# Loading project CPU
