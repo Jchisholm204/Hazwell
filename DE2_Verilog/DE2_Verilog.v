@@ -28,6 +28,7 @@ wire DEL_RST;
 assign LEDR = SW;
 
 assign LCD_ON = 1'b1;
+assign LCD_BLON = SW[1];
 
 always @(posedge CLOCK_50) begin
     if(!SW[0]) begin
@@ -55,7 +56,7 @@ SEG7 u1(
 	.iDIGIT(4'hf)
 );
 
-LCD_Test u2(
+LCD_TEST u2(
     .iCLK(CLOCK_50),
     .iRST_N(DLY_RST),
     .LCD_DATA(LCD_DATA),

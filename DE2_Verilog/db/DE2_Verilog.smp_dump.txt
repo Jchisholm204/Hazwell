@@ -1,12 +1,12 @@
 
-State Machine - |DE2_Verilog|LCD_Test:u2|mLCD_ST
+State Machine - |DE2_Verilog|LCD_TEST:u2|mLCD_ST
 Name mLCD_ST.000011 mLCD_ST.000010 mLCD_ST.000001 mLCD_ST.000000 
 mLCD_ST.000000 0 0 0 0 
 mLCD_ST.000001 0 0 1 1 
 mLCD_ST.000010 0 1 0 1 
 mLCD_ST.000011 1 0 0 1 
 
-State Machine - |DE2_Verilog|LCD_Test:u2|LCD_Controller:u0|State
+State Machine - |DE2_Verilog|LCD_TEST:u2|LCD_Controller:u0|State
 Name State.11 State.10 State.01 State.00 
 State.00 0 0 0 0 
 State.01 0 0 1 1 

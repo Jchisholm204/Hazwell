@@ -1,4 +1,4 @@
-module	LCD_Test (	//	Host Side
+module	LCD_TEST (	//	Host Side
 					iCLK,iRST_N,
 					//	LCD Side
 					LCD_DATA,LCD_RW,LCD_EN,LCD_RS	);
@@ -120,16 +120,16 @@ begin
 end
 
 LCD_Controller 		u0	(	//	Host Side
-							.iData(mLCD_DATA),
+							.iDATA(mLCD_DATA),
 							.iRS(mLCD_RS),
 							.iStart(mLCD_Start),
 							.oDone(mLCD_Done),
-							.iClk(iCLK),
-							.nRst(iRST_N),
+							.iCLK(iCLK),
+							.iRST_N(iRST_N),
 							//	LCD Interface
 							.LCD_DATA(LCD_DATA),
 							.LCD_RW(LCD_RW),
-							.LCD_En(LCD_EN),
+							.LCD_EN(LCD_EN),
 							.LCD_RS(LCD_RS)	);
 
 endmodule
