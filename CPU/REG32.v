@@ -2,7 +2,7 @@ module REG32(
     iClk,
     nRst, iEn,
     iD, oQ,
-)
+);
 
 input wire iClk, nRst, iEn;
 input wire [31:0] iD;

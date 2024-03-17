@@ -1,5 +1,127 @@
 m255
 K3
+z0
+!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 cModel Technology
 dC:\Users\Jacob\Documents\GitHub\Hazwell\CPU
+vALU
+!s110 1710701728
+!i10b 1
+!s100 XH5CaH7^`5VQ4hQHCjm1X0
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IkCCFCa6E]XXjFZYz]9Nl_2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Jacob/Documents/GitHub/Hazwell/CPU
+w1710701721
+8C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+!i122 1
+L0 1 20
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1710701728.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@a@l@u
+vCPU
+!s110 1710702311
+!i10b 1
+!s100 O?mV?C9V>2abi?m?n5D;[3
+R0
+I3o<Rb<?@h@R=e;U6GYi@E3
+R1
+R2
+w1710702307
+8C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v
+!i122 4
+L0 1 171
+R3
+r1
+!s85 0
+31
+!s108 1710702311.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v|
+!i113 1
+R4
+R5
+n@c@p@u
+vCPU_TB
+!s110 1710702835
+!i10b 1
+!s100 2jHReAKMzjkncQV5VRPdV2
+R0
+Igdg]IJ1l>a5Z@6BOVE1Ta0
+R1
+R2
+w1710702829
+8C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+!i122 6
+Z6 L0 1 19
+R3
+r1
+!s85 0
+31
+!s108 1710702835.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v|
+!i113 1
+R4
+R5
+n@c@p@u_@t@b
+vREG32
+!s110 1710701743
+!i10b 1
+!s100 LGZ?47B]QK^1zPamzcGS^0
+R0
+IRL6=F=f]QHH^:V^fD^>oD1
+R1
+R2
+w1710701741
+8C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+!i122 2
+R6
+R3
+r1
+!s85 0
+31
+!s108 1710701743.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v|
+!i113 1
+R4
+R5
+n@r@e@g32
+vRegFile
+!s110 1710701943
+!i10b 1
+!s100 m3DbLVN_MNQm[:813KCHF2
+R0
+IRH]9ghGnRPD^d5GW<6zQb1
+R1
+R2
+w1710701932
+8C:\Users\Jacob\Documents\GitHub\Hazwell\CPU\RegFile.v
+FC:\Users\Jacob\Documents\GitHub\Hazwell\CPU\RegFile.v
+!i122 3
+L0 1 39
+R3
+r1
+!s85 0
+31
+!s108 1710701942.000000
+!s107 C:\Users\Jacob\Documents\GitHub\Hazwell\CPU\RegFile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Jacob\Documents\GitHub\Hazwell\CPU\RegFile.v|
+!i113 1
+R4
+R5
+n@reg@file

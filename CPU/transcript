@@ -1,7 +1,24 @@
-# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
-# vsim -gui . 
-# ** Error: (vsim-19) Failed to access library '' at "".
-# 
-# Invalid argument. (errno = EINVAL)
-# Error loading design
-# Loading project CPU
+# Error opening C:\Users\Jacob\Documents\GitHub\Hazwell\CPU\TOP.v
+# Path name 'C:\Users\Jacob\Documents\GitHub\Hazwell\CPU\TOP.v' doesn't exist.
+# Compile of ALU.v failed with 1 errors.
+# Compile of CPU.v failed with 5 errors.
+# Compile of REG32.v failed with 1 errors.
+# Compile of RegFile.v failed with 1 errors.
+# 4 compiles, 5 failed with 8 errors.
+# Compile of ALU.v was successful.
+# Compile of REG32.v failed with 1 errors.
+# Compile of ALU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v failed with 1 errors.
+# Compile of RegFile.v failed with 1 errors.
+# Compile of RegFile.v failed with 1 errors.
+# Compile of RegFile.v failed with 1 errors.
+# Compile of RegFile.v failed with 3 errors.
+# Error opening C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/(vlog-13069) C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Path name 'C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/(vlog-13069) C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v' doesn't exist.
+# Compile of RegFile.v was successful.
+# Compile of CPU.v failed with 5 errors.
+# Compile of CPU.v failed with 1 errors.
+# Compile of CPU.v was successful.
+# Compile of CPU_TB.v was successful.
+# Compile of CPU_TB.v was successful.

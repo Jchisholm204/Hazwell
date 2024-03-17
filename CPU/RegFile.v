@@ -1,7 +1,7 @@
 module RegFile(
-    .iClk, nRst, iWrite,
+    iClk, nRst, iWrite,
     iAddrA, iAddrB, iAddrC,
-    oRegA, oRegB, iRegC,
+    oRegA, oRegB, iRegC
 );
 
 // Module IO
@@ -15,9 +15,9 @@ reg r1_write, r2_write, r3_write;
 wire [31:0] r1_out, r2_out, r3_out;
 
 // Write Signal Assert
-assign r1_write = (iAddrC == 5'b00001) and iWrite;
-assign r2_write = (iAddrC == 5'b00010) and iWrite;
-assign r3_write = (iAddrC == 5'b00011) and iWrite;
+assign r1_write = (iAddrC == 5'b00001) && iWrite;
+assign r2_write = (iAddrC == 5'b00010) && iWrite;
+assign r3_write = (iAddrC == 5'b00011) && iWrite;
 
 // Output Register A assignment
 assign oRegA =  (iAddrA == 5'b00001) ? r1_out :
@@ -35,3 +35,5 @@ assign oRegB =  (iAddrB == 5'b00001) ? r1_out :
 REG32 r1( .iClk(iClk), .nRst(nRst), .iEn(r1_write), .iD(iRegC), .oQ(r1_out) );
 REG32 r2( .iClk(iClk), .nRst(nRst), .iEn(r2_write), .iD(iRegC), .oQ(r2_out) );
 REG32 r3( .iClk(iClk), .nRst(nRst), .iEn(r3_write), .iD(iRegC), .oQ(r3_out) );
+
+endmodule
