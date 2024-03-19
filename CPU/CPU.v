@@ -22,7 +22,7 @@ wire [31:0] RX_out, RY_out, RZ_out;
 wire [31:0] PC_adder_out;
 
 // ALU
-reg [3:0] ALU_op;
+wire [3:0] ALU_op;
 wire [31:0] ALU_out;
 wire ALU_zero_out, ALU_neg_out;
 
@@ -56,11 +56,11 @@ wire [15:0] IR_imm16;
 wire [25:0] IR_imm26;
 
 // 32 Bit sign extended immediate value
-reg [31:0] imm32;
+wire [31:0] imm32;
 
 // Multiplexer control signals
-reg B_Select, INC_Select, MA_Select, PC_Select;
-reg [1:0] C_Select, Y_Select;
+wire B_Select, INC_Select, MA_Select, PC_Select;
+wire [1:0] C_Select, Y_Select;
 
 wire PC_en, PC_temp_en, IR_en;
 
@@ -165,7 +165,7 @@ assign RF_write = Step[4] && (INS_ldw || INS_addi);
 always@(posedge iClk or negedge nRst)
 begin
     if(!nRst) Step = 5'b00001;
-    else Step = {Step[4:1], Step[5]};
+    else Step = {Step[3:0], Step[4]};
 end
 
 endmodule

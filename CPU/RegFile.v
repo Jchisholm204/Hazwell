@@ -11,7 +11,7 @@ output wire [31:0] oRegA, oRegB;
 input wire [31:0] iRegC;
 
 // Register IO
-reg r1_write, r2_write, r3_write;
+wire r1_write, r2_write, r3_write;
 wire [31:0] r1_out, r2_out, r3_out;
 
 // Write Signal Assert
