@@ -35,7 +35,7 @@ wire [31:0] MuxPC_out;
 wire [31:0] MuxY_out;
 
 // One hot step counter
-enum bit [3:0] {Step1, Step2, Step3, Step4, Step5} Step;
+reg T1, T2, T3, T4, T5;
 
 // Outputs from instruction decoder
 wire INS_addi, INS_br, INS_ldw, INS_stw;
@@ -88,8 +88,8 @@ RegFile u0(
 // Create the ALU
 ALU u1(
     .iOP(ALU_op),
-    .iRegA(RF_oA),
-    .iRegB(RF_oB),
+    .iRegA(RA_out),
+    .iRegB(MuxB_out),
     .oRegC(ALU_out),
     .oNEG(ALU_neg_out),
     .oZERO(ALU_zero_out)
@@ -100,13 +100,35 @@ ALU u1(
 REG32 PC      ( .iClk(iClk), .nRst(nRst), .iEn(PC_en), .iD(MuxPC_out), .oQ(PC_out) );
 REG32 PC_Temp ( .iClk(iClk), .nRst(nRst), .iEn(PC_temp_en), .iD(PC_out), .oQ(PC_TEMP_out) );
 REG32 IR      ( .iClk(iClk), .nRst(nRst), .iEn(IR_en), .iD(iMemData), .oQ(IR_out) );
-REG32 RA      ( .iClk(iClk), .nRst(nRst), .iEn(1'b1), .iD(Reg_A), .oQ(RA_out) );
-REG32 RB      ( .iClk(iClk), .nRst(nRst), .iEn(1'b1), .iD(Reg_B), .oQ(RB_out) );
+REG32 RA      ( .iClk(iClk), .nRst(nRst), .iEn(1'b1), .iD(RF_oA), .oQ(RA_out) );
+REG32 RB      ( .iClk(iClk), .nRst(nRst), .iEn(1'b1), .iD(RF_oB), .oQ(RB_out) );
 REG32 RM      ( .iClk(iClk), .nRst(nRst), .iEn(1'b1), .iD(RB_out), .oQ(RM_out) );
 REG32 RY      ( .iClk(iClk), .nRst(nRst), .iEn(1'b1), .iD(MuxY_out), .oQ(RY_out) );
 REG32 RZ      ( .iClk(iClk), .nRst(nRst), .iEn(1'b1), .iD(ALU_out), .oQ(RZ_out) );
 
 // ========================================================================== //
+
+
+// One hot step counter;
+always@(posedge iClk or negedge nRst)
+begin
+    if(!nRst) begin
+        T1 <= 1'b1;
+        T2 <= 1'b0;
+        T3 <= 1'b0;
+        T4 <= 1'b0;
+        T5 <= 1'b0;
+    end
+    else begin
+        T1 <= T5;
+        T2 <= T1;
+        T3 <= T2;
+        T4 <= T3;
+        T5 <= T4;
+    end
+end
+
+
 
 // PC Adder
 assign PC_adder_out = PC_out + MuxINC_out;
@@ -122,7 +144,7 @@ assign MuxINC_out = INC_Select ? imm32 : 32'd4;
 assign MuxMA_out = MA_Select ? PC_out : RZ_out;
 assign MuxPC_out = PC_Select ? PC_adder_out : RA_out;
 assign MuxY_out =   (Y_Select == 2'b10) ? PC_TEMP_out :
-                    (Y_Select == 2'b10) ? iMemData :
+                    (Y_Select == 2'b01) ? iMemData :
                     RZ_out;
 
 
@@ -138,12 +160,12 @@ assign IR_Opcode = IR_out[5:0];
 // Opcode Decoding
 assign INS_addi = (IR_Opcode == 6'b000100);
 assign INS_br = (IR_Opcode == 6'b000110);
-assign INS_ldw = (IR_Opcode == 6'b000111);
-assign INS_stw = (IR_Opcode == 6'b000101);
+assign INS_ldw = (IR_Opcode == 6'b010111);
+assign INS_stw = (IR_Opcode == 6'b010101);
 
 // Memory control signals
-assign oMemRead = (Step[0] || (Step[3] && INS_ldw)); // Conditional for Memory Read
-assign oMemWrite = Step[3] && INS_stw; // Conditional for Memory Write
+assign oMemRead = (T1 || (T4 && INS_ldw)); // Conditional for Memory Read
+assign oMemWrite = T4 && INS_stw; // Conditional for Memory Write
 
 // Memory Outputs
 assign oMemAddr = MuxMA_out;
@@ -152,26 +174,20 @@ assign oMemData = RM_out;
 // Multiplexer Control Signals
 assign B_Select = 1'b1; // ALU Input
 assign C_Select = 2'b00; // Set SRC2 as destination register
-assign INC_Select = Step[2] && INS_br; // Use imm32 offset for br, otherwise +4
-assign MA_Select = Step[0]; // use PC for ifetch, otherwise RZ
-assign PC_Select = 1'b1;
-assign Y_Select = (Step[3] && INS_ldw) ? 2'b01 : 2'b00;
+assign INC_Select = T3 && INS_br; // Use imm32 offset for br, otherwise +4
+assign MA_Select = T1; // use PC for ifetch, otherwise RZ
+assign PC_Select = 1'b1; // always use PC_adder_out for now
+assign Y_Select = (T4 && INS_ldw) ? 2'b01 : 2'b00;
 
 // Load enable for Program Counter
-assign PC_en = Step[0] || (Step[2] && INS_br);
-assign PC_temp_en = Step[2]; //Should be T3 and INs_call when call supported
+assign PC_en = T1 || (T3 && INS_br);
+assign PC_temp_en = T3; //Should be T3 and INs_call when call supported
 
-assign IR_en = Step[0];
+assign IR_en = T1;
 
 assign ALU_op = 4'b0000;
 
-assign RF_write = Step[4] && (INS_ldw || INS_addi);
+assign RF_Write = T5 && (INS_ldw || INS_addi);
 
-// One hot step counter;
-always@(posedge iClk or negedge nRst)
-begin
-    if(!nRst) Step = 5'b00001;
-    else Step = {Step[3:0], Step[4]};
-end
 
 endmodule

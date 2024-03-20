@@ -20,6 +20,25 @@
   "design_units": [
    {
     "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\ALU.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "ALU",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
      "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\RegFile.v",
      "__class__": "Path"
     },
@@ -58,63 +77,6 @@
    },
    {
     "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\SEG7\\SEG7.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "SEG7",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\CPU_TB.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "CPU_TB",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      1,
-      7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "C:\\Users\\Jacob\\AppData\\Local\\Temp\\nvim.0\\zAyBXr\\tmpfc_45537.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "FLASH",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
      "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\test_tb.v",
      "__class__": "Path"
     },
@@ -128,44 +90,6 @@
      [
       2,
       7
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\ALU.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "ALU",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\ALU\\ADDER.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "ADDER",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
      ]
     ],
     "__class__": "VerilogDesignUnit"
@@ -223,6 +147,82 @@
      [
       0,
       6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "C:\\Users\\Jacob\\AppData\\Local\\Temp\\nvim.0\\zAyBXr\\tmpfc_45537.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "FLASH",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\ALU\\ADDER.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "ADDER",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\SEG7\\SEG7.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "SEG7",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\CPU_TB.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "CPU_TB",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      1,
+      7
      ]
     ],
     "__class__": "VerilogDesignUnit"
