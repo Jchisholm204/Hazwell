@@ -2,14 +2,14 @@ module CPU (
     iClk, nRst,
     oMemAddr, oMemData,
     iMemData,
-    oMemRW, oMemEn
+    oMemWrite, oMemRead
 );
 
 // External Signals
 input wire iClk, nRst;
 output wire [31:0] oMemAddr, oMemData;
 input wire  [31:0] iMemData;
-output wire        oMemRW, oMemEn;
+output wire        oMemWrite, oMemRead;
 
 // Internal Signals
 
@@ -27,7 +27,6 @@ wire [31:0] ALU_out;
 wire ALU_zero_out, ALU_neg_out;
 
 // Instruction fetch multiplexer outputs
-
 wire [31:0] MuxB_out;
 wire [4:0] MuxC_out;
 wire [31:0] MuxINC_out;
@@ -36,19 +35,19 @@ wire [31:0] MuxPC_out;
 wire [31:0] MuxY_out;
 
 // One hot step counter
-reg [4:0] Step;
+enum bit [3:0] {Step1, Step2, Step3, Step4, Step5} Step;
 
 // Outputs from instruction decoder
 wire INS_addi, INS_br, INS_ldw, INS_stw;
 
 // Register File
-wire [5:0] Addr_A, Addr_B, Addr_C; // A/B unused
-wire [31:0] Reg_A, Reg_B;
-wire RF_write;
+wire [5:0] RF_AddrA, RF_AddrB, RF_AddrC; // AB unused
+wire [31:0] RF_oA, RF_oB;
+wire RF_Write;
 
-// Instruction Register Decoded
+// Instruction Register Decoded Things
 wire [5:0] IR_Opcode;
-wire [10:0] IR_OPX;
+wire [10:0] IR_OPX; // Extened OPCODE
 wire [4:0] IR_src1;
 wire [4:0] IR_src2;
 wire [4:0] IR_dest;
@@ -66,24 +65,31 @@ wire PC_en, PC_temp_en, IR_en;
 
 // =========================================================== //
 
+
+// Register File Address inputs
+assign RF_AddrA = IR_src1;
+assign RF_AddrB = IR_src2;
+assign RF_AddrC = MuxC_out;
+
+
 // Create the REGFile
 RegFile u0(
     .iClk(iClk),
     .nRst(nRst),
-    .iWrite(RF_write),
-    .iAddrA(IR_src1),
-    .iAddrB(IR_src2),
-    .iAddrC(Addr_C),
-    .oRegA(Reg_A),
-    .oRegB(Reg_B),
+    .iWrite(RF_Write),
+    .iAddrA(RF_AddrA),
+    .iAddrB(RF_AddrB),
+    .iAddrC(RF_AddrC),
+    .oRegA(RF_oA),
+    .oRegB(RF_oB),
     .iRegC(RY_out)
 );
 
 // Create the ALU
 ALU u1(
     .iOP(ALU_op),
-    .iRegA(RA_out),
-    .iRegB(RB_out),
+    .iRegA(RF_oA),
+    .iRegB(RF_oB),
     .oRegC(ALU_out),
     .oNEG(ALU_neg_out),
     .oZERO(ALU_zero_out)
@@ -136,8 +142,8 @@ assign INS_ldw = (IR_Opcode == 6'b000111);
 assign INS_stw = (IR_Opcode == 6'b000101);
 
 // Memory control signals
-assign oMemRW = (Step[1] || (Step[4] && INS_ldw)); // Conditional for mem read
-assign oMemEn = Step[1] || Step[4]; // Conditional for any mem operation
+assign oMemRead = (Step[0] || (Step[3] && INS_ldw)); // Conditional for Memory Read
+assign oMemWrite = Step[3] && INS_stw; // Conditional for Memory Write
 
 // Memory Outputs
 assign oMemAddr = MuxMA_out;

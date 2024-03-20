@@ -2,7 +2,7 @@
 module CPU_TB();
 
 reg CLK, RST;
-wire MemRW, MemEN;
+wire MemoryWrite, MemoryRead;
 wire [31:0] MemAddr, cpu_to_mem;
 reg [31:0] mem_to_cpu;
 
@@ -12,8 +12,8 @@ CPU u0(
     .oMemAddr(MemAddr),
     .oMemData(cpu_to_mem),
     .iMemData(mem_to_cpu),
-    .oMemRW(MemRW),
-    .oMemEn(MemEN)
+    .oMemRead(MemoryRead),
+    .oMemWrite(MemoryWrite)
 );
 
 // define constant bit patterns for test instructions
@@ -25,16 +25,18 @@ parameter [31:0] BR_START = 32'b00000000000011111111111100000110;
 
 
 initial begin
-    CLK = 1'b0;
-    RST = 1'b0;
-    #1;
-    RST = 1'b1;
     forever begin
         CLK = 1'b0;
-        #1;
+        #10;
         CLK = 1'b1;
-        #1;
+        #10;
     end
+end
+
+initial begin
+    RST = 1'b0;
+    #10;
+    RST = 1'b1;
 end
 
 // model the full memory output for instruction and data addresses
