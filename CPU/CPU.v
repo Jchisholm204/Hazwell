@@ -147,7 +147,7 @@ REG32 RZ      ( .iClk(iClk), .nRst(nRst), .iEn(1'b1),       .iD(ALU_out),   .oQ(
 assign PC_adder_out = PC_out + MuxINC_out;
 
 // Multiplexer Control Signals
-assign B_Select = ~INSX_add; // ALU Input
+assign B_Select = ~INS_Rtype; // ALU Input
 assign C_Select = INS_Rtype ?  2'b01 : 2'b00; // RegFile AddrC Select - IRsrc2, IRdest, Link
 assign INC_Select = T3 && INS_br; // Use imm32 offset for br, otherwise +4
 assign MA_Select = T1; // use PC for ifetch, otherwise RZ
