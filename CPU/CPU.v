@@ -39,15 +39,17 @@ reg T1, T2, T3, T4, T5;
 
 
 // Register File
-wire [5:0] RF_AddrA, RF_AddrB, RF_AddrC; // AB unused
+wire [4:0] RF_AddrA, RF_AddrB, RF_AddrC; // AB unused
 wire [31:0] RF_oA, RF_oB;
 wire RF_Write;
 
 
 // One Hot outputs from I-Type Instructions
-wire INS_addi, INS_br, INS_ldw, INS_stw, INS_Rtype;
+wire INS_addi, INS_br, INS_ldw, INS_stw, INS_call, INS_Rtype;
 // One Hot outputs from R-Type Instructions
-wire INSX_add;
+wire INSX_add, INSX_sub;
+// Redirect Instructions
+wire INS_beq, INS_blt;
 
 // Instruction Register Segments
 wire [5:0] IR_Opcode;
@@ -107,7 +109,9 @@ RegFile u0(
 
 //**********  Begin ALU  ************//
 
-assign ALU_op = 4'b0000;
+assign ALU_op = (INS_addi || INSX_add) ? 4'b0000 :
+                (INSX_sub)             ? 4'b0001 :
+                                         4'b0000 ;
 // Create the ALU
 ALU u1(
     .iOP(ALU_op),
@@ -126,7 +130,7 @@ ALU u1(
 
 // Load Enable Signals
 assign PC_en = T1 || (T3 && INS_br);
-assign PC_temp_en = T3; //Should be T3 and INs_call when call supported
+assign PC_temp_en = T3 && INS_call; //Should be T3 and INs_call when call supported
 assign IR_en = T1;
 
 // System Registers (For use within the Datapath)
@@ -161,20 +165,23 @@ assign MuxINC_out = INC_Select ? imm32        : 32'd4;
 assign MuxMA_out  = MA_Select  ? PC_out       : RZ_out;
 assign MuxPC_out  = PC_Select  ? PC_adder_out : RA_out;
 assign MuxY_out   = (Y_Select == 2'b10) ? PC_TEMP_out :
-                    (Y_Select == 2'b01) ? iMemData :
+                    (Y_Select == 2'b01) ? iMemData    :
                     RZ_out;
 assign MuxC_out   = (C_Select == 2'b01) ? IR_dest : IR_src2;
 
 
 // Opcode Decoding (I-Type Instructions)
 assign INS_addi = (IR_Opcode == 6'b000100);
-assign INS_br = (IR_Opcode == 6'b000110);
+assign INS_br = (IR_Opcode == 6'b000110) || (INS_beq && (RA_out == RB_out)) || (INS_blt && (RA_out < RB_out));
 assign INS_ldw = (IR_Opcode == 6'b010111);
 assign INS_stw = (IR_Opcode == 6'b010101);
+assign INS_beq = (IR_Opcode == 6'h26);
+assign INS_blt = (IR_Opcode == 6'h16);
 assign INS_Rtype = (IR_Opcode == 6'h3A);
 
 // Opcode Decoding (J-Type Instructions)
-assign INSX_add = INS_Rtype && (IR_OPX == 11'h31);
+assign INSX_add = INS_Rtype && (IR_OPX == {6'h31, 5'h0});
+assign INSX_sub = INS_Rtype && (IR_OPX == {6'h39, 5'h0});
 
 // Memory control signals
 assign oMemRead = (T1 || (T4 && INS_ldw)); // Conditional for Memory Read

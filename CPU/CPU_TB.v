@@ -5,7 +5,7 @@ reg CLK, RST;
 wire MemoryWrite, MemoryRead;
 wire [31:0] MemAddr, cpu_to_mem;
 reg [31:0] mem_to_cpu;
-reg [31:0] temp1 = 32'd7;
+reg [31:0] temp1 = 32'd2;
 reg [31:0] temp2 = 32'd9;
 
 CPU u0(
@@ -27,9 +27,11 @@ parameter [5:0] OP_LDW = 6'h17;
 parameter [5:0] OP_STW = 6'h15;
 parameter [5:0] OP_ADDI = 6'h04;
 parameter [5:0] OP_BR = 6'h06;
+parameter [5:0] OP_BLT = 6'h16;
+parameter [5:0] OP_BEQ = 6'h26;
 parameter [5:0] OP_R = 6'h3A;
 
-parameter [10:0] OPX_ADD = 11'h31;
+parameter [10:0] OPX_ADD = {6'h31, 5'h0};
 
 parameter [15:0] ADDR  = 16'h1000;
 parameter [15:0] BR_ADDR = 16'b1111111111110000;
@@ -41,9 +43,10 @@ parameter [15:0] BR_ADDR = 16'b1111111111110000;
 parameter [31:0] LOAD_R1  = {R0, R1, 16'h1000, OP_LDW};
 parameter [31:0] LOAD_R2  = {R0, R2, 16'h1004, OP_LDW};
 parameter [31:0] STORE_R1 = {R0, R1, ADDR, OP_STW};
-parameter [31:0] ADDI_R1  = {R1, R1, 16'd1, OP_ADDI};
-parameter [31:0] ADD_R1R2  = {R1, R1, R2, OPX_ADD, OP_R};
-parameter [31:0] BR_START = {R0, R1, BR_ADDR, OP_BR};
+parameter [31:0] ADDI_R1  = {R1, R1, 16'b11111111111111111, OP_ADDI};
+parameter [31:0] ADD_R1R2  = {R2, R1, R1, OPX_ADD, OP_R};
+parameter [31:0] BR_START = {R0, R1, 16'b1111111111101100, OP_BR};
+parameter [31:0] BR_R0R1 = {R0, R1, BR_ADDR, OP_BLT};
 
 
 initial begin
@@ -65,9 +68,10 @@ end
 always @* begin
     case(MemAddr)
         32'h00000000: mem_to_cpu = LOAD_R1;
-        32'h00000004: mem_to_cpu = LOAD_R2;
-        32'h00000008: mem_to_cpu = ADD_R1R2;
-        32'h0000000C: mem_to_cpu = BR_START;
+        32'h00000004: mem_to_cpu = ADDI_R1;
+        32'h00000008: mem_to_cpu = STORE_R1;
+        32'h0000000C: mem_to_cpu = BR_R0R1;
+        32'h00000010: mem_to_cpu = LOAD_R2;
         32'h1000: mem_to_cpu = temp1;
         32'h1004: mem_to_cpu = temp2;
         default: mem_to_cpu = 32'd0;
