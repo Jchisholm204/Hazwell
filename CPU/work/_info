@@ -6,145 +6,145 @@ cModel Technology
 dC:\Users\Jacob\Documents\GitHub\Hazwell\CPU
 !s11f vlog 2020.1 2020.02, Feb 28 2020
 vALU
-Z0 !s110 1710986621
+!s110 1710988106
 !i10b 1
 !s100 j1cBbL_i?LUHQz9_fE:HF2
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IV5[?Az>:f[kE9=Y83[05D3
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dC:/Users/Jacob/Documents/GitHub/Hazwell/CPU
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Jacob/Documents/GitHub/Hazwell/CPU
 w1710982226
 8C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
-!i122 229
+!i122 247
 L0 1 20
-Z4 OV;L;2020.1;71
+Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1710986621.000000
+Z4 !s108 1710988106.000000
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v|
 !i113 1
-Z6 o-work work
-Z7 tCvgOpt 0
+Z5 o-work work
+Z6 tCvgOpt 0
 n@a@l@u
 vCPU
-R0
+Z7 !s110 1710988107
 !i10b 1
-!s100 j8j>P[eh@[Lb<`[CFY@IJ3
+!s100 MM@b4O7@ejiB1Eb_IG4X23
+R0
+ILRRNAc>jL7c76LzF7=FSY3
 R1
-I0hVM3IGAG@dM@fc2`HD1B2
 R2
-R3
-w1710986510
+w1710988102
 8C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v
-!i122 230
+!i122 248
 L0 1 214
-R4
+R3
 r1
 !s85 0
 31
-R5
+R4
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v|
 !i113 1
+R5
 R6
-R7
 n@c@p@u
 vCPU_TB
-R0
+R7
 !i10b 1
-!s100 >C:^n_DDJl<2a5k5`R__E1
+!s100 Clzzc>i_S?;F1hQUbfi=@2
+R0
+I5jQ4OXEzTeASGF>6oWiKJ2
 R1
-IO?JGe8E:31=Bogl33?dg:2
 R2
-R3
-w1710986618
+w1710987979
 8C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
-!i122 233
-L0 2 87
-R4
+!i122 251
+L0 2 89
+R3
 r1
 !s85 0
 31
-R5
+Z8 !s108 1710988107.000000
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v|
 !i113 1
+R5
 R6
-R7
 n@c@p@u_@t@b
 vREG32
-R0
+R7
 !i10b 1
 !s100 C=dPWh6bHaQ@f7m;HFccA0
-R1
+R0
 IYJg`hbR;Udlf<GUO0>hY01
+R1
 R2
-R3
 w1710985034
 8C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
-!i122 231
+!i122 249
 L0 1 19
-R4
+R3
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v|
 !i113 1
+R5
 R6
-R7
 n@r@e@g32
 vRegFile
-R0
+R7
 !i10b 1
 !s100 A1JCB4hHZW2dXme[KY5go2
-R1
+R0
 IJ5FPPRbmeAHmSeI7ocI]z0
+R1
 R2
-R3
 w1710986476
 8C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
-!i122 232
+!i122 250
 L0 1 68
-R4
+R3
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v|
 !i113 1
+R5
 R6
-R7
 n@reg@file
 vtest_tb
-R0
+R7
 !i10b 1
 !s100 8E[PJ;d2@D?oBOCHL`9U]2
-R1
+R0
 I6MP96mA8LSN`eJf`2Q45N1
+R1
 R2
-R3
 w1710899502
 8C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
-!i122 234
+!i122 252
 L0 3 13
-R4
+R3
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v|
 !i113 1
+R5
 R6
-R7

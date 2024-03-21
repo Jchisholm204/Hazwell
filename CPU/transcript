@@ -1608,3 +1608,58 @@ run 1000ns
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
+# Compile of ALU.v was successful.
+# Compile of CPU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.CPU
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position 24  sim:/CPU_TB/u0/INSX_sub
+# Compile of ALU.v was successful.
+# Compile of CPU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.CPU
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of ALU.v was successful.
+# Compile of CPU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.CPU
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 

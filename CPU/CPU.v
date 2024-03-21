@@ -91,7 +91,7 @@ assign RF_AddrA = IR_src1;
 assign RF_AddrB = IR_src2;
 assign RF_AddrC = MuxC_out;
 
-assign RF_Write = T5 && (INS_ldw || INS_addi || INSX_add);
+assign RF_Write = T5 && (INS_ldw || INS_addi || INSX_add || INSX_sub);
 
 RegFile u0(
     .iClk(iClk),
