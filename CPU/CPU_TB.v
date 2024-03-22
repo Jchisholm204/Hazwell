@@ -1,16 +1,18 @@
 `timescale 1ns/1ns
 module CPU_TB();
 
-reg CLK, RST;
+reg CLK, RST, RDY;
 wire MemoryWrite, MemoryRead;
 wire [31:0] MemAddr, cpu_to_mem;
 reg [31:0] mem_to_cpu;
 reg [31:0] temp1 = 32'd2;
 reg [31:0] temp2 = 32'd1;
 
-CPU u0(
+
+PROCESSOR proc(
     .iClk(CLK),
     .nRst(RST),
+    .iRDY(RDY),
     .oMemAddr(MemAddr),
     .oMemData(cpu_to_mem),
     .iMemData(mem_to_cpu),
@@ -52,11 +54,18 @@ parameter [31:0] BR_R0R1 = {R0, R1, BR_ADDR, OP_BLT};
 
 
 initial begin
+    RDY = 1'b1;
     forever begin
         CLK = 1'b0;
         #10;
         CLK = 1'b1;
         #10;
+        if(MemoryRead || MemoryWrite) begin
+            RDY = 1'b1;
+            //#15;
+            RDY = 1'b1;
+        end
+        else RDY = 1'b1;
     end
 end
 
@@ -65,6 +74,7 @@ initial begin
     #10;
     RST = 1'b1;
 end
+
 
 // model the full memory output for instruction and data addresses
 always @* begin

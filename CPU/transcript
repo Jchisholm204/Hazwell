@@ -1663,3 +1663,273 @@ run 1000ns
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
+# Compile of ALU.v was successful.
+# Compile of CPU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# 6 compiles, 0 failed with no errors.
+retstart
+# invalid command name "retstart"
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.CPU
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of ALU.v was successful.
+# Compile of CPU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.CPU
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break key hit
+# Break in Module CPU_TB at C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v line 77
+# Compile of ALU.v was successful.
+# Compile of CPU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.CPU
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of ALU.v was successful.
+# Compile of CPU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.CPU
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position 1  sim:/CPU_TB/RDY
+restart
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of ALU.v was successful.
+# Compile of CPU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.CPU
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break key hit
+# Break in Module CPU_TB at C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v line 77
+# Compile of ALU.v was successful.
+# Compile of CPU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.CPU
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of ALU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# Compile of PROCESSOR.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.PROCESSOR
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/T1'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/T2'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/T3'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/T4'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/T5'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INC_Select'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/MuxINC_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/PC_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/RA_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/RB_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/IR_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INS_ldw'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INS_addi'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INS_stw'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INS_br'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INS_Rtype'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INSX_add'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INSX_sub'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INS_blt'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/imm32'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/MA_Select'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/RZ_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/ALU_out'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/RF_oA'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/RF_oB'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/RF_Write'. 
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of ALU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# Compile of PROCESSOR.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.PROCESSOR
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 10000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position end  sim:/CPU_TB/proc/T1
+add wave -position end  sim:/CPU_TB/proc/T2
+add wave -position end  sim:/CPU_TB/proc/T3
+add wave -position end  sim:/CPU_TB/proc/T4
+add wave -position end  sim:/CPU_TB/proc/T5
+add wave -position end  sim:/CPU_TB/proc/RF_AddrA
+add wave -position end  sim:/CPU_TB/proc/RF_AddrB
+add wave -position end  sim:/CPU_TB/proc/RF_AddrC
+add wave -position end  sim:/CPU_TB/proc/RF_oA
+add wave -position end  sim:/CPU_TB/proc/RF_oB
+restart
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of ALU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# Compile of PROCESSOR.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.PROCESSOR
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of ALU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# Compile of PROCESSOR.v was successful.
+# 6 compiles, 0 failed with no errors.
+# Compile of ALU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# Compile of PROCESSOR.v was successful.
+# 6 compiles, 0 failed with no errors.
+# Compile of ALU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# Compile of PROCESSOR.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.PROCESSOR
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of ALU.v was successful.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of CPU_TB.v was successful with warnings.
+# Compile of test_tb.v was successful.
+# Compile of PROCESSOR.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.CPU_TB
+# Loading work.PROCESSOR
+# Loading work.RegFile
+# Loading work.REG32
+# Loading work.ALU
+run 1000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 

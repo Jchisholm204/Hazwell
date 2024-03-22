@@ -1,12 +1,12 @@
-module CPU (
-    iClk, nRst,
+module PROCESSOR (
+    iClk, nRst, iRDY,
     oMemAddr, oMemData,
     iMemData,
     oMemWrite, oMemRead
 );
 
 // External Signals
-input wire iClk, nRst;
+input wire iClk, nRst, iRDY; // Clock, active low reset, ready input (outside system is ready)
 output wire [31:0] oMemAddr, oMemData;
 input wire  [31:0] iMemData;
 output wire        oMemWrite, oMemRead;
@@ -202,7 +202,7 @@ begin
         T4 <= 1'b0;
         T5 <= 1'b0;
     end
-    else begin
+    else if(iRDY) begin
         T1 <= T5;
         T2 <= T1;
         T3 <= T2;
