@@ -39,25 +39,6 @@
    },
    {
     "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\RegFile.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "RegFile",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
      "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\Memory\\FLASH.v",
      "__class__": "Path"
     },
@@ -77,19 +58,19 @@
    },
    {
     "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\test_tb.v",
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\RegFile.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "test_tb",
+     "name": "RegFile",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      2,
-      7
+      0,
+      6
      ]
     ],
     "__class__": "VerilogDesignUnit"
@@ -102,44 +83,6 @@
     "type_": "entity",
     "name": {
      "name": "REG32",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\PROCESSOR.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "PROCESSOR",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\ALU\\ADDER_TB.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "ADDER_TB",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
@@ -172,19 +115,19 @@
    },
    {
     "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\ALU\\ADDER.v",
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\CPU_TB.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "ADDER",
+     "name": "CPU_TB",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      0,
-      6
+      1,
+      7
      ]
     ],
     "__class__": "VerilogDesignUnit"
@@ -210,19 +153,19 @@
    },
    {
     "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\CPU_TB.v",
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\ALU\\ADDER_TB.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "CPU_TB",
+     "name": "ADDER_TB",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      1,
-      7
+      0,
+      6
      ]
     ],
     "__class__": "VerilogDesignUnit"
@@ -230,6 +173,82 @@
    {
     "owner": {
      "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\CPU.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "PROCESSOR",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\ALU\\ADDER.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "ADDER",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\test_tb.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "test_tb",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      2,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\registers.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "registers",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\PROCESSOR.v",
      "__class__": "Path"
     },
     "type_": "entity",

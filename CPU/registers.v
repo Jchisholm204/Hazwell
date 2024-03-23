@@ -1,7 +1,7 @@
 module registers(
     iClk, nRst, iWrite,
     iAddrA, iAddrB, iAddrC,
-    oRegA, oRegB, iRegC,
+    oRegA, oRegB, iRegC
 );
 
 // Module IO
@@ -27,16 +27,16 @@ wire [31:0] r1_out, r2_out, r3_out, r4_out, r5_out,
             r26_out, r27_out, r28_out, r29_out, r30_out, r31_out;
 
 // Write Signal Assert
-assign r1_write = (iAddrC == 5'b00001) && iWrite;
-assign r2_write = (iAddrC == 5'b00010) && iWrite;
-assign r3_write = (iAddrC == 5'b00011) && iWrite;
-assign r4_write = (iAddrC == 5'b00100) && iWrite;
-assign r5_write = (iAddrC == 5'b00101) && iWrite;
-assign r6_write = (iAddrC == 5'b00110) && iWrite;
-assign r7_write = (iAddrC == 5'b00111) && iWrite;
-assign r8_write = (iAddrC == 5'b01000) && iWrite;
-assign r9_write = (iAddrC == 5'b01001) && iWrite;
-assign r10_write = (iAddrC == 5'b01010) && iWrite
+assign r1_write  = (iAddrC == 5'b00001) && iWrite;
+assign r2_write  = (iAddrC == 5'b00010) && iWrite;
+assign r3_write  = (iAddrC == 5'b00011) && iWrite;
+assign r4_write  = (iAddrC == 5'b00100) && iWrite;
+assign r5_write  = (iAddrC == 5'b00101) && iWrite;
+assign r6_write  = (iAddrC == 5'b00110) && iWrite;
+assign r7_write  = (iAddrC == 5'b00111) && iWrite;
+assign r8_write  = (iAddrC == 5'b01000) && iWrite;
+assign r9_write  = (iAddrC == 5'b01001) && iWrite;
+assign r10_write = (iAddrC == 5'b01010) && iWrite;
 assign r11_write = (iAddrC == 5'b01011) && iWrite;
 assign r12_write = (iAddrC == 5'b01100) && iWrite;
 assign r13_write = (iAddrC == 5'b01101) && iWrite;

@@ -32,6 +32,7 @@ parameter [5:0] OP_BR = 6'h06;
 parameter [5:0] OP_BLT = 6'h16;
 parameter [5:0] OP_BEQ = 6'h26;
 parameter [5:0] OP_R = 6'h3A;
+parameter [5:0] OP_CALL = 6'h00;
 
 parameter [10:0] OPX_ADD = {6'h31, 5'h0};
 parameter [10:0] OPX_SUB = {6'h39, 5'h0};
@@ -51,6 +52,7 @@ parameter [31:0] ADD_R1R2  = {R2, R1, R1, OPX_ADD, OP_R};
 parameter [31:0] SUB_R1R2  = {R1, R2, R1, OPX_SUB, OP_R};
 parameter [31:0] BR_START = {R0, R1, 16'b1111111111101100, OP_BR};
 parameter [31:0] BR_R0R1 = {R0, R1, BR_ADDR, OP_BLT};
+parameter [31:0] CALL0 = {26'h0, OP_CALL};
 
 
 initial begin
@@ -84,9 +86,10 @@ always @* begin
         32'h00000008: mem_to_cpu = SUB_R1R2;
         32'h0000000C: mem_to_cpu = STORE_R1;
         32'h00000010: mem_to_cpu = BR_R0R1;
+        32'h00000014: mem_to_cpu = 32'bx;
         32'h1000: mem_to_cpu = temp1;
         32'h1004: mem_to_cpu = temp2;
-        default: mem_to_cpu = 32'd0;
+        default: mem_to_cpu = 32'bz;
     endcase
 
     if(MemoryWrite) begin
