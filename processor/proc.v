@@ -10,6 +10,11 @@ input wire [31:0] iMemData;
 output wire [31:0] oMemData, oMemAddr;
 output wire oMemWrite, oMemRead;
 
+// Program Counter
+wire [31:0] PC_in, PC_out;
+wire PC_en;
+REG32 PC (.iClk(iClk), .nRst(nRst), .iEn(PC_en), .iD(PC_in), .oQ(PC_out));
+
 // Memory Data
 wire [31:0] IR_out, MDR_out, MAR_in;
 wire IR_en, MDR_en, MAR_en;
@@ -45,8 +50,11 @@ REG32 RALU (.iClk(iClk), .nRst(1'b1), .iD(ALU_RC), .oQ(ALU_out));
 
 
 // Datapath Control Signals
-wire MAR_Select, ALUsrcB_Select;
-wire [1:0] PC_Select, RFC_Select;
+wire MAR_Select, ALUB_Select, AddrC_Select, PCA_Select;
+wire [1:0] PC_Select, C_Select;
+
+// Control Unit
+
 
 
 // Memory Data Out
