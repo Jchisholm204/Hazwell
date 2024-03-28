@@ -324,6 +324,44 @@
    },
    {
     "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\processor\\control.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "control",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\processor\\CPU_TB.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "CPU_TB",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      1,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
      "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\CPU\\ALU\\ADDER_TB.v",
      "__class__": "Path"
     },

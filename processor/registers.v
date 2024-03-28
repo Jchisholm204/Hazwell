@@ -10,6 +10,7 @@ input wire [4:0] iAddrA, iAddrB, iAddrC;
 output wire [31:0] oRegA, oRegB;
 input wire [31:0] iRegC;
 
+parameter [5:0] AddrRA = 5'b11111;
 
 // Register IO
 wire r1_write, r2_write, r3_write, r5_write, r6_write,

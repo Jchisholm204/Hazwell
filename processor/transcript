@@ -1,1935 +1,701 @@
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of CPU.v was successful.
-vsim -gui work.CPU_TB
-# vsim -gui work.CPU_TB 
-# Start time: 22:05:14 on Mar 19,2024
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 70
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 95
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 96
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 97
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 98
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 99
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-add wave -position end  sim:/CPU_TB/CLK
-add wave -position end  sim:/CPU_TB/RST
-add wave -position end  sim:/CPU_TB/MemoryWrite
-add wave -position end  sim:/CPU_TB/MemoryRead
-add wave -position end  sim:/CPU_TB/MemAddr
-add wave -position end  sim:/CPU_TB/cpu_to_mem
-add wave -position end  sim:/CPU_TB/mem_to_cpu
-add wave -position end  sim:/CPU_TB/u0/Step
-run 20ns
-run 80ns
-run 100ns
-# Compile of CPU_TB.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 70
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 95
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 96
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 97
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 98
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 99
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-run 100ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v failed with 1 errors.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 1 failed with 1 error.
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'iD'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v(4).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'iD'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v(4).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/Step'. 
-add wave -position end  sim:/CPU_TB/u0/T1
-add wave -position end  sim:/CPU_TB/u0/T2
-add wave -position end  sim:/CPU_TB/u0/T3
-add wave -position end  sim:/CPU_TB/u0/T4
-add wave -position end  sim:/CPU_TB/u0/T5
-run 200ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-log * -r
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'iD'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v(4).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'iD'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v(4).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 200ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'iD'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v(4).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'iD'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v(4).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 1ms
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 1ms
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 1ms
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 200ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-run 800ns
-add wave -position end  sim:/CPU_TB/u0/INC_Select
-add wave -position end  sim:/CPU_TB/u0/MuxC_out
-add wave -position end  sim:/CPU_TB/u0/MuxINC_out
-add wave -position end  sim:/CPU_TB/u0/PC_out
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 200ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-run 400ns
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 800ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-add wave -position end  sim:/CPU_TB/u0/RA_out
-add wave -position end  sim:/CPU_TB/u0/RA_out
-add wave -position end  sim:/CPU_TB/u0/RB_out
-add wave -position end  sim:/CPU_TB/u0/IR_out
-add wave -position end  sim:/CPU_TB/u0/INS_addi
-add wave -position end  sim:/CPU_TB/u0/INS_br
-add wave -position end  sim:/CPU_TB/u0/INS_ldw
-add wave -position end  sim:/CPU_TB/u0/INS_stw
-add wave -position end  sim:/CPU_TB/u0/imm32
-add wave -position end  sim:/CPU_TB/u0/MA_Select
-add wave -position end  sim:/CPU_TB/u0/RZ_out
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 450ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-add wave -position end  sim:/CPU_TB/u0/ALU_out
-add wave -position end  sim:/CPU_TB/u0/RF_oA
-add wave -position end  sim:/CPU_TB/u0/RF_oB
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 500ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-add wave -position end  sim:/CPU_TB/u0/RF_Write
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 500ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 500ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 500ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of CPU_TB.v was successful with warnings.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 76
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 100
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 101
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 102
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 103
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 104
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 105
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 106
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 107
-run 500ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-run 500ns
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of ALU.v was successful.
-# Compile of CPU.v failed with 2 errors.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 1 failed with 2 errors.
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of CPU.v was successful.
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 133
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 134
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-run 1ms
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 133
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 134
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 133
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 134
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 133
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 134
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 133
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 134
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 133
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 134
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 133
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 134
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 133
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 134
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 133
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 134
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 133
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 134
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 133
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 134
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-add wave -position 20  sim:/CPU_TB/u0/INSX_add
-add wave -position 20  sim:/CPU_TB/u0/INS_Rtype
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 133
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 134
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 141
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 142
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 141
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 142
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-restart
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 141
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 142
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r1'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r1 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 35
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r2'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r2 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 36
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'r3'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0/r3 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v Line: 37
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 135
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'PC_Temp'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/PC_Temp File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 136
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'IR'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/IR File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 137
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RA'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RA File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 138
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RB'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RB File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 139
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RM'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RM File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 140
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RY'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RY File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 141
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'RZ'.  Expected 6, found 5.
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/RZ File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 142
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrA'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrB'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (6) for port 'iAddrC'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v(3).
-#    Time: 0 ns  Iteration: 0  Instance: /CPU_TB/u0/u0 File: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU.v Line: 94
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v failed with 5 errors.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v failed with 1 errors.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 2 failed with 6 errors.
-# Compile of ALU.v was successful.
-# Compile of CPU.v failed with 5 errors.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 1 failed with 5 errors.
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-add wave -position 24  sim:/CPU_TB/u0/INS_blt
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-add wave -position 24  sim:/CPU_TB/u0/INSX_sub
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-retstart
-# invalid command name "retstart"
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Break key hit
-# Break in Module CPU_TB at C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v line 77
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-add wave -position 1  sim:/CPU_TB/RDY
-restart
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Break key hit
-# Break in Module CPU_TB at C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v line 77
-# Compile of ALU.v was successful.
-# Compile of CPU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.CPU
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# Compile of PROCESSOR.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.PROCESSOR
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/T1'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/T2'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/T3'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/T4'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/T5'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INC_Select'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/MuxINC_out'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/PC_out'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/RA_out'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/RB_out'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/IR_out'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INS_ldw'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INS_addi'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INS_stw'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INS_br'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INS_Rtype'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INSX_add'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INSX_sub'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/INS_blt'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/imm32'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/MA_Select'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/RZ_out'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/ALU_out'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/RF_oA'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/RF_oB'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/CPU_TB/u0/RF_Write'. 
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# Compile of PROCESSOR.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.PROCESSOR
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 10000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-restart
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-add wave -position end  sim:/CPU_TB/proc/T1
-add wave -position end  sim:/CPU_TB/proc/T2
-add wave -position end  sim:/CPU_TB/proc/T3
-add wave -position end  sim:/CPU_TB/proc/T4
-add wave -position end  sim:/CPU_TB/proc/T5
-add wave -position end  sim:/CPU_TB/proc/RF_AddrA
-add wave -position end  sim:/CPU_TB/proc/RF_AddrB
-add wave -position end  sim:/CPU_TB/proc/RF_AddrC
-add wave -position end  sim:/CPU_TB/proc/RF_oA
-add wave -position end  sim:/CPU_TB/proc/RF_oB
-restart
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# Compile of PROCESSOR.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.PROCESSOR
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# Compile of PROCESSOR.v was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of ALU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# Compile of PROCESSOR.v was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of ALU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# Compile of PROCESSOR.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.PROCESSOR
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Compile of ALU.v was successful.
-# Compile of REG32.v was successful.
-# Compile of RegFile.v was successful.
-# Compile of CPU_TB.v was successful with warnings.
-# Compile of test_tb.v was successful.
-# Compile of PROCESSOR.v was successful.
-# 6 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.CPU_TB
-# Loading work.PROCESSOR
-# Loading work.RegFile
-# Loading work.REG32
-# Loading work.ALU
-run 1000ns
-# GetModuleFileName: The specified module could not be found.
+# vsim . 
+# ** Error: (vsim-19) Failed to access library '' at "".
 # 
+# Invalid argument. (errno = EINVAL)
+# Error loading design
+# Loading project CPU
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
 # 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(93): (vlog-2730) Undefined variable: 'RF_oB'.
+# 
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(2): Identifier must be declared with a port mode: iOP.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(2): Identifier must be declared with a port mode: iRdy.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: PC_en.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: PCT_en.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: IR_en.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: MDR_en.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: MAR_en.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(27): (vlog-2730) Undefined variable: 'MOR_en'.
+# 
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: MOR_en.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(4): Identifier must be declared with a port mode: RF_Write.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(5): Identifier must be declared with a port mode: ALU_op.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(6): Identifier must be declared with a port mode: MAR_Select.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(6): Identifier must be declared with a port mode: ALUB_Select.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(6): Identifier must be declared with a port mode: PCA_Select.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(7): Identifier must be declared with a port mode: PC_Select.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(7): Identifier must be declared with a port mode: C_Select.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(7): Identifier must be declared with a port mode: AddrC_Select.
+# 
+# 
+# 8 compiles, 2 failed with 3 errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(93): (vlog-2730) Undefined variable: 'RF_oB'.
+# 
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(2): Identifier must be declared with a port mode: iOP.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(2): Identifier must be declared with a port mode: iRdy.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: PC_en.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: PCT_en.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: IR_en.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: MDR_en.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: MAR_en.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(27): (vlog-2730) Undefined variable: 'MOR_en'.
+# 
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: MOR_en.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(4): Identifier must be declared with a port mode: RF_Write.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(5): Identifier must be declared with a port mode: ALU_op.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(6): Identifier must be declared with a port mode: MAR_Select.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(6): Identifier must be declared with a port mode: ALUB_Select.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(6): Identifier must be declared with a port mode: PCA_Select.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(7): Identifier must be declared with a port mode: PC_Select.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(7): Identifier must be declared with a port mode: C_Select.
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(7): Identifier must be declared with a port mode: AddrC_Select.
+# 
+# 
+# 8 compiles, 2 failed with 3 errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(93): (vlog-2730) Undefined variable: 'RF_oB'.
+# 
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(27): (vlog-2730) Undefined variable: 'MOR_en'.
+# 
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v(3): Identifier must be declared with a port mode: MOR_en.
+# 
+# 
+# 8 compiles, 2 failed with 3 errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(93): (vlog-2730) Undefined variable: 'RF_oB'.
+# 
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# 8 compiles, 1 failed with 1 error. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# 8 compiles, 0 failed with no errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# 8 compiles, 0 failed with no errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# ** Error: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(104): (vlog-2730) Undefined variable: 'C_Select_RA'.
+# 
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# 8 compiles, 1 failed with 1 error. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# 8 compiles, 0 failed with no errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# 8 compiles, 0 failed with no errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# 8 compiles, 0 failed with no errors. 
