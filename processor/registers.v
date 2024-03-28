@@ -10,7 +10,38 @@ input wire [4:0] iAddrA, iAddrB, iAddrC;
 output wire [31:0] oRegA, oRegB;
 input wire [31:0] iRegC;
 
-parameter [5:0] AddrRA = 5'b11111;
+parameter [5:0] R0       = 5'b00000,
+                R1       = 5'b00001,
+                R2       = 5'b00010,
+                R3       = 5'b00011,
+                R4       = 5'b00100,
+                R5       = 5'b00101,
+                R6       = 5'b00110,
+                R7       = 5'b00111,
+                R8       = 5'b01000,
+                R9       = 5'b01001,
+                R10      = 5'b01010,
+                R11      = 5'b01011,
+                R12      = 5'b01100,
+                R13      = 5'b01101,
+                R14      = 5'b01110,
+                R15      = 5'b01111,
+                R16      = 5'b10000,
+                R17      = 5'b10001,
+                R18      = 5'b10010,
+                R19      = 5'b10011,
+                R20      = 5'b10100,
+                R21      = 5'b10101,
+                R22      = 5'b10110,
+                R23      = 5'b10111,
+                Ret      = 5'b11000,
+                Rbt      = 5'b11001,
+                Rgp      = 5'b11010,
+                Rsp      = 5'b11011,
+                Rfp      = 5'b11100,
+                Rea      = 5'b11101,
+                Rsstatus = 5'b11110,
+                Rra      = 5'b11111;
 
 // Register IO
 wire r1_write, r2_write, r3_write, r5_write, r6_write,
@@ -28,105 +59,105 @@ wire [31:0] r1_out, r2_out, r3_out, r4_out, r5_out,
             r26_out, r27_out, r28_out, r29_out, r30_out, r31_out;
 
 // Write Signal Assert
-assign r1_write  = (iAddrC == 5'b00001) && iWrite;
-assign r2_write  = (iAddrC == 5'b00010) && iWrite;
-assign r3_write  = (iAddrC == 5'b00011) && iWrite;
-assign r4_write  = (iAddrC == 5'b00100) && iWrite;
-assign r5_write  = (iAddrC == 5'b00101) && iWrite;
-assign r6_write  = (iAddrC == 5'b00110) && iWrite;
-assign r7_write  = (iAddrC == 5'b00111) && iWrite;
-assign r8_write  = (iAddrC == 5'b01000) && iWrite;
-assign r9_write  = (iAddrC == 5'b01001) && iWrite;
-assign r10_write = (iAddrC == 5'b01010) && iWrite;
-assign r11_write = (iAddrC == 5'b01011) && iWrite;
-assign r12_write = (iAddrC == 5'b01100) && iWrite;
-assign r13_write = (iAddrC == 5'b01101) && iWrite;
-assign r14_write = (iAddrC == 5'b01110) && iWrite;
-assign r15_write = (iAddrC == 5'b01111) && iWrite;
-assign r16_write = (iAddrC == 5'b10000) && iWrite;
-assign r17_write = (iAddrC == 5'b10001) && iWrite;
-assign r18_write = (iAddrC == 5'b10010) && iWrite;
-assign r19_write = (iAddrC == 5'b10011) && iWrite;
-assign r20_write = (iAddrC == 5'b10100) && iWrite;
-assign r21_write = (iAddrC == 5'b10101) && iWrite;
-assign r22_write = (iAddrC == 5'b10110) && iWrite;
-assign r23_write = (iAddrC == 5'b10111) && iWrite;
-assign r24_write = (iAddrC == 5'b11000) && iWrite;
-assign r25_write = (iAddrC == 5'b11001) && iWrite;
-assign r26_write = (iAddrC == 5'b11010) && iWrite;
-assign r27_write = (iAddrC == 5'b11011) && iWrite;
-assign r28_write = (iAddrC == 5'b11100) && iWrite;
-assign r29_write = (iAddrC == 5'b11101) && iWrite;
-assign r30_write = (iAddrC == 5'b11110) && iWrite;
-assign r31_write = (iAddrC == 5'b11111) && iWrite;
+assign r1_write  = (iAddrC == R1) && iWrite;
+assign r2_write  = (iAddrC == R2) && iWrite;
+assign r3_write  = (iAddrC == R3) && iWrite;
+assign r4_write  = (iAddrC == R4) && iWrite;
+assign r5_write  = (iAddrC == R5) && iWrite;
+assign r6_write  = (iAddrC == R6) && iWrite;
+assign r7_write  = (iAddrC == R7) && iWrite;
+assign r8_write  = (iAddrC == R8) && iWrite;
+assign r9_write  = (iAddrC == R9) && iWrite;
+assign r10_write = (iAddrC == R10) && iWrite;
+assign r11_write = (iAddrC == R11) && iWrite;
+assign r12_write = (iAddrC == R12) && iWrite;
+assign r13_write = (iAddrC == R13) && iWrite;
+assign r14_write = (iAddrC == R14) && iWrite;
+assign r15_write = (iAddrC == R15) && iWrite;
+assign r16_write = (iAddrC == R16) && iWrite;
+assign r17_write = (iAddrC == R17) && iWrite;
+assign r18_write = (iAddrC == R18) && iWrite;
+assign r19_write = (iAddrC == R19) && iWrite;
+assign r20_write = (iAddrC == R20) && iWrite;
+assign r21_write = (iAddrC == R21) && iWrite;
+assign r22_write = (iAddrC == R22) && iWrite;
+assign r23_write = (iAddrC == R23) && iWrite;
+assign r24_write = (iAddrC == Ret) && iWrite;
+assign r25_write = (iAddrC == Rbt) && iWrite;
+assign r26_write = (iAddrC == Rgp) && iWrite;
+assign r27_write = (iAddrC == Rsp) && iWrite;
+assign r28_write = (iAddrC == Rfp) && iWrite;
+assign r29_write = (iAddrC == Rea) && iWrite;
+assign r30_write = (iAddrC == Rsstatus) && iWrite;
+assign r31_write = (iAddrC == Rra) && iWrite;
 
 
 // Output Register A assignment
-assign oRegA =  (iAddrA == 5'b00001) ? r1_out  :
-                (iAddrA == 5'b00010) ? r2_out  :
-                (iAddrA == 5'b00011) ? r3_out  :
-                (iAddrA == 5'b00100) ? r4_out  :
-                (iAddrA == 5'b00101) ? r5_out  :
-                (iAddrA == 5'b00110) ? r6_out  :
-                (iAddrA == 5'b00111) ? r7_out  :
-                (iAddrA == 5'b01000) ? r8_out  :
-                (iAddrA == 5'b01001) ? r9_out  :
-                (iAddrA == 5'b01010) ? r10_out :
-                (iAddrA == 5'b01011) ? r11_out :
-                (iAddrA == 5'b01100) ? r12_out :
-                (iAddrA == 5'b01101) ? r13_out :
-                (iAddrA == 5'b01110) ? r14_out :
-                (iAddrA == 5'b01111) ? r15_out :
-                (iAddrA == 5'b10000) ? r16_out :
-                (iAddrA == 5'b10001) ? r17_out :
-                (iAddrA == 5'b10010) ? r18_out :
-                (iAddrA == 5'b10011) ? r19_out :
-                (iAddrA == 5'b10100) ? r20_out :
-                (iAddrA == 5'b10101) ? r21_out :
-                (iAddrA == 5'b10110) ? r22_out :
-                (iAddrA == 5'b10111) ? r23_out :
-                (iAddrA == 5'b11000) ? r24_out :
-                (iAddrA == 5'b11001) ? r25_out :
-                (iAddrA == 5'b11010) ? r26_out :
-                (iAddrA == 5'b11011) ? r27_out :
-                (iAddrA == 5'b11100) ? r28_out :
-                (iAddrA == 5'b11101) ? r29_out :
-                (iAddrA == 5'b11110) ? r30_out :
-                (iAddrA == 5'b11111) ? r31_out :
+assign oRegA =  (iAddrA == R1)       ? r1_out  :
+                (iAddrA == R2)       ? r2_out  :
+                (iAddrA == R3)       ? r3_out  :
+                (iAddrA == R4)       ? r4_out  :
+                (iAddrA == R5)       ? r5_out  :
+                (iAddrA == R6)       ? r6_out  :
+                (iAddrA == R7)       ? r7_out  :
+                (iAddrA == R8)       ? r8_out  :
+                (iAddrA == R9)       ? r9_out  :
+                (iAddrA == R10)      ? r10_out :
+                (iAddrA == R11)      ? r11_out :
+                (iAddrA == R12)      ? r12_out :
+                (iAddrA == R13)      ? r13_out :
+                (iAddrA == R14)      ? r14_out :
+                (iAddrA == R15)      ? r15_out :
+                (iAddrA == R16)      ? r16_out :
+                (iAddrA == R17)      ? r17_out :
+                (iAddrA == R18)      ? r18_out :
+                (iAddrA == R19)      ? r19_out :
+                (iAddrA == R20)      ? r20_out :
+                (iAddrA == R21)      ? r21_out :
+                (iAddrA == R22)      ? r22_out :
+                (iAddrA == R23)      ? r23_out :
+                (iAddrA == Ret)      ? r24_out :
+                (iAddrA == Rbt)      ? r25_out :
+                (iAddrA == Rgp)      ? r26_out :
+                (iAddrA == Rsp)      ? r27_out :
+                (iAddrA == Rfp)      ? r28_out :
+                (iAddrA == Rea)      ? r29_out :
+                (iAddrA == Rsstatus) ? r30_out :
+                (iAddrA == Rra)      ? r31_out :
                 32'd0;
 
 // Output Register A assignment
-assign oRegB =  (iAddrB == 5'b00001) ? r1_out  :
-                (iAddrB == 5'b00010) ? r2_out  :
-                (iAddrB == 5'b00011) ? r3_out  :
-                (iAddrB == 5'b00100) ? r4_out  :
-                (iAddrB == 5'b00101) ? r5_out  :
-                (iAddrB == 5'b00110) ? r6_out  :
-                (iAddrB == 5'b00111) ? r7_out  :
-                (iAddrB == 5'b01000) ? r8_out  :
-                (iAddrB == 5'b01001) ? r9_out  :
-                (iAddrB == 5'b01010) ? r10_out :
-                (iAddrB == 5'b01011) ? r11_out :
-                (iAddrB == 5'b01100) ? r12_out :
-                (iAddrB == 5'b01101) ? r13_out :
-                (iAddrB == 5'b01110) ? r14_out :
-                (iAddrB == 5'b01111) ? r15_out :
-                (iAddrB == 5'b10000) ? r16_out :
-                (iAddrB == 5'b10001) ? r17_out :
-                (iAddrB == 5'b10010) ? r18_out :
-                (iAddrB == 5'b10011) ? r19_out :
-                (iAddrB == 5'b10100) ? r20_out :
-                (iAddrB == 5'b10101) ? r21_out :
-                (iAddrB == 5'b10110) ? r22_out :
-                (iAddrB == 5'b10111) ? r23_out :
-                (iAddrB == 5'b11000) ? r24_out :
-                (iAddrB == 5'b11001) ? r25_out :
-                (iAddrB == 5'b11010) ? r26_out :
-                (iAddrB == 5'b11011) ? r27_out :
-                (iAddrB == 5'b11100) ? r28_out :
-                (iAddrB == 5'b11101) ? r29_out :
-                (iAddrB == 5'b11110) ? r30_out :
-                (iAddrB == 5'b11111) ? r31_out :
+assign oRegB =  (iAddrB == R1)       ? r1_out  :
+                (iAddrB == R2)       ? r2_out  :
+                (iAddrB == R3)       ? r3_out  :
+                (iAddrB == R4)       ? r4_out  :
+                (iAddrB == R5)       ? r5_out  :
+                (iAddrB == R6)       ? r6_out  :
+                (iAddrB == R7)       ? r7_out  :
+                (iAddrB == R8)       ? r8_out  :
+                (iAddrB == R9)       ? r9_out  :
+                (iAddrB == R10)      ? r10_out :
+                (iAddrB == R11)      ? r11_out :
+                (iAddrB == R12)      ? r12_out :
+                (iAddrB == R13)      ? r13_out :
+                (iAddrB == R14)      ? r14_out :
+                (iAddrB == R15)      ? r15_out :
+                (iAddrB == R16)      ? r16_out :
+                (iAddrB == R17)      ? r17_out :
+                (iAddrB == R18)      ? r18_out :
+                (iAddrB == R19)      ? r19_out :
+                (iAddrB == R20)      ? r20_out :
+                (iAddrB == R21)      ? r21_out :
+                (iAddrB == R22)      ? r22_out :
+                (iAddrB == R23)      ? r23_out :
+                (iAddrB == Ret)      ? r24_out :
+                (iAddrB == Rbt)      ? r25_out :
+                (iAddrB == Rgp)      ? r26_out :
+                (iAddrB == Rsp)      ? r27_out :
+                (iAddrB == Rfp)      ? r28_out :
+                (iAddrB == Rea)      ? r29_out :
+                (iAddrB == Rsstatus) ? r30_out :
+                (iAddrB == Rra)      ? r31_out :
                 32'd0;
 
 // Registers

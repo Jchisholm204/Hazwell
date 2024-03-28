@@ -42,8 +42,8 @@ registers regs( .iClk(iClk),       .nRst(nRst),       .iWrite(RF_Write),
 // Registers to hold RF Outputs
 wire [31:0] RA_out, RB_out;
 
-REG32 RA (.iClk(iClk), .nRst(1'b1), .iD(RF_RA), .oQ(RA_out));
-REG32 RB (.iClk(iClk), .nRst(1'b1), .iD(RF_RB), .oQ(RB_out));
+REG32 RA (.iClk(iClk), .nRst(nRst), .iEn(1'b1), .iD(RF_RA), .oQ(RA_out));
+REG32 RB (.iClk(iClk), .nRst(nRst), .iEn(1'b1), .iD(RF_RB), .oQ(RB_out));
 
 
 // ALU
@@ -55,7 +55,7 @@ ALU alu(.OP(ALU_op), .oZero(ALU_zero), .oNeg(ALU_neg), .iRA(ALU_RA), .iRB(ALU_RB
 
 // ALU output register
 wire [31:0] ALU_out;
-REG32 RALU (.iClk(iClk), .nRst(1'b1), .iD(ALU_RC), .oQ(ALU_out));
+REG32 RALU (.iClk(iClk), .nRst(nRst), .iEn(1'b1), .iD(ALU_RC), .oQ(ALU_out));
 
 
 // Datapath Control Signals
@@ -76,8 +76,8 @@ wire [16:0] IR_OP;
 
 // Control Unit]
 
-control controller( .iOP(IR_OP),   .iRdy(iRdy),
-                    .PC_en(PC_en), .PCT_en(PCT_en), .IR_en(IR_en), .MDR_en(MDR_en), .MOR_en(MOR_en),
+control ctrl      ( .iOP(IR_OP),   .iRdy(iRdy),
+                    .PC_en(PC_en), .PCT_en(PCT_en), .IR_en(IR_en), .MDR_en(MDR_en), .MAR_en(MAR_en), .MOR_en(MOR_en),
                     .RF_Write(RF_Write),
                     .ALU_op(ALU_op),
                     .MAR_Select(MAR_Select), .ALUB_Select(ALUB_Select), .PCA_Select(PCA_Select),
@@ -96,17 +96,17 @@ assign ALU_RB = ALUB_Select ? IR_imm32 : RB_out;
 assign PC_Add = PCA_Select ? IR_imm32 : 31'd4;
 
 // PC Input => Return Addr | Call Addr | Next Instruction
-assign PC_in  = (PC_Select == 2'b10) ? RA_out : 
-                (PC_Select == 2'b01) ? PC_Call:
+assign PC_in  = (PC_Select == ctrl.PCS_RA)   ? RA_out  :
+                (PC_Select == ctrl.PCS_Call) ? PC_Call :
                 PC_Adder_out;
 
 // Register File Write Address => Link Register | IR destination | IR Source 2
-assign RF_AddrC =   (AddrC_Select == control.C_Select_RA) ? registers.AddrRA : 
-                    (AddrC_Select == 2'b01) ? IR_dest  :
+assign RF_AddrC =   (AddrC_Select == ctrl.CaS_RA)     ? regs.Rra : 
+                    (AddrC_Select == ctrl.CaSIR_dest) ? IR_dest       :
                     IR_src2;
 // Register File Write Data => PC Temp | Memory Data In | ALU Output
-assign RF_C =   (C_Select == 2'b10) ? PCT_out :
-                (C_Select == 2'b01) ? MDR_out :
+assign RF_C =   (C_Select == ctrl.CS_PCT) ? PCT_out :
+                (C_Select == ctrl.CS_MDR) ? MDR_out :
                 ALU_out;
 
 // Memory Data Out

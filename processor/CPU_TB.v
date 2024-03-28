@@ -9,10 +9,10 @@ reg [31:0] temp1 = 32'd2;
 reg [31:0] temp2 = 32'd1;
 
 
-PROCESSOR proc(
+proc p(
     .iClk(CLK),
     .nRst(RST),
-    .iRDY(RDY),
+    .iRdy(RDY),
     .oMemAddr(MemAddr),
     .oMemData(cpu_to_mem),
     .iMemData(mem_to_cpu),

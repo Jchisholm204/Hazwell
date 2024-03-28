@@ -22,6 +22,9 @@ output wire [1:0]  PC_Select,    // Program Counter IN Select
             C_Select,     // Register File Write Select
             AddrC_Select; // Register File Write Register Select
 
-parameter [1:0] C_Select_RA = 2'b10;
+parameter [1:0] CaS_RA   = 2'b10,  CaSIR_dest = 2'b01;
+parameter [1:0] CS_PCT   = 2'b10,  CS_MDR     = 2'b01;
+parameter [1:0] PCS_RA   = 2'b10,  PCS_Call   = 2'b01;
+parameter       MARS_ALU = 1'b0,   MARS_PC    = 1'b1;
 
-endmodule
+endmodule 

@@ -1,6 +1,40 @@
 library verilog;
 use verilog.vl_types.all;
 entity registers is
+    generic(
+        R0              : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi0);
+        R1              : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi1);
+        R2              : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi0, Hi0, Hi1, Hi0);
+        R3              : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi0, Hi0, Hi1, Hi1);
+        R4              : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi0, Hi1, Hi0, Hi0);
+        R5              : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi0, Hi1, Hi0, Hi1);
+        R6              : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi0, Hi1, Hi1, Hi0);
+        R7              : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi0, Hi1, Hi1, Hi1);
+        R8              : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi1, Hi0, Hi0, Hi0);
+        R9              : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi1, Hi0, Hi0, Hi1);
+        R10             : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi1, Hi0, Hi1, Hi0);
+        R11             : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi1, Hi0, Hi1, Hi1);
+        R12             : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi1, Hi1, Hi0, Hi0);
+        R13             : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi1, Hi1, Hi0, Hi1);
+        R14             : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi1, Hi1, Hi1, Hi0);
+        R15             : vl_logic_vector(5 downto 0) := (Hi0, Hi0, Hi1, Hi1, Hi1, Hi1);
+        R16             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi0, Hi0, Hi0, Hi0);
+        R17             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi0, Hi0, Hi0, Hi1);
+        R18             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi0, Hi0, Hi1, Hi0);
+        R19             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi0, Hi0, Hi1, Hi1);
+        R20             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi0, Hi1, Hi0, Hi0);
+        R21             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi0, Hi1, Hi0, Hi1);
+        R22             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi0, Hi1, Hi1, Hi0);
+        R23             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi0, Hi1, Hi1, Hi1);
+        Ret             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi1, Hi0, Hi0, Hi0);
+        Rbt             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi1, Hi0, Hi0, Hi1);
+        Rgp             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi1, Hi0, Hi1, Hi0);
+        Rsp             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi1, Hi0, Hi1, Hi1);
+        Rfp             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi1, Hi1, Hi0, Hi0);
+        Rea             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi1, Hi1, Hi0, Hi1);
+        Rsstatus        : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi1, Hi1, Hi1, Hi0);
+        Rra             : vl_logic_vector(5 downto 0) := (Hi0, Hi1, Hi1, Hi1, Hi1, Hi1)
+    );
     port(
         iClk            : in     vl_logic;
         nRst            : in     vl_logic;
@@ -12,4 +46,37 @@ entity registers is
         oRegB           : out    vl_logic_vector(31 downto 0);
         iRegC           : in     vl_logic_vector(31 downto 0)
     );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of R0 : constant is 2;
+    attribute mti_svvh_generic_type of R1 : constant is 2;
+    attribute mti_svvh_generic_type of R2 : constant is 2;
+    attribute mti_svvh_generic_type of R3 : constant is 2;
+    attribute mti_svvh_generic_type of R4 : constant is 2;
+    attribute mti_svvh_generic_type of R5 : constant is 2;
+    attribute mti_svvh_generic_type of R6 : constant is 2;
+    attribute mti_svvh_generic_type of R7 : constant is 2;
+    attribute mti_svvh_generic_type of R8 : constant is 2;
+    attribute mti_svvh_generic_type of R9 : constant is 2;
+    attribute mti_svvh_generic_type of R10 : constant is 2;
+    attribute mti_svvh_generic_type of R11 : constant is 2;
+    attribute mti_svvh_generic_type of R12 : constant is 2;
+    attribute mti_svvh_generic_type of R13 : constant is 2;
+    attribute mti_svvh_generic_type of R14 : constant is 2;
+    attribute mti_svvh_generic_type of R15 : constant is 2;
+    attribute mti_svvh_generic_type of R16 : constant is 2;
+    attribute mti_svvh_generic_type of R17 : constant is 2;
+    attribute mti_svvh_generic_type of R18 : constant is 2;
+    attribute mti_svvh_generic_type of R19 : constant is 2;
+    attribute mti_svvh_generic_type of R20 : constant is 2;
+    attribute mti_svvh_generic_type of R21 : constant is 2;
+    attribute mti_svvh_generic_type of R22 : constant is 2;
+    attribute mti_svvh_generic_type of R23 : constant is 2;
+    attribute mti_svvh_generic_type of Ret : constant is 2;
+    attribute mti_svvh_generic_type of Rbt : constant is 2;
+    attribute mti_svvh_generic_type of Rgp : constant is 2;
+    attribute mti_svvh_generic_type of Rsp : constant is 2;
+    attribute mti_svvh_generic_type of Rfp : constant is 2;
+    attribute mti_svvh_generic_type of Rea : constant is 2;
+    attribute mti_svvh_generic_type of Rsstatus : constant is 2;
+    attribute mti_svvh_generic_type of Rra : constant is 2;
 end registers;

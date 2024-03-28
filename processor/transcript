@@ -699,3 +699,676 @@
 # 
 # 
 # 8 compiles, 0 failed with no errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# 8 compiles, 0 failed with no errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# 8 compiles, 0 failed with no errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# 8 compiles, 0 failed with no errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/RegFile.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/test_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module test_tb
+# 
+# Top level modules:
+# 	test_tb
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/CPU/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# 8 compiles, 0 failed with no errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/PROCESSOR.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PROCESSOR
+# 
+# Top level modules:
+# 	PROCESSOR
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# 7 compiles, 0 failed with no errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# 6 compiles, 0 failed with no errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# 6 compiles, 0 failed with no errors. 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# 6 compiles, 0 failed with no errors. 
+vsim work.CPU_TB
+# vsim work.CPU_TB 
+# Loading work.CPU_TB
+# Loading work.proc
+# Loading work.REG32
+# Loading work.registers
+# Loading work.ALU
+# Loading work.control
+# ** Error: (vsim-3043) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(99): Unresolved reference to 'control'.
+# 
+#         Region: /CPU_TB/p
+# ** Error: (vsim-3043) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(104): Unresolved reference to 'registers'.
+# 
+#         Region: /CPU_TB/p
+# ** Warning: (vsim-3017) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(45): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /CPU_TB/p/RA
+# ** Warning: (vsim-3722) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(45): [TFMPC] - Missing connection for port 'iEn'.
+# 
+# ** Warning: (vsim-3017) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(46): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /CPU_TB/p/RB
+# ** Warning: (vsim-3722) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(46): [TFMPC] - Missing connection for port 'iEn'.
+# 
+# ** Warning: (vsim-3017) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(58): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /CPU_TB/p/RALU
+# ** Warning: (vsim-3722) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(58): [TFMPC] - Missing connection for port 'iEn'.
+# 
+# ** Warning: (vsim-3017) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(85): [TFMPC] - Too few port connections. Expected 16, found 15.
+# 
+#         Region: /CPU_TB/p/controller
+# ** Warning: (vsim-3722) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(85): [TFMPC] - Missing connection for port 'MAR_en'.
+# 
+# Error loading design
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# 6 compiles, 0 failed with no errors. 
+vsim work.CPU_TB
+# vsim work.CPU_TB 
+# Loading work.CPU_TB
+# Loading work.proc
+# Loading work.REG32
+# Loading work.registers
+# Loading work.ALU
+# Loading work.control
+# ** Error: (vsim-3043) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(104): Unresolved reference to 'registers'.
+# 
+#         Region: /CPU_TB/p
+# ** Warning: (vsim-3017) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(45): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /CPU_TB/p/RA
+# ** Warning: (vsim-3722) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(45): [TFMPC] - Missing connection for port 'iEn'.
+# 
+# ** Warning: (vsim-3017) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(46): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /CPU_TB/p/RB
+# ** Warning: (vsim-3722) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(46): [TFMPC] - Missing connection for port 'iEn'.
+# 
+# ** Warning: (vsim-3017) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(58): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /CPU_TB/p/RALU
+# ** Warning: (vsim-3722) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(58): [TFMPC] - Missing connection for port 'iEn'.
+# 
+# ** Warning: (vsim-3017) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(85): [TFMPC] - Too few port connections. Expected 16, found 15.
+# 
+#         Region: /CPU_TB/p/con
+# ** Warning: (vsim-3722) C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v(85): [TFMPC] - Missing connection for port 'MAR_en'.
+# 
+# Error loading design
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/proc.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module proc
+# 
+# Top level modules:
+# 	proc
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/control.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/ALU.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/CPU_TB.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU_TB
+# ** Warning: C:/Users/Jacob/Documents/GitHub/Hazwell/processor/CPU_TB.v(50): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	CPU_TB
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/REG32.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module REG32
+# 
+# Top level modules:
+# 	REG32
+# 
+# 
+# vlog -work work C:/Users/Jacob/Documents/GitHub/Hazwell/processor/registers.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# 
+# 
+# 6 compiles, 0 failed with no errors. 
+vsim work.CPU_TB
+# vsim work.CPU_TB 
+# Loading work.CPU_TB
+# Loading work.proc
+# Loading work.REG32
+# Loading work.registers
+# Loading work.ALU
+# Loading work.control
