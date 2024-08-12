@@ -77,6 +77,25 @@
    },
    {
     "owner": {
+     "name": "C:\\Users\\Jacob\\AppData\\Local\\Temp\\nvim.0\\WupG5J\\tmp_bdf_azh.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "Control",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
      "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\RegFile.v",
      "__class__": "Path"
     },
@@ -140,25 +159,6 @@
     "type_": "entity",
     "name": {
      "name": "ALU",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "C:\\Users\\Jacob\\AppData\\Local\\Temp\\nvim.0\\WupG5J\\tmpxweirgsz.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "Control",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
