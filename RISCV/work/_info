@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
@@ -8,3 +9,195 @@ z2
 !i10f 100
 cModel Technology
 dC:/intelFPGA/20.1
+vALU
+Z0 !s110 1723393268
+!i10b 1
+!s100 X<A6ka<:_hh2[PJnj4Jm`1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I;21TQ6UkGN458IJ^Em]Rc2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV
+w1723341886
+8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALU.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALU.v
+!i122 59
+L0 1 40
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1723393268.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALU.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@a@l@u
+vALUControl
+R0
+!i10b 1
+!s100 E5W6nm?ch8B3?BeQ@lLP30
+R1
+IMndgV89]^l122gMD=ZO2?2
+R2
+R3
+w1723393108
+8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALUControl.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALUControl.v
+!i122 60
+L0 1 55
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALUControl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALUControl.v|
+!i113 1
+R6
+R7
+n@a@l@u@control
+vClock
+R0
+!i10b 1
+!s100 <B^lEak?eCeNWEI4>h;>50
+R1
+IF;czmXS_1LWLhCJ4JQ5kN2
+R2
+R3
+w1723256691
+8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/clock.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/clock.v
+!i122 58
+L0 2 25
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/clock.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/clock.v|
+!i113 1
+R6
+R7
+n@clock
+vControl
+R0
+!i10b 1
+!s100 Be;AMHYO>oNP6zcdI<A8G3
+R1
+IFaOKSlG?JQ2IF2DQK4=FC0
+R2
+R3
+w1723392677
+8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Control.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Control.v
+!i122 61
+L0 1 61
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Control.v|
+!i113 1
+R6
+R7
+n@control
+vDecode
+R0
+!i10b 1
+!s100 _olGkd[EELJYFhR6EcWbF2
+R1
+I<=<j9Fb0KOYSn2NhfjJhK3
+R2
+R3
+w1723392720
+8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Decode.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Decode.v
+!i122 62
+L0 2 52
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Decode.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Decode.v|
+!i113 1
+R6
+R7
+n@decode
+vProcessor
+R0
+!i10b 1
+!s100 ]Oa;LUnO9Q1Bhc5HQ_]No1
+R1
+IKS7540e>SC@CJ@8gaoE4I3
+R2
+R3
+w1723392342
+8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Processor.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Processor.v
+!i122 63
+L0 1 70
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Processor.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Processor.v|
+!i113 1
+R6
+R7
+n@processor
+vREG32
+Z8 !s110 1723393269
+!i10b 1
+!s100 j4lMo];nTE0W470G=0M_B3
+R1
+I]7i8;[g;k6V<1De7N<gf?1
+R2
+R3
+w1723260150
+8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/REG32.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/REG32.v
+!i122 64
+L0 1 22
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/REG32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/REG32.v|
+!i113 1
+R6
+R7
+n@r@e@g32
+vRegFile
+R8
+!i10b 1
+!s100 APSVV@dYUaNOm]j`U5<Xf3
+R1
+IjbC^4j_RMg8<SU7zo]OE[0
+R2
+R3
+w1723392560
+8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/RegFile.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/RegFile.v
+!i122 65
+L0 1 209
+R4
+r1
+!s85 0
+31
+!s108 1723393269.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/RegFile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/RegFile.v|
+!i113 1
+R6
+R7
+n@reg@file
