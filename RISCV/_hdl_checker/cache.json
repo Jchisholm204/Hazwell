@@ -20,126 +20,12 @@
   "design_units": [
    {
     "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\Decode.v",
+     "name": "C:\\Users\\Jacob\\AppData\\Local\\Temp\\nvim.0\\WupG5J\\tmpgvdmn8gt.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "Decode",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\REG32.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "REG32",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\ALUControl.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "ALUControl",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "C:\\Users\\Jacob\\AppData\\Local\\Temp\\nvim.0\\WupG5J\\tmp_bdf_azh.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "Control",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\RegFile.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "RegFile",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "C:\\Users\\Jacob\\AppData\\Local\\Temp\\nvim.0\\jxLTO4\\tmp_9_9s1oq.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "Processor",
-     "case_sensitive": true,
-     "__class__": "VerilogIdentifier"
-    },
-    "locations": [
-     [
-      0,
-      6
-     ]
-    ],
-    "__class__": "VerilogDesignUnit"
-   },
-   {
-    "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\simulation\\clock.v",
-     "__class__": "Path"
-    },
-    "type_": "entity",
-    "name": {
-     "name": "Clock",
+     "name": "RV32I",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
@@ -172,12 +58,69 @@
    },
    {
     "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\ALU.v",
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\Processor.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "ALU",
+     "name": "Processor",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\ALUControl.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "ALUControl",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\REG32.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "REG32",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "C:\\Users\\Jacob\\AppData\\Local\\Temp\\nvim.0\\jxLTO4\\tmp_9_9s1oq.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "Processor",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
@@ -197,6 +140,44 @@
     "type_": "entity",
     "name": {
      "name": "RV32I",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      1,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "C:\\Users\\Jacob\\AppData\\Local\\Temp\\nvim.0\\zmtyAw\\tmpaw3pj041.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "RV32I",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      1,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\RegFile.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "RegFile",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
@@ -229,6 +210,25 @@
    },
    {
     "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\ALU.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "ALU",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
      "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\inst_fetch.v",
      "__class__": "Path"
     },
@@ -248,19 +248,38 @@
    },
    {
     "owner": {
-     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\Processor.v",
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\Decode.v",
      "__class__": "Path"
     },
     "type_": "entity",
     "name": {
-     "name": "Processor",
+     "name": "Decode",
      "case_sensitive": true,
      "__class__": "VerilogIdentifier"
     },
     "locations": [
      [
-      0,
-      6
+      1,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "c:\\Users\\Jacob\\Documents\\GitHub\\Hazwell\\RISCV\\simulation\\clock.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "Clock",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      1,
+      7
      ]
     ],
     "__class__": "VerilogDesignUnit"

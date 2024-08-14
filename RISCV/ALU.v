@@ -2,17 +2,20 @@ module ALU(
     iClk,
     nRst,
     iOP,
+    oRdy,
     iA,
     iB,
     oC
 );
 
-input wire iClk, nRst;
+input wire iClk, nRst, oRdy;
 input wire [3:0] iOP;
 input wire [31:0] iA, iB;
 output wire [31:0] oC;
 
 wire [31:0] r_add, r_sub, r_xor, r_or, r_and, r_sll, r_srl, r_sra, r_slt, r_sltu;
+
+assign oRdy = 1'b1;
 
 assign r_add = iA + iB;
 assign r_sub = iA - iB;

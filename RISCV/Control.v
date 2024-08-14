@@ -4,11 +4,12 @@ module Control(
     iOpcode,
     iFunct3,
     iFunct7,
-    oStep,
     iRdy_ALU, iRdy_MEM,
+    oStep,
     oLoad, oStore,
-    oBranch, oImm,
-    oJump, oRegWrite, oPCWrite
+    oBranch, oJump, oJumpR
+    oRegWrite, oPCWrite,
+    oALU_IMM, oALU_PC
 );
 
 // Inputs
@@ -21,13 +22,10 @@ output wire [4:0] oStep;
 // Ready Signals from ALU and Memory
 input wire iRdy_ALU, iRdy_MEM;
 // Triggers to use in the pipeline
-output wire oLoad,  // Load from memory required
-            oStore, // Store to memory required
-            oBranch, // Conditional Branch evaluation required
-            oImm,    // Immediate value required
-            oJump,   // Unconditional Jump
-            oRegWrite, // Write to register file required
-            oPCWrite;  // Write to PC required
+output wire oLoad, oStore,
+            oBranch, oJump, oJumpR,
+            oRegWrite, oPCWrite,
+            oALU_IMM, oALU_PC;
 
 // Internal Control
 reg [4:0] step;
@@ -63,11 +61,12 @@ assign store  = (iOpcode == 7'b0100011);
 assign oLoad = load;
 assign oStore = store;
 assign oBranch = branch;
-assign oImm = alui || lui || auipc || jalr || jal || branch || load || store;
-assign oJump = jalr || jal;
+assign oJump = jal;
+assign oJumpR = jalr;
 assign oRegWrite = alur || alui || lui || load;
 assign oPCWrite = auipc || jal || jalr;
-assign oStep = step;
+assign oALU_Imm = alui || lui || auipc || jalr || jal || branch || load || store;
+assign ALU_PC = alur || jal || jalr || branch || store || load;
 
 always@(posedge iClk or negedge nRst)
 begin
