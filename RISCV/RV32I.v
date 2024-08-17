@@ -32,10 +32,7 @@ wire [6:0] dec_func7;
 // ALU
 wire [3:0] alu_op;
 wire [31:0] alu_ra, alu_rb, alu_rz;
-
-// Branch/Jump Control
-wire branch_jalx, branch_jalr;
-wire [31:0] branch_addr;
+wire alu_zero;
 
 // Register File
 wire [31:0] rf_rs1, rf_rs2, rs_rd;
@@ -47,37 +44,27 @@ wire [31:0] reg_pc_out, reg_pc_tmp_out, reg_ir_out, reg_aluA_out, reg_aluB_out, 
 
 // Multiplexers
 wire [31:0] mux_aluA, mux_aluB, mux_pc, mux_jump;
-wire [31:0] pc_next;
-assign pc_next = reg_pc_out + 31'd4;
 
 assign mux_aluA = (ctrl_alu_imm) ? dec_imm32 : rf_rs1;
 assign mux_aluB = (ctrl_alu_pc) ? reg_pc_out : rf_rs2;
 
-assign mux_jump = (ctrl_jumpR) ? reg_aluD_out : branch_addr;
+assign mux_jump = (ctrl_jumpR) ? rf_rs1 : oImm32;
 assign mux_pc = (branchOK) ? reg_aluD_out : pc_next;
 
-// Registers
-REG32 pc(
-    .iClk(iClk),
-    .nRst(nRst),
-    .iEn(reg_pc_en),
-    .iData(reg_pc_in),
-    .oData(reg_pc_out)
-);
-REG32 pc_tmp(
-    .iClk(iClk),
-    .nRst(nRst),
-    .iEn(reg_pc_tmp_en),
-    .iData(reg_pc_tmp_in),
-    .oData(reg_pc_tmp_out)
-);
-REG32 ir(
-    .iClk(iClk),
-    .nRst(nRst),
-    .iEn(reg_ir_en),
-    .iData(reg_ir_in),
-    .oData(reg_ir_out)
-);
+// Instruction Register
+REG32 IR    ( .iClk(iClk), .nRst(nRst), .iEn(reg_ir_en), .iData(reg_ir_in), .oData(reg_ir_out) );
+
+// Program Counter
+wire 
+wire [31:0] pc_next;
+wire [31:0] mux_jsource, mux_jmp, mux_pc;
+assign pc_next = reg_pc_out + 31'd4;
+assign mux_jsource = (ctrl_jumpR) ? rf_rs1 : oImm32;
+assign mux_jmp = (ctrl_jump) ? mux_jsource : mux_pc;
+
+REG32 PC    ( .iClk(iClk), .nRst(nRst), .iEn(reg_pc_en), .iData(reg_pc_in), .oData(reg_pc_out) );
+
+REG32 PC_TMP( .iClk(iClk), .nRst(nRst), .iEn(reg_pc_tmp_en), .iData(reg_pc_tmp_in), .oData(reg_pc_tmp_out) );
 REG32 aluA(
     .iClk(iClk),
     .nRst(nRst),
@@ -157,7 +144,8 @@ ALU ALU_inst(
     .oRdy(Rdy_ALU),
     .iA(alu_ra),
     .iB(alu_rb),
-    .oC(alu_rz)
+    .oC(alu_rz),
+    .oZero(alu_zero)
 );
 
 endmodule
