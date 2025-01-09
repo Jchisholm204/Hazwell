@@ -10,23 +10,23 @@ z2
 cModel Technology
 dC:/intelFPGA/20.1
 vALU
-Z0 !s110 1723393268
+Z0 !s110 1736383769
 !i10b 1
-!s100 X<A6ka<:_hh2[PJnj4Jm`1
+!s100 V6aDmA<]CiFX_F58koXXc0
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I;21TQ6UkGN458IJ^Em]Rc2
+Ic3naU6GkIBB0OffSZMOH33
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 dC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV
-w1723341886
+w1723858093
 8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALU.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALU.v
-!i122 59
-L0 1 40
+!i122 67
+L0 1 49
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1723393268.000000
+Z5 !s108 1736383769.000000
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALU.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALU.v|
 !i113 1
@@ -44,7 +44,7 @@ R3
 w1723393108
 8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALUControl.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/ALUControl.v
-!i122 60
+!i122 68
 L0 1 55
 R4
 r1
@@ -57,6 +57,30 @@ R5
 R6
 R7
 n@a@l@u@control
+vCLA
+!s110 1736384576
+!i10b 1
+!s100 dTL:JnL`7icKl^<>h_BKO0
+R1
+I6U@7b5:b7nNMabnQ`AQa21
+R2
+R3
+w1736384554
+8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/CLA.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/CLA.v
+!i122 76
+Z8 L0 2 30
+R4
+r1
+!s85 0
+31
+!s108 1736384576.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/CLA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/CLA.v|
+!i113 1
+R6
+R7
+n@c@l@a
 vClock
 R0
 !i10b 1
@@ -68,7 +92,7 @@ R3
 w1723256691
 8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/clock.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/clock.v
-!i122 58
+!i122 66
 L0 2 25
 R4
 r1
@@ -82,7 +106,7 @@ R6
 R7
 n@clock
 vControl
-R0
+Z9 !s110 1723393268
 !i10b 1
 !s100 Be;AMHYO>oNP6zcdI<A8G3
 R1
@@ -98,7 +122,7 @@ R4
 r1
 !s85 0
 31
-R5
+Z10 !s108 1723393268.000000
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Control.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Control.v|
 !i113 1
@@ -116,7 +140,7 @@ R3
 w1723392720
 8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Decode.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Decode.v
-!i122 62
+!i122 69
 L0 2 52
 R4
 r1
@@ -130,7 +154,7 @@ R6
 R7
 n@decode
 vProcessor
-R0
+R9
 !i10b 1
 !s100 ]Oa;LUnO9Q1Bhc5HQ_]No1
 R1
@@ -146,7 +170,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Processor.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/Processor.v|
 !i113 1
@@ -154,7 +178,7 @@ R6
 R7
 n@processor
 vREG32
-Z8 !s110 1723393269
+!s110 1736383771
 !i10b 1
 !s100 j4lMo];nTE0W470G=0M_B3
 R1
@@ -164,13 +188,13 @@ R3
 w1723260150
 8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/REG32.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/REG32.v
-!i122 64
+!i122 70
 L0 1 22
 R4
 r1
 !s85 0
 31
-R5
+Z11 !s108 1736383771.000000
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/REG32.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/REG32.v|
 !i113 1
@@ -178,7 +202,7 @@ R6
 R7
 n@r@e@g32
 vRegFile
-R8
+!s110 1736383772
 !i10b 1
 !s100 APSVV@dYUaNOm]j`U5<Xf3
 R1
@@ -188,16 +212,40 @@ R3
 w1723392560
 8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/RegFile.v
 FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/RegFile.v
-!i122 65
+!i122 71
 L0 1 209
 R4
 r1
 !s85 0
 31
-!s108 1723393269.000000
+R11
 !s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/RegFile.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/RegFile.v|
 !i113 1
 R6
 R7
 n@reg@file
+vsim_CLA
+!s110 1736385018
+!i10b 1
+!s100 5f=;7al6ohPh6c;:gAi`I3
+R1
+IFDh_`jkORG^z4f[OGUBA00
+R2
+R3
+w1736384957
+8C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v
+FC:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v
+!i122 78
+R8
+R4
+r1
+!s85 0
+31
+!s108 1736385018.000000
+!s107 C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v|
+!i113 1
+R6
+R7
+nsim_@c@l@a

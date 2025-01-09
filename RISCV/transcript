@@ -1,0 +1,99 @@
+# Compile of top.v was successful.
+# Compile of clock.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUControl.v was successful.
+# Compile of Control.v failed with 1 errors.
+# Compile of Decode.v was successful with warnings.
+# Compile of REG32.v was successful.
+# Compile of RegFile.v was successful.
+# Compile of sim_CLA.v failed with 1 errors.
+# Compile of CLA.v failed with 11 errors.
+# 10 compiles, 4 failed with 13 errors.
+# Compile of CLA.v failed with 7 errors.
+# Compile of CLA.v failed with 1 errors.
+# Compile of CLA.v was successful.
+# Compile of sim_CLA.v failed with 1 errors.
+# Compile of sim_CLA.v was successful.
+vsim -gui work.sim_CLA
+# vsim -gui work.sim_CLA 
+# Start time: 19:51:58 on Jan 08,2025
+# Loading work.sim_CLA
+# Loading work.CLA
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'adder'.  Expected 9, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /sim_CLA/adder File: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v Line: 6
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'oS'.
+#    Time: 0 ps  Iteration: 0  Instance: /sim_CLA/adder File: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v Line: 6
+# ** Warning: (vsim-3015) [PCDPC] - Port size (31) does not match connection size (32) for port 'oS'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/CLA.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_CLA/adder File: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v Line: 6
+# ** Warning: (vsim-3722) C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v(6): [TFMPC] - Missing connection for port 'oOverflow'.
+# Error loading design
+# End time: 19:51:59 on Jan 08,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 12
+# Compile of sim_CLA.v failed with 1 errors.
+# Compile of sim_CLA.v was successful.
+vsim -gui work.sim_CLA
+# vsim -gui work.sim_CLA 
+# Start time: 19:53:47 on Jan 08,2025
+# Loading work.sim_CLA
+# Loading work.CLA
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'adder'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /sim_CLA/adder File: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v Line: 7
+# ** Warning: (vsim-3015) [PCDPC] - Port size (31) does not match connection size (32) for port 'oS'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/CLA.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_CLA/adder File: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v Line: 7
+add wave -position end  sim:/sim_CLA/iCarry
+add wave -position end  sim:/sim_CLA/oCarry
+add wave -position end  sim:/sim_CLA/Overflow
+add wave -position end  sim:/sim_CLA/Zero
+add wave -position end  sim:/sim_CLA/Negative
+add wave -position end  sim:/sim_CLA/X
+add wave -position end  sim:/sim_CLA/Y
+add wave -position end  sim:/sim_CLA/sum
+run 100ps
+add wave -position end  sim:/sim_CLA/adder/iCarry
+add wave -position end  sim:/sim_CLA/adder/iX
+add wave -position end  sim:/sim_CLA/adder/iY
+add wave -position end  sim:/sim_CLA/adder/oS
+add wave -position end  sim:/sim_CLA/adder/oCarry
+add wave -position end  sim:/sim_CLA/adder/oOverflow
+add wave -position end  sim:/sim_CLA/adder/oZero
+add wave -position end  sim:/sim_CLA/adder/oNegative
+add wave -position end  sim:/sim_CLA/adder/G
+add wave -position end  sim:/sim_CLA/adder/P
+add wave -position end  sim:/sim_CLA/adder/C
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'adder'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /sim_CLA/adder File: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v Line: 7
+# ** Warning: (vsim-3015) [PCDPC] - Port size (31) does not match connection size (32) for port 'oS'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/CLA.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_CLA/adder File: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v Line: 7
+run 100ps
+# Compile of sim_CLA.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.sim_CLA
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'adder'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /sim_CLA/adder File: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v Line: 8
+# ** Warning: (vsim-3015) [PCDPC] - Port size (31) does not match connection size (32) for port 'oS'. The port definition is at: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/CLA.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /sim_CLA/adder File: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v Line: 8
+run 100ps
+# Compile of CLA.v was successful.
+# Compile of sim_CLA.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.sim_CLA
+# Loading work.CLA
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'adder'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /sim_CLA/adder File: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v Line: 8
+run 30ps
+restart
+# Compile of sim_CLA.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.sim_CLA
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'adder'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /sim_CLA/adder File: C:/Users/Jacob/Documents/GitHub/Hazwell/RISCV/simulation/sim_CLA.v Line: 8
+# Warning in wave window restart: (vish-4014) No objects found matching '/sim_CLA/oCarry'. 
+add wave -position 0  sim:/sim_CLA/Carry
+run 30ps
+# End time: 20:13:26 on Jan 08,2025, Elapsed time: 0:19:39
+# Errors: 0, Warnings: 2
